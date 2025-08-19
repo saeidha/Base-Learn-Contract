@@ -33,3 +33,9 @@ The primary feature of this token is its **non-transferability**; once claimed, 
       * A constant defining the maximum number of users who can claim tokens.
   * `uint256 public constant CLAIM_AMOUNT = 10 * 10**18;`
       * A constant defining the amount of tokens (10 tokens with 18 decimals) a user receives when they claim.
+
+### Constructor
+
+```solidity
+constructor(address initialOwner) ERC20("AIBLockedToken", "AIBL") Ownable(initialOwner) {}
+```
