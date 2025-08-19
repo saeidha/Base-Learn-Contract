@@ -18,5 +18,10 @@ contract AIBLockedXpToken is ERC20, Ownable {
     }
 
 
+    function _update(address from, address to, uint256 value) internal override {
+        require(from == address(0) || to == address(0), "Token is non-transferable");
+        super._update(from, to, value);
+    }
+
 
 }
