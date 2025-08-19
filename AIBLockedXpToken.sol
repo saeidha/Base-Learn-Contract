@@ -6,5 +6,17 @@ import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 
 contract AIBLockedXpToken is ERC20, Ownable {
 
+    uint256 public maxSupply;
+    uint256 public totalClaims;
+    uint256 public constant MAX_CLAIMS = 100;
+    uint256 public constant CLAIM_AMOUNT = 10 * 10**18;
+    mapping(address => bool) public whitelist;
+    mapping(address => bool) public hasClaimed;
+
+    constructor(address initialOwner) ERC20("AIBLockedXpToken", "AIBLXP") Ownable(initialOwner) {
+        maxSupply = MAX_CLAIMS * CLAIM_AMOUNT;
+    }
+
+
 
 }
