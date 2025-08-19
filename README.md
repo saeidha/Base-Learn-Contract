@@ -1,0 +1,1 @@
+# AIBasedLockedToken Smart Contract Documentation
