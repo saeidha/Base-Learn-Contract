@@ -39,6 +39,9 @@ contract AIBLockedXpToken is ERC20, Ownable {
         }
     }
 
-
+    function updateMaxSupply(uint256 newMaxSupply) external onlyOwner {
+        require(newMaxSupply >= totalSupply(), "New max supply is less than total supply");
+        maxSupply = newMaxSupply;
+    }
 
 }
