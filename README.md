@@ -1,4 +1,4 @@
-# AIBasedLockedToken Smart Contract Documentation
+# Base Learn Smart Contract Documentation
 
 ## Overview
 
