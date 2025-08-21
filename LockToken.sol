@@ -135,3 +135,7 @@ emit TokensWithdrawn(msg.sender, _lockId, amount);
      * @notice Pauses the contract, preventing new locks and withdrawals.
      * @dev Can only be called by the owner.
      */
+
+    function pause() external onlyOwner {
+        _pause();
+    }
