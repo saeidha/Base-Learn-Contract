@@ -139,3 +139,7 @@ emit TokensWithdrawn(msg.sender, _lockId, amount);
     function pause() external onlyOwner {
         _pause();
     }
+    /**
+     * @notice Unpauses the contract, re-enabling functionality.
+     * @dev Can only be called by the owner.
+     */
