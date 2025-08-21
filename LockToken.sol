@@ -118,3 +118,4 @@ emit TokensWithdrawn(msg.sender, _lockId, amount);
      * @param _user The address of the user.
      * @return An array of lock IDs owned by the user.
      */
+        function getLocksForUser(address _user) external view returns (uint256[] memory) {
