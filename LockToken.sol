@@ -146,3 +146,9 @@ emit TokensWithdrawn(msg.sender, _lockId, amount);
     function unpause() external onlyOwner {
         _unpause();
     }
+    /**
+     * @notice Allows the owner to withdraw any ERC20 tokens accidentally sent to this contract.
+     * @dev This is a safety measure. It cannot withdraw the designated `lockToken`.
+     * @param _tokenAddress The address of the ERC20 token to withdraw.
+     * @param _amount The amount to withdraw.
+     */
