@@ -57,3 +57,6 @@ contract LockToken is Ownable, Pausable {
         require(_duration > 0, "Duration must be greater than zero");
  uint256 lockId = locks.length;
         uint256 unlockTime = block.timestamp + _duration;
+        locks.push(Lock({ owner: msg.sender, amount: _amount, unlockTime: unlockTime, active: true })); 
+        userLockIds[msg.sender].push(lockId); 
+        userTotalLockedAmount[msg.sender] += _amount; totalLocked += _amount; 
