@@ -93,4 +93,8 @@ emit TokensWithdrawn(msg.sender, _lockId, amount);
      */
     function extendLock(uint256 _lockId, uint256 _extraDuration) external {
         Lock storage userLock = locks[_lockId];
+         require(userLock.owner == msg.sender, "Not lock owner");
+        require(userLock.active, "Lock not active");
+        require(_extraDuration > 0, "Extra duration must be positive");
+
         
