@@ -55,3 +55,5 @@ contract LockToken is Ownable, Pausable {
      function lock(uint256 _amount, uint256 _duration) external whenNotPaused {
         require(_amount > 0, "Amount must be greater than zero");
         require(_duration > 0, "Duration must be greater than zero");
+ uint256 lockId = locks.length;
+        uint256 unlockTime = block.timestamp + _duration;
