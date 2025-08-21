@@ -70,3 +70,5 @@ contract LockToken is Ownable, Pausable {
      * @notice Withdraws the tokens from a specific lock after it has expired.
      * @param _lockId The ID of the lock to withdraw from.
      */
+    function withdraw(uint256 _lockId) external whenNotPaused {
+        Lock storage userLock = locks[_lockId];
