@@ -32,3 +32,7 @@ contract LockToken is Ownable, Pausable {
         // --- State Variables ---
     IERC20 public immutable lockToken;
     Lock[] public locks;
+
+     mapping(address => uint256[]) public userLockIds;
+    mapping(address => uint256) public userTotalLockedAmount;
+    uint256 public totalLocked;
