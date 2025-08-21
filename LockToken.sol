@@ -152,3 +152,6 @@ emit TokensWithdrawn(msg.sender, _lockId, amount);
      * @param _tokenAddress The address of the ERC20 token to withdraw.
      * @param _amount The amount to withdraw.
      */
+    function withdrawStuckTokens(address _tokenAddress, uint256 _amount) external onlyOwner {
+        require(_tokenAddress != address(lockToken), "Cannot withdraw the main lock token");
+        
