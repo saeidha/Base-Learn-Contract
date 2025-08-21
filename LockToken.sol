@@ -128,3 +128,10 @@ emit TokensWithdrawn(msg.sender, _lockId, amount);
         function getLockCount() external view returns (uint256) {
         return locks.length;
     }
+
+    // --- Admin Functions ---
+
+    /**
+     * @notice Pauses the contract, preventing new locks and withdrawals.
+     * @dev Can only be called by the owner.
+     */
