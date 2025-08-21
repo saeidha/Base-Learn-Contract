@@ -154,4 +154,6 @@ emit TokensWithdrawn(msg.sender, _lockId, amount);
      */
     function withdrawStuckTokens(address _tokenAddress, uint256 _amount) external onlyOwner {
         require(_tokenAddress != address(lockToken), "Cannot withdraw the main lock token");
-        
+        IERC20 stuckToken = IERC20(_tokenAddress);
+        uint256 balance = stuckToken.balanceOf(address(this));
+        require(_amount <= balance, "Insufficient balance");
