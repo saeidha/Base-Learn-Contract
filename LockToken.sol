@@ -20,3 +20,11 @@ contract LockToken is Ownable, Pausable {
     event TokensWithdrawn(address indexed user, uint256 lockId, uint256 amount);
     event LockExtended(uint256 indexed lockId, uint256 newUnlockTime);
     event EmergencyWithdrawal(address indexed token, address indexed to, uint256 amount);
+
+  // --- Structs ---
+    struct Lock {
+        address owner;
+        uint256 amount;
+        uint256 unlockTime;
+        bool active; // To mark if the lock has been withdrawn
+    }
