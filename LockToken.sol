@@ -72,3 +72,6 @@ contract LockToken is Ownable, Pausable {
      */
     function withdraw(uint256 _lockId) external whenNotPaused {
         Lock storage userLock = locks[_lockId];
+          require(userLock.owner == msg.sender, "Not lock owner");
+        require(userLock.active, "Lock already withdrawn");
+        require(block.timestamp >= userLock.unlockTime, "Lock period not over yet");
