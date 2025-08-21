@@ -143,3 +143,6 @@ emit TokensWithdrawn(msg.sender, _lockId, amount);
      * @notice Unpauses the contract, re-enabling functionality.
      * @dev Can only be called by the owner.
      */
+    function unpause() external onlyOwner {
+        _unpause();
+    }
