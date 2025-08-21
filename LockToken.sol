@@ -28,3 +28,7 @@ contract LockToken is Ownable, Pausable {
         uint256 unlockTime;
         bool active; // To mark if the lock has been withdrawn
     }
+
+        // --- State Variables ---
+    IERC20 public immutable lockToken;
+    Lock[] public locks;
