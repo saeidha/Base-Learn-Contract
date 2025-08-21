@@ -97,4 +97,7 @@ emit TokensWithdrawn(msg.sender, _lockId, amount);
         require(userLock.active, "Lock not active");
         require(_extraDuration > 0, "Extra duration must be positive");
 
-        
+         userLock.unlockTime += _extraDuration;
+
+        emit LockExtended(_lockId, userLock.unlockTime);
+    }
