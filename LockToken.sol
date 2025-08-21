@@ -51,3 +51,7 @@ contract LockToken is Ownable, Pausable {
      * @param _amount The amount of tokens to lock.
      * @param _duration The lock duration in seconds.
      */
+
+     function lock(uint256 _amount, uint256 _duration) external whenNotPaused {
+        require(_amount > 0, "Amount must be greater than zero");
+        require(_duration > 0, "Duration must be greater than zero");
