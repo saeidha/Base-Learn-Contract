@@ -36,3 +36,9 @@ contract LockToken is Ownable, Pausable {
      mapping(address => uint256[]) public userLockIds;
     mapping(address => uint256) public userTotalLockedAmount;
     uint256 public totalLocked;
+
+    // --- Constructor ---
+    constructor(address _tokenAddress) Ownable(msg.sender) {
+        require(_tokenAddress != address(0), "Token address cannot be zero");
+        lockToken = IERC20(_tokenAddress);
+    }
