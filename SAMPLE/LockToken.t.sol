@@ -34,3 +34,12 @@ contract LockToken is Ownable, Pausable {
                 require(_tokenAddress != address(0), "Token address cannot be zero");
                 lockToken = IERC20(_tokenAddress);
     }
+
+    // --- Core User Functions ---
+
+    /**
+     * @notice Locks a specified amount of tokens for a given duration.
+     * @dev The user must first approve this contract to spend their tokens.
+     * @param _amount The amount of tokens to lock.
+     * @param _duration The lock duration in seconds.
+     */
