@@ -16,3 +16,8 @@ contract LockToken is Ownable, Pausable {
 
 // --- Structs ---
     struct Lock {
+        address owner;
+        uint256 amount;
+        uint256 unlockTime;
+        bool active; // To mark if the lock has been withdrawn
+    }
