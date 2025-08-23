@@ -31,3 +31,4 @@ contract LockToken is Ownable, Pausable {
 
     // --- Constructor ---
     constructor(address _tokenAddress) Ownable(msg.sender) {
+                require(_tokenAddress != address(0), "Token address cannot be zero");
