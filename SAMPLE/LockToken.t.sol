@@ -28,3 +28,6 @@ contract LockToken is Ownable, Pausable {
     mapping(address => uint256[]) public userLockIds;
     mapping(address => uint256) public userTotalLockedAmount;
     uint256 public totalLocked;
+
+    // --- Constructor ---
+    constructor(address _tokenAddress) Ownable(msg.sender) {
