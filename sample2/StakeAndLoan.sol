@@ -219,5 +219,5 @@ contract StakeAndLoan is Ownable {
         return (loan.principal, loan.interestRate, loan.startTime);
     }
 
-        // --- Admin Functions ---
+    // --- Admin Functions ---
 }
