@@ -83,3 +83,5 @@ contract LoanlyTest is Test {
         vm.warp(block.timestamp + DURATION);
         uint256 interest = loanly.calculateInterest(1);
         uint256 totalRepayment = LOAN_AMOUNT + interest;
+        vm.prank(borrower);
+        loanly.repayLoan{value: totalRepayment}(1);
