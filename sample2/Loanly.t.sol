@@ -86,3 +86,5 @@ contract LoanlyTest is Test {
         vm.prank(borrower);
         loanly.repayLoan{value: totalRepayment}(1);
         uint256 lenderInitialBalance = lender.balance;
+        vm.prank(lender);
+        loanly.withdraw(1);
