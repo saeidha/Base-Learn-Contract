@@ -232,4 +232,5 @@ contract StakeAndLoan is Ownable {
      * @dev Updates the price of the collateral asset.
      * @param _newPrice The new price.
      */
+        function setCollateralPrice(uint256 _newPrice) public onlyOwner {
 }
