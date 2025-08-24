@@ -175,4 +175,8 @@ contract StakeAndLoan is Ownable {
         if (loan.principal == 0) {
             return 0;
         }
+        uint256 timeElapsed = block.timestamp - loan.startTime;
+        uint256 interest = (loan.principal * loan.interestRate * timeElapsed) / (10000 * 365 days);
+        return loan.principal + interest;
+    }
 }
