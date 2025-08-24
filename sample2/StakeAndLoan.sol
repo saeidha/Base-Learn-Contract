@@ -62,3 +62,8 @@ contract StakeAndLoan is Ownable {
         require(collateralToken.transferFrom(msg.sender, address(this), _amount), "Token transfer failed");
         emit Staked(msg.sender, _amount);
     }
+
+    /**
+     * @dev Unstakes collateral tokens from the contract.
+     * @param _amount The amount of collateral tokens to unstake.
+     */
