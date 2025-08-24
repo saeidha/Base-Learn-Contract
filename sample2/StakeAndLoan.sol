@@ -199,4 +199,6 @@ contract StakeAndLoan is Ownable {
         uint256 collateralValue = getCollateralValue(stakedBalance[_user]);
         return (collateralValue * collateralizationRatio) / 10000;
     }
+
+
 }
