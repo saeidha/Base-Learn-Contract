@@ -23,3 +23,8 @@ contract LoanlyTest is Test {
     /**
      * @dev Tests the loan request functionality.
      */
+    function testRequestLoan() public {
+        vm.prank(borrower);
+        loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
+
+        (uint256 id, address b, , uint256 amount, uint256 interest, , , bool funded, bool repaid) = loanly.getLoanDetails(1);
