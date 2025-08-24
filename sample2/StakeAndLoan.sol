@@ -25,7 +25,7 @@ contract StakeAndLoan is Ownable {
     mapping(address => Loan) public userLoan;
     // The percentage of collateral value that can be borrowed (e.g., 7500 = 75%).
     uint256 public collateralizationRatio = 7500; // In basis points
-
+    
     // Price of collateral token in terms of loan token (e.g., 1 ETH = 2000 DAI).
     // In a real-world scenario, this would be fed by an oracle.
     uint256 public collateralPrice = 2000;
@@ -47,3 +47,6 @@ contract StakeAndLoan is Ownable {
      */
 
         constructor(address _collateralTokenAddress, address _loanTokenAddress) Ownable(msg.sender) {
+            collateralToken = IERC20(_collateralTokenAddress);
+        loanToken = IERC20(_loanTokenAddress);
+    }
