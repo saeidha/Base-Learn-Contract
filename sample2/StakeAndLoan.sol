@@ -89,5 +89,6 @@ contract StakeAndLoan is Ownable {
         );
                 stakedBalance[msg.sender] -= _amount;
                         require(collateralToken.transfer(msg.sender, _amount), "Token transfer failed");
+
     }
 }
