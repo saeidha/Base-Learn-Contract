@@ -34,3 +34,4 @@ contract Loanly {
      * @param _interest The interest rate in basis points (e.g., 500 for 5%).
      * @param _duration The duration of the loan in seconds.
      */
+        function requestLoan(uint256 _amount, uint256 _interest, uint256 _duration) public {
