@@ -234,4 +234,5 @@ contract StakeAndLoan is Ownable {
      */
         function setCollateralPrice(uint256 _newPrice) public onlyOwner {
         collateralPrice = _newPrice;
+
 }
