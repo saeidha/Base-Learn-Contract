@@ -106,5 +106,9 @@ contract StakeAndLoan is Ownable {
         require(userLoan[msg.sender].principal == 0, "Loan already exists, repay first");
         uint256 maxBorrowable = getAccountMaxBorrowableValue(msg.sender);
         require(_amount <= maxBorrowable, "Borrow amount exceeds collateralization ratio");
-
+userLoan[msg.sender] = Loan({
+            principal: _amount,
+            interestRate: 500, // 5% annual interest
+            startTime: block.timestamp
+        });
 }
