@@ -56,3 +56,14 @@ contract LoanlyTest is Test {
     function testRepayLoan() public {
         vm.prank(borrower);
         loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
+        vm.prank(lender);
+        loanly.fundLoan{value: LOAN_AMOUNT}(1);
+        // Advance time to simulate interest accrual
+        vm.warp(block.timestamp + DURATION);
+
+        uint256 interest = loanly.calculateInterest(1);
+        uint256 totalRepayment = LOAN_AMOUNT + interest;
+        uint256 lenderInitialBalance = lender.balance;
+
+        vm.prank(borrower);
+        loanly.repayLoan{value: totalRepayment}(1);
