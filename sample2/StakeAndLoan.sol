@@ -111,4 +111,7 @@ userLoan[msg.sender] = Loan({
             interestRate: 500, // 5% annual interest
             startTime: block.timestamp
         });
+         require(loanToken.transfer(msg.sender, _amount), "Loan token transfer failed");
+        emit Borrowed(msg.sender, _amount);
+    }
 }
