@@ -90,3 +90,6 @@ contract LoanlyTest is Test {
         loanly.withdraw(1);
         assertTrue(lender.balance > lenderInitialBalance);
     }
+    /**
+     * @dev Tests failure case for funding own loan.
+     */
