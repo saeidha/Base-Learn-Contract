@@ -39,3 +39,6 @@ contract LoanlyTest is Test {
     /**
      * @dev Tests the loan funding functionality.
      */
+    function testFundLoan() public {
+        vm.prank(borrower);
+        loanly.requestLo
