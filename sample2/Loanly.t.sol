@@ -67,3 +67,6 @@ contract LoanlyTest is Test {
 
         vm.prank(borrower);
         loanly.repayLoan{value: totalRepayment}(1);
+        assertTrue(loanly.isLoanRepaid(1));
+        assertEq(lender.balance, lenderInitialBalance + totalRepayment);
+    }
