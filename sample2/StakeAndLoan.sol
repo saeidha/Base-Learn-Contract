@@ -23,3 +23,5 @@ contract StakeAndLoan is Ownable {
     }
     // Mapping from user address to their loan details.
     mapping(address => Loan) public userLoan;
+    // The percentage of collateral value that can be borrowed (e.g., 7500 = 75%).
+    uint256 public collateralizationRatio = 7500; // In basis points
