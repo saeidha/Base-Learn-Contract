@@ -155,3 +155,6 @@ contract LoanlyTest is Test {
         vm.prank(borrower);
         loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
         loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
+        assertEq(loanly.getLoanCount(), 2);
+    }
+}
