@@ -71,3 +71,4 @@ contract StakeAndLoan is Ownable {
     function unstake(uint256 _amount) public {
                 require(_amount > 0, "Unstake amount must be positive");
                         require(stakedBalance[msg.sender] >= _amount, "Insufficient staked balance");
+                                uint256 maxBorrowable = getAccountMaxBorrowableValue(msg.sender) - getLoanValue(msg.sender);
