@@ -119,3 +119,6 @@ contract LoanlyTest is Test {
     /**
      * @dev Tests the interest calculation.
      */
+    function testCalculateInterest() public {
+        vm.prank(borrower);
+        loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
