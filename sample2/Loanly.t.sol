@@ -21,4 +21,7 @@ contract LoanlyTest is Test {
         vm.deal(borrower, 10 ether);
         vm.deal(lender, 10 ether);
     }
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
