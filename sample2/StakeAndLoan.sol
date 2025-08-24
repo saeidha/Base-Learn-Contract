@@ -67,3 +67,5 @@ contract StakeAndLoan is Ownable {
      * @dev Unstakes collateral tokens from the contract.
      * @param _amount The amount of collateral tokens to unstake.
      */
+
+        function unstake(uint256 _amount) public {
