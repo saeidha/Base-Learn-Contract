@@ -137,3 +137,6 @@ contract LoanlyTest is Test {
         uint256 currentTime = loanly.getCurrentTime();
         assertTrue(currentTime > 0);
     }
+    /**
+     * @dev Tests checking if a loan is funded.
+     */
