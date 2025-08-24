@@ -25,3 +25,5 @@ contract Loanly {
 
     // Events to log significant actions.
     event LoanRequested(uint256 indexed id, address indexed borrower, uint256 amount, uint256 interest);
+    event LoanFunded(uint256 indexed id, address indexed lender, uint256 amount);
+    event LoanRepaid(uint256 indexed id, uint256 totalAmount);
