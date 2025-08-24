@@ -98,5 +98,5 @@ contract LoanlyTest is Test {
     vm.prank(borrower);
     loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
     vm.prank(borrower);
-        vm.expectRevert("Cannot fund your own loan");
-        loanly.fundLoan{value: LOAN_AMOUNT}(1);
+    vm.expectRevert("Cannot fund your own loan");
+    loanly.fundLoan{value: LOAN_AMOUNT}(1);
