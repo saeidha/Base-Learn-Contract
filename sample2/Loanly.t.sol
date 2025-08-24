@@ -106,3 +106,5 @@ contract LoanlyTest is Test {
      * @dev Tests failure case for incorrect repayment amount.
      */
     function testFailIncorrectRepayment() public {
+        vm.prank(borrower);
+        loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
