@@ -145,16 +145,21 @@ contract StakeAndLoan is Ownable {
      */
     function liquidate(address _borrower) public {
         uint256 collateralValue = getCollateralValue(stakedBalance[_borrower]);
-                uint256 loanValue = getLoanValue(_borrower);
- require(loanValue > 0, "No loan to liquidate");
-        require(collateralValue < loanValue, "Position is not undercollateralized");
+        uint256 loanValue = getLoanValue(_borrower);
+        require(loanValue > 0, "No loan to liquidate");
+        require(
+            collateralValue < loanValue,
+            "Position is not undercollateralized"
+        );
 
-uint256 collateralToLiquidate = stakedBalance[_borrower];
+        uint256 collateralToLiquidate = stakedBalance[_borrower];
         stakedBalance[_borrower] = 0;
         delete userLoan[_borrower];
- // In a real scenario, this collateral might be auctioned. Here, it's sent to the liquidator.
-        require(collateralToken.transfer(msg.sender, collateralToLiquidate), "Liquidation transfer failed");
+        // In a real scenario, this collateral might be auctioned. Here, it's sent to the liquidator.
+        require(
+            collateralToken.transfer(msg.sender, collateralToLiquidate),
+            "Liquidation transfer failed"
+        );
         emit Liquidated(_borrower, collateralToLiquidate);
     }
-
 }
