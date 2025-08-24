@@ -69,6 +69,5 @@ contract Loanly {
         require(msg.sender != loan.borrower, "Cannot fund your own loan");
 
 
-
         loan.lender = payable(msg.sender);
         loan.funded = true;
