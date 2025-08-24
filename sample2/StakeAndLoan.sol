@@ -149,7 +149,9 @@ contract StakeAndLoan is Ownable {
  require(loanValue > 0, "No loan to liquidate");
         require(collateralValue < loanValue, "Position is not undercollateralized");
 
-
+uint256 collateralToLiquidate = stakedBalance[_borrower];
+        stakedBalance[_borrower] = 0;
+        delete userLoan[_borrower];
 
 
 }
