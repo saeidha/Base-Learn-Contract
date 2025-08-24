@@ -102,4 +102,6 @@ contract LoanlyTest is Test {
         loanly.fundLoan{value: LOAN_AMOUNT}(1);
     }
 
-    
+    /**
+     * @dev Tests failure case for incorrect repayment amount.
+     */
