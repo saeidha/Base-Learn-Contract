@@ -41,7 +41,6 @@ contract LoanlyTest is Test {
      */
     function testFundLoan() public {
         vm.prank(borrower);
-        vm.prank(borrower);
         loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
 
         vm.prank(lender);
