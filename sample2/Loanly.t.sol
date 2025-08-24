@@ -151,3 +151,7 @@ contract LoanlyTest is Test {
     /**
      * @dev Tests getting the total loan count.
      */
+    function testGetLoanCount() public {
+        vm.prank(borrower);
+        loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
+        loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
