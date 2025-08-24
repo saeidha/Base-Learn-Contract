@@ -218,4 +218,6 @@ contract StakeAndLoan is Ownable {
         Loan memory loan = userLoan[_user];
         return (loan.principal, loan.interestRate, loan.startTime);
     }
+
+        // --- Admin Functions ---
 }
