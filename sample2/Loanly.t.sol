@@ -88,3 +88,5 @@ contract LoanlyTest is Test {
         uint256 lenderInitialBalance = lender.balance;
         vm.prank(lender);
         loanly.withdraw(1);
+        assertTrue(lender.balance > lenderInitialBalance);
+    }
