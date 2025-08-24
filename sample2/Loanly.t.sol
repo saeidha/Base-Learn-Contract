@@ -53,3 +53,6 @@ contract LoanlyTest is Test {
     /**
      * @dev Tests the loan repayment functionality.
      */
+    function testRepayLoan() public {
+        vm.prank(borrower);
+        loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
