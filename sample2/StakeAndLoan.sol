@@ -146,6 +146,8 @@ contract StakeAndLoan is Ownable {
     function liquidate(address _borrower) public {
         uint256 collateralValue = getCollateralValue(stakedBalance[_borrower]);
                 uint256 loanValue = getLoanValue(_borrower);
+ require(loanValue > 0, "No loan to liquidate");
+        require(collateralValue < loanValue, "Position is not undercollateralized");
 
 
 
