@@ -21,3 +21,5 @@ contract StakeAndLoan is Ownable {
         uint256 interestRate; // Annual interest rate in basis points (e.g., 500 = 5%)
         uint256 startTime;
     }
+    // Mapping from user address to their loan details.
+    mapping(address => Loan) public userLoan;
