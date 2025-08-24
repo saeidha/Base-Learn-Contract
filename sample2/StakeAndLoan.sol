@@ -200,5 +200,10 @@ contract StakeAndLoan is Ownable {
         return (collateralValue * collateralizationRatio) / 10000;
     }
 
+    /**
+     * @dev Retrieves a user's staked balance.
+     * @param _user The address to query.
+     * @return The amount of staked collateral.
+     */
 
 }
