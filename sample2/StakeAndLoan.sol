@@ -56,7 +56,7 @@ contract StakeAndLoan is Ownable {
      * @dev Stakes collateral tokens into the contract.
      * @param _amount The amount of collateral tokens to stake.
      */
-        function stake(uint256 _amount) public {
+    function stake(uint256 _amount) public {
         require(_amount > 0, "Stake amount must be positive");
         stakedBalance[msg.sender] += _amount;
         require(collateralToken.transferFrom(msg.sender, address(this), _amount), "Token transfer failed");
