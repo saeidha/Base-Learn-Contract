@@ -119,4 +119,7 @@ userLoan[msg.sender] = Loan({
      * @dev Repays an active loan.
      */
         function repay() public {
+             Loan storage loan = userLoan[msg.sender];
+        require(loan.principal > 0, "No active loan to repay");
+
 }
