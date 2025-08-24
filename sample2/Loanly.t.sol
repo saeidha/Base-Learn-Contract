@@ -45,3 +45,8 @@ contract LoanlyTest is Test {
 
         vm.prank(lender);
         loanly.fundLoan{value: LOAN_AMOUNT}(1);
+
+        ( , , address l, , , , , bool funded, ) = loanly.getLoanDetails(1);
+        assertEq(l, lender);
+        assertTrue(funded);
+    }
