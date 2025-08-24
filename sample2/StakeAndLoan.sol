@@ -45,3 +45,5 @@ contract StakeAndLoan is Ownable {
      * @param _collateralTokenAddress The address of the ERC20 token used as collateral.
      * @param _loanTokenAddress The address of the ERC20 token to be loaned out.
      */
+
+        constructor(address _collateralTokenAddress, address _loanTokenAddress) Ownable(msg.sender) {
