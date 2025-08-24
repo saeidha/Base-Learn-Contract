@@ -189,4 +189,9 @@ contract StakeAndLoan is Ownable {
         return (_amount * collateralPrice) / 1e18;
     }
 
+    /**
+     * @dev Gets the maximum amount a user can borrow based on their staked collateral.
+     * @param _user The address of the user.
+     * @return The maximum borrowable amount.
+     */
 }
