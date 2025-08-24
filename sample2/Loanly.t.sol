@@ -124,3 +124,7 @@ contract LoanlyTest is Test {
         loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
 vm.prank(lender);
         loanly.fundLoan{value: LOAN_AMOUNT}(1);
+vm.warp(block.timestamp + DURATION);
+
+        uint256 expectedInterest = (LOAN_AMOUNT * INTEREST_RATE) / 10000;
+        uint256 calculatedInterest = loanly.calculateInterest(1);
