@@ -227,4 +227,9 @@ contract StakeAndLoan is Ownable {
     function setCollateralizationRatio(uint256 _newRatio) public onlyOwner {
         collateralizationRatio = _newRatio;
     }
+
+    /**
+     * @dev Updates the price of the collateral asset.
+     * @param _newPrice The new price.
+     */
 }
