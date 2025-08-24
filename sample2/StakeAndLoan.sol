@@ -74,3 +74,4 @@ contract StakeAndLoan is Ownable {
                                 uint256 maxBorrowable = getAccountMaxBorrowableValue(msg.sender) - getLoanValue(msg.sender);
                                         require(getCollateralValue(stakedBalance[msg.sender] - _amount) >= maxBorrowable, "Unstaking would make you undercollateralized");
     }
+}
