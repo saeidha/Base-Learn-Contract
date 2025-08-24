@@ -88,5 +88,6 @@ contract StakeAndLoan is Ownable {
             "Unstaking would make you undercollateralized"
         );
                 stakedBalance[msg.sender] -= _amount;
+                        require(collateralToken.transfer(msg.sender, _amount), "Token transfer failed");
     }
 }
