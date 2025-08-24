@@ -37,3 +37,5 @@ contract StakeAndLoan is Ownable {
     event Borrowed(address indexed user, uint256 amount);
     event Repaid(address indexed user, uint256 amount);
     event Liquidated(address indexed user, uint256 collateralLiquidated);
+
+    // --- Constructor ---
