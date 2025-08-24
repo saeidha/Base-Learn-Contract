@@ -118,5 +118,5 @@ userLoan[msg.sender] = Loan({
     /**
      * @dev Repays an active loan.
      */
-
+        function repay() public {
 }
