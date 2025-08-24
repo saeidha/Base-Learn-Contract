@@ -27,3 +27,10 @@ contract Loanly {
     event LoanRequested(uint256 indexed id, address indexed borrower, uint256 amount, uint256 interest);
     event LoanFunded(uint256 indexed id, address indexed lender, uint256 amount);
     event LoanRepaid(uint256 indexed id, uint256 totalAmount);
+
+ /**
+     * @dev Requests a new loan.
+     * @param _amount The principal amount of the loan.
+     * @param _interest The interest rate in basis points (e.g., 500 for 5%).
+     * @param _duration The duration of the loan in seconds.
+     */
