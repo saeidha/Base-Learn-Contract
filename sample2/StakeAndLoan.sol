@@ -50,3 +50,5 @@ contract StakeAndLoan is Ownable {
             collateralToken = IERC20(_collateralTokenAddress);
         loanToken = IERC20(_loanTokenAddress);
     }
+
+    // --- Core Functions ---
