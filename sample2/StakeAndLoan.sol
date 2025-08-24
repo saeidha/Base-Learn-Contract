@@ -220,4 +220,8 @@ contract StakeAndLoan is Ownable {
     }
 
     // --- Admin Functions ---
+    /**
+     * @dev Updates the collateralization ratio.
+     * @param _newRatio The new ratio in basis points.
+     */
 }
