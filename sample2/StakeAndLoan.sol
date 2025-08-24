@@ -194,4 +194,7 @@ contract StakeAndLoan is Ownable {
      * @param _user The address of the user.
      * @return The maximum borrowable amount.
      */
+
+        function getAccountMaxBorrowableValue(address _user) public view returns (uint256) {
+
 }
