@@ -224,11 +224,7 @@ contract StakeAndLoan is Ownable {
      * @dev Updates the collateralization ratio.
      * @param _newRatio The new ratio in basis points.
      */
-        function setCollateralizationRatio(uint256 _newRatio) public onlyOwner {
-            require(
-                _newRatio >= 5000 && _newRatio <= 9000,
-                "Ratio must be between 50% and 90%"
-            );
-            collateralizationRatio = _newRatio;
-        }
+    function setCollateralizationRatio(uint256 _newRatio) public onlyOwner {
+        collateralizationRatio = _newRatio;
+    }
 }
