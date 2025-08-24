@@ -114,4 +114,9 @@ userLoan[msg.sender] = Loan({
          require(loanToken.transfer(msg.sender, _amount), "Loan token transfer failed");
         emit Borrowed(msg.sender, _amount);
     }
+
+    /**
+     * @dev Repays an active loan.
+     */
+
 }
