@@ -76,7 +76,7 @@ contract Loanly {
         emit LoanFunded(_id, msg.sender, loan.amount);
         }
 
-/**
+    /**
      * @dev Repays a funded loan.
      * @param _id The ID of the loan to repay.
      */
