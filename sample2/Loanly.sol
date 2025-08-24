@@ -34,4 +34,32 @@ contract Loanly {
      * @param _interest The interest rate in basis points (e.g., 500 for 5%).
      * @param _duration The duration of the loan in seconds.
      */
-        function requestLoan(uint256 _amount, uint256 _interest, uint256 _duration) public {
+    function requestLoan(uint256 _amount, uint256 _interest, uint256 _duration) public {
+        require(_amount > 0, "Loan amount must be greater than zero");
+        require(_interest > 0, "Interest rate must be greater than zero");
+        require(_duration > 0, "Loan duration must be greater than zero");
+
+        loanCounter++;
+        loans[loanCounter] = Loan({
+            id: loanCounter,
+            borrower: payable(msg.sender),
+            lender: payable(address(0)),
+            amount: _amount,
+            interest: _interest,
+            duration: _duration,
+            startTime: 0,
+            funded: false,
+            repaid: false
+        });
+
+        emit LoanRequested(loanCounter, msg.sender, _amount, _interest);
+    }
+
+    /**
+     * @dev Funds an existing loan request.
+     * @param _id The ID of the loan to fund.
+     */
+
+    function fundLoan(uint256 _id) public payable {
+        Loan storage loan = loans[_id];
+        
