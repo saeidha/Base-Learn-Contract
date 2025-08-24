@@ -138,4 +138,10 @@ contract StakeAndLoan is Ownable {
         delete userLoan[msg.sender];
         emit Repaid(msg.sender, totalOwed);
     }
+
+    /**
+     * @dev Liquidates an undercollateralized position.
+     * @param _borrower The address of the borrower to liquidate.
+     */
+
 }
