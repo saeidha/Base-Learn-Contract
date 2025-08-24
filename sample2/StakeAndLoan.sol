@@ -164,4 +164,10 @@ contract StakeAndLoan is Ownable {
     }
 
         // --- View and Helper Functions ---
+
+        /**
+     * @dev Calculates the current value of a loan including accrued interest.
+     * @param _user The address of the user.
+     * @return The total value of the loan (principal + interest).
+     */
 }
