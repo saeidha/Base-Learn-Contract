@@ -95,5 +95,9 @@ contract StakeAndLoan is Ownable {
         emit Unstaked(msg.sender, _amount);
     }
 
+/**
+     * @dev Borrows loan tokens against staked collateral.
+     * @param _amount The amount of loan tokens to borrow.
+     */
 
 }
