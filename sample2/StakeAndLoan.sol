@@ -195,7 +195,7 @@ contract StakeAndLoan is Ownable {
      * @return The maximum borrowable amount.
      */
 
-        function getAccountMaxBorrowableValue(address _user) public view returns (uint256) {
+    function getAccountMaxBorrowableValue(address _user) public view returns (uint256) {
             uint256 collateralValue = getCollateralValue(stakedBalance[_user]);
             return (collateralValue * collateralizationRatio) / 10000;
         }
