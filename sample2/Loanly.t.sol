@@ -70,3 +70,7 @@ contract LoanlyTest is Test {
         assertTrue(loanly.isLoanRepaid(1));
         assertEq(lender.balance, lenderInitialBalance + totalRepayment);
     }
+
+    /**
+     * @dev Tests the withdrawal functionality.
+     */
