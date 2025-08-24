@@ -185,4 +185,8 @@ contract StakeAndLoan is Ownable {
      * @param _amount The amount of collateral.
      * @return The value in loan tokens.
      */
+    function getCollateralValue(uint256 _amount) public view returns (uint256) {
+        return (_amount * collateralPrice) / 1e18;
+    }
+
 }
