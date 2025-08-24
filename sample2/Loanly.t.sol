@@ -133,3 +133,7 @@ contract LoanlyTest is Test {
     /**
      * @dev Tests getting the current time.
      */
+    function testGetCurrentTime() public {
+        uint256 currentTime = loanly.getCurrentTime();
+        assertTrue(currentTime > 0);
+    }
