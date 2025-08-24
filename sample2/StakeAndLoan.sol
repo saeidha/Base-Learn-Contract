@@ -100,4 +100,6 @@ contract StakeAndLoan is Ownable {
      * @param _amount The amount of loan tokens to borrow.
      */
 
+        function borrow(uint256 _amount) public {
+
 }
