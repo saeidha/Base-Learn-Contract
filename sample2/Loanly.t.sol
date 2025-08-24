@@ -94,3 +94,4 @@ contract LoanlyTest is Test {
     /**
      * @dev Tests failure case for funding own loan.
      */
+        function testFailFundOwnLoan() public {
