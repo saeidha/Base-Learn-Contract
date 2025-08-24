@@ -105,4 +105,4 @@ contract LoanlyTest is Test {
     /**
      * @dev Tests failure case for incorrect repayment amount.
      */
-        function testFailIncorrectRepayment() public {
+    function testFailIncorrectRepayment() public {
