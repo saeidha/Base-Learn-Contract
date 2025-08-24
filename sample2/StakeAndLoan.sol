@@ -144,4 +144,5 @@ contract StakeAndLoan is Ownable {
      * @param _borrower The address of the borrower to liquidate.
      */
     function liquidate(address _borrower) public {
+                uint256 collateralValue = getCollateralValue(stakedBalance[_borrower]);
 }
