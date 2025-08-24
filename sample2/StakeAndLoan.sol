@@ -121,5 +121,7 @@ userLoan[msg.sender] = Loan({
         function repay() public {
              Loan storage loan = userLoan[msg.sender];
         require(loan.principal > 0, "No active loan to repay");
+uint256 totalOwed = getLoanValue(msg.sender);
+        require(loanToken.transferFrom(msg.sender, address(this), totalOwed), "Repayment transfer failed");
 
 }
