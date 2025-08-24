@@ -104,4 +104,5 @@ contract StakeAndLoan is Ownable {
                     require(_amount > 0, "Borrow amount must be positive");
                             require(stakedBalance[msg.sender] > 0, "No collateral staked");
         require(userLoan[msg.sender].principal == 0, "Loan already exists, repay first");
+
 }
