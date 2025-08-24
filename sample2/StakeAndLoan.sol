@@ -16,3 +16,8 @@ contract StakeAndLoan is Ownable {
     // Mapping from user address to their staked collateral balance.
     mapping(address => uint256) public stakedBalance;
     // Struct to hold details of a user's loan.
+    struct Loan {
+        uint256 principal;
+        uint256 interestRate; // Annual interest rate in basis points (e.g., 500 = 5%)
+        uint256 startTime;
+    }
