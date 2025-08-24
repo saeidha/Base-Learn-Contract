@@ -63,3 +63,7 @@ contract Loanly {
     function fundLoan(uint256 _id) public payable {
         Loan storage loan = loans[_id];
         
+        require(loan.id != 0, "Loan does not exist");
+        require(!loan.funded, "Loan is already funded");
+        require(msg.value == loan.amount, "Incorrect funding amount sent");
+        require(msg.sender != loan.borrower, "Cannot fund your own loan");
