@@ -140,3 +140,7 @@ contract LoanlyTest is Test {
     /**
      * @dev Tests checking if a loan is funded.
      */
+    function testIsLoanFunded() public {
+        vm.prank(borrower);
+        loanly.requestLoan(LOAN_AMOUNT, INTEREST_RATE, DURATION);
+        assertFalse(loanly.isLoanFunded(1));
