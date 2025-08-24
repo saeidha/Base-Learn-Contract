@@ -16,6 +16,3 @@ contract LoanlyTest is Test {
      */
     function setUp() public {
         loanly = new Loanly();
-        vm.deal(borrower, 10 ether);
-        vm.deal(lender, 10 ether);
-    }
