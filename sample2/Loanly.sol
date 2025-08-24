@@ -67,3 +67,8 @@ contract Loanly {
         require(!loan.funded, "Loan is already funded");
         require(msg.value == loan.amount, "Incorrect funding amount sent");
         require(msg.sender != loan.borrower, "Cannot fund your own loan");
+
+
+
+        loan.lender = payable(msg.sender);
+        loan.funded = true;
