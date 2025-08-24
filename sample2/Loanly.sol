@@ -22,3 +22,8 @@ contract Loanly {
     mapping(uint256 => Loan) public loans;
     // A counter to ensure unique loan IDs.
     uint256 public loanCounter;
+
+    // Events to log significant actions.
+    event LoanRequested(uint256 indexed id, address indexed borrower, uint256 amount, uint256 interest);
+    event LoanFunded(uint256 indexed id, address indexed lender, uint256 amount);
+    event LoanRepaid(uint256 indexed id, uint256 totalAmount);
