@@ -35,3 +35,7 @@ contract LoanlyTest is Test {
         assertFalse(funded);
         assertFalse(repaid);
     }
+
+    /**
+     * @dev Tests the loan funding functionality.
+     */
