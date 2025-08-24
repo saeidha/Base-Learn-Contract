@@ -208,4 +208,10 @@ contract StakeAndLoan is Ownable {
     function getUserStakedBalance(address _user) public view returns (uint256) {
         return stakedBalance[_user];
     }
+
+    /**
+     * @dev Retrieves the details of a user's loan.
+     * @param _user The address to query.
+     * @return The loan principal, interest rate, and start time.
+     */
 }
