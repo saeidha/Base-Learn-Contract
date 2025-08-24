@@ -56,3 +56,4 @@ contract StakeAndLoan is Ownable {
      * @dev Stakes collateral tokens into the contract.
      * @param _amount The amount of collateral tokens to stake.
      */
+        function stake(uint256 _amount) public {
