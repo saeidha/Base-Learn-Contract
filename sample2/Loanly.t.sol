@@ -115,3 +115,8 @@ contract LoanlyTest is Test {
         vm.expectRevert("Incorrect repayment amount");
         loanly.repayLoan{value: 1 wei}(1);
     }
+    }
+
+    /**
+     * @dev Tests the interest calculation.
+     */
