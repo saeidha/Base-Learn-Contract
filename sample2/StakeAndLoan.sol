@@ -205,5 +205,7 @@ contract StakeAndLoan is Ownable {
      * @param _user The address to query.
      * @return The amount of staked collateral.
      */
-
+    function getUserStakedBalance(address _user) public view returns (uint256) {
+        return stakedBalance[_user];
+    }
 }
