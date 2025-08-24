@@ -87,5 +87,6 @@ contract StakeAndLoan is Ownable {
                 maxBorrowable,
             "Unstaking would make you undercollateralized"
         );
+                stakedBalance[msg.sender] -= _amount;
     }
 }
