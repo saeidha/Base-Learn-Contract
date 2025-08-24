@@ -52,3 +52,7 @@ contract StakeAndLoan is Ownable {
     }
 
     // --- Core Functions ---
+    /**
+     * @dev Stakes collateral tokens into the contract.
+     * @param _amount The amount of collateral tokens to stake.
+     */
