@@ -25,7 +25,7 @@ contract StakeAndLoan is Ownable {
     mapping(address => Loan) public userLoan;
     // The percentage of collateral value that can be borrowed (e.g., 7500 = 75%).
     uint256 public collateralizationRatio = 7500; // In basis points
-    
+
     // Price of collateral token in terms of loan token (e.g., 1 ETH = 2000 DAI).
     // In a real-world scenario, this would be fed by an oracle.
     uint256 public collateralPrice = 2000;
@@ -46,8 +46,11 @@ contract StakeAndLoan is Ownable {
      * @param _loanTokenAddress The address of the ERC20 token to be loaned out.
      */
 
-        constructor(address _collateralTokenAddress, address _loanTokenAddress) Ownable(msg.sender) {
-            collateralToken = IERC20(_collateralTokenAddress);
+    constructor(
+        address _collateralTokenAddress,
+        address _loanTokenAddress
+    ) Ownable(msg.sender) {
+        collateralToken = IERC20(_collateralTokenAddress);
         loanToken = IERC20(_loanTokenAddress);
     }
 
@@ -59,7 +62,10 @@ contract StakeAndLoan is Ownable {
     function stake(uint256 _amount) public {
         require(_amount > 0, "Stake amount must be positive");
         stakedBalance[msg.sender] += _amount;
-        require(collateralToken.transferFrom(msg.sender, address(this), _amount), "Token transfer failed");
+        require(
+            collateralToken.transferFrom(msg.sender, address(this), _amount),
+            "Token transfer failed"
+        );
         emit Staked(msg.sender, _amount);
     }
 
@@ -69,9 +75,17 @@ contract StakeAndLoan is Ownable {
      */
 
     function unstake(uint256 _amount) public {
-                require(_amount > 0, "Unstake amount must be positive");
-                        require(stakedBalance[msg.sender] >= _amount, "Insufficient staked balance");
-                                uint256 maxBorrowable = getAccountMaxBorrowableValue(msg.sender) - getLoanValue(msg.sender);
-                                        require(getCollateralValue(stakedBalance[msg.sender] - _amount) >= maxBorrowable, "Unstaking would make you undercollateralized");
+        require(_amount > 0, "Unstake amount must be positive");
+        require(
+            stakedBalance[msg.sender] >= _amount,
+            "Insufficient staked balance"
+        );
+        uint256 maxBorrowable = getAccountMaxBorrowableValue(msg.sender) -
+            getLoanValue(msg.sender);
+        require(
+            getCollateralValue(stakedBalance[msg.sender] - _amount) >=
+                maxBorrowable,
+            "Unstaking would make you undercollateralized"
+        );
     }
 }
