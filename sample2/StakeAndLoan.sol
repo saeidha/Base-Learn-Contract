@@ -147,4 +147,7 @@ contract StakeAndLoan is Ownable {
         uint256 collateralValue = getCollateralValue(stakedBalance[_borrower]);
                 uint256 loanValue = getLoanValue(_borrower);
 
+
+
+
 }
