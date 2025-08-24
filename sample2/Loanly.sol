@@ -74,3 +74,4 @@ contract Loanly {
         loan.startTime = block.timestamp;
 
         emit LoanFunded(_id, msg.sender, loan.amount);
+        }
