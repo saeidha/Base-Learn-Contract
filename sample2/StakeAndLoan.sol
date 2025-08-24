@@ -9,3 +9,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * @dev A contract that allows users to stake collateral tokens and borrow loan tokens.
  */
 contract StakeAndLoan is Ownable {
+    // --- State Variables ---
+
+    IERC20 public immutable collateralToken;
+    IERC20 public immutable loanToken;
