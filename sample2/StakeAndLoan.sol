@@ -170,4 +170,5 @@ contract StakeAndLoan is Ownable {
      * @param _user The address of the user.
      * @return The total value of the loan (principal + interest).
      */
+        function getLoanValue(address _user) public view returns (uint256) {
 }
