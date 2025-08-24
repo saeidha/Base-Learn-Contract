@@ -162,4 +162,6 @@ contract StakeAndLoan is Ownable {
         );
         emit Liquidated(_borrower, collateralToLiquidate);
     }
+
+        // --- View and Helper Functions ---
 }
