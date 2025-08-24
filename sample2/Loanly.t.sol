@@ -148,3 +148,6 @@ contract LoanlyTest is Test {
         loanly.fundLoan{value: LOAN_AMOUNT}(1);
         assertTrue(loanly.isLoanFunded(1));
     }
+    /**
+     * @dev Tests getting the total loan count.
+     */
