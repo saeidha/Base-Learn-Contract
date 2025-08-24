@@ -171,4 +171,8 @@ contract StakeAndLoan is Ownable {
      * @return The total value of the loan (principal + interest).
      */
         function getLoanValue(address _user) public view returns (uint256) {
+            Loan memory loan = userLoan[_user];
+        if (loan.principal == 0) {
+            return 0;
+        }
 }
