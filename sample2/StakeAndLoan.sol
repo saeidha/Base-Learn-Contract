@@ -214,7 +214,6 @@ contract StakeAndLoan is Ownable {
      * @param _user The address to query.
      * @return The loan principal, interest rate, and start time.
      */
-
     function getLoanDetails(address _user) public view returns (uint256, uint256, uint256) {
         Loan memory loan = userLoan[_user];
         return (loan.principal, loan.interestRate, loan.startTime);
