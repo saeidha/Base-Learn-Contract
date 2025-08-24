@@ -18,3 +18,7 @@ contract Loanly {
         bool funded;
         bool repaid;
     }
+    // A mapping from loan IDs to Loan structs.
+    mapping(uint256 => Loan) public loans;
+    // A counter to ensure unique loan IDs.
+    uint256 public loanCounter;
