@@ -49,11 +49,17 @@ contract StakeAndLoanTest is Test {
      * @dev Tests borrowing functionality.
      */
     function testBorrow() public {
+        // First, stake some collateral
         vm.startPrank(user);
-        collateralToken.approve(address(stakeAndLoan), 20 ether);
-        stakeAndLoan.stake(20 ether);
-        stakeAndLoan.borrow(100 ether);
-        assertEq(stakeAndLoan.getUserLoanBalance(user), 100 ether);
-        assertEq(loanToken.balanceOf(user), 100 ether);
+        collateralToken.approve(address(stakeAndLoan), 10 ether);
+        stakeAndLoan.stake(10 ether);
+
+        // Now, borrow against it
+        uint256 maxBorrowable = stakeAndLoan.getAccountMaxBorrowableValue(user);
+        stakeAndLoan.borrow(maxBorrowable);
+
+        assertEq(loanToken.balanceOf(user), maxBorrowable);
+        (uint256 principal, , ) = stakeAndLoan.getLoanDetails(user);
+        assertEq(principal, maxBorrowable);
         vm.stopPrank();
     }
