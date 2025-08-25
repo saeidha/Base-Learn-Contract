@@ -70,3 +70,6 @@ contract StakeAndLoanTest is Test {
     function testRepay() public {
         // Stake and borrow
         vm.startPrank(user);
+        collateralToken.approve(address(stakeAndLoan), 10 ether);
+        stakeAndLoan.stake(10 ether);
+        stakeAndLoan.borrow(1000 ether);
