@@ -76,3 +76,7 @@ contract StakeAndLoanTest is Test {
 
         // Advance time to accrue interest
         vm.warp(block.timestamp + 365 days);
+
+        uint256 totalOwed = stakeAndLoan.getLoanValue(user);
+        loanToken.mint(user, totalOwed); // Mint enough to repay
+        loanToken.approve(address(stakeAndLoan), totalOwed);
