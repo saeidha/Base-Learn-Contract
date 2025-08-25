@@ -181,3 +181,4 @@ contract StakeAndLoanTest is Test {
      * @dev Tests getting the collateral value.
      */
         function testGetCollateralValue() public {
+                    uint256 value = stakeAndLoan.getCollateralValue(1 ether);
