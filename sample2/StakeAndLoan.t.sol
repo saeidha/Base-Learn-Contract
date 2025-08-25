@@ -109,3 +109,70 @@ contract StakeAndLoanTest is Test {
         assertEq(collateralToken.balanceOf(user), 100 ether); // Back to original balance
         vm.stopPrank();
     }
+    
+    /**
+     * @dev Tests liquidation of an undercollateralized position.
+     */
+
+    function testLiquidate() public {
+        // User stakes and borrows
+        vm.startPrank(user);
+        collateralToken.approve(address(stakeAndLoan), 10 ether);
+        stakeAndLoan.stake(10 ether);
+        stakeAndLoan.borrow(15000 ether); // Borrow a large amount
+        vm.stopPrank();
+
+        // Price of collateral drops, making the position undercollateralized
+        stakeAndLoan.setCollateralPrice(800);
+
+        // Liquidator steps in
+        vm.startPrank(liquidator);
+        stakeAndLoan.liquidate(user);
+        assertEq(collateralToken.balanceOf(liquidator), 10 ether);
+        assertEq(stakeAndLoan.getUserStakedBalance(user), 0);
+        vm.stopPrank();
+    }
+/**
+     * @dev Tests that a user cannot borrow more than the collateralization ratio allows.
+     */
+        function testFailBorrowExceedsRatio() public {
+            vm.startPrank(user);
+        collateralToken.approve(address(stakeAndLoan), 10 ether);
+        stakeAndLoan.stake(10 ether);
+        uint256 maxBorrowable = stakeAndLoan.getAccountMaxBorrowableValue(user);
+        
+        vm.expectRevert("Borrow amount exceeds collateralization ratio");
+        stakeAndLoan.borrow(maxBorrowable + 1);
+        vm.stopPrank();
+    }
+
+    /**
+     * @dev Tests the ability to get loan details.
+     */
+    function testGetLoanDetails() public {
+        vm.startPrank(user);
+        collateralToken.approve(address(stakeAndLoan), 1 ether);
+        stakeAndLoan.stake(1 ether);
+        stakeAndLoan.borrow(100 ether);
+        (uint256 p, uint256 r, uint256 t) = stakeAndLoan.getLoanDetails(user);
+        assertEq(p, 100 ether);
+        assertEq(r, 500);
+        assertTrue(t > 0);
+        vm.stopPrank();
+    }
+
+    /**
+     * @dev Tests the owner's ability to change the collateral price.
+     */
+    function testSetCollateralPrice() public {
+        stakeAndLoan.setCollateralPrice(2500);
+        assertEq(stakeAndLoan.collateralPrice(), 2500);
+    }
+    
+    /**
+     * @dev Tests the owner's ability to change the collateralization ratio.
+     */
+    function testSetCollateralizationRatio() public {
+        stakeAndLoan.setCollateralizationRatio(8000);
+        assertEq(stakeAndLoan.collateralizationRatio(), 8000);
+    }
