@@ -180,3 +180,4 @@ contract StakeAndLoanTest is Test {
     /**
      * @dev Tests getting the collateral value.
      */
+        function testGetCollateralValue() public {
