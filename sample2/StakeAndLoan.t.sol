@@ -176,3 +176,7 @@ contract StakeAndLoanTest is Test {
         stakeAndLoan.setCollateralizationRatio(8000);
         assertEq(stakeAndLoan.collateralizationRatio(), 8000);
     }
+
+    /**
+     * @dev Tests getting the collateral value.
+     */
