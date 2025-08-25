@@ -92,3 +92,8 @@ contract StakeAndLoanTest is Test {
      * @dev Tests unstaking functionality.
      */
     function testUnstake() public {
+        // Stake, borrow, and repay
+        vm.startPrank(user);
+        collateralToken.approve(address(stakeAndLoan), 10 ether);
+        stakeAndLoan.stake(10 ether);
+        stakeAndLoan.borrow(1000 ether);
