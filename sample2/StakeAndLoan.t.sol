@@ -80,3 +80,4 @@ contract StakeAndLoanTest is Test {
         uint256 totalOwed = stakeAndLoan.getLoanValue(user);
         loanToken.mint(user, totalOwed); // Mint enough to repay
         loanToken.approve(address(stakeAndLoan), totalOwed);
+
