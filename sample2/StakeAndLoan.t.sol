@@ -67,3 +67,6 @@ contract StakeAndLoanTest is Test {
     /**
      * @dev Tests loan repayment functionality.
      */
+    function testRepay() public {
+        // Stake and borrow
+        vm.startPrank(user);
