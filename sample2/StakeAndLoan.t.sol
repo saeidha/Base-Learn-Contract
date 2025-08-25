@@ -13,3 +13,8 @@ contract MockERC20 is ERC20 {
         _mint(to, amount);
     }
 }
+
+contract StakeAndLoanTest is Test {
+    StakeAndLoan public stakeAndLoan;
+    MockERC20 public collateralToken;
+    MockERC20 public loanToken;
