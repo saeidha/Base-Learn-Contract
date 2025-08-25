@@ -102,3 +102,10 @@ contract StakeAndLoanTest is Test {
         loanToken.mint(user, totalOwed);
         loanToken.approve(address(stakeAndLoan), totalOwed);
         stakeAndLoan.repay();
+
+        // Unstake
+        stakeAndLoan.unstake(10 ether);
+        assertEq(stakeAndLoan.getUserStakedBalance(user), 0);
+        assertEq(collateralToken.balanceOf(user), 100 ether); // Back to original balance
+        vm.stopPrank();
+    }
