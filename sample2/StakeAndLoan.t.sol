@@ -27,3 +27,33 @@ contract StakeAndLoanTest is Test {
      */
     function setUp() public {
         collateralToken = new MockERC20("Collateral", "COL");
+        loanToken = new MockERC20("Loan Token", "LOAN");
+        stakeAndLoan = new StakeAndLoan(address(collateralToken), address(loanToken));
+        // Mint tokens for the user and the contract (to be loaned out)
+        collateralToken.mint(user, 100 ether);
+        loanToken.mint(address(stakeAndLoan), 50000 ether);
+    }
+
+    /**
+     * @dev Tests staking functionality.
+     */
+    function testStake() public {
+        vm.startPrank(user);
+        collateralToken.approve(address(stakeAndLoan), 10 ether);
+        stakeAndLoan.stake(10 ether);
+        assertEq(stakeAndLoan.getUserStakedBalance(user), 10 ether);
+        vm.stopPrank();
+    }
+
+    /**
+     * @dev Tests borrowing functionality.
+     */
+    function testBorrow() public {
+        vm.startPrank(user);
+        collateralToken.approve(address(stakeAndLoan), 20 ether);
+        stakeAndLoan.stake(20 ether);
+        stakeAndLoan.borrow(100 ether);
+        assertEq(stakeAndLoan.getUserLoanBalance(user), 100 ether);
+        assertEq(loanToken.balanceOf(user), 100 ether);
+        vm.stopPrank();
+    }
