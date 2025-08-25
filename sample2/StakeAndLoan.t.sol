@@ -87,3 +87,8 @@ contract StakeAndLoanTest is Test {
         assertEq(loanToken.balanceOf(user), 0);
         vm.stopPrank();
     }
+
+      /**
+     * @dev Tests unstaking functionality.
+     */
+    function testUnstake() public {
