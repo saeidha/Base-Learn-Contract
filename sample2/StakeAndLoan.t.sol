@@ -63,3 +63,7 @@ contract StakeAndLoanTest is Test {
         assertEq(principal, maxBorrowable);
         vm.stopPrank();
     }
+
+    /**
+     * @dev Tests loan repayment functionality.
+     */
