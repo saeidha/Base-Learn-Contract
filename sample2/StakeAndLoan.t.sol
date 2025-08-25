@@ -28,7 +28,10 @@ contract StakeAndLoanTest is Test {
     function setUp() public {
         collateralToken = new MockERC20("Collateral", "COL");
         loanToken = new MockERC20("Loan Token", "LOAN");
-        stakeAndLoan = new StakeAndLoan(address(collateralToken), address(loanToken));
+        stakeAndLoan = new StakeAndLoan(
+            address(collateralToken),
+            address(loanToken)
+        );
         // Mint tokens for the user and the contract (to be loaned out)
         collateralToken.mint(user, 100 ether);
         loanToken.mint(address(stakeAndLoan), 50000 ether);
@@ -57,7 +60,7 @@ contract StakeAndLoanTest is Test {
         // Now, borrow against it
         uint256 maxBorrowable = stakeAndLoan.getAccountMaxBorrowableValue(user);
         stakeAndLoan.borrow(maxBorrowable);
-        
+
         assertEq(loanToken.balanceOf(user), maxBorrowable);
         (uint256 principal, , ) = stakeAndLoan.getLoanDetails(user);
         assertEq(principal, maxBorrowable);
@@ -88,7 +91,7 @@ contract StakeAndLoanTest is Test {
         vm.stopPrank();
     }
 
-      /**
+    /**
      * @dev Tests unstaking functionality.
      */
     function testUnstake() public {
@@ -109,7 +112,7 @@ contract StakeAndLoanTest is Test {
         assertEq(collateralToken.balanceOf(user), 100 ether); // Back to original balance
         vm.stopPrank();
     }
-    
+
     /**
      * @dev Tests liquidation of an undercollateralized position.
      */
@@ -132,15 +135,16 @@ contract StakeAndLoanTest is Test {
         assertEq(stakeAndLoan.getUserStakedBalance(user), 0);
         vm.stopPrank();
     }
-/**
+
+    /**
      * @dev Tests that a user cannot borrow more than the collateralization ratio allows.
      */
-        function testFailBorrowExceedsRatio() public {
-            vm.startPrank(user);
+    function testFailBorrowExceedsRatio() public {
+        vm.startPrank(user);
         collateralToken.approve(address(stakeAndLoan), 10 ether);
         stakeAndLoan.stake(10 ether);
         uint256 maxBorrowable = stakeAndLoan.getAccountMaxBorrowableValue(user);
-        
+
         vm.expectRevert("Borrow amount exceeds collateralization ratio");
         stakeAndLoan.borrow(maxBorrowable + 1);
         vm.stopPrank();
@@ -168,7 +172,7 @@ contract StakeAndLoanTest is Test {
         stakeAndLoan.setCollateralPrice(2500);
         assertEq(stakeAndLoan.collateralPrice(), 2500);
     }
-    
+
     /**
      * @dev Tests the owner's ability to change the collateralization ratio.
      */
@@ -180,7 +184,9 @@ contract StakeAndLoanTest is Test {
     /**
      * @dev Tests getting the collateral value.
      */
-        function testGetCollateralValue() public {
-                    uint256 value = stakeAndLoan.getCollateralValue(1 ether);
-                            // 1 ether * 2000 / 1e18 = 2000
-                                    assertEq(value, 2000);
+    function testGetCollateralValue() public {
+        uint256 value = stakeAndLoan.getCollateralValue(1 ether);
+        // 1 ether * 2000 / 1e18 = 2000
+        assertEq(value, 2000);
+    }
+}
