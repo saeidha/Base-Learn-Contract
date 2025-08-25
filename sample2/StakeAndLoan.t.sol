@@ -18,3 +18,6 @@ contract StakeAndLoanTest is Test {
     StakeAndLoan public stakeAndLoan;
     MockERC20 public collateralToken;
     MockERC20 public loanToken;
+
+    address public user = address(1);
+    address public liquidator = address(2);
