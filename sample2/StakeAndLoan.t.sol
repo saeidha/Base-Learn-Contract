@@ -22,7 +22,7 @@ contract StakeAndLoanTest is Test {
     address public user = address(1);
     address public liquidator = address(2);
 
-/**
+    /**
      * @dev Sets up the test environment.
      */
     function setUp() public {
