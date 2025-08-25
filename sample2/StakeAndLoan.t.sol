@@ -57,7 +57,7 @@ contract StakeAndLoanTest is Test {
         // Now, borrow against it
         uint256 maxBorrowable = stakeAndLoan.getAccountMaxBorrowableValue(user);
         stakeAndLoan.borrow(maxBorrowable);
-
+        
         assertEq(loanToken.balanceOf(user), maxBorrowable);
         (uint256 principal, , ) = stakeAndLoan.getLoanDetails(user);
         assertEq(principal, maxBorrowable);
@@ -81,3 +81,4 @@ contract StakeAndLoanTest is Test {
         loanToken.mint(user, totalOwed); // Mint enough to repay
         loanToken.approve(address(stakeAndLoan), totalOwed);
 
+        stakeAndLoan.repay();
