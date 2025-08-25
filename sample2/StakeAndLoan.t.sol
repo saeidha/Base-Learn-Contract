@@ -73,3 +73,6 @@ contract StakeAndLoanTest is Test {
         collateralToken.approve(address(stakeAndLoan), 10 ether);
         stakeAndLoan.stake(10 ether);
         stakeAndLoan.borrow(1000 ether);
+
+        // Advance time to accrue interest
+        vm.warp(block.timestamp + 365 days);
