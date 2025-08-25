@@ -182,3 +182,4 @@ contract StakeAndLoanTest is Test {
      */
         function testGetCollateralValue() public {
                     uint256 value = stakeAndLoan.getCollateralValue(1 ether);
+                            // 1 ether * 2000 / 1e18 = 2000
