@@ -158,3 +158,6 @@ contract YieldFarm is Ownable, ReentrancyGuard {
      * @param _user The address of the user.
      * @return A StakeInfo struct.
      */
+    function getStakeInfo(address _user) public view returns (StakeInfo memory) {
+        return stakes[_user];
+    }
