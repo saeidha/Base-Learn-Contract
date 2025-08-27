@@ -152,3 +152,9 @@ contract YieldFarm is Ownable, ReentrancyGuard {
     function isLockupActive(address _user) public view returns (bool) {
         return block.timestamp < stakes[_user].lockupEndTime;
     }
+
+    /**
+     * @dev Returns the full staking information for a user.
+     * @param _user The address of the user.
+     * @return A StakeInfo struct.
+     */
