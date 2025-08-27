@@ -186,3 +186,7 @@ contract YieldFarm is Ownable, ReentrancyGuard {
      * @param _tier The lockup tier to modify.
      * @param _rate The new APY in basis points.
      */
+    function setRewardRate(LockupTier _tier, uint256 _rate) public onlyOwner {
+        rewardRates[_tier] = _rate;
+        emit RewardRateSet(_tier, _rate);
+    }
