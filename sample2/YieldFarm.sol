@@ -132,3 +132,8 @@ contract YieldFarm is Ownable, ReentrancyGuard {
      * @param _user The address of the user.
      * @return The amount of rewardToken owed.
      */
+    function calculateRewards(address _user) public view returns (uint256) {
+        StakeInfo memory userStake = stakes[_user];
+        if (userStake.amount == 0) {
+            return 0;
+        }
