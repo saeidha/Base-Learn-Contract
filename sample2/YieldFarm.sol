@@ -89,3 +89,4 @@ contract YieldFarm is Ownable, ReentrancyGuard {
         require(stakingToken.transferFrom(msg.sender, address(this), _amount), "Transfer failed");
         emit Staked(msg.sender, _amount, _tier);
     }
+
