@@ -33,4 +33,4 @@ contract YieldFarm is Ownable, ReentrancyGuard {
         uint256 lockupEndTime;
     }
 
-        mapping(address => StakeInfo) public stakes;
+    mapping(address => StakeInfo) public stakes;
