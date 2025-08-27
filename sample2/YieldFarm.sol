@@ -44,3 +44,10 @@ contract YieldFarm is Ownable, ReentrancyGuard {
     event Unstaked(address indexed user, uint256 amount);
     event RewardsClaimed(address indexed user, uint256 amount);
     event RewardRateSet(LockupTier tier, uint256 rate);
+
+// --- Constructor ---
+
+    constructor(address _stakingTokenAddress, address _rewardTokenAddress) Ownable(msg.sender) {
+        stakingToken = IERC20(_stakingTokenAddress);
+        rewardToken = IERC20(_rewardTokenAddress);
+    }
