@@ -90,3 +90,12 @@ contract YieldFarm is Ownable, ReentrancyGuard {
         emit Staked(msg.sender, _amount, _tier);
     }
 
+    /**
+     * @dev Unstakes tokens and claims any pending rewards.
+     * @param _amount The amount to unstake.
+     */
+    function unstake(uint256 _amount) public nonReentrant {
+        StakeInfo storage userStake = stakes[msg.sender];
+        require(userStake.amount >= _amount, "Insufficient staked amount");
+        require(isLockupActive(msg.sender) == false, "Lockup period is still active");
+        
