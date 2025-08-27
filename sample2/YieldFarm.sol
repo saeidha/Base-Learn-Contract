@@ -149,3 +149,6 @@ contract YieldFarm is Ownable, ReentrancyGuard {
      * @param _user The address of the user.
      * @return True if the lockup is active, false otherwise.
      */
+    function isLockupActive(address _user) public view returns (bool) {
+        return block.timestamp < stakes[_user].lockupEndTime;
+    }
