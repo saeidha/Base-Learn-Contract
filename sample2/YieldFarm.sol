@@ -169,3 +169,9 @@ contract YieldFarm is Ownable, ReentrancyGuard {
     function getTotalStaked() public view returns (uint256) {
         return totalStaked;
     }
+
+    /**
+     * @dev Returns the reward rate for a given tier.
+     * @param _tier The lockup tier.
+     * @return The reward rate in basis points.
+     */
