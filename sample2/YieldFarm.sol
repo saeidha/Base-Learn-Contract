@@ -53,3 +53,9 @@ contract YieldFarm is Ownable, ReentrancyGuard {
     }
 
     // --- Core Staking Functions ---
+
+/**
+     * @dev Stakes tokens. If user already has a stake, it adds to it.
+     * @param _amount The amount of stakingToken to stake.
+     * @param _tier The lockup tier to use for the stake.
+     */
