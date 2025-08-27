@@ -10,3 +10,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
  * @dev A contract for staking tokens to earn rewards with optional time-locks for higher APY.
  */
 contract YieldFarm is Ownable, ReentrancyGuard {
+        // --- State Variables ---
+
+    IERC20 public immutable stakingToken;
+    IERC20 public immutable rewardToken;
