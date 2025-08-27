@@ -190,3 +190,9 @@ contract YieldFarm is Ownable, ReentrancyGuard {
         rewardRates[_tier] = _rate;
         emit RewardRateSet(_tier, _rate);
     }
+
+
+/**
+     * @dev Adds more reward tokens to the contract to be distributed.
+     * @param _amount The amount of rewardToken to add.
+     */
