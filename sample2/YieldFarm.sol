@@ -125,3 +125,10 @@ contract YieldFarm is Ownable, ReentrancyGuard {
         rewardToken.transfer(msg.sender, pending);
         emit RewardsClaimed(msg.sender, pending);
     }
+    // --- View Functions ---
+
+    /**
+     * @dev Calculates pending rewards for a user.
+     * @param _user The address of the user.
+     * @return The amount of rewardToken owed.
+     */
