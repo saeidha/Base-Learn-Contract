@@ -137,3 +137,9 @@ contract YieldFarm is Ownable, ReentrancyGuard {
         if (userStake.amount == 0) {
             return 0;
         }
+        uint256 rate = rewardRates[userStake.lockupTier];
+        uint256 timeElapsed = block.timestamp - userStake.since;
+        
+        // Formula: (amount * APY * time) / (basis_points * seconds_in_year)
+        return (userStake.amount * rate * timeElapsed) / (10000 * 365 days);
+    }
