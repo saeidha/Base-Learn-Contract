@@ -200,4 +200,4 @@ contract YieldFarm is Ownable, ReentrancyGuard {
         require(_amount > 0, "Amount must be positive");
         require(rewardToken.transferFrom(msg.sender, address(this), _amount), "Transfer failed");
     }
-                          
+}                      
