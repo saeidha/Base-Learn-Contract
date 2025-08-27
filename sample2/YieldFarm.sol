@@ -161,3 +161,8 @@ contract YieldFarm is Ownable, ReentrancyGuard {
     function getStakeInfo(address _user) public view returns (StakeInfo memory) {
         return stakes[_user];
     }
+
+    /**
+     * @dev Returns the total amount of tokens staked in the contract.
+     * @return The total staked amount.
+     */
