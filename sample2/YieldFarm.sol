@@ -61,7 +61,7 @@ contract YieldFarm is Ownable, ReentrancyGuard {
      */
     function stake(uint256 _amount, LockupTier _tier) public nonReentrant {
         require(_amount > 0, "Cannot stake 0");
-
+        
         StakeInfo storage userStake = stakes[msg.sender];
 
 // If user has an existing stake, claim pending rewards first
@@ -81,3 +81,11 @@ contract YieldFarm is Ownable, ReentrancyGuard {
                 userStake.lockupEndTime = block.timestamp + 90 days;
             }
         }
+
+        userStake.amount += _amount;
+        userStake.since = block.timestamp;
+        totalStaked += _amount;
+
+        require(stakingToken.transferFrom(msg.sender, address(this), _amount), "Transfer failed");
+        emit Staked(msg.sender, _amount, _tier);
+    }
