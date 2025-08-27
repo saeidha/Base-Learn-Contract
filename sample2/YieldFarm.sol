@@ -143,3 +143,5 @@ contract YieldFarm is Ownable, ReentrancyGuard {
         // Formula: (amount * APY * time) / (basis_points * seconds_in_year)
         return (userStake.amount * rate * timeElapsed) / (10000 * 365 days);
     }
+
+    
