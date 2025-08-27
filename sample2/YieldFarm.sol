@@ -59,3 +59,7 @@ contract YieldFarm is Ownable, ReentrancyGuard {
      * @param _amount The amount of stakingToken to stake.
      * @param _tier The lockup tier to use for the stake.
      */
+    function stake(uint256 _amount, LockupTier _tier) public nonReentrant {
+        require(_amount > 0, "Cannot stake 0");
+
+        StakeInfo storage userStake = stakes[msg.sender];
