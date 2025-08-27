@@ -178,3 +178,11 @@ contract YieldFarm is Ownable, ReentrancyGuard {
     function getRewardRateForTier(LockupTier _tier) public view returns (uint256) {
         return rewardRates[_tier];
     }
+
+    // --- Admin Functions ---
+
+    /**
+     * @dev Sets the reward rate for a specific lockup tier.
+     * @param _tier The lockup tier to modify.
+     * @param _rate The new APY in basis points.
+     */
