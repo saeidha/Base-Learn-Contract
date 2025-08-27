@@ -98,9 +98,9 @@ contract YieldFarm is Ownable, ReentrancyGuard {
         StakeInfo storage userStake = stakes[msg.sender];
         require(userStake.amount >= _amount, "Insufficient staked amount");
         require(isLockupActive(msg.sender) == false, "Lockup period is still active");
-
+        
          uint256 pending = calculateRewards(msg.sender);
-
+        
         userStake.amount -= _amount;
         userStake.since = block.timestamp;
         totalStaked -= _amount;
@@ -114,3 +114,6 @@ contract YieldFarm is Ownable, ReentrancyGuard {
         emit Unstaked(msg.sender, _amount);
     }
 
+    /**
+     * @dev Claims pending rewards without unstaking.
+     */
