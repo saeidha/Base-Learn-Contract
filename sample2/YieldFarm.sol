@@ -204,4 +204,4 @@ contract YieldFarm is Ownable, ReentrancyGuard {
     function addRewardTokens(uint256 _amount) public onlyOwner {
         require(_amount > 0, "Amount must be greater than 0");
         require(rewardToken.transferFrom(msg.sender, address(this), _amount), "Transfer failed");
-    }
+    }       
