@@ -37,3 +37,10 @@ contract YieldFarm is Ownable, ReentrancyGuard {
 
     // Mapping from LockupTier to its reward rate (APY in basis points, e.g., 500 = 5%)
     mapping(LockupTier => uint256) public rewardRates;
+
+    // --- Events ---
+
+    event Staked(address indexed user, uint256 amount, LockupTier tier);
+    event Unstaked(address indexed user, uint256 amount);
+    event RewardsClaimed(address indexed user, uint256 amount);
+    event RewardRateSet(LockupTier tier, uint256 rate);
