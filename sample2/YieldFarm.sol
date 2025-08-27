@@ -196,3 +196,4 @@ contract YieldFarm is Ownable, ReentrancyGuard {
      * @dev Adds more reward tokens to the contract to be distributed.
      * @param _amount The amount of rewardToken to add.
      */
+    
