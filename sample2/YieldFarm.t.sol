@@ -100,4 +100,4 @@ contract YieldFarmTest is Test {
      */
         function testCalculateRewards() public {
                     vm.startPrank(user1);
-                    
+        stakingToken.approve(address(yieldFarm), 100 ether);
