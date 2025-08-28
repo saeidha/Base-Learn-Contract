@@ -159,6 +159,6 @@ contract YieldFarmTest is Test {
      */
     function testNonOwnerCannotSetRewardRate() public {
             vm.prank(user1);
-        yieldFarm.setRewardRate(YieldFarm.LockupTier.NinetyDays, 1000); // 10%
-        vm.stopPrank();
+        vm.expectRevert(); // Default revert message for Ownable
+        yieldFarm.setRewardRate(YieldFarm.LockupTier.None, 9999);
     }
