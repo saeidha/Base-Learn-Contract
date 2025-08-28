@@ -125,3 +125,5 @@ contract YieldFarmTest is Test {
         yieldFarm.claimRewards();
         uint256 rewards = yieldFarm.calculateRewards(user1);
         assertEq(rewardToken.balanceOf(user1), initialRewardBalance + rewards);
+        vm.stopPrank();
+    }
