@@ -63,3 +63,4 @@ contract YieldFarmTest is Test {
         yieldFarm.withdraw(100 ether);
 
         uint256 rewardBalance = rewardToken.balanceOf(user1);
+        assertApproxEqAbs(rewardBalance, expectedRewards, 1e15); // Allow
