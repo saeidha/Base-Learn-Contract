@@ -158,7 +158,7 @@ contract YieldFarmTest is Test {
      * @dev Tests that non-owners cannot set reward rates.
      */
     function testNonOwnerCannotSetRewardRate() public {
-            vm.prank(user1);
+        vm.prank(user1);
         vm.expectRevert(); // Default revert message for Ownable
         yieldFarm.setRewardRate(YieldFarm.LockupTier.None, 9999);
     }
