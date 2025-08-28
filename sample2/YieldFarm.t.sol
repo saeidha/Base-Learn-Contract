@@ -155,3 +155,5 @@ contract YieldFarmTest is Test {
         // Fast forward time by 31 days
         vm.warp(block.timestamp + 31 days);
         uint256 initialBalance = stakingToken.balanceOf(user1);
+        yieldFarm.unstake(100 ether);
+        assertEq(stakingToken.balanceOf(user1), initialBalance + 100 ether);
