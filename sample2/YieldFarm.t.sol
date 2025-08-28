@@ -102,4 +102,4 @@ contract YieldFarmTest is Test {
                     vm.startPrank(user1);
         stakingToken.approve(address(yieldFarm), 100 ether);
         yieldFarm.stake(100 ether, YieldFarm.LockupTier.None);
-        
+        // Fast forward time by 365 days
