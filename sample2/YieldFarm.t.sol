@@ -150,3 +150,4 @@ contract YieldFarmTest is Test {
      */
     function testUnstakeAfterLockup() public {
         vm.startPrank(user1);
+        stakingToken.approve(address(yieldFarm), 100 ether);
