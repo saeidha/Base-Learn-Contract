@@ -167,4 +167,4 @@ contract YieldFarmTest is Test {
      * @dev Tests the addRewards functionality.
      */
         function testAddRewards() public {
-            
+        uint256 initialBalance = rewardToken.balanceOf(address(yieldFarm));
