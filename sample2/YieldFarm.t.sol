@@ -34,3 +34,4 @@ contract YieldFarmTest is Test {
         stakingToken.mint(user1, 1000 ether);
         rewardToken.mint(address(yieldFarm), 10000 ether);
         // Approve the yield farm to spend user's staking tokens
+        vm.prank(user1);
