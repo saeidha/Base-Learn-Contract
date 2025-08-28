@@ -83,14 +83,15 @@ contract YieldFarmTest is Test {
      */
     function testUnstakeAfterLockup() public {
         vm.startPrank(user1);
+        vm.startPrank(user1);
         stakingToken.approve(address(yieldFarm), 100 ether);
         yieldFarm.stake(100 ether, YieldFarm.LockupTier.ThirtyDays);
-        
+
         // Fast forward time by 31 days
         vm.warp(block.timestamp + 31 days);
         
-        yieldFarm.unstake(50 ether);
-        YieldFarm.StakeInfo memory info = yieldFarm.getStakeInfo(user1);
-        assertEq(info.amount, 50 ether);
+        uint256 initialBalance = stakingToken.balanceOf(user1);
+        yieldFarm.unstake(100 ether);
+        assertEq(stakingToken.balanceOf(user1), initialBalance + 100 ether);
         vm.stopPrank();
     }
