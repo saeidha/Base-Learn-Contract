@@ -137,3 +137,4 @@ contract YieldFarmTest is Test {
     /**
      * @dev Tests getTotalStaked function.
      */
+    function testGetTotalStaked() public {
