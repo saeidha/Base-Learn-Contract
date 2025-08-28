@@ -25,4 +25,4 @@ contract YieldFarmTest is Test {
  /**
      * @dev Sets up the test environment before each test.
      */
-    
+    function setUp() public {
