@@ -75,3 +75,4 @@ contract YieldFarmTest is Test {
         assertEq(rewardToken.balanceOf(user2), 60e18); // 300
         vm.stopPrank();
     }
+}
