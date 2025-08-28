@@ -70,3 +70,4 @@ contract YieldFarmTest is Test {
      * @dev Tests that unstaking is blocked during the lockup period.
      */
     function testFailUnstakeDuringLockup() public {
+                vm.startPrank(user1);
