@@ -62,3 +62,4 @@ contract YieldFarmTest is Test {
                 stakingToken.approve(address(yieldFarm), 100 ether);
         yieldFarm.stake(100 ether, YieldFarm.LockupTier.ThirtyDays);
         YieldFarm.StakeInfo memory info = yieldFarm.getStakeInfo(user1);
+        assertEq(info.amount, 100 ether);
