@@ -171,3 +171,4 @@ contract YieldFarmTest is Test {
         rewardToken.mint(address(this), 500 ether);
         rewardToken.approve(address(yieldFarm), 500 ether);
         yieldFarm.addRewards(500 ether);
+        uint256 finalBalance = rewardToken.balanceOf(address(yieldFarm));
