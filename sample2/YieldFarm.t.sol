@@ -166,7 +166,7 @@ contract YieldFarmTest is Test {
     /**
      * @dev Tests the addRewards functionality.
      */
-        function testAddRewards() public {
+    function testAddRewards() public {
         uint256 initialBalance = rewardToken.balanceOf(address(yieldFarm));
         rewardToken.mint(address(this), 500 ether);
         rewardToken.approve(address(yieldFarm), 500 ether);
