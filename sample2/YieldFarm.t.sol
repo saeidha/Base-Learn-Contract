@@ -21,3 +21,7 @@ contract YieldFarmTest is Test {
     
     uint256 constant APY_NONE = 500; // 5%
     uint256 constant APY_30_DAYS = 750; // 7.5%
+
+ /**
+     * @dev Sets up the test environment before each test.
+     */
