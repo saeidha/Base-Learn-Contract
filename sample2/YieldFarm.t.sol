@@ -16,6 +16,8 @@ contract YieldFarmTest is Test {
    YieldFarm public yieldFarm;
     MockERC20 public stakingToken;
     MockERC20 public rewardToken;
-    address public user1 = address(0x1);
-    address public user2 = address(0x2);
+     address public owner;
+    address public user1 = address(1);
     
+    uint256 constant APY_NONE = 500; // 5%
+    uint256 constant APY_30_DAYS = 750; // 7.5%
