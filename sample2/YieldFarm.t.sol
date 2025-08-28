@@ -53,14 +53,4 @@ contract YieldFarmTest is Test {
         assertEq(uint(info.lockupTier), uint(YieldFarm.LockupTier.None));
         vm.stopPrank();
     }
-        // Fast forward time by 30 days
-        vm.warp(block.timestamp + 30 days);
-
-        // Calculate expected rewards: 100 * 5% * (30/365) = ~0.4109589 tokens
-        uint256 expectedRewards = (100 ether * APY_NONE / 10000) * 30 / 365;
-
-        // Withdraw stake and rewards
-        yieldFarm.withdraw(100 ether);
-
-        uint256 rewardBalance = rewardToken.balanceOf(user1);
-        assertApproxEqAbs(rewardBalance, expectedRewards, 1e15); // Allow
+    
