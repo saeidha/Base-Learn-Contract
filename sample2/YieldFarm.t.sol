@@ -173,3 +173,4 @@ contract YieldFarmTest is Test {
         yieldFarm.addRewards(500 ether);
         uint256 finalBalance = rewardToken.balanceOf(address(yieldFarm));
         assertEq(finalBalance, initialBalance + 500 ether);
+        vm.stopPrank();
