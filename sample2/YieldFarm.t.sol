@@ -122,3 +122,4 @@ contract YieldFarmTest is Test {
         // Fast forward time by 1 year
         vm.warp(block.timestamp + 365 days);
         uint256 initialRewardBalance = rewardToken.balanceOf(user1);
+        yieldFarm.claimRewards();
