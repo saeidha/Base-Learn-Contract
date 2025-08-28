@@ -157,4 +157,8 @@ contract YieldFarmTest is Test {
     /**
      * @dev Tests that non-owners cannot set reward rates.
      */
-    
+    function testFailNonOwnerCannotSetRewardRate() public {
+        vm.startPrank(user1);
+        yieldFarm.setRewardRate(YieldFarm.LockupTier.NinetyDays, 1000); // 10%
+        vm.stopPrank();
+    }
