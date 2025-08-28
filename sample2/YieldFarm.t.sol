@@ -65,3 +65,4 @@ contract YieldFarmTest is Test {
         assertEq(info.amount, 100 ether);
         assertEq(uint(info.lockupTier), uint(YieldFarm.LockupTier.ThirtyDays));
         vm.stopPrank();
+    }
