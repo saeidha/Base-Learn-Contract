@@ -133,3 +133,7 @@ contract YieldFarmTest is Test {
         assertEq(yieldFarm.calculateRewards(user1), 0);
         vm.stopPrank();
     }
+
+    /**
+     * @dev Tests getTotalStaked function.
+     */
