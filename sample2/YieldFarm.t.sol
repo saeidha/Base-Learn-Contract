@@ -74,3 +74,4 @@ contract YieldFarmTest is Test {
         stakingToken.approve(address(yieldFarm), 100 ether);
         yieldFarm.stake(100 ether, YieldFarm.LockupTier.ThirtyDays);
         yieldFarm.unstake(50 ether); // Should fail due to active lockup
+        vm.stopPrank();
