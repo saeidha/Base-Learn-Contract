@@ -98,14 +98,16 @@ contract YieldFarmTest is Test {
     /**
      * @dev Tests the reward calculation logic.
      */
-        function testCalculateRewards() public {
-                    vm.startPrank(user1);
+    function testCalculateRewards() public {
+        vm.startPrank(user1);
         stakingToken.approve(address(yieldFarm), 100 ether);
         yieldFarm.stake(100 ether, YieldFarm.LockupTier.None);
-        // Fast forward time by 365 days
+        
+        // Fast forward time by 1 year
         vm.warp(block.timestamp + 365 days);
+        
         uint256 rewards = yieldFarm.calculateRewards(user1);
-        // For 5% APY on 100 ether, rewards should be approximately 5 ether
-        assertApproxEqAbs(rewards, 5 ether, 0.1 ether);
+        // Expected rewards: 100 * 5% = 5 ether
+        assertApproxEqAbs(rewards, 5 ether, 1e15); // Allow for small timestamp deviation
         vm.stopPrank();
     }
