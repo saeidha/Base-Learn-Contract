@@ -162,3 +162,7 @@ contract YieldFarmTest is Test {
         vm.expectRevert(); // Default revert message for Ownable
         yieldFarm.setRewardRate(YieldFarm.LockupTier.None, 9999);
     }
+
+    /**
+     * @dev Tests the addRewards functionality.
+     */
