@@ -29,4 +29,5 @@ contract YieldFarmTest is Test {
         owner = address(this);
         stakingToken = new MockERC20("Staking Token", "STK");
         rewardToken = new MockERC20("Reward Token", "RWD");
-        yieldFarm = new YieldFarm(address(stakingToken), address(rewardToken), APY
+        yieldFarm = new YieldFarm(address(stakingToken), address(rewardToken), APY_NONE, APY_30_DAYS);
+        // Mint some tokens for testing
