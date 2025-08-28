@@ -145,4 +145,6 @@ contract YieldFarmTest is Test {
         
         assertEq(yieldFarm.getTotalStaked(), 50 ether);
     }
-    
+    /**
+     * @dev Tests successful unstaking after the lockup period has ended.
+     */
