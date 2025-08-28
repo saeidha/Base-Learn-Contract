@@ -94,3 +94,7 @@ contract YieldFarmTest is Test {
         assertEq(stakingToken.balanceOf(user1), initialBalance + 100 ether);
         vm.stopPrank();
     }
+
+    /**
+     * @dev Tests the reward calculation logic.
+     */
