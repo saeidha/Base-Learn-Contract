@@ -157,3 +157,4 @@ contract YieldFarmTest is Test {
         uint256 initialBalance = stakingToken.balanceOf(user1);
         yieldFarm.unstake(100 ether);
         assertEq(stakingToken.balanceOf(user1), initialBalance + 100 ether);
+        vm.stopPrank();
