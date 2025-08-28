@@ -18,3 +18,4 @@ contract YieldFarmTest is Test {
     MockERC20 public rewardToken;
     address public user1 = address(0x1);
     address public user2 = address(0x2);
+    
