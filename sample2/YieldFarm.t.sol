@@ -123,3 +123,4 @@ contract YieldFarmTest is Test {
         vm.warp(block.timestamp + 365 days);
         uint256 initialRewardBalance = rewardToken.balanceOf(user1);
         yieldFarm.claimRewards();
+        uint256 rewards = yieldFarm.calculateRewards(user1);
