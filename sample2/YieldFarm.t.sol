@@ -177,4 +177,4 @@ contract YieldFarmTest is Test {
 
         assertEq(finalBalance, initialBalance + amountToAdd);
     }
-    
+}
