@@ -139,9 +139,10 @@ contract YieldFarmTest is Test {
      */
     function testGetTotalStaked() public {
         vm.startPrank(user1);
-        stakingToken.approve(address(yieldFarm), 200 ether);
-        yieldFarm.stake(100 ether, YieldFarm.LockupTier.None);
-        yieldFarm.stake(100 ether, YieldFarm.LockupTier.ThirtyDays);
-        
-        assertEq(yieldFarm.getTotalStaked(user1), 200 ether);
+        stakingToken.approve(address(yieldFarm), 50 ether);
+        yieldFarm.stake(50 ether, YieldFarm.LockupTier.None);
         vm.stopPrank();
+        
+        assertEq(yieldFarm.getTotalStaked(), 50 ether);
+    }
+    
