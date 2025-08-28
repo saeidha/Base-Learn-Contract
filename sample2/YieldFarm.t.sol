@@ -65,3 +65,7 @@ contract YieldFarmTest is Test {
         assertTrue(yieldFarm.isLockupActive(user1));
         vm.stopPrank();
     }
+
+    /**
+     * @dev Tests that unstaking is blocked during the lockup period.
+     */
