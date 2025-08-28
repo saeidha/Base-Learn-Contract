@@ -54,3 +54,6 @@ contract YieldFarmTest is Test {
         vm.stopPrank();
     }
     
+    /**
+     * @dev Tests staking with a 30-day lockup.
+     */
