@@ -99,3 +99,4 @@ contract YieldFarmTest is Test {
      * @dev Tests the reward calculation logic.
      */
         function testCalculateRewards() public {
+                    vm.startPrank(user1);
