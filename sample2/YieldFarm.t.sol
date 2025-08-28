@@ -145,6 +145,7 @@ contract YieldFarmTest is Test {
         
         assertEq(yieldFarm.getTotalStaked(), 50 ether);
     }
+    
     /**
      * @dev Tests owner's ability to set reward rates.
      */
