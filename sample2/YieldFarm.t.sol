@@ -43,3 +43,4 @@ contract YieldFarmTest is Test {
     /**
      * @dev Tests staking with no lockup.
      */
+    function testStakeNoLockup() public {
