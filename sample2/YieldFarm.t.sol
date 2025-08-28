@@ -138,3 +138,5 @@ contract YieldFarmTest is Test {
      * @dev Tests getTotalStaked function.
      */
     function testGetTotalStaked() public {
+        vm.startPrank(user1);
+        
