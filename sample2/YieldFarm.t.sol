@@ -40,6 +40,6 @@ contract YieldFarmTest is Test {
         rewardToken.mint(address(yieldFarm), 10000 ether);
     }
 
-/**
+    /**
      * @dev Tests staking with no lockup.
      */
