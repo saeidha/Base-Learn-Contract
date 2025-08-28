@@ -31,3 +31,4 @@ contract YieldFarmTest is Test {
         rewardToken = new MockERC20("Reward Token", "RWD");
         yieldFarm = new YieldFarm(address(stakingToken), address(rewardToken), APY_NONE, APY_30_DAYS);
         // Mint some tokens for testing
+        stakingToken.mint(user1, 1000 ether);
