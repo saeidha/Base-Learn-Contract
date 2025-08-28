@@ -116,7 +116,6 @@ contract YieldFarmTest is Test {
      * @dev Tests the claimRewards function.
      */
     function testClaimRewards() public {
-                vm.startPrank(user1);
         vm.startPrank(user1);
         stakingToken.approve(address(yieldFarm), 100 ether);
         yieldFarm.stake(100 ether, YieldFarm.LockupTier.None);
