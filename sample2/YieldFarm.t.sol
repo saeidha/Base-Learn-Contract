@@ -117,13 +117,20 @@ contract YieldFarmTest is Test {
      */
     function testClaimRewards() public {
                 vm.startPrank(user1);
+        vm.startPrank(user1);
         stakingToken.approve(address(yieldFarm), 100 ether);
         yieldFarm.stake(100 ether, YieldFarm.LockupTier.None);
-        // Fast forward time by 1 year
+        
         vm.warp(block.timestamp + 365 days);
+        
         uint256 initialRewardBalance = rewardToken.balanceOf(user1);
         yieldFarm.claimRewards();
-        uint256 rewards = yieldFarm.calculateRewards(user1);
-        assertEq(rewardToken.balanceOf(user1), initialRewardBalance + rewards);
+        
+        uint256 finalRewardBalance = rewardToken.balanceOf(user1);
+        assertTrue(finalRewardBalance > initialRewardBalance);
+        assertApproxEqAbs(finalRewardBalance - initialRewardBalance, 5 ether, 1e15);
+
+        // Check that subsequent rewards are 0 right after claiming
+        assertEq(yieldFarm.calculateRewards(user1), 0);
         vm.stopPrank();
     }
