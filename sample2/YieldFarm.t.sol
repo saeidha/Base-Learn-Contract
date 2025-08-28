@@ -153,4 +153,8 @@ contract YieldFarmTest is Test {
         yieldFarm.setRewardRate(YieldFarm.LockupTier.NinetyDays, 1000); // 10%
         assertEq(yieldFarm.getRewardRateForTier(YieldFarm.LockupTier.NinetyDays), 1000);
     }
+
+    /**
+     * @dev Tests that non-owners cannot set reward rates.
+     */
     
