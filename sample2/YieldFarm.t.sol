@@ -145,7 +145,7 @@ contract YieldFarmTest is Test {
         
         assertEq(yieldFarm.getTotalStaked(), 50 ether);
     }
-    
+
     /**
      * @dev Tests owner's ability to set reward rates.
      */
@@ -153,3 +153,4 @@ contract YieldFarmTest is Test {
         yieldFarm.setRewardRate(YieldFarm.LockupTier.NinetyDays, 1000); // 10%
         assertEq(yieldFarm.getRewardRateForTier(YieldFarm.LockupTier.NinetyDays), 1000);
     }
+    
