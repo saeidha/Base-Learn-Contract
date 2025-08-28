@@ -28,3 +28,4 @@ contract YieldFarmTest is Test {
     function setUp() public {
         owner = address(this);
         stakingToken = new MockERC20("Staking Token", "STK");
+        rewardToken = new MockERC20("Reward Token", "RWD");
