@@ -72,3 +72,4 @@ contract YieldFarmTest is Test {
     function testFailUnstakeDuringLockup() public {
         vm.startPrank(user1);
         stakingToken.approve(address(yieldFarm), 100 ether);
+        yieldFarm.stake(100 ether, YieldFarm.LockupTier.ThirtyDays);
