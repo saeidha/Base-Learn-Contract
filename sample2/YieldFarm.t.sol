@@ -72,3 +72,4 @@ contract YieldFarmTest is Test {
         vm.stopPrank(); 
         vm.startPrank(user2);
         yieldFarm.claimRewards();
+        
