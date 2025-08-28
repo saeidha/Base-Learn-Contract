@@ -167,3 +167,4 @@ contract YieldFarmTest is Test {
      * @dev Tests the addRewards functionality.
      */
         function testAddRewards() public {
+            
