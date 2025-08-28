@@ -29,11 +29,13 @@ contract YieldFarmTest is Test {
         owner = address(this);
         stakingToken = new MockERC20("Staking Token", "STK");
         rewardToken = new MockERC20("Reward Token", "RWD");
-        yieldFarm = new YieldFarm(address(stakingToken), address(rewardToken), APY_NONE, APY_30_DAYS);
-        // Mint some tokens for testing
+        yieldFarm = new YieldFarm(address(stakingToken), address(rewardToken));
+
+        // Set up reward rates
+        yieldFarm.setRewardRate(YieldFarm.LockupTier.None, APY_NONE);
+        yieldFarm.setRewardRate(YieldFarm.LockupTier.ThirtyDays, APY_30_DAYS);
+
+        // Fund user and the farm contract
         stakingToken.mint(user1, 1000 ether);
         rewardToken.mint(address(yieldFarm), 10000 ether);
-        // Approve the yield farm to spend user's staking tokens
-        vm.prank(user1);
-        stakingToken.approve(address(yieldFarm), type(uint256).max);
     }
