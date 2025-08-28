@@ -63,4 +63,5 @@ contract YieldFarmTest is Test {
         yieldFarm.stake(100 ether, YieldFarm.LockupTier.ThirtyDays);
         YieldFarm.StakeInfo memory info = yieldFarm.getStakeInfo(user1);
         assertEq(info.amount, 100 ether);
-        assertEq(uint(info.lockupTier), uint(YieldFarm.LockupTier.ThirtyDays
+        assertEq(uint(info.lockupTier), uint(YieldFarm.LockupTier.ThirtyDays));
+        vm.stopPrank();
