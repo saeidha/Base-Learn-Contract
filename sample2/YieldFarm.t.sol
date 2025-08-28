@@ -77,3 +77,7 @@ contract YieldFarmTest is Test {
         yieldFarm.unstake(50 ether);
         vm.stopPrank();
     }
+
+    /**
+     * @dev Tests successful unstaking after the lockup period has ended.
+     */
