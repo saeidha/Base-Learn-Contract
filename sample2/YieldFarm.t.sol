@@ -105,4 +105,5 @@ contract YieldFarmTest is Test {
         // Fast forward time by 365 days
         vm.warp(block.timestamp + 365 days);
         uint256 rewards = yieldFarm.calculateRewards(user1);
-        // For 5% APY on 100 ether, rewards should be approximately 5
+        // For 5% APY on 100 ether, rewards should be approximately 5 ether
+        assertApproxEqAbs(rewards, 5 ether, 0.1 ether);
