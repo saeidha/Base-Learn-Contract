@@ -121,3 +121,4 @@ contract YieldFarmTest is Test {
         yieldFarm.stake(100 ether, YieldFarm.LockupTier.None);
         // Fast forward time by 1 year
         vm.warp(block.timestamp + 365 days);
+        uint256 initialRewardBalance = rewardToken.balanceOf(user1);
