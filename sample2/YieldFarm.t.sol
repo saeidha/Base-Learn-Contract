@@ -13,7 +13,7 @@ contract MockERC20 is ERC20 {
 }
 
 contract YieldFarmTest is Test {
-   YieldFarm public yieldFarm;
+    YieldFarm public yieldFarm;
     MockERC20 public stakingToken;
     MockERC20 public rewardToken;
      address public owner;
