@@ -66,4 +66,5 @@ contract YieldFarmTest is Test {
 
         vm.warp(block.timestamp + 100); // Advance time by 100 seconds
 
-        vm
+        vm.startPrank(user1);
+        yieldFarm.claimRewards();
