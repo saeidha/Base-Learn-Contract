@@ -108,3 +108,4 @@ contract YieldFarmTest is Test {
         // For 5% APY on 100 ether, rewards should be approximately 5 ether
         assertApproxEqAbs(rewards, 5 ether, 0.1 ether);
         vm.stopPrank();
+    }
