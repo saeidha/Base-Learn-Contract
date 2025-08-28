@@ -168,3 +168,4 @@ contract YieldFarmTest is Test {
      */
         function testAddRewards() public {
         uint256 initialBalance = rewardToken.balanceOf(address(yieldFarm));
+        rewardToken.mint(address(this), 500 ether);
