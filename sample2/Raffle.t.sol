@@ -90,3 +90,5 @@ contract RaffleTest is Test {
                            checkUpkeep
     //////////////////////////////////////////////////////////////*/
     function testCheckUpkeepReturnsFalseIfNoOneSentEth() public {
+        // Arrange
+        vm.warp(block.timestamp + interval + 1);
