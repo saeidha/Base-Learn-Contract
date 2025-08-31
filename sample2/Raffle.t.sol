@@ -196,3 +196,4 @@ contract RaffleTest is Test {
         uint256 startingBalance = expectedWinner.balance;
 
         // Expect the WinnerPicked event
+        vm.expectEmit(true, true, true, true, address(raffle));
