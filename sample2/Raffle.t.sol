@@ -101,3 +101,4 @@ contract RaffleTest is Test {
         assert(!upkeepNeeded);
     }
 
+    function testCheckUpkeepReturnsFalseIfRaffleIsntOpen() public {
