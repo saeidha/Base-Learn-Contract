@@ -16,3 +16,4 @@ contract RaffleTest is Test {
     address vrfCoordinator;
     bytes32 gasLane;
     uint64 subscriptionId;
+    uint32 callbackGasLimit;
