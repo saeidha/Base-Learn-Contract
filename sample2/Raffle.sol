@@ -57,3 +57,5 @@ contract Raffle is VRFConsumerBaseV2 {
         i_subscriptionId = subscriptionId;
         i_gasLane = gasLane;
         i_callbackGasLimit = callbackGasLimit;
+        i_raffleEntranceFee = raffleEntranceFee;
+        i_interval = interval;
