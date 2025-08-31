@@ -127,3 +127,5 @@ contract RaffleTest is Test {
         // Assert
         assert(!upkeepNeeded);
     }
+
+    function testCheckUpkeepReturnsTrueWhenParametersAreGood() public {
