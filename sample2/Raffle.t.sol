@@ -110,3 +110,5 @@ contract RaffleTest is Test {
         raffle.performUpkeep(""); // Puts it in CALCULATING state
 
         // Act
+        (bool upkeepNeeded,) = raffle.checkUpkeep("");
+
