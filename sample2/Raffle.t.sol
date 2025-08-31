@@ -153,3 +153,4 @@ contract RaffleTest is Test {
         vm.expectRevert(abi.encodeWithSelector(Raffle.Raffle__UpkeepNotNeeded.selector, currentBalance, numPlayers, raffleState));
 
         // Act & Assert
+        raffle.performUpkeep("");
