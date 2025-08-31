@@ -183,3 +183,5 @@ contract RaffleTest is Test {
             raffle.enterRaffle{value: entranceFee}();
         }
 
+        uint256 prize = entranceFee * (additionalEntrants + 1);
+
