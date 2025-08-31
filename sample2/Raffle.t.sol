@@ -67,3 +67,5 @@ contract RaffleTest is Test {
         assertEq(playerRecorded, PLAYER);
     }
 
+    function testEmitsEventOnEntrance() public {
+        vm.prank(PLAYER);
