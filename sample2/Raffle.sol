@@ -69,3 +69,6 @@ contract Raffle is VRFConsumerBaseV2 {
     function enterRaffle() public payable {
         if (s_raffleState != RaffleState.OPEN) {
             revert Raffle__NotOpen();
+        }
+        if (msg.value < i_raffleEntranceFee) {
+            revert Raffle__SendMoreToEnterRaffle();
