@@ -62,3 +62,4 @@ contract Raffle is VRFConsumerBaseV2 {
         s_raffleState = RaffleState.OPEN;
         s_lastTimeStamp = block.timestamp;
     }
+
