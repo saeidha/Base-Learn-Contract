@@ -129,3 +129,5 @@ contract Raffle is VRFConsumerBaseV2 {
         address payable recentWinner = payable(s_players[indexOfWinner]);
         s_recentWinner = recentWinner;
 
+        // Reset the raffle state
+        s_raffleState = RaffleState.OPEN;
