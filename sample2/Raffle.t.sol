@@ -93,3 +93,5 @@ contract RaffleTest is Test {
         // Arrange
         vm.warp(block.timestamp + interval + 1);
         vm.roll(block.number + 1);
+
+        // Act
