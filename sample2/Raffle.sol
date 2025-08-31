@@ -38,3 +38,6 @@ contract Raffle is VRFConsumerBaseV2 {
     RaffleState private s_raffleState;
     uint256 private s_lastTimeStamp;
     address[] private s_players;
+    address private s_recentWinner;
+
+    /* Events */
