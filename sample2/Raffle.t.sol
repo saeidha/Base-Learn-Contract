@@ -14,3 +14,5 @@ contract RaffleTest is Test {
     uint256 entranceFee;
     uint256 interval;
     address vrfCoordinator;
+    bytes32 gasLane;
+    uint64 subscriptionId;
