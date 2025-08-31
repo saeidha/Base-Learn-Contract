@@ -117,3 +117,4 @@ contract Raffle is VRFConsumerBaseV2 {
             NUM_WORDS
         );
         emit RequestedRaffleWinner(requestId);
+    }
