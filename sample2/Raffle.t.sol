@@ -21,3 +21,5 @@ contract RaffleTest is Test {
     address public PLAYER = makeAddr("player");
     uint256 public constant STARTING_USER_BALANCE = 10 ether;
 
+    event WinnerPicked(address indexed winner);
+    event RaffleEnter(address indexed player);
