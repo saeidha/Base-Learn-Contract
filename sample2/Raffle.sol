@@ -103,3 +103,4 @@ contract Raffle is VRFConsumerBaseV2 {
      * @dev It requests a random number from the Chainlink VRF.
      */
     function performUpkeep(bytes calldata /* performData */) external {
+        (bool upkeepNeeded,) = checkUpkeep("");
