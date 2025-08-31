@@ -61,3 +61,5 @@ contract RaffleTest is Test {
     }
 
     function testRaffleRecordsPlayerWhenTheyEnter() public {
+        vm.prank(PLAYER);
+        raffle.enterRaffle{value: entranceFee}();
