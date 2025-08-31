@@ -24,3 +24,5 @@ contract RaffleTest is Test {
     event WinnerPicked(address indexed winner);
     event RaffleEnter(address indexed player);
 
+    function setUp() public {
+        helperConfig = new HelperConfig();
