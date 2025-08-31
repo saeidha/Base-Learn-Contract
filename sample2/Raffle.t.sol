@@ -197,3 +197,6 @@ contract RaffleTest is Test {
 
         // Expect the WinnerPicked event
         vm.expectEmit(true, true, true, true, address(raffle));
+        emit WinnerPicked(expectedWinner);
+
+        // Act
