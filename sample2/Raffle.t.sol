@@ -31,3 +31,4 @@ contract RaffleTest is Test {
 
         // If on a local anvil chain, deploy mocks
         if (block.chainid == 31337) {
+            VRFCoordinatorV2Mock vrfCoordinatorV2Mock = new VRFCoordinatorV2Mock(0, 0);
