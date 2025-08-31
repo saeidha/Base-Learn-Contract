@@ -200,3 +200,4 @@ contract RaffleTest is Test {
         emit WinnerPicked(expectedWinner);
 
         // Act
+        // This will kick off the request to the VRF...
