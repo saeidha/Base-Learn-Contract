@@ -119,3 +119,5 @@ contract RaffleTest is Test {
     function testCheckUpkeepReturnsFalseIfEnoughTimeHasntPassed() public {
         // Arrange
         vm.prank(PLAYER);
+        raffle.enterRaffle{value: entranceFee}();
+
