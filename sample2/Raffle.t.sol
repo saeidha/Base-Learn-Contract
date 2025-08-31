@@ -205,3 +205,6 @@ contract RaffleTest is Test {
         // And this is the callback from the (mock) VRF
         VRFCoordinatorV2Mock(vrfCoordinator).fulfillRandomWords(1, address(raffle));
 
+        // Assert
+        assertEq(uint256(raffle.getRaffleState()), uint256(Raffle.RaffleState.OPEN));
+        assertEq(raffle.getNumPlayers(), 0);
