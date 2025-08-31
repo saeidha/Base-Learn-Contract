@@ -194,3 +194,5 @@ contract RaffleTest is Test {
         uint256 expectedWinnerIndex = 1;
         address expectedWinner = raffle.getPlayer(expectedWinnerIndex);
         uint256 startingBalance = expectedWinner.balance;
+
+        // Expect the WinnerPicked event
