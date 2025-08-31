@@ -24,3 +24,5 @@ contract Raffle is VRFConsumerBaseV2 {
     }
 
     /* State Variables */
+    // Chainlink VRF variables
+    VRFCoordinatorV2Interface private immutable i_vrfCoordinator;
