@@ -69,3 +69,5 @@ contract RaffleTest is Test {
 
     function testEmitsEventOnEntrance() public {
         vm.prank(PLAYER);
+        vm.expectEmit(true, true, true, true, address(raffle));
+        emit RaffleEnter(PLAYER);
