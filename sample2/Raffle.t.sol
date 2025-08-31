@@ -19,3 +19,5 @@ contract RaffleTest is Test {
     uint32 callbackGasLimit;
 
     address public PLAYER = makeAddr("player");
+    uint256 public constant STARTING_USER_BALANCE = 10 ether;
+
