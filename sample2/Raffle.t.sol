@@ -17,3 +17,5 @@ contract RaffleTest is Test {
     bytes32 gasLane;
     uint64 subscriptionId;
     uint32 callbackGasLimit;
+
+    address public PLAYER = makeAddr("player");
