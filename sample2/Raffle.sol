@@ -36,3 +36,5 @@ contract Raffle is VRFConsumerBaseV2 {
     uint256 private immutable i_raffleEntranceFee;
     uint256 private immutable i_interval;
     RaffleState private s_raffleState;
+    uint256 private s_lastTimeStamp;
+    address[] private s_players;
