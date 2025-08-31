@@ -12,3 +12,5 @@ contract RaffleTest is Test {
     HelperConfig helperConfig;
 
     uint256 entranceFee;
+    uint256 interval;
+    address vrfCoordinator;
