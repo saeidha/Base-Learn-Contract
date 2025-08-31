@@ -140,3 +140,4 @@ contract Raffle is VRFConsumerBaseV2 {
             revert Raffle__TransferFailed();
         }
 
+        emit WinnerPicked(recentWinner);
