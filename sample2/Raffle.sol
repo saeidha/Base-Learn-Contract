@@ -122,3 +122,5 @@ contract Raffle is VRFConsumerBaseV2 {
     /**
      * @notice This is the callback function that the Chainlink VRF Coordinator calls after receiving a random number.
      * @param requestId The unique ID of the VRF request.
+     * @param randomWords An array of random numbers. We only need one.
+     */
