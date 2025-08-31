@@ -63,3 +63,5 @@ contract Raffle is VRFConsumerBaseV2 {
         s_lastTimeStamp = block.timestamp;
     }
 
+    /**
+     * @notice Allows a user to enter the raffle.
