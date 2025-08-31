@@ -42,3 +42,5 @@ contract RaffleTest is Test {
         // Add our raffle contract as a consumer for the mock coordinator
         if (block.chainid == 31337) {
             VRFCoordinatorV2Mock(vrfCoordinator).addConsumer(subscriptionId, address(raffle));
+        }
+
