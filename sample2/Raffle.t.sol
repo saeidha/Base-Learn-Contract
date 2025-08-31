@@ -57,3 +57,7 @@ contract RaffleTest is Test {
     function testRaffleRevertsWhenYouDontPayEnough() public {
         vm.prank(PLAYER);
         vm.expectRevert(Raffle.Raffle__SendMoreToEnterRaffle.selector);
+        raffle.enterRaffle();
+    }
+
+    function testRaffleRecordsPlayerWhenTheyEnter() public {
