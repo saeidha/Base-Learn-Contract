@@ -49,3 +49,4 @@ contract Raffle is VRFConsumerBaseV2 {
         address vrfCoordinatorV2,
         uint64 subscriptionId,
         bytes32 gasLane, // keyHash
+        uint32 callbackGasLimit,
