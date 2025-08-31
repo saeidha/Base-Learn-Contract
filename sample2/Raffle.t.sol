@@ -201,3 +201,5 @@ contract RaffleTest is Test {
 
         // Act
         // This will kick off the request to the VRF...
+        raffle.performUpkeep("");
+        // And this is the callback from the (mock) VRF
