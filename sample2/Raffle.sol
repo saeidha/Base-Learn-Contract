@@ -128,3 +128,4 @@ contract Raffle is VRFConsumerBaseV2 {
         uint256 indexOfWinner = randomWords[0] % s_players.length;
         address payable recentWinner = payable(s_players[indexOfWinner]);
         s_recentWinner = recentWinner;
+
