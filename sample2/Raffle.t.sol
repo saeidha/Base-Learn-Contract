@@ -157,3 +157,5 @@ contract RaffleTest is Test {
     }
 
     function testPerformUpkeepUpdatesRaffleStateAndCallsVrfCoordinator() public {
+        // Arrange
+        vm.prank(PLAYER);
