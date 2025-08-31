@@ -115,3 +115,5 @@ contract RaffleTest is Test {
         // Assert
         assert(!upkeepNeeded);
     }
+
+    function testCheckUpkeepReturnsFalseIfEnoughTimeHasntPassed() public {
