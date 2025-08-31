@@ -11,3 +11,4 @@ contract RaffleTest is Test {
     Raffle raffle;
     HelperConfig helperConfig;
 
+    uint256 entranceFee;
