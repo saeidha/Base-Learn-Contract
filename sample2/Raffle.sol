@@ -89,3 +89,5 @@ contract Raffle is VRFConsumerBaseV2 {
         public
         view
         returns (bool upkeepNeeded, bytes memory /* performData */)
+    {
+        bool isOpen = (RaffleState.OPEN == s_raffleState);
