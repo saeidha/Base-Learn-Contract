@@ -102,3 +102,4 @@ contract RaffleTest is Test {
     }
 
     function testCheckUpkeepReturnsFalseIfRaffleIsntOpen() public {
+        // Arrange
