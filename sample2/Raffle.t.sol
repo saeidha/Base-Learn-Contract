@@ -209,3 +209,5 @@ contract RaffleTest is Test {
         assertEq(uint256(raffle.getRaffleState()), uint256(Raffle.RaffleState.OPEN));
         assertEq(raffle.getNumPlayers(), 0);
         assertEq(raffle.getRecentWinner(), expectedWinner);
+        assertEq(expectedWinner.balance, startingBalance + prize);
+    }
