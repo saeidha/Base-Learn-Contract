@@ -131,3 +131,4 @@ contract RaffleTest is Test {
     function testCheckUpkeepReturnsTrueWhenParametersAreGood() public {
         // Arrange
         vm.prank(PLAYER);
+        raffle.enterRaffle{value: entranceFee}();
