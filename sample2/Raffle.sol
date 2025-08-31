@@ -72,3 +72,5 @@ contract Raffle is VRFConsumerBaseV2 {
         }
         if (msg.value < i_raffleEntranceFee) {
             revert Raffle__SendMoreToEnterRaffle();
+        }
+        s_players.push(payable(msg.sender));
