@@ -148,3 +148,5 @@ contract RaffleTest is Test {
     function testPerformUpkeepRevertsIfCheckUpkeepIsFalse() public {
         // Arrange
         uint256 currentBalance = 0;
+        uint256 numPlayers = 0;
+        uint256 raffleState = 0;
