@@ -112,3 +112,4 @@ contract Raffle is VRFConsumerBaseV2 {
         uint256 requestId = i_vrfCoordinator.requestRandomWords(
             i_gasLane,
             i_subscriptionId,
+            REQUEST_CONFIRMATIONS,
