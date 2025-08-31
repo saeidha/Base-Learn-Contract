@@ -92,3 +92,4 @@ contract RaffleTest is Test {
     function testCheckUpkeepReturnsFalseIfNoOneSentEth() public {
         // Arrange
         vm.warp(block.timestamp + interval + 1);
+        vm.roll(block.number + 1);
