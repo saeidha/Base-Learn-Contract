@@ -180,3 +180,4 @@ contract RaffleTest is Test {
         for (uint256 i = startingPlayerIndex; i < startingPlayerIndex + additionalEntrants; i++) {
             address player = address(uint160(i));
             hoax(player, STARTING_USER_BALANCE); // hoax is prank + deal in one
+            raffle.enterRaffle{value: entranceFee}();
