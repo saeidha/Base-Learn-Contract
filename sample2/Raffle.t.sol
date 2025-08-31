@@ -164,3 +164,5 @@ contract RaffleTest is Test {
         vm.roll(block.number + 1);
 
         // Act
+        raffle.performUpkeep("");
+
