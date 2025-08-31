@@ -189,3 +189,5 @@ contract RaffleTest is Test {
         vm.roll(block.number + 1);
 
         // We are going to pretend to be the Chainlink VRF
+        // and pick a winner.
+        // The winner should be player at index 1 (address(1))
