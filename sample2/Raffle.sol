@@ -5,3 +5,6 @@ import {VRFCoordinatorV2Interface} from "@chainlink/contracts/src/v0.8/interface
 import {VRFConsumerBaseV2} from "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol";
 
 /**
+ * @title A Decentralized Raffle Contract
+ * @author Gemini
+ * @notice This contract is for creating a provably fair and decentralized lottery.
