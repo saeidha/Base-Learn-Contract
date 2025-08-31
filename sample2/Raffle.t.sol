@@ -121,3 +121,7 @@ contract RaffleTest is Test {
         vm.prank(PLAYER);
         raffle.enterRaffle{value: entranceFee}();
 
+        // Act
+        (bool upkeepNeeded,) = raffle.checkUpkeep("");
+
+        // Assert
