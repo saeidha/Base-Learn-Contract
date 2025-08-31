@@ -11,3 +11,5 @@ import {VRFConsumerBaseV2} from "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2
  * @dev Implements Chainlink VRFv2 and Chainlink Automation.
  */
 contract Raffle is VRFConsumerBaseV2 {
+    /* Errors */
+    error Raffle__NotOpen();
