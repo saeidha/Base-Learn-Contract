@@ -179,3 +179,4 @@ contract RaffleTest is Test {
         uint256 startingPlayerIndex = 1; // PLAYER is at index 0
         for (uint256 i = startingPlayerIndex; i < startingPlayerIndex + additionalEntrants; i++) {
             address player = address(uint160(i));
+            hoax(player, STARTING_USER_BALANCE); // hoax is prank + deal in one
