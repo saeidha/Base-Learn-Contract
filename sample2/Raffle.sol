@@ -138,3 +138,5 @@ contract Raffle is VRFConsumerBaseV2 {
         (bool success,) = recentWinner.call{value: address(this).balance}("");
         if (!success) {
             revert Raffle__TransferFailed();
+        }
+
