@@ -66,3 +66,4 @@ contract RaffleTest is Test {
         address playerRecorded = raffle.getPlayer(0);
         assertEq(playerRecorded, PLAYER);
     }
+
