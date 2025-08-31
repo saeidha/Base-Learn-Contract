@@ -109,3 +109,4 @@ contract RaffleTest is Test {
         vm.roll(block.number + 1);
         raffle.performUpkeep(""); // Puts it in CALCULATING state
 
+        // Act
