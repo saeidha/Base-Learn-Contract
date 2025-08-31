@@ -117,3 +117,5 @@ contract RaffleTest is Test {
     }
 
     function testCheckUpkeepReturnsFalseIfEnoughTimeHasntPassed() public {
+        // Arrange
+        vm.prank(PLAYER);
