@@ -74,3 +74,5 @@ contract Raffle is VRFConsumerBaseV2 {
             revert Raffle__SendMoreToEnterRaffle();
         }
         s_players.push(payable(msg.sender));
+        emit RaffleEnter(msg.sender);
+    }
