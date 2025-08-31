@@ -114,3 +114,4 @@ contract Raffle is VRFConsumerBaseV2 {
             i_subscriptionId,
             REQUEST_CONFIRMATIONS,
             i_callbackGasLimit,
+            NUM_WORDS
