@@ -129,3 +129,4 @@ contract RaffleTest is Test {
     }
 
     function testCheckUpkeepReturnsTrueWhenParametersAreGood() public {
+        // Arrange
