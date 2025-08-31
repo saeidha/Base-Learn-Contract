@@ -48,3 +48,4 @@ contract RaffleTest is Test {
     }
 
     function testRaffleInitializesInOpenState() public view {
+        assertEq(uint256(raffle.getRaffleState()), uint256(Raffle.RaffleState.OPEN));
