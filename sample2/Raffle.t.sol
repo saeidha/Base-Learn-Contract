@@ -33,3 +33,4 @@ contract RaffleTest is Test {
         if (block.chainid == 31337) {
             VRFCoordinatorV2Mock vrfCoordinatorV2Mock = new VRFCoordinatorV2Mock(0, 0);
             vrfCoordinator = address(vrfCoordinatorV2Mock);
+            vrfCoordinatorV2Mock.createSubscription();
