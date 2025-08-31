@@ -33,3 +33,5 @@ contract Raffle is VRFConsumerBaseV2 {
     uint32 private constant NUM_WORDS = 1;
 
     // Lottery variables
+    uint256 private immutable i_raffleEntranceFee;
+    uint256 private immutable i_interval;
