@@ -65,3 +65,6 @@ contract Raffle is VRFConsumerBaseV2 {
 
     /**
      * @notice Allows a user to enter the raffle.
+     */
+    function enterRaffle() public payable {
+        if (s_raffleState != RaffleState.OPEN) {
