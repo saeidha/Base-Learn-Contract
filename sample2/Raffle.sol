@@ -104,3 +104,4 @@ contract Raffle is VRFConsumerBaseV2 {
      */
     function performUpkeep(bytes calldata /* performData */) external {
         (bool upkeepNeeded,) = checkUpkeep("");
+        if (!upkeepNeeded) {
