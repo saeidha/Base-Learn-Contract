@@ -177,3 +177,4 @@ contract RaffleTest is Test {
         // Arrange
         uint256 additionalEntrants = 5;
         uint256 startingPlayerIndex = 1; // PLAYER is at index 0
+        for (uint256 i = startingPlayerIndex; i < startingPlayerIndex + additionalEntrants; i++) {
