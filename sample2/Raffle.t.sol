@@ -44,3 +44,7 @@ contract RaffleTest is Test {
             VRFCoordinatorV2Mock(vrfCoordinator).addConsumer(subscriptionId, address(raffle));
         }
 
+        vm.deal(PLAYER, STARTING_USER_BALANCE);
+    }
+
+    function testRaffleInitializesInOpenState() public view {
