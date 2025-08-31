@@ -118,3 +118,5 @@ contract Raffle is VRFConsumerBaseV2 {
         );
         emit RequestedRaffleWinner(requestId);
     }
+
+    /**
