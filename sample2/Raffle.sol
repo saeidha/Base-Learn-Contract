@@ -86,3 +86,6 @@ contract Raffle is VRFConsumerBaseV2 {
      * 4. The lottery is in an "open" state.
      */
     function checkUpkeep(bytes memory /* checkData */)
+        public
+        view
+        returns (bool upkeepNeeded, bytes memory /* performData */)
