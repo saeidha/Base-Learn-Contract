@@ -115,3 +115,5 @@ contract Raffle is VRFConsumerBaseV2 {
             REQUEST_CONFIRMATIONS,
             i_callbackGasLimit,
             NUM_WORDS
+        );
+        emit RequestedRaffleWinner(requestId);
