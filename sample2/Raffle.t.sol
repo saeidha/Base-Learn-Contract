@@ -26,3 +26,4 @@ contract RaffleTest is Test {
 
     function setUp() public {
         helperConfig = new HelperConfig();
+        (entranceFee, interval, vrfCoordinator, gasLane, subscriptionId, callbackGasLimit,,) =
