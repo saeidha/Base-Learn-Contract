@@ -39,3 +39,5 @@ contract RaffleTest is Test {
         }
 
         raffle = new Raffle(vrfCoordinator, subscriptionId, gasLane, callbackGasLimit, entranceFee, interval);
+        // Add our raffle contract as a consumer for the mock coordinator
+        if (block.chainid == 31337) {
