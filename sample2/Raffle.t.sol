@@ -174,3 +174,6 @@ contract RaffleTest is Test {
                           fulfillRandomWords
     //////////////////////////////////////////////////////////////*/
     function testFulfillRandomWordsPicksAWinnerResetsAndSendsMoney() public {
+        // Arrange
+        uint256 additionalEntrants = 5;
+        uint256 startingPlayerIndex = 1; // PLAYER is at index 0
