@@ -203,3 +203,4 @@ contract RaffleTest is Test {
         // This will kick off the request to the VRF...
         raffle.performUpkeep("");
         // And this is the callback from the (mock) VRF
+        VRFCoordinatorV2Mock(vrfCoordinator).fulfillRandomWords(1, address(raffle));
