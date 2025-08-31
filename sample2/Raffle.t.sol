@@ -172,3 +172,5 @@ contract RaffleTest is Test {
 
     /*//////////////////////////////////////////////////////////////
                           fulfillRandomWords
+    //////////////////////////////////////////////////////////////*/
+    function testFulfillRandomWordsPicksAWinnerResetsAndSendsMoney() public {
