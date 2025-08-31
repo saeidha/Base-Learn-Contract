@@ -46,3 +46,6 @@ contract Raffle is VRFConsumerBaseV2 {
     event WinnerPicked(address indexed winner);
 
     constructor(
+        address vrfCoordinatorV2,
+        uint64 subscriptionId,
+        bytes32 gasLane, // keyHash
