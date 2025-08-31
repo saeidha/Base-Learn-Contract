@@ -131,3 +131,4 @@ contract Raffle is VRFConsumerBaseV2 {
 
         // Reset the raffle state
         s_raffleState = RaffleState.OPEN;
+        s_players = new address payable[](0);
