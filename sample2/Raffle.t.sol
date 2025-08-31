@@ -29,3 +29,5 @@ contract RaffleTest is Test {
         (entranceFee, interval, vrfCoordinator, gasLane, subscriptionId, callbackGasLimit,,) =
             helperConfig.activeNetworkConfig();
 
+        // If on a local anvil chain, deploy mocks
+        if (block.chainid == 31337) {
