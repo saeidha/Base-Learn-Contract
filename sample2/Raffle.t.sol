@@ -9,3 +9,4 @@ import {VRFCoordinatorV2Mock} from "@chainlink/contracts/src/v0.8/mocks/VRFCoord
 
 contract RaffleTest is Test {
     Raffle raffle;
+    HelperConfig helperConfig;
