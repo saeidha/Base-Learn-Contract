@@ -34,3 +34,4 @@ contract RaffleTest is Test {
             VRFCoordinatorV2Mock vrfCoordinatorV2Mock = new VRFCoordinatorV2Mock(0, 0);
             vrfCoordinator = address(vrfCoordinatorV2Mock);
             vrfCoordinatorV2Mock.createSubscription();
+            // We are funding with a ridiculously high number to avoid running out
