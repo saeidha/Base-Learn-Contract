@@ -19,3 +19,4 @@ contract Raffle is VRFConsumerBaseV2 {
 
     /* Type Declarations */
     enum RaffleState {
+        OPEN,
