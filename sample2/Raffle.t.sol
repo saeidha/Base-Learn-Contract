@@ -168,3 +168,5 @@ contract RaffleTest is Test {
 
         // Assert
         assert(uint256(raffle.getRaffleState()) == uint256(Raffle.RaffleState.CALCULATING));
+    }
+
