@@ -21,3 +21,5 @@ contract Raffle is VRFConsumerBaseV2 {
     enum RaffleState {
         OPEN,
         CALCULATING
+    }
+
