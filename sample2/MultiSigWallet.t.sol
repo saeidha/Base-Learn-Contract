@@ -189,3 +189,5 @@ contract MultiSigWalletTest is Test {
     function test_ProposeAndExecuteAddOwner() public {
         address newOwner = address(0x10);
         bytes memory data = abi.encodeWithSelector(MultiSigWallet.addOwner.selector, newOwner);
+        
+        // Propose
