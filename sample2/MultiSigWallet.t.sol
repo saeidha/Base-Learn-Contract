@@ -191,3 +191,7 @@ contract MultiSigWalletTest is Test {
         bytes memory data = abi.encodeWithSelector(MultiSigWallet.addOwner.selector, newOwner);
         
         // Propose
+        vm.prank(owner1);
+        uint256 txIndex = wallet.submitTransaction(address(wallet), 0, data);
+
+        // Confirm
