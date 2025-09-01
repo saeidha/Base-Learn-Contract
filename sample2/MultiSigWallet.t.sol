@@ -209,3 +209,5 @@ describe("MultiSigWallet", function () {
     describe("Owner Management", function () {
         it("should be able to add a new owner through a proposal", async function () {
             const newOwner = nonOwner.address;
+            const addOwnerData = multiSigWallet.interface.encodeFunctionData("addOwner", [newOwner]);
+
