@@ -168,3 +168,6 @@ contract MultiSigWallet {
         notExecuted(_txIndex)
     {
         require(isConfirmed[_txIndex][msg.sender], "MultiSigWallet: You have not confirmed this transaction");
+        isConfirmed[_txIndex][msg.sender] = false;
+        emit ConfirmationRevoked(_txIndex, msg.sender);
+    }
