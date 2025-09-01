@@ -238,3 +238,6 @@ contract MultiSigWallet {
      * @dev Changes the number of required confirmations. This action must be approved via a multi-sig transaction.
      * @param _newRequiredConfirmations The new number of required confirmations.
      */
+    function changeRequiredConfirmations(uint256 _newRequiredConfirmations) public onlyOwner {
+        require(
+            _newRequiredConfirmations > 0 && _newRequiredConfirmations <= owners.length,
