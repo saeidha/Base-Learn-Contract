@@ -186,3 +186,6 @@ contract MultiSigWallet {
         require(
             confirmationCount >= requiredConfirmations,
             "MultiSigWallet: Not enough confirmations"
+        );
+
+        Transaction storage transaction = transactions[_txIndex];
