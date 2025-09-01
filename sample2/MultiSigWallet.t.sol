@@ -24,3 +24,5 @@ describe("MultiSigWallet", function () {
         it("should set the correct owners", async function () {
             const contractOwners = await multiSigWallet.getOwners();
             expect(contractOwners).to.have.members(owners);
+        });
+
