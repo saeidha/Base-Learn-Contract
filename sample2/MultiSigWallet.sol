@@ -272,3 +272,5 @@ contract MultiSigWallet {
     function getTransaction(uint256 _txIndex)
         public
         view
+        returns (address destination, uint256 value, bytes memory data, bool executed)
+    {
