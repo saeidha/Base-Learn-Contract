@@ -195,3 +195,5 @@ describe("MultiSigWallet", function () {
             );
         });
 
+        it("should fail if trying to execute an already executed transaction", async function () {
+            await multiSigWallet.connect(owner2).confirmTransaction(0);
