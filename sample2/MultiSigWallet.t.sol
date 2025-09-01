@@ -160,3 +160,6 @@ contract MultiSigWalletTest is Test {
     }
 
     function test_Fail_ExecuteWithoutEnoughConfirmations() public {
+        vm.prank(owner1);
+        uint256 txIndex = wallet.submitTransaction(destination, 1 ether, "");
+
