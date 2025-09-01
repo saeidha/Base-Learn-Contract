@@ -58,3 +58,5 @@ describe("MultiSigWallet", function () {
                 .withArgs(0, owner1.address, to, value, data);
 
             const tx = await multiSigWallet.getTransaction(0);
+            expect(tx.destination).to.equal(to);
+            expect(tx.value).to.equal(value);
