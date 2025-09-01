@@ -37,3 +37,4 @@ describe("MultiSigWallet", function () {
         });
 
         it("should fail deployment with invalid required confirmations", async function () {
+            await expect(MultiSigWallet.deploy(owners, 0)).to.be.revertedWith(
