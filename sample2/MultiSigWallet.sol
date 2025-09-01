@@ -107,3 +107,5 @@ contract MultiSigWallet {
     // Fallback and Receive Functions
     //================================================================================
 
+    receive() external payable {
+        emit Deposit(msg.sender, msg.value, address(this).balance);
