@@ -100,3 +100,4 @@ contract MultiSigWallet {
             owners.push(owner);
         }
 
+        requiredConfirmations = _requiredConfirmations;
