@@ -251,3 +251,5 @@ describe("MultiSigWallet", function () {
             const initialBalance = await ethers.provider.getBalance(await multiSigWallet.getAddress());
             
             await expect(() => owner1.sendTransaction({
+                to: await multiSigWallet.getAddress(),
+                value: amount
