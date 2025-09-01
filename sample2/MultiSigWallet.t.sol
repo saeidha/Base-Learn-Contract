@@ -255,3 +255,4 @@ describe("MultiSigWallet", function () {
                 value: amount
             })).to.changeEtherBalance(multiSigWallet, amount);
             
+            const finalBalance = await ethers.provider.getBalance(await multiSigWallet.getAddress());
