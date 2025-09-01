@@ -127,3 +127,4 @@ contract MultiSigWallet {
         onlyOwner
         returns (uint256 txIndex)
     {
+        txIndex = transactions.length;
