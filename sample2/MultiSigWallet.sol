@@ -49,3 +49,5 @@ contract MultiSigWallet {
     // Mapping to check if an address is an owner for efficient lookups.
     mapping(address => bool) public isOwner;
 
+    // The required number of confirmations for a transaction to be executed.
+    uint256 public requiredConfirmations;
