@@ -70,3 +70,5 @@ contract MultiSigWalletTest is Test {
         assertEq(dest, destination);
         assertEq(val, 1 ether);
         assertEq(executed, false);
+    }
+
