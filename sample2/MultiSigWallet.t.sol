@@ -26,3 +26,5 @@ describe("MultiSigWallet", function () {
             expect(contractOwners).to.have.members(owners);
         });
 
+        it("should set the correct required confirmations", async function () {
+            expect(await multiSigWallet.requiredConfirmations()).to.equal(requiredConfirmations);
