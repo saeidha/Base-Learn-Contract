@@ -218,3 +218,5 @@ contract MultiSigWallet {
         require(owners.length > 1, "MultiSigWallet: Cannot remove the last owner");
 
         isOwner[_oldOwner] = false;
+        // Find and remove the owner from the array
+        for (uint256 i = 0; i < owners.length - 1; i++) {
