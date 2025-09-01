@@ -197,3 +197,5 @@ contract MultiSigWallet {
         emit TransactionExecuted(_txIndex, msg.sender);
     }
 
+    /**
+     * @dev Adds a new owner. This action itself must be approved via a multi-sig transaction.
