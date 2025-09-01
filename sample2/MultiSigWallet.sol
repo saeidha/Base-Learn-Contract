@@ -145,3 +145,4 @@ contract MultiSigWallet {
 
     /**
      * @dev Allows an owner to confirm a pending transaction.
+     * @param _txIndex The index of the transaction to confirm.
