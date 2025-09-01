@@ -262,3 +262,5 @@ contract MultiSigWallet {
      * @dev Returns the total number of transactions submitted to the wallet.
      */
     function getTransactionCount() public view returns (uint256) {
+        return transactions.length;
+    }
