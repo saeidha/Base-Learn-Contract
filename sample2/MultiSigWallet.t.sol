@@ -179,3 +179,5 @@ describe("MultiSigWallet", function () {
             const initialBalance = await ethers.provider.getBalance(to);
             
             await expect(multiSigWallet.connect(owner1).executeTransaction(0))
+                .to.emit(multiSigWallet, "TransactionExecuted")
+                .withArgs(0, owner1.address);
