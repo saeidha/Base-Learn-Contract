@@ -278,3 +278,5 @@ contract MultiSigWallet {
         return (transaction.destination, transaction.value, transaction.data, transaction.executed);
     }
     
+    /**
+     * @dev Returns the number of confirmations for a given transaction.
