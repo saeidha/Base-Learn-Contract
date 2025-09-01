@@ -157,3 +157,4 @@ contract MultiSigWallet {
        _confirmTransaction(_txIndex);
     }
 
+    /**
