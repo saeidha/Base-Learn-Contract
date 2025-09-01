@@ -54,3 +54,4 @@ describe("MultiSigWallet", function () {
             const data = "0x";
 
             await expect(multiSigWallet.connect(owner1).submitTransaction(to, value, data))
+                .to.emit(multiSigWallet, "TransactionSubmitted")
