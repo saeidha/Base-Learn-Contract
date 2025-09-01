@@ -221,3 +221,4 @@ describe("MultiSigWallet", function () {
             expect(await multiSigWallet.isOwner(newOwner)).to.be.true;
         });
 
+        it("should be able to remove an owner through a proposal", async function () {
