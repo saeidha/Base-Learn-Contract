@@ -95,3 +95,4 @@ contract MultiSigWallet {
         for (uint256 i = 0; i < _owners.length; i++) {
             address owner = _owners[i];
             require(owner != address(0), "MultiSigWallet: Invalid owner address");
+            require(!isOwner[owner], "MultiSigWallet: Duplicate owner");
