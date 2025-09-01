@@ -46,3 +46,4 @@ contract MultiSigWalletTest is Test {
     function test_Fail_DeployWithZeroOwners() public {
         address[] memory emptyOwners;
         vm.expectRevert("MultiSigWallet: Owners required");
+        new MultiSigWallet(emptyOwners, 1);
