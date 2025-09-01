@@ -230,3 +230,5 @@ contract MultiSigWallet {
         if (requiredConfirmations > owners.length) {
             changeRequiredConfirmations(owners.length);
         }
+
+        emit OwnerRemoved(_oldOwner);
