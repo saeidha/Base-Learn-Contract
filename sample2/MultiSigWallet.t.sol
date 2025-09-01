@@ -44,3 +44,4 @@ contract MultiSigWalletTest is Test {
     }
 
     function test_Fail_DeployWithZeroOwners() public {
+        address[] memory emptyOwners;
