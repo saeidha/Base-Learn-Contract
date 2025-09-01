@@ -174,3 +174,4 @@ contract MultiSigWalletTest is Test {
         vm.prank(owner2);
         wallet.confirmTransaction(txIndex);
 
+        vm.prank(owner1);
