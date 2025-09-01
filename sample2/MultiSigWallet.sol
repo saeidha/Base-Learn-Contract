@@ -208,3 +208,6 @@ contract MultiSigWallet {
         owners.push(_newOwner);
         emit OwnerAdded(_newOwner);
     }
+    
+    /**
+     * @dev Removes an existing owner. This action must be approved via a multi-sig transaction.
