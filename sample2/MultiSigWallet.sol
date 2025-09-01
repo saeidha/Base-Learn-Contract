@@ -220,3 +220,5 @@ contract MultiSigWallet {
         isOwner[_oldOwner] = false;
         // Find and remove the owner from the array
         for (uint256 i = 0; i < owners.length - 1; i++) {
+            if (owners[i] == _oldOwner) {
+                owners[i] = owners[owners.length - 1];
