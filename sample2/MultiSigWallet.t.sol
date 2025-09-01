@@ -129,3 +129,4 @@ contract MultiSigWalletTest is Test {
         uint256 txIndex = wallet.submitTransaction(destination, 1 ether, "");
         
         vm.prank(owner2); // owner2 hasn't confirmed
+        vm.expectRevert("MultiSigWallet: You have not confirmed this transaction");
