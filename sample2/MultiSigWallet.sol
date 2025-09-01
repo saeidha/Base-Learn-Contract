@@ -191,3 +191,6 @@ contract MultiSigWallet {
         Transaction storage transaction = transactions[_txIndex];
         transaction.executed = true;
 
+        (bool success, ) = transaction.destination.call{value: transaction.value}(transaction.data);
+        require(success, "MultiSigWallet: Transaction execution failed");
+
