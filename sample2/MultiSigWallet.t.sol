@@ -253,3 +253,4 @@ describe("MultiSigWallet", function () {
             await expect(() => owner1.sendTransaction({
                 to: await multiSigWallet.getAddress(),
                 value: amount
+            })).to.changeEtherBalance(multiSigWallet, amount);
