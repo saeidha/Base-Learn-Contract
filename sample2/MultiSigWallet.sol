@@ -201,3 +201,4 @@ contract MultiSigWallet {
      * @dev Adds a new owner. This action itself must be approved via a multi-sig transaction.
      * @param _newOwner The address of the new owner to add.
      */
+    function addOwner(address _newOwner) public onlyOwner {
