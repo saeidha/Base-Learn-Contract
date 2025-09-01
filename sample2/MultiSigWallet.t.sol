@@ -30,3 +30,5 @@ describe("MultiSigWallet", function () {
             expect(await multiSigWallet.requiredConfirmations()).to.equal(requiredConfirmations);
         });
 
+        it("should fail deployment with zero owners", async function () {
+            await expect(MultiSigWallet.deploy([], requiredConfirmations)).to.be.revertedWith(
