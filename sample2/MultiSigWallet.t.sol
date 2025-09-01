@@ -98,3 +98,4 @@ contract MultiSigWalletTest is Test {
         emit TransactionConfirmed(txIndex, owner2);
         wallet.confirmTransaction(txIndex);
         
+        assertTrue(wallet.isConfirmed(txIndex, owner2));
