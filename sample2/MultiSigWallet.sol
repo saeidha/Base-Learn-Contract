@@ -44,3 +44,5 @@ contract MultiSigWallet {
     mapping(uint256 => mapping(address => bool)) public isConfirmed;
 
     // Array of owner addresses.
+    address[] public owners;
+
