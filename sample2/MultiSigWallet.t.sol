@@ -268,3 +268,4 @@ describe("MultiSigWallet", function () {
             expect(await multiSigWallet.getTransactionCount()).to.equal(1);
         });
 
+        it("getConfirmationCount should return the correct count", async function () {
