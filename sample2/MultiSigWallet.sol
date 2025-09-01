@@ -151,3 +151,5 @@ contract MultiSigWallet {
         public
         onlyOwner
         txExists(_txIndex)
+        notExecuted(_txIndex)
+        notConfirmed(_txIndex)
