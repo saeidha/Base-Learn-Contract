@@ -46,3 +46,4 @@ contract MultiSigWallet {
     // Array of owner addresses.
     address[] public owners;
 
+    // Mapping to check if an address is an owner for efficient lookups.
