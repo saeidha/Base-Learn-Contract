@@ -8,3 +8,5 @@ describe("MultiSigWallet", function () {
     let requiredConfirmations;
 
     // Hook to run before each test
+    beforeEach(async function () {
+        // Get signers
