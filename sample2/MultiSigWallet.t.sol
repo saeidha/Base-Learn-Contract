@@ -20,3 +20,5 @@ contract MultiSigWalletTest is Test {
     event TransactionExecuted(uint256 indexed txIndex, address indexed owner);
 
     // This function runs before each test case
+    function setUp() public {
+        owners.push(owner1);
