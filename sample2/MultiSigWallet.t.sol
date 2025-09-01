@@ -217,3 +217,5 @@ describe("MultiSigWallet", function () {
             // Confirm and execute
             await multiSigWallet.connect(owner2).confirmTransaction(0);
             await multiSigWallet.connect(owner1).executeTransaction(0);
+
+            expect(await multiSigWallet.isOwner(newOwner)).to.be.true;
