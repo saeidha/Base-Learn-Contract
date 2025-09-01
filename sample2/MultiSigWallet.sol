@@ -52,3 +52,4 @@ contract MultiSigWallet {
     // The required number of confirmations for a transaction to be executed.
     uint256 public requiredConfirmations;
 
+    //================================================================================
