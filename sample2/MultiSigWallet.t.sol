@@ -243,3 +243,5 @@ describe("MultiSigWallet", function () {
             expect(await multiSigWallet.requiredConfirmations()).to.equal(newRequirement);
         });
     });
+
+    // 7. Test Receiving Ether
