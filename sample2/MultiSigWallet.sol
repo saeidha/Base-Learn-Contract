@@ -177,3 +177,5 @@ contract MultiSigWallet {
      * @param _txIndex The index of the transaction to execute.
      */
     function executeTransaction(uint256 _txIndex)
+        public
+        onlyOwner
