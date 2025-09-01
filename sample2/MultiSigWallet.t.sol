@@ -143,3 +143,5 @@ describe("MultiSigWallet", function () {
             );
         });
 
+        it("should fail if a non-owner tries to revoke", async function () {
+            await expect(multiSigWallet.connect(nonOwner).revokeConfirmation(0)).to.be.revertedWith(
