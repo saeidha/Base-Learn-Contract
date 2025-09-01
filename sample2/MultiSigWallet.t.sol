@@ -95,3 +95,5 @@ contract MultiSigWalletTest is Test {
 
         vm.prank(owner2);
         vm.expectEmit(true, true, true, true);
+        emit TransactionConfirmed(txIndex, owner2);
+        wallet.confirmTransaction(txIndex);
