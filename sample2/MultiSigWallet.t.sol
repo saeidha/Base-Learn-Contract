@@ -219,3 +219,5 @@ describe("MultiSigWallet", function () {
             await multiSigWallet.connect(owner1).executeTransaction(0);
 
             expect(await multiSigWallet.isOwner(newOwner)).to.be.true;
+        });
+
