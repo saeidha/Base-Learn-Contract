@@ -38,3 +38,5 @@ contract MultiSigWallet {
     }
 
     // Mapping from transaction index to the transaction details.
+    Transaction[] public transactions;
+
