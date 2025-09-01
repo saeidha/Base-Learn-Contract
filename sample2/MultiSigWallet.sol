@@ -294,3 +294,5 @@ contract MultiSigWallet {
      * @dev Internal function to handle the confirmation logic.
      * @param _txIndex The index of the transaction.
      */
+    function _confirmTransaction(uint256 _txIndex) internal {
+        isConfirmed[_txIndex][msg.sender] = true;
