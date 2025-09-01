@@ -150,3 +150,4 @@ contract MultiSigWallet {
     function confirmTransaction(uint256 _txIndex)
         public
         onlyOwner
+        txExists(_txIndex)
