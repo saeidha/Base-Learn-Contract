@@ -257,3 +257,5 @@ describe("MultiSigWallet", function () {
             
             const finalBalance = await ethers.provider.getBalance(await multiSigWallet.getAddress());
             expect(finalBalance - initialBalance).to.equal(amount);
+        });
+    });
