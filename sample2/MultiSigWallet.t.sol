@@ -157,3 +157,5 @@ contract MultiSigWalletTest is Test {
         (, , , bool executed) = wallet.getTransaction(txIndex);
         assertTrue(executed);
         assertEq(destination.balance, initialBalance + 1 ether);
+    }
+
