@@ -263,3 +263,4 @@ describe("MultiSigWallet", function () {
     // 8. Test View Functions
     describe("View Functions", function () {
         it("getTransactionCount should return the correct count", async function () {
+            expect(await multiSigWallet.getTransactionCount()).to.equal(0);
