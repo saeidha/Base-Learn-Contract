@@ -234,3 +234,5 @@ contract MultiSigWallet {
         emit OwnerRemoved(_oldOwner);
     }
 
+    /**
+     * @dev Changes the number of required confirmations. This action must be approved via a multi-sig transaction.
