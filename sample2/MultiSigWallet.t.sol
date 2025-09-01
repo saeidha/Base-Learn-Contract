@@ -212,3 +212,5 @@ describe("MultiSigWallet", function () {
             const addOwnerData = multiSigWallet.interface.encodeFunctionData("addOwner", [newOwner]);
 
             // Submit the proposal to add an owner
+            await multiSigWallet.connect(owner1).submitTransaction(await multiSigWallet.getAddress(), 0, addOwnerData);
+            
