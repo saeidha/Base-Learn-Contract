@@ -280,3 +280,5 @@ contract MultiSigWallet {
     
     /**
      * @dev Returns the number of confirmations for a given transaction.
+     * @param _txIndex The index of the transaction.
+     */
