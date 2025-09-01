@@ -220,3 +220,5 @@ contract MultiSigWalletTest is Test {
         vm.prank(owner1);
         wallet.executeTransaction(txIndex);
 
+        assertFalse(wallet.isOwner(ownerToRemove));
+        assertEq(wallet.getOwners().length, 2);
