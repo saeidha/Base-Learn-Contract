@@ -166,3 +166,5 @@ describe("MultiSigWallet", function () {
 
             await multiSigWallet.connect(owner1).submitTransaction(to, value, data);
         });
+
+        it("should fail to execute if confirmations are not met", async function () {
