@@ -142,3 +142,5 @@ contract MultiSigWalletTest is Test {
         vm.prank(owner1);
         uint256 txIndex = wallet.submitTransaction(destination, 1 ether, "");
         
+        // Step 2: Confirm
+        vm.prank(owner2);
