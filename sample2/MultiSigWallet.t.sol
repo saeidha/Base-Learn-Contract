@@ -60,3 +60,5 @@ contract MultiSigWalletTest is Test {
     //================================================================================
     // 2. Transaction Submission Tests
     //================================================================================
+
+    function test_OwnerCanSubmitTransaction() public {
