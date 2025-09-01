@@ -199,3 +199,4 @@ describe("MultiSigWallet", function () {
             await multiSigWallet.connect(owner2).confirmTransaction(0);
             await multiSigWallet.connect(owner1).executeTransaction(0); // First execution
             
+            await expect(multiSigWallet.connect(owner1).executeTransaction(0)).to.be.revertedWith(
