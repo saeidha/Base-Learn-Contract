@@ -171,3 +171,5 @@ contract MultiSigWallet {
         isConfirmed[_txIndex][msg.sender] = false;
         emit ConfirmationRevoked(_txIndex, msg.sender);
     }
+
+    /**
