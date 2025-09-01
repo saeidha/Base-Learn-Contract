@@ -101,3 +101,6 @@ contract MultiSigWallet {
         }
 
         requiredConfirmations = _requiredConfirmations;
+    }
+
+    //================================================================================
