@@ -128,3 +128,4 @@ contract MultiSigWallet {
         returns (uint256 txIndex)
     {
         txIndex = transactions.length;
+        transactions.push(Transaction({
