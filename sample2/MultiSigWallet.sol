@@ -37,3 +37,4 @@ contract MultiSigWallet {
         bool executed;
     }
 
+    // Mapping from transaction index to the transaction details.
