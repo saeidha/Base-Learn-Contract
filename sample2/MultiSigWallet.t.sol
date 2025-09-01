@@ -122,3 +122,5 @@ contract MultiSigWalletTest is Test {
         
         assertFalse(wallet.isConfirmed(txIndex, owner1));
         assertEq(wallet.getConfirmationCount(txIndex), 0);
+    }
+    
