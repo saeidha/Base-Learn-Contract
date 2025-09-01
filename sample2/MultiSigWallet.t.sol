@@ -86,3 +86,5 @@ describe("MultiSigWallet", function () {
     // 3. Test Transaction Confirmation
     describe("confirmTransaction", function () {
         beforeEach(async function () {
+            const to = nonOwner.address;
+            const value = ethers.parseEther("1.0");
