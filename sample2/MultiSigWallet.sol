@@ -274,3 +274,4 @@ contract MultiSigWallet {
         view
         returns (address destination, uint256 value, bytes memory data, bool executed)
     {
+        Transaction storage transaction = transactions[_txIndex];
