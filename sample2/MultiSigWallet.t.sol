@@ -117,3 +117,5 @@ contract MultiSigWalletTest is Test {
         
         vm.prank(owner1);
         vm.expectEmit(true, true, false, true); // Don't check data
+        emit ConfirmationRevoked(txIndex, owner1);
+        wallet.revokeConfirmation(txIndex);
