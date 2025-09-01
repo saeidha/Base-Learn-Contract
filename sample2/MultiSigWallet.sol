@@ -144,3 +144,4 @@ contract MultiSigWallet {
     }
 
     /**
+     * @dev Allows an owner to confirm a pending transaction.
