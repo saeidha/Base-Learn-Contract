@@ -166,3 +166,5 @@ contract MultiSigWallet {
         onlyOwner
         txExists(_txIndex)
         notExecuted(_txIndex)
+    {
+        require(isConfirmed[_txIndex][msg.sender], "MultiSigWallet: You have not confirmed this transaction");
