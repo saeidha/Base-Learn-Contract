@@ -195,3 +195,4 @@ contract MultiSigWalletTest is Test {
         uint256 txIndex = wallet.submitTransaction(address(wallet), 0, data);
 
         // Confirm
+        vm.prank(owner2);
