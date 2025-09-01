@@ -99,3 +99,5 @@ describe("MultiSigWallet", function () {
 
             expect(await multiSigWallet.isConfirmed(0, owner2.address)).to.be.true;
         });
+
+        it("should fail if a non-owner tries to confirm", async function () {
