@@ -243,3 +243,5 @@ contract MultiSigWallet {
             _newRequiredConfirmations > 0 && _newRequiredConfirmations <= owners.length,
             "MultiSigWallet: Invalid number of required confirmations"
         );
+        requiredConfirmations = _newRequiredConfirmations;
+        emit RequiredConfirmationsChanged(_newRequiredConfirmations);
