@@ -141,3 +141,5 @@ contract MultiSigWallet {
         _confirmTransaction(txIndex);
 
         return txIndex;
+    }
+
