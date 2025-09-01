@@ -236,3 +236,5 @@ contract MultiSigWallet {
 
     /**
      * @dev Changes the number of required confirmations. This action must be approved via a multi-sig transaction.
+     * @param _newRequiredConfirmations The new number of required confirmations.
+     */
