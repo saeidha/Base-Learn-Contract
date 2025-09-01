@@ -119,3 +119,5 @@ contract MultiSigWallet {
      * @dev Allows an owner to submit a new transaction proposal.
      * @param _destination The target address for the transaction.
      * @param _value The amount of Ether to send with the transaction.
+     * @param _data The calldata to be sent with the transaction.
+     * @return txIndex The index of the newly created transaction.
