@@ -95,3 +95,4 @@ describe("MultiSigWallet", function () {
         it("should allow another owner to confirm a transaction", async function () {
             await expect(multiSigWallet.connect(owner2).confirmTransaction(0))
                 .to.emit(multiSigWallet, "TransactionConfirmed")
+                .withArgs(0, owner2.address);
