@@ -35,3 +35,5 @@ describe("MultiSigWallet", function () {
                 "MultiSigWallet: Owners required"
             );
         });
+
+        it("should fail deployment with invalid required confirmations", async function () {
