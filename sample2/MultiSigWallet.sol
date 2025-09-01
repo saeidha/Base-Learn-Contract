@@ -139,3 +139,5 @@ contract MultiSigWallet {
 
         // The submitter automatically confirms the transaction.
         _confirmTransaction(txIndex);
+
+        return txIndex;
