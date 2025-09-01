@@ -233,3 +233,5 @@ describe("MultiSigWallet", function () {
         });
 
         it("should be able to change required confirmations through a proposal", async function () {
+            const newRequirement = 3;
+            const changeReqData = multiSigWallet.interface.encodeFunctionData("changeRequiredConfirmations", [newRequirement]);
