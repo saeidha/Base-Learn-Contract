@@ -254,3 +254,4 @@ describe("MultiSigWallet", function () {
                 to: await multiSigWallet.getAddress(),
                 value: amount
             })).to.changeEtherBalance(multiSigWallet, amount);
+            
