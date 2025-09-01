@@ -34,3 +34,5 @@ contract MultiSigWalletTest is Test {
     // 1. Deployment Tests
     //================================================================================
 
+    function test_InitialState() public {
+        assertEq(wallet.requiredConfirmations(), REQUIRED_CONFIRMATIONS);
