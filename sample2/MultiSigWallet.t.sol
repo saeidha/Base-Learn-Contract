@@ -84,3 +84,5 @@ describe("MultiSigWallet", function () {
     });
 
     // 3. Test Transaction Confirmation
+    describe("confirmTransaction", function () {
+        beforeEach(async function () {
