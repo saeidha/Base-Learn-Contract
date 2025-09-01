@@ -189,3 +189,4 @@ contract MultiSigWallet {
         );
 
         Transaction storage transaction = transactions[_txIndex];
+        transaction.executed = true;
