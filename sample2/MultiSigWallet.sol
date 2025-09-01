@@ -285,3 +285,5 @@ contract MultiSigWallet {
     function getConfirmationCount(uint256 _txIndex) public view returns (uint256 count) {
         for (uint256 i = 0; i < owners.length; i++) {
             if (isConfirmed[_txIndex][owners[i]]) {
+                count++;
+            }
