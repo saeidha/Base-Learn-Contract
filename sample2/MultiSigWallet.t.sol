@@ -153,3 +153,4 @@ describe("MultiSigWallet", function () {
     // 5. Test Transaction Execution
     describe("executeTransaction", function () {
         let to, value, data;
+        beforeEach(async function () {
