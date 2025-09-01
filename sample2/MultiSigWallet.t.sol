@@ -66,3 +66,4 @@ contract MultiSigWalletTest is Test {
         uint256 txIndex = wallet.submitTransaction(destination, 1 ether, "");
         assertEq(txIndex, 0);
 
+        (address dest, uint256 val, , bool executed) = wallet.getTransaction(txIndex);
