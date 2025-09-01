@@ -282,3 +282,4 @@ contract MultiSigWallet {
      * @dev Returns the number of confirmations for a given transaction.
      * @param _txIndex The index of the transaction.
      */
+    function getConfirmationCount(uint256 _txIndex) public view returns (uint256 count) {
