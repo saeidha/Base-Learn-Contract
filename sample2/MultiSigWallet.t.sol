@@ -270,3 +270,5 @@ describe("MultiSigWallet", function () {
 
         it("getConfirmationCount should return the correct count", async function () {
             await multiSigWallet.connect(owner1).submitTransaction(nonOwner.address, 1, "0x");
+            expect(await multiSigWallet.getConfirmationCount(0)).to.equal(1);
+            await multiSigWallet.connect(owner2).confirmTransaction(0);
