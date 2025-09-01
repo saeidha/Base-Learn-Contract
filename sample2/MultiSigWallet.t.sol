@@ -260,3 +260,4 @@ describe("MultiSigWallet", function () {
         });
     });
 
+    // 8. Test View Functions
