@@ -146,3 +146,7 @@ contract MultiSigWalletTest is Test {
         vm.prank(owner2);
         wallet.confirmTransaction(txIndex);
         
+        // Step 3: Execute
+        uint256 initialBalance = destination.balance;
+        vm.prank(owner3); // Anyone can execute
+        vm.expectEmit(true, true, false, true);
