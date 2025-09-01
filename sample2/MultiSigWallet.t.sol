@@ -176,3 +176,4 @@ describe("MultiSigWallet", function () {
         it("should execute the transaction when enough confirmations are met", async function () {
             await multiSigWallet.connect(owner2).confirmTransaction(0);
             
+            const initialBalance = await ethers.provider.getBalance(to);
