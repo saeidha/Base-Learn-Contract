@@ -110,3 +110,5 @@ contract MultiSigWalletTest is Test {
         vm.expectRevert("MultiSigWallet: Transaction already confirmed by you");
         wallet.confirmTransaction(txIndex);
     }
+
+    function test_OwnerCanRevokeConfirmation() public {
