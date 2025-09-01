@@ -121,3 +121,4 @@ describe("MultiSigWallet", function () {
 
     // 4. Test Confirmation Revocation
     describe("revokeConfirmation", function () {
+        beforeEach(async function () {
