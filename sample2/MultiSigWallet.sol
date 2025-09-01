@@ -245,3 +245,6 @@ contract MultiSigWallet {
         );
         requiredConfirmations = _newRequiredConfirmations;
         emit RequiredConfirmationsChanged(_newRequiredConfirmations);
+    }
+
+    //================================================================================
