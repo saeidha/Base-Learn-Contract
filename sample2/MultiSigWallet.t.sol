@@ -129,3 +129,5 @@ describe("MultiSigWallet", function () {
             await multiSigWallet.connect(owner2).confirmTransaction(0);
         });
 
+        it("should allow an owner to revoke their confirmation", async function () {
+            await expect(multiSigWallet.connect(owner2).revokeConfirmation(0))
