@@ -110,3 +110,5 @@ describe("MultiSigWallet", function () {
             await expect(multiSigWallet.connect(owner1).confirmTransaction(99)).to.be.revertedWith(
                 "MultiSigWallet: Transaction does not exist"
             );
+        });
+
