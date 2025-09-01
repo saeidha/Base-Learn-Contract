@@ -62,3 +62,5 @@ describe("MultiSigWallet", function () {
             expect(tx.value).to.equal(value);
             expect(tx.executed).to.be.false;
         });
+
+        it("should automatically confirm the transaction for the submitter", async function () {
