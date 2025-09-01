@@ -148,3 +148,5 @@ describe("MultiSigWallet", function () {
                 "MultiSigWallet: Not an owner"
             );
         });
+    });
+
