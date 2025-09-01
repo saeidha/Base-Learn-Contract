@@ -128,3 +128,4 @@ describe("MultiSigWallet", function () {
             await multiSigWallet.connect(owner1).submitTransaction(to, value, data); // txIndex 0
             await multiSigWallet.connect(owner2).confirmTransaction(0);
         });
+
