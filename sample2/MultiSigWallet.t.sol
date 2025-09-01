@@ -177,3 +177,5 @@ contract MultiSigWalletTest is Test {
         vm.prank(owner1);
         wallet.executeTransaction(txIndex); // First execution
 
+        vm.prank(owner1);
+        vm.expectRevert("MultiSigWallet: Transaction already executed");
