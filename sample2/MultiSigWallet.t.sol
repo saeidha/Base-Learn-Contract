@@ -42,3 +42,5 @@ contract MultiSigWalletTest is Test {
         assertEq(deployedOwners[1], owner2);
         assertEq(deployedOwners[2], owner3);
     }
+
+    function test_Fail_DeployWithZeroOwners() public {
