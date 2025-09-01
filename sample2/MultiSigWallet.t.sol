@@ -103,3 +103,5 @@ describe("MultiSigWallet", function () {
         it("should fail if a non-owner tries to confirm", async function () {
             await expect(multiSigWallet.connect(nonOwner).confirmTransaction(0)).to.be.revertedWith(
                 "MultiSigWallet: Not an owner"
+            );
+        });
