@@ -184,3 +184,5 @@ contract MultiSigWallet {
     {
         uint256 confirmationCount = getConfirmationCount(_txIndex);
         require(
+            confirmationCount >= requiredConfirmations,
+            "MultiSigWallet: Not enough confirmations"
