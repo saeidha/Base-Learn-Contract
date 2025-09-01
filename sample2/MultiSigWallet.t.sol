@@ -231,3 +231,5 @@ describe("MultiSigWallet", function () {
 
             expect(await multiSigWallet.isOwner(ownerToRemove)).to.be.false;
         });
+
+        it("should be able to change required confirmations through a proposal", async function () {
