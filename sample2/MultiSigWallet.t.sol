@@ -147,3 +147,4 @@ describe("MultiSigWallet", function () {
             await expect(multiSigWallet.connect(nonOwner).revokeConfirmation(0)).to.be.revertedWith(
                 "MultiSigWallet: Not an owner"
             );
+        });
