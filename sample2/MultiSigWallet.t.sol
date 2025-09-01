@@ -61,3 +61,4 @@ describe("MultiSigWallet", function () {
             expect(tx.destination).to.equal(to);
             expect(tx.value).to.equal(value);
             expect(tx.executed).to.be.false;
+        });
