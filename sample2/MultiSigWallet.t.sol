@@ -162,3 +162,5 @@ describe("MultiSigWallet", function () {
             await owner1.sendTransaction({
                 to: await multiSigWallet.getAddress(),
                 value: ethers.parseEther("2.0")
+            });
+
