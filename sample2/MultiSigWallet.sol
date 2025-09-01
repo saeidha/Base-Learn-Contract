@@ -27,3 +27,4 @@ contract MultiSigWallet {
     event RequiredConfirmationsChanged(uint256 newRequiredConfirmations);
 
     //================================================================================
+    // State Variables
