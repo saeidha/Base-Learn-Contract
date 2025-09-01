@@ -222,3 +222,4 @@ contract MultiSigWalletTest is Test {
 
         assertFalse(wallet.isOwner(ownerToRemove));
         assertEq(wallet.getOwners().length, 2);
+    }
