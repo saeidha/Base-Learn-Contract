@@ -188,3 +188,5 @@ describe("MultiSigWallet", function () {
             const finalBalance = await ethers.provider.getBalance(to);
             expect(finalBalance - initialBalance).to.equal(value);
         });
+
+        it("should fail if trying to execute a non-existent transaction", async function () {
