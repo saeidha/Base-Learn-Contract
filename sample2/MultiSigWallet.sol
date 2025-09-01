@@ -277,3 +277,4 @@ contract MultiSigWallet {
         Transaction storage transaction = transactions[_txIndex];
         return (transaction.destination, transaction.value, transaction.data, transaction.executed);
     }
+    
