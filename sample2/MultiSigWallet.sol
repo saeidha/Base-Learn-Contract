@@ -162,3 +162,7 @@ contract MultiSigWallet {
      * @param _txIndex The index of the transaction to revoke confirmation for.
      */
     function revokeConfirmation(uint256 _txIndex)
+        public
+        onlyOwner
+        txExists(_txIndex)
+        notExecuted(_txIndex)
