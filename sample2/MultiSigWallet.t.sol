@@ -172,3 +172,4 @@ describe("MultiSigWallet", function () {
                 "MultiSigWallet: Not enough confirmations"
             );
         });
+
