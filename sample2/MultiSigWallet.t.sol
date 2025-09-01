@@ -182,3 +182,5 @@ describe("MultiSigWallet", function () {
                 .to.emit(multiSigWallet, "TransactionExecuted")
                 .withArgs(0, owner1.address);
 
+            const tx = await multiSigWallet.getTransaction(0);
+            expect(tx.executed).to.be.true;
