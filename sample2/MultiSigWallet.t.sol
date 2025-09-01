@@ -99,3 +99,4 @@ contract MultiSigWalletTest is Test {
         wallet.confirmTransaction(txIndex);
         
         assertTrue(wallet.isConfirmed(txIndex, owner2));
+        assertEq(wallet.getConfirmationCount(txIndex), 2);
