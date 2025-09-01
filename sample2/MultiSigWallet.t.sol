@@ -249,3 +249,5 @@ describe("MultiSigWallet", function () {
         it("should accept Ether deposits via receive()", async function () {
             const amount = ethers.parseEther("1.0");
             const initialBalance = await ethers.provider.getBalance(await multiSigWallet.getAddress());
+            
+            await expect(() => owner1.sendTransaction({
