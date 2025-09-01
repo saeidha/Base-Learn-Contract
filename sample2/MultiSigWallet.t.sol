@@ -114,3 +114,5 @@ describe("MultiSigWallet", function () {
 
         it("should fail if an owner tries to confirm a transaction they already confirmed", async function () {
             await expect(multiSigWallet.connect(owner1).confirmTransaction(0)).to.be.revertedWith(
+                "MultiSigWallet: Transaction already confirmed by you"
+            );
