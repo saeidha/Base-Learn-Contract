@@ -24,3 +24,5 @@ contract MultiSigWalletTest is Test {
         owners.push(owner1);
         owners.push(owner2);
         owners.push(owner3);
+        wallet = new MultiSigWallet(owners, REQUIRED_CONFIRMATIONS);
+
