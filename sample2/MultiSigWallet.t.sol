@@ -89,3 +89,5 @@ contract MultiSigWalletTest is Test {
     // 3. Confirmation and Revocation Tests
     //================================================================================
 
+    function test_OwnerCanConfirmTransaction() public {
+        vm.prank(owner1);
