@@ -173,3 +173,4 @@ contract MultiSigWallet {
     }
 
     /**
+     * @dev Allows anyone to execute a transaction once it has enough confirmations.
