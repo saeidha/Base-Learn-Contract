@@ -74,3 +74,5 @@ describe("MultiSigWallet", function () {
 
         it("should fail if a non-owner tries to submit a transaction", async function () {
             const to = nonOwner.address;
+            const value = ethers.parseEther("1.0");
+            const data = "0x";
