@@ -152,3 +152,5 @@ contract MultiSigWalletTest is Test {
         vm.expectEmit(true, true, false, true);
         emit TransactionExecuted(txIndex, owner3);
         wallet.executeTransaction(txIndex);
+
+        // Assertions
