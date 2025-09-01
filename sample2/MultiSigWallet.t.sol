@@ -22,3 +22,5 @@ describe("MultiSigWallet", function () {
     // 1. Test Deployment and Initialization
     describe("Deployment", function () {
         it("should set the correct owners", async function () {
+            const contractOwners = await multiSigWallet.getOwners();
+            expect(contractOwners).to.have.members(owners);
