@@ -159,3 +159,4 @@ describe("MultiSigWallet", function () {
             data = "0x";
             
             // Fund the wallet
+            await owner1.sendTransaction({
