@@ -202,3 +202,5 @@ contract MultiSigWallet {
      * @param _newOwner The address of the new owner to add.
      */
     function addOwner(address _newOwner) public onlyOwner {
+        require(_newOwner != address(0), "MultiSigWallet: Invalid owner address");
+        require(!isOwner[_newOwner], "MultiSigWallet: Owner already exists");
