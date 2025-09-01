@@ -108,3 +108,5 @@ describe("MultiSigWallet", function () {
 
         it("should fail if an owner tries to confirm a non-existent transaction", async function () {
             await expect(multiSigWallet.connect(owner1).confirmTransaction(99)).to.be.revertedWith(
+                "MultiSigWallet: Transaction does not exist"
+            );
