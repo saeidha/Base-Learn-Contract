@@ -11,3 +11,4 @@ contract MultiSigWalletTest is Test {
     address public owner2 = address(0x2);
     address public owner3 = address(0x3);
     address public nonOwner = address(0x4);
+    address public destination = address(0x5);
