@@ -106,3 +106,4 @@ describe("MultiSigWallet", function () {
             );
         });
 
+        it("should fail if an owner tries to confirm a non-existent transaction", async function () {
