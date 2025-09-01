@@ -185,3 +185,5 @@ contract MultiSigWalletTest is Test {
     //================================================================================
     // 5. Owner Management (via Multi-Sig)
     //================================================================================
+
+    function test_ProposeAndExecuteAddOwner() public {
