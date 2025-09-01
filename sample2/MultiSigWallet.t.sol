@@ -126,3 +126,5 @@ describe("MultiSigWallet", function () {
             const value = ethers.parseEther("1.0");
             const data = "0x";
             await multiSigWallet.connect(owner1).submitTransaction(to, value, data); // txIndex 0
+            await multiSigWallet.connect(owner2).confirmTransaction(0);
+        });
