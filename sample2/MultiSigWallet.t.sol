@@ -264,3 +264,4 @@ describe("MultiSigWallet", function () {
     describe("View Functions", function () {
         it("getTransactionCount should return the correct count", async function () {
             expect(await multiSigWallet.getTransactionCount()).to.equal(0);
+            await multiSigWallet.connect(owner1).submitTransaction(nonOwner.address, 1, "0x");
