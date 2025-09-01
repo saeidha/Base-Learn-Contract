@@ -44,3 +44,5 @@ describe("MultiSigWallet", function () {
                 "MultiSigWallet: Invalid number of required confirmations"
             );
         });
+    });
+
