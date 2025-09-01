@@ -47,3 +47,4 @@ describe("MultiSigWallet", function () {
     });
 
     // 2. Test Transaction Submission
+    describe("submitTransaction", function () {
