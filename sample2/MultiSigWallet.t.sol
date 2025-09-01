@@ -211,3 +211,5 @@ contract MultiSigWalletTest is Test {
         bytes memory data = abi.encodeWithSelector(MultiSigWallet.removeOwner.selector, ownerToRemove);
         
         // Propose & Confirm
+        vm.prank(owner1);
+        uint256 txIndex = wallet.submitTransaction(address(wallet), 0, data);
