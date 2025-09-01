@@ -64,3 +64,5 @@ contract MultiSigWallet {
     modifier txExists(uint256 _txIndex) {
         require(_txIndex < transactions.length, "MultiSigWallet: Transaction does not exist");
         _;
+    }
+
