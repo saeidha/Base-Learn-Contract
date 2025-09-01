@@ -214,3 +214,5 @@ contract MultiSigWallet {
      * @param _oldOwner The address of the owner to remove.
      */
     function removeOwner(address _oldOwner) public onlyOwner {
+        require(isOwner[_oldOwner], "MultiSigWallet: Address is not an owner");
+        require(owners.length > 1, "MultiSigWallet: Cannot remove the last owner");
