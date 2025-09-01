@@ -205,3 +205,5 @@ contract MultiSigWalletTest is Test {
         assertTrue(wallet.isOwner(newOwner));
         assertEq(wallet.getOwners().length, 4);
     }
+
+    function test_ProposeAndExecuteRemoveOwner() public {
