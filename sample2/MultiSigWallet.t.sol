@@ -214,3 +214,4 @@ describe("MultiSigWallet", function () {
             // Submit the proposal to add an owner
             await multiSigWallet.connect(owner1).submitTransaction(await multiSigWallet.getAddress(), 0, addOwnerData);
             
+            // Confirm and execute
