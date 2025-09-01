@@ -22,3 +22,5 @@ contract MultiSigWalletTest is Test {
     // This function runs before each test case
     function setUp() public {
         owners.push(owner1);
+        owners.push(owner2);
+        owners.push(owner3);
