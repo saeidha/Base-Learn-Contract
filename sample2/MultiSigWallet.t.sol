@@ -28,3 +28,5 @@ describe("MultiSigWallet", function () {
 
         it("should set the correct required confirmations", async function () {
             expect(await multiSigWallet.requiredConfirmations()).to.equal(requiredConfirmations);
+        });
+
