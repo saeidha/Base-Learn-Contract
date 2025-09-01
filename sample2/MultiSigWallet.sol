@@ -132,3 +132,6 @@ contract MultiSigWallet {
             destination: _destination,
             value: _value,
             data: _data,
+            executed: false
+        }));
+
