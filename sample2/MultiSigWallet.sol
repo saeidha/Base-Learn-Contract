@@ -92,3 +92,4 @@ contract MultiSigWallet {
             "MultiSigWallet: Invalid number of required confirmations"
         );
 
+        for (uint256 i = 0; i < _owners.length; i++) {
