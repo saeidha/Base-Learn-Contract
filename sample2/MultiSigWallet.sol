@@ -34,3 +34,6 @@ contract MultiSigWallet {
         address destination;
         uint256 value;
         bytes data;
+        bool executed;
+    }
+
