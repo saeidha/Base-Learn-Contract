@@ -4,3 +4,5 @@ const { ethers } = require("hardhat");
 describe("MultiSigWallet", function () {
     let MultiSigWallet;
     let multiSigWallet;
+    let owners;
+    let requiredConfirmations;
