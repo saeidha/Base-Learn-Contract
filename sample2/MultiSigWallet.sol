@@ -260,3 +260,4 @@ contract MultiSigWallet {
 
     /**
      * @dev Returns the total number of transactions submitted to the wallet.
+     */
