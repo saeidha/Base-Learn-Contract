@@ -137,3 +137,4 @@ describe("MultiSigWallet", function () {
             expect(await multiSigWallet.isConfirmed(0, owner2.address)).to.be.false;
         });
 
+        it("should fail if an owner tries to revoke a confirmation they haven't made", async function () {
