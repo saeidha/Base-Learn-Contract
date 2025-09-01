@@ -179,3 +179,6 @@ contract MultiSigWallet {
     function executeTransaction(uint256 _txIndex)
         public
         onlyOwner
+        txExists(_txIndex)
+        notExecuted(_txIndex)
+    {
