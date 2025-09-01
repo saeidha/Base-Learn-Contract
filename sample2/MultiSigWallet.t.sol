@@ -259,3 +259,4 @@ describe("MultiSigWallet", function () {
             expect(finalBalance - initialBalance).to.equal(amount);
         });
     });
+
