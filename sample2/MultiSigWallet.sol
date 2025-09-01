@@ -270,3 +270,5 @@ contract MultiSigWallet {
      * @param _txIndex The index of the transaction.
      */
     function getTransaction(uint256 _txIndex)
+        public
+        view
