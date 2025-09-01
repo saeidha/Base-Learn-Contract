@@ -226,3 +226,5 @@ contract MultiSigWallet {
             }
         }
         owners.pop();
+
+        if (requiredConfirmations > owners.length) {
