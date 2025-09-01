@@ -206,3 +206,4 @@ describe("MultiSigWallet", function () {
     });
 
     // 6. Test Owner Management (via multi-sig transactions)
+    describe("Owner Management", function () {
