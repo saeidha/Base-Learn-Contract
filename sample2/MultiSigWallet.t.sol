@@ -275,3 +275,4 @@ describe("MultiSigWallet", function () {
             expect(await multiSigWallet.getConfirmationCount(0)).to.equal(2);
             await multiSigWallet.connect(owner2).revokeConfirmation(0);
             expect(await multiSigWallet.getConfirmationCount(0)).to.equal(1);
+        });
