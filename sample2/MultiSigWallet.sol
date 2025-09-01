@@ -291,3 +291,6 @@ contract MultiSigWallet {
     }
 
     /**
+     * @dev Internal function to handle the confirmation logic.
+     * @param _txIndex The index of the transaction.
+     */
