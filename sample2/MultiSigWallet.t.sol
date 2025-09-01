@@ -245,3 +245,5 @@ describe("MultiSigWallet", function () {
     });
 
     // 7. Test Receiving Ether
+    describe("Receive Ether", function () {
+        it("should accept Ether deposits via receive()", async function () {
