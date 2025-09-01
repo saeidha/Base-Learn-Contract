@@ -153,3 +153,4 @@ contract MultiSigWallet {
         txExists(_txIndex)
         notExecuted(_txIndex)
         notConfirmed(_txIndex)
+    {
