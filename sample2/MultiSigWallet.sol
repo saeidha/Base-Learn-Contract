@@ -58,3 +58,6 @@ contract MultiSigWallet {
 
     modifier onlyOwner() {
         require(isOwner[msg.sender], "MultiSigWallet: Not an owner");
+        _;
+    }
+
