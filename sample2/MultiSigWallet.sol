@@ -222,3 +222,7 @@ contract MultiSigWallet {
         for (uint256 i = 0; i < owners.length - 1; i++) {
             if (owners[i] == _oldOwner) {
                 owners[i] = owners[owners.length - 1];
+                break;
+            }
+        }
+        owners.pop();
