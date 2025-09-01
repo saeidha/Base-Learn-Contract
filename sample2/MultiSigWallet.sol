@@ -266,3 +266,5 @@ contract MultiSigWallet {
     }
 
     /**
+     * @dev Returns the details of a specific transaction.
+     * @param _txIndex The index of the transaction.
