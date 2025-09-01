@@ -210,3 +210,4 @@ contract MultiSigWalletTest is Test {
         address ownerToRemove = owner3;
         bytes memory data = abi.encodeWithSelector(MultiSigWallet.removeOwner.selector, ownerToRemove);
         
+        // Propose & Confirm
