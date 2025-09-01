@@ -261,3 +261,5 @@ describe("MultiSigWallet", function () {
     });
 
     // 8. Test View Functions
+    describe("View Functions", function () {
+        it("getTransactionCount should return the correct count", async function () {
