@@ -85,3 +85,6 @@ contract MultiSigWalletTest is Test {
         wallet.submitTransaction(destination, 1 ether, "");
     }
 
+    //================================================================================
+    // 3. Confirmation and Revocation Tests
+    //================================================================================
