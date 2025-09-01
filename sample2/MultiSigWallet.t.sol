@@ -154,3 +154,4 @@ describe("MultiSigWallet", function () {
     describe("executeTransaction", function () {
         let to, value, data;
         beforeEach(async function () {
+            to = nonOwner.address;
