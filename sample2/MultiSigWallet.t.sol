@@ -81,3 +81,4 @@ contract MultiSigWalletTest is Test {
 
     function test_Fail_NonOwnerCannotSubmitTransaction() public {
         vm.prank(nonOwner);
+        vm.expectRevert("MultiSigWallet: Not an owner");
