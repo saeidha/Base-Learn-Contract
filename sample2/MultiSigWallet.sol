@@ -160,3 +160,5 @@ contract MultiSigWallet {
     /**
      * @dev Allows an owner to revoke their confirmation for a pending transaction.
      * @param _txIndex The index of the transaction to revoke confirmation for.
+     */
+    function revokeConfirmation(uint256 _txIndex)
