@@ -34,3 +34,4 @@ describe("MultiSigWallet", function () {
             await expect(MultiSigWallet.deploy([], requiredConfirmations)).to.be.revertedWith(
                 "MultiSigWallet: Owners required"
             );
+        });
