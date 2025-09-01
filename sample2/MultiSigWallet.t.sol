@@ -26,3 +26,4 @@ contract MultiSigWalletTest is Test {
         owners.push(owner3);
         wallet = new MultiSigWallet(owners, REQUIRED_CONFIRMATIONS);
 
+        // Fund the wallet with 10 ETH for execution tests
