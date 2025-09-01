@@ -207,3 +207,4 @@ contract MultiSigWallet {
         isOwner[_newOwner] = true;
         owners.push(_newOwner);
         emit OwnerAdded(_newOwner);
+    }
