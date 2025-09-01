@@ -33,3 +33,4 @@ describe("MultiSigWallet", function () {
         it("should fail deployment with zero owners", async function () {
             await expect(MultiSigWallet.deploy([], requiredConfirmations)).to.be.revertedWith(
                 "MultiSigWallet: Owners required"
+            );
