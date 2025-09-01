@@ -54,3 +54,4 @@ contract MultiSigWalletTest is Test {
         new MultiSigWallet(owners, 0);
 
         vm.expectRevert("MultiSigWallet: Invalid number of required confirmations");
+        new MultiSigWallet(owners, owners.length + 1);
