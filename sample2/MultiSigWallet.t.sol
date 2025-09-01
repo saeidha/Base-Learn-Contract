@@ -116,3 +116,4 @@ contract MultiSigWalletTest is Test {
         uint256 txIndex = wallet.submitTransaction(destination, 1 ether, ""); // owner1 confirms
         
         vm.prank(owner1);
+        vm.expectEmit(true, true, false, true); // Don't check data
