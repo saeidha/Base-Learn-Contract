@@ -135,3 +135,5 @@ contract MultiSigWallet {
             executed: false
         }));
 
+        emit TransactionSubmitted(txIndex, msg.sender, _destination, _value, _data);
+
