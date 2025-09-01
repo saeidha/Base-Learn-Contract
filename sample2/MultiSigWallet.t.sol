@@ -2,3 +2,5 @@ const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
 describe("MultiSigWallet", function () {
+    let MultiSigWallet;
+    let multiSigWallet;
