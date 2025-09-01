@@ -52,3 +52,5 @@ describe("MultiSigWallet", function () {
             const to = nonOwner.address;
             const value = ethers.parseEther("1.0");
             const data = "0x";
+
+            await expect(multiSigWallet.connect(owner1).submitTransaction(to, value, data))
