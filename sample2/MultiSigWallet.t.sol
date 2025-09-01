@@ -164,3 +164,5 @@ describe("MultiSigWallet", function () {
                 value: ethers.parseEther("2.0")
             });
 
+            await multiSigWallet.connect(owner1).submitTransaction(to, value, data);
+        });
