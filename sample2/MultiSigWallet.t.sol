@@ -48,3 +48,5 @@ describe("MultiSigWallet", function () {
 
     // 2. Test Transaction Submission
     describe("submitTransaction", function () {
+        it("should allow an owner to submit a transaction", async function () {
+            const to = nonOwner.address;
