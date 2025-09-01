@@ -8,3 +8,5 @@ contract MultiSigWalletTest is Test {
     MultiSigWallet wallet;
     address[] public owners;
     address public owner1 = address(0x1);
+    address public owner2 = address(0x2);
+    address public owner3 = address(0x3);
