@@ -207,3 +207,5 @@ describe("MultiSigWallet", function () {
 
     // 6. Test Owner Management (via multi-sig transactions)
     describe("Owner Management", function () {
+        it("should be able to add a new owner through a proposal", async function () {
+            const newOwner = nonOwner.address;
