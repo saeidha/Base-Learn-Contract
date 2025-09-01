@@ -124,3 +124,5 @@ contract MultiSigWalletTest is Test {
         assertEq(wallet.getConfirmationCount(txIndex), 0);
     }
     
+    function test_Fail_CannotRevokeIfNotConfirmed() public {
+        vm.prank(owner1);
