@@ -71,3 +71,4 @@ contract MultiSigWallet {
         _;
     }
 
+    modifier notConfirmed(uint256 _txIndex) {
