@@ -6,3 +6,5 @@ describe("MultiSigWallet", function () {
     let multiSigWallet;
     let owners;
     let requiredConfirmations;
+
+    // Hook to run before each test
