@@ -135,3 +135,5 @@ describe("MultiSigWallet", function () {
                 .withArgs(0, owner2.address);
             
             expect(await multiSigWallet.isConfirmed(0, owner2.address)).to.be.false;
+        });
+
