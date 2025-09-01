@@ -267,3 +267,4 @@ describe("MultiSigWallet", function () {
             await multiSigWallet.connect(owner1).submitTransaction(nonOwner.address, 1, "0x");
             expect(await multiSigWallet.getTransactionCount()).to.equal(1);
         });
+
