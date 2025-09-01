@@ -79,3 +79,5 @@ contract MultiSigWalletTest is Test {
         assertEq(wallet.getConfirmationCount(txIndex), 1);
     }
 
+    function test_Fail_NonOwnerCannotSubmitTransaction() public {
+        vm.prank(nonOwner);
