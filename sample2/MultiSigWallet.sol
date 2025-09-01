@@ -275,3 +275,5 @@ contract MultiSigWallet {
         returns (address destination, uint256 value, bytes memory data, bool executed)
     {
         Transaction storage transaction = transactions[_txIndex];
+        return (transaction.destination, transaction.value, transaction.data, transaction.executed);
+    }
