@@ -17,3 +17,4 @@ contract MultiSigWalletTest is Test {
     event TransactionSubmitted(uint256 indexed txIndex, address indexed owner, address indexed destination, uint256 value, bytes data);
     event TransactionConfirmed(uint256 indexed txIndex, address indexed owner);
     event ConfirmationRevoked(uint256 indexed txIndex, address indexed owner);
+    event TransactionExecuted(uint256 indexed txIndex, address indexed owner);
