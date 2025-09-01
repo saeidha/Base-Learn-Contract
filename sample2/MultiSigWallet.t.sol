@@ -194,3 +194,4 @@ describe("MultiSigWallet", function () {
                 "MultiSigWallet: Transaction does not exist"
             );
         });
+
