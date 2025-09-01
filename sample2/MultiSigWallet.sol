@@ -98,3 +98,4 @@ contract MultiSigWallet {
             require(!isOwner[owner], "MultiSigWallet: Duplicate owner");
             isOwner[owner] = true;
             owners.push(owner);
+        }
