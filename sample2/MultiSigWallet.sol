@@ -195,3 +195,5 @@ contract MultiSigWallet {
         require(success, "MultiSigWallet: Transaction execution failed");
 
         emit TransactionExecuted(_txIndex, msg.sender);
+    }
+
