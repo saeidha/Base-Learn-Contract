@@ -14,3 +14,5 @@ contract MultiSigWalletTest is Test {
     address public destination = address(0x5);
     uint256 public constant REQUIRED_CONFIRMATIONS = 2;
 
+    event TransactionSubmitted(uint256 indexed txIndex, address indexed owner, address indexed destination, uint256 value, bytes data);
+    event TransactionConfirmed(uint256 indexed txIndex, address indexed owner);
