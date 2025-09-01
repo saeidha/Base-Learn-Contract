@@ -60,3 +60,4 @@ describe("MultiSigWallet", function () {
             const tx = await multiSigWallet.getTransaction(0);
             expect(tx.destination).to.equal(to);
             expect(tx.value).to.equal(value);
+            expect(tx.executed).to.be.false;
