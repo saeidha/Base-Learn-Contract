@@ -91,3 +91,4 @@ contract MultiSigWallet {
             _requiredConfirmations > 0 && _requiredConfirmations <= _owners.length,
             "MultiSigWallet: Invalid number of required confirmations"
         );
+
