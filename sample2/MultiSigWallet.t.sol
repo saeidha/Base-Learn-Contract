@@ -76,3 +76,4 @@ contract MultiSigWalletTest is Test {
         vm.prank(owner1);
         uint256 txIndex = wallet.submitTransaction(destination, 1 ether, "");
         assertTrue(wallet.isConfirmed(txIndex, owner1));
+        assertEq(wallet.getConfirmationCount(txIndex), 1);
