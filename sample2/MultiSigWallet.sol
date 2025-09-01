@@ -115,3 +115,6 @@ contract MultiSigWallet {
     // Public and External Functions
     //================================================================================
 
+    /**
+     * @dev Allows an owner to submit a new transaction proposal.
+     * @param _destination The target address for the transaction.
