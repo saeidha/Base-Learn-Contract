@@ -184,3 +184,5 @@ describe("MultiSigWallet", function () {
 
             const tx = await multiSigWallet.getTransaction(0);
             expect(tx.executed).to.be.true;
+
+            const finalBalance = await ethers.provider.getBalance(to);
