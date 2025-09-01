@@ -154,3 +154,6 @@ contract MultiSigWallet {
         notExecuted(_txIndex)
         notConfirmed(_txIndex)
     {
+       _confirmTransaction(_txIndex);
+    }
+
