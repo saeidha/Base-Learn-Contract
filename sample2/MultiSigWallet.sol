@@ -81,3 +81,5 @@ contract MultiSigWallet {
     //================================================================================
 
     /**
+     * @dev Initializes the multi-sig wallet with a set of owners and a required confirmation count.
+     * @param _owners An array of initial owner addresses.
