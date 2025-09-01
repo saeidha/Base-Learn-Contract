@@ -175,3 +175,5 @@ contract MultiSigWallet {
     /**
      * @dev Allows anyone to execute a transaction once it has enough confirmations.
      * @param _txIndex The index of the transaction to execute.
+     */
+    function executeTransaction(uint256 _txIndex)
