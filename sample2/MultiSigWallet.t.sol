@@ -78,3 +78,4 @@ describe("MultiSigWallet", function () {
             const data = "0x";
 
             await expect(
+                multiSigWallet.connect(nonOwner).submitTransaction(to, value, data)
