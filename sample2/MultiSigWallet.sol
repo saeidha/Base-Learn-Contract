@@ -213,3 +213,4 @@ contract MultiSigWallet {
      * @dev Removes an existing owner. This action must be approved via a multi-sig transaction.
      * @param _oldOwner The address of the owner to remove.
      */
+    function removeOwner(address _oldOwner) public onlyOwner {
