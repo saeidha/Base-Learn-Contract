@@ -137,3 +137,5 @@ contract MultiSigWalletTest is Test {
     // 4. Transaction Execution Tests
     //================================================================================
     
+    function test_CanExecuteWithEnoughConfirmations() public {
+        // Step 1: Submit
