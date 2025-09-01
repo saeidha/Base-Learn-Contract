@@ -167,3 +167,6 @@ contract MultiSigWalletTest is Test {
         vm.expectRevert("MultiSigWallet: Not enough confirmations");
         wallet.executeTransaction(txIndex);
     }
+
+    function test_Fail_ExecuteAlreadyExecuted() public {
+        vm.prank(owner1);
