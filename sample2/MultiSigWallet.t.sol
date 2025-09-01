@@ -223,3 +223,5 @@ describe("MultiSigWallet", function () {
 
         it("should be able to remove an owner through a proposal", async function () {
             const ownerToRemove = owner3.address;
+            const removeOwnerData = multiSigWallet.interface.encodeFunctionData("removeOwner", [ownerToRemove]);
+
