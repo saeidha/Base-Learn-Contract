@@ -256,3 +256,6 @@ contract MultiSigWallet {
      */
     function getOwners() public view returns (address[] memory) {
         return owners;
+    }
+
+    /**
