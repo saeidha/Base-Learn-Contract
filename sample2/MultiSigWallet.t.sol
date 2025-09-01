@@ -116,3 +116,5 @@ describe("MultiSigWallet", function () {
             await expect(multiSigWallet.connect(owner1).confirmTransaction(0)).to.be.revertedWith(
                 "MultiSigWallet: Transaction already confirmed by you"
             );
+        });
+    });
