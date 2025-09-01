@@ -17,3 +17,4 @@ contract MultiSigWallet {
         address indexed owner,
         address indexed destination,
         uint256 value,
+        bytes data
