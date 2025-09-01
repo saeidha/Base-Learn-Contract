@@ -137,3 +137,5 @@ contract MultiSigWallet {
 
         emit TransactionSubmitted(txIndex, msg.sender, _destination, _value, _data);
 
+        // The submitter automatically confirms the transaction.
+        _confirmTransaction(txIndex);
