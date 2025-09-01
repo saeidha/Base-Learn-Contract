@@ -253,3 +253,4 @@ contract MultiSigWallet {
     
     /**
      * @dev Returns the list of all owners.
+     */
