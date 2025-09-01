@@ -287,3 +287,4 @@ contract MultiSigWallet {
             if (isConfirmed[_txIndex][owners[i]]) {
                 count++;
             }
+        }
