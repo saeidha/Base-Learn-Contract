@@ -132,3 +132,5 @@ describe("MultiSigWallet", function () {
         it("should allow an owner to revoke their confirmation", async function () {
             await expect(multiSigWallet.connect(owner2).revokeConfirmation(0))
                 .to.emit(multiSigWallet, "ConfirmationRevoked")
+                .withArgs(0, owner2.address);
+            
