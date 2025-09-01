@@ -131,3 +131,4 @@ contract MultiSigWallet {
         transactions.push(Transaction({
             destination: _destination,
             value: _value,
+            data: _data,
