@@ -225,3 +225,5 @@ describe("MultiSigWallet", function () {
             const ownerToRemove = owner3.address;
             const removeOwnerData = multiSigWallet.interface.encodeFunctionData("removeOwner", [ownerToRemove]);
 
+            await multiSigWallet.connect(owner1).submitTransaction(await multiSigWallet.getAddress(), 0, removeOwnerData);
+            await multiSigWallet.connect(owner2).confirmTransaction(0);
