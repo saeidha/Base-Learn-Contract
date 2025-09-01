@@ -68,3 +68,6 @@ contract MultiSigWallet {
 
     modifier notExecuted(uint256 _txIndex) {
         require(!transactions[_txIndex].executed, "MultiSigWallet: Transaction already executed");
+        _;
+    }
+
