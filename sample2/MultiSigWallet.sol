@@ -232,3 +232,4 @@ contract MultiSigWallet {
         }
 
         emit OwnerRemoved(_oldOwner);
+    }
