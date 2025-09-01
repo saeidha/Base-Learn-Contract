@@ -182,3 +182,5 @@ contract MultiSigWallet {
         txExists(_txIndex)
         notExecuted(_txIndex)
     {
+        uint256 confirmationCount = getConfirmationCount(_txIndex);
+        require(
