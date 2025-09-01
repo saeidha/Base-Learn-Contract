@@ -40,3 +40,5 @@ contract MultiSigWalletTest is Test {
         assertEq(deployedOwners.length, 3);
         assertEq(deployedOwners[0], owner1);
         assertEq(deployedOwners[1], owner2);
+        assertEq(deployedOwners[2], owner3);
+    }
