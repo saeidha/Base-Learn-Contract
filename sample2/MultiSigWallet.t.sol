@@ -237,3 +237,4 @@ describe("MultiSigWallet", function () {
             const changeReqData = multiSigWallet.interface.encodeFunctionData("changeRequiredConfirmations", [newRequirement]);
             
             await multiSigWallet.connect(owner1).submitTransaction(await multiSigWallet.getAddress(), 0, changeReqData);
+            await multiSigWallet.connect(owner2).confirmTransaction(0);
