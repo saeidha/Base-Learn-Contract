@@ -156,3 +156,4 @@ describe("MultiSigWallet", function () {
         beforeEach(async function () {
             to = nonOwner.address;
             value = ethers.parseEther("1.0");
+            data = "0x";
