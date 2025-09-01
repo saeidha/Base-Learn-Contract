@@ -25,3 +25,5 @@ contract MultiSigWallet {
     event OwnerAdded(address indexed newOwner);
     event OwnerRemoved(address indexed oldOwner);
     event RequiredConfirmationsChanged(uint256 newRequiredConfirmations);
+
+    //================================================================================
