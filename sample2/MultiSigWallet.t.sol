@@ -130,3 +130,5 @@ contract MultiSigWalletTest is Test {
         
         vm.prank(owner2); // owner2 hasn't confirmed
         vm.expectRevert("MultiSigWallet: You have not confirmed this transaction");
+        wallet.revokeConfirmation(txIndex);
+    }
