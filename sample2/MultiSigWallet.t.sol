@@ -90,3 +90,7 @@ describe("MultiSigWallet", function () {
             const value = ethers.parseEther("1.0");
             const data = "0x";
             await multiSigWallet.connect(owner1).submitTransaction(to, value, data);
+        });
+
+        it("should allow another owner to confirm a transaction", async function () {
+            await expect(multiSigWallet.connect(owner2).confirmTransaction(0))
