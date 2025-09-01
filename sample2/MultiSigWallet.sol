@@ -61,3 +61,4 @@ contract MultiSigWallet {
         _;
     }
 
+    modifier txExists(uint256 _txIndex) {
