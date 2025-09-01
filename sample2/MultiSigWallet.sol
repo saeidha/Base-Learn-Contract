@@ -47,3 +47,5 @@ contract MultiSigWallet {
     address[] public owners;
 
     // Mapping to check if an address is an owner for efficient lookups.
+    mapping(address => bool) public isOwner;
+
