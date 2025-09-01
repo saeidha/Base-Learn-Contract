@@ -42,3 +42,5 @@ describe("MultiSigWallet", function () {
             );
             await expect(MultiSigWallet.deploy(owners, owners.length + 1)).to.be.revertedWith(
                 "MultiSigWallet: Invalid number of required confirmations"
+            );
+        });
