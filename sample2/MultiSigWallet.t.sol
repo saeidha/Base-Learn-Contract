@@ -56,3 +56,5 @@ describe("MultiSigWallet", function () {
             await expect(multiSigWallet.connect(owner1).submitTransaction(to, value, data))
                 .to.emit(multiSigWallet, "TransactionSubmitted")
                 .withArgs(0, owner1.address, to, value, data);
+
+            const tx = await multiSigWallet.getTransaction(0);
