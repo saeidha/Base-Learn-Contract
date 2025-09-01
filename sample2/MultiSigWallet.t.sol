@@ -120,3 +120,5 @@ contract MultiSigWalletTest is Test {
         emit ConfirmationRevoked(txIndex, owner1);
         wallet.revokeConfirmation(txIndex);
         
+        assertFalse(wallet.isConfirmed(txIndex, owner1));
+        assertEq(wallet.getConfirmationCount(txIndex), 0);
