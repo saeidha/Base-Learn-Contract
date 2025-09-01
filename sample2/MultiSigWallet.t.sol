@@ -66,3 +66,4 @@ describe("MultiSigWallet", function () {
         it("should automatically confirm the transaction for the submitter", async function () {
             const to = nonOwner.address;
             const value = ethers.parseEther("1.0");
+            const data = "0x";
