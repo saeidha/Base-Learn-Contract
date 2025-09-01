@@ -64,3 +64,4 @@ describe("MultiSigWallet", function () {
         });
 
         it("should automatically confirm the transaction for the submitter", async function () {
+            const to = nonOwner.address;
