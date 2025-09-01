@@ -12,3 +12,5 @@ contract MultiSigWalletTest is Test {
     address public owner3 = address(0x3);
     address public nonOwner = address(0x4);
     address public destination = address(0x5);
+    uint256 public constant REQUIRED_CONFIRMATIONS = 2;
+
