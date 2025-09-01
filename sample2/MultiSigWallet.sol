@@ -254,3 +254,5 @@ contract MultiSigWallet {
     /**
      * @dev Returns the list of all owners.
      */
+    function getOwners() public view returns (address[] memory) {
+        return owners;
