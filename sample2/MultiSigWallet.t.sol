@@ -123,3 +123,4 @@ describe("MultiSigWallet", function () {
     describe("revokeConfirmation", function () {
         beforeEach(async function () {
             const to = nonOwner.address;
+            const value = ethers.parseEther("1.0");
