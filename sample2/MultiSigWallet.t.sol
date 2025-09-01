@@ -182,3 +182,6 @@ contract MultiSigWalletTest is Test {
         wallet.executeTransaction(txIndex); // Second execution
     }
 
+    //================================================================================
+    // 5. Owner Management (via Multi-Sig)
+    //================================================================================
