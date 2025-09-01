@@ -99,3 +99,4 @@ contract MultiSigWallet {
             isOwner[owner] = true;
             owners.push(owner);
         }
+
