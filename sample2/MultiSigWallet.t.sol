@@ -140,3 +140,4 @@ describe("MultiSigWallet", function () {
         it("should fail if an owner tries to revoke a confirmation they haven't made", async function () {
              await expect(multiSigWallet.connect(owner3).revokeConfirmation(0)).to.be.revertedWith(
                 "MultiSigWallet: You have not confirmed this transaction"
+            );
