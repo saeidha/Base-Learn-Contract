@@ -170,3 +170,5 @@ describe("MultiSigWallet", function () {
         it("should fail to execute if confirmations are not met", async function () {
             await expect(multiSigWallet.connect(owner1).executeTransaction(0)).to.be.revertedWith(
                 "MultiSigWallet: Not enough confirmations"
+            );
+        });
