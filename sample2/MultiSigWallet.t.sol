@@ -18,3 +18,5 @@ describe("MultiSigWallet", function () {
         MultiSigWallet = await ethers.getContractFactory("MultiSigWallet");
         multiSigWallet = await MultiSigWallet.deploy(owners, requiredConfirmations);
     });
+
+    // 1. Test Deployment and Initialization
