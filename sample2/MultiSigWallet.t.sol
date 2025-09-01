@@ -72,3 +72,4 @@ contract MultiSigWalletTest is Test {
         assertEq(executed, false);
     }
 
+    function test_SubmitterAutomaticallyConfirms() public {
