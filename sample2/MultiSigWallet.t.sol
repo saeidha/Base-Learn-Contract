@@ -64,3 +64,4 @@ contract MultiSigWalletTest is Test {
     function test_OwnerCanSubmitTransaction() public {
         vm.prank(owner1);
         uint256 txIndex = wallet.submitTransaction(destination, 1 ether, "");
+        assertEq(txIndex, 0);
