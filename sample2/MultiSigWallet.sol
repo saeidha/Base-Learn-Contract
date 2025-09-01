@@ -130,3 +130,4 @@ contract MultiSigWallet {
         txIndex = transactions.length;
         transactions.push(Transaction({
             destination: _destination,
+            value: _value,
