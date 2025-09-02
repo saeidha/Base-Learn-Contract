@@ -123,3 +123,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
 
     /**
      * @notice Gets the number of beneficiaries with vesting schedules.
+     * @return The total number of beneficiaries.
