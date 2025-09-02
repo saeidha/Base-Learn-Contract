@@ -83,3 +83,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @param _amounts An array of total token amounts for each beneficiary.
      * @param _startTimes An array of start times for each beneficiary.
      * @param _durations An array of durations for each beneficiary.
+     * @param _cliffDurations An array of cliff durations for each beneficiary.
+     */
