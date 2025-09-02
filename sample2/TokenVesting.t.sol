@@ -95,3 +95,4 @@ contract TestTokenVesting is Test {
         tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
         
         vm.warp(startTime + CLIFF - 1 days);
+        
