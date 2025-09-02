@@ -40,3 +40,4 @@ contract TestTokenVesting is Test {
         mockToken = new MockToken("Mock Token", "MTK", TOTAL_SUPPLY);
 
         vm.prank(owner);
+        tokenVesting = new TokenVesting(address(mockToken));
