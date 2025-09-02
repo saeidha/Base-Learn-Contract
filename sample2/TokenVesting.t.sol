@@ -261,3 +261,5 @@ contract TestTokenVesting is Test {
         tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, DURATION + 1);
     }
 
+    function test_19_GetVestedAmount_NoSchedule() public {
+        assertEq(tokenVesting.getVestedAmount(randomUser), 0);
