@@ -279,3 +279,4 @@ contract TestTokenVesting is Test {
         tokenVesting.createVestingSchedule(beneficiary2, VESTING_AMOUNT_2, startTime, DURATION, CLIFF);
 
         // Time passes
+        uint64 time = startTime + CLIFF + 50 days;
