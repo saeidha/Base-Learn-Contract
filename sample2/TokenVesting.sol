@@ -259,3 +259,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     }
 
     /**
+     * @notice Gets the total amount of all tokens locked in this contract across all schedules.
