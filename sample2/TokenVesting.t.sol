@@ -235,3 +235,5 @@ contract TestTokenVesting is Test {
         
         vm.prank(beneficiary1);
         tokenVesting.release();
+        
+        // Try to release again
