@@ -126,3 +126,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @return The total number of beneficiaries.
      */
     function getBeneficiaryCount() public view returns (uint256) {
+        return beneficiaries.length;
