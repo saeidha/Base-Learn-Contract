@@ -7,3 +7,6 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 /**
  * @title TokenVesting
+ * @dev A smart contract for managing token vesting schedules for multiple beneficiaries.
+ * It allows for linear vesting with an optional cliff period.
+ * The owner can create vesting schedules, and beneficiaries can release their vested tokens.
