@@ -18,3 +18,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         uint64 startTime;
         uint64 duration;
         uint64 cliffDuration;
+        uint256 totalAmount;
