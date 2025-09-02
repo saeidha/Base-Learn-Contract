@@ -187,3 +187,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @param _beneficiary The address of the beneficiary.
      * @return The total vested amount of tokens.
      */
+    function getVestedAmount(address _beneficiary) public view returns (uint256) {
