@@ -87,3 +87,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      */
     function createMultipleVestingSchedules(
         address[] calldata _beneficiaries,
+        uint256[] calldata _amounts,
