@@ -181,3 +181,5 @@ contract TestTokenVesting is Test {
         vm.prank(owner);
         tokenVesting.createMultipleVestingSchedules(beneficiaries, amounts, startTimes, durations, cliffDurations);
         
+        assertEq(tokenVesting.getBeneficiaryCount(), 2);
+        assertEq(tokenVesting.getTotalAmount(beneficiary1), VESTING_AMOUNT_1);
