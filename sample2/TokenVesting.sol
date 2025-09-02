@@ -204,3 +204,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         VestingSchedule memory schedule = vestingSchedules[_beneficiary];
         if (schedule.totalAmount == 0) {
             return 0;
+        }
+
