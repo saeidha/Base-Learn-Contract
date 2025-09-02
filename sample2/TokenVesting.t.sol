@@ -143,3 +143,5 @@ contract TestTokenVesting is Test {
         uint64 firstReleaseTime = startTime + CLIFF + 30 days;
         vm.warp(firstReleaseTime);
         uint256 firstExpectedVested = (VESTING_AMOUNT_1 * (firstReleaseTime - startTime)) / DURATION;
+        vm.prank(beneficiary1);
+        tokenVesting.release();
