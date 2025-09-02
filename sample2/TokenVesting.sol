@@ -142,3 +142,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @notice Gets the details of a vesting schedule for a specific beneficiary.
      * @param _beneficiary The address of the beneficiary.
      * @return The VestingSchedule struct for the given beneficiary.
+     */
