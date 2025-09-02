@@ -119,3 +119,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         require(token.transfer(beneficiary, releasableAmount), "TokenVesting: Token transfer failed");
     }
     
+    // --- View Functions ---
+
