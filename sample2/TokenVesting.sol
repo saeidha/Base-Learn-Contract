@@ -91,3 +91,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         uint64[] calldata _startTimes,
         uint64[] calldata _durations,
         uint64[] calldata _cliffDurations
+    ) external onlyOwner {
+        require(_beneficiaries.length == _amounts.length, "Arrays length mismatch");
