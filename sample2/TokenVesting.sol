@@ -177,3 +177,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
 
     /**
      * @notice Gets the amount of tokens already released to a beneficiary.
+     */
