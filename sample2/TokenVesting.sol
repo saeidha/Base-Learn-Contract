@@ -45,3 +45,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @notice Creates a new vesting schedule for a single beneficiary.
      * @param _beneficiary The address of the beneficiary.
      * @param _totalAmount The total amount of tokens to be vested.
+     * @param _startTime The start time of the vesting period (Unix timestamp).
+     * @param _duration The duration of the vesting period in seconds.
