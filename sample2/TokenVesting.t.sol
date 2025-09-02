@@ -132,3 +132,4 @@ contract TestTokenVesting is Test {
         tokenVesting.release();
         
         assertEq(mockToken.balanceOf(beneficiary1), VESTING_AMOUNT_1);
+        assertEq(tokenVesting.getReleasedAmount(beneficiary1), VESTING_AMOUNT_1);
