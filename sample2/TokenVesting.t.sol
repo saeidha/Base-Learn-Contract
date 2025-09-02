@@ -237,3 +237,5 @@ contract TestTokenVesting is Test {
         tokenVesting.release();
         
         // Try to release again
+        vm.prank(beneficiary1);
+        vm.expectRevert("TokenVesting: No tokens available for release");
