@@ -135,3 +135,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @return The address of the beneficiary.
      */
     function getBeneficiaryAtIndex(uint256 _index) public view returns (address) {
+        return beneficiaries[_index];
+    }
