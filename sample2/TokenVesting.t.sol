@@ -177,3 +177,5 @@ contract TestTokenVesting is Test {
         uint64[] memory cliffDurations = new uint64[](2);
         cliffDurations[0] = CLIFF;
         cliffDurations[1] = CLIFF;
+        
+        vm.prank(owner);
