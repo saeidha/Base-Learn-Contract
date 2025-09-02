@@ -38,3 +38,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      */
     constructor(address _token) Ownable(msg.sender) {
         require(_token != address(0), "TokenVesting: Token address cannot be zero");
+        token = IERC20(_token);
+    }
