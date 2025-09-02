@@ -107,3 +107,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @notice Allows a beneficiary to release their vested tokens.
      */
     function release() external nonReentrant {
+        address beneficiary = msg.sender;
+        uint256 releasableAmount = getReleasableAmount(beneficiary);
