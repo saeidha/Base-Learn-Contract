@@ -212,3 +212,5 @@ contract TestTokenVesting is Test {
         assertEq(tokenVesting.getVestedAmountAt(beneficiary1, futureTime), expectedVested);
     }
     
+    function test_13_TotalLockedAmount() public {
+        assertEq(tokenVesting.getTotalLockedAmount(), VESTING_AMOUNT_1 + VESTING_AMOUNT_2);
