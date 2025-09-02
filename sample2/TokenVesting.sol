@@ -51,3 +51,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      */
     function createVestingSchedule(
         address _beneficiary,
+        uint256 _totalAmount,
+        uint64 _startTime,
