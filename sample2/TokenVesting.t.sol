@@ -179,3 +179,4 @@ contract TestTokenVesting is Test {
         cliffDurations[1] = CLIFF;
         
         vm.prank(owner);
+        tokenVesting.createMultipleVestingSchedules(beneficiaries, amounts, startTimes, durations, cliffDurations);
