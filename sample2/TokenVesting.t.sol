@@ -18,3 +18,7 @@ contract TestTokenVesting is Test {
     MockToken public mockToken;
 
     address public owner;
+    address public beneficiary1;
+    address public beneficiary2;
+    address public randomUser;
+
