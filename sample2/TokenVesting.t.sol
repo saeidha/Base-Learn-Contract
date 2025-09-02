@@ -257,3 +257,5 @@ contract TestTokenVesting is Test {
     
     function test_18_Fail_CreateSchedule_CliffLongerThanDuration() public {
         vm.prank(owner);
+        vm.expectRevert("TokenVesting: Cliff duration cannot be longer than total duration");
+        tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, DURATION + 1);
