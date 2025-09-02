@@ -289,3 +289,5 @@ contract TestTokenVesting is Test {
         assertEq(mockToken.balanceOf(beneficiary1), b1_expected);
 
         // Beneficiary 2 has not released yet
+        assertEq(mockToken.balanceOf(beneficiary2), 0);
+        uint256 b2_releasable = (VESTING_AMOUNT_2 * (time - startTime)) / DURATION;
