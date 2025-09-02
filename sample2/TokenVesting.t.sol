@@ -192,3 +192,5 @@ contract TestTokenVesting is Test {
         
         assertEq(tokenVesting.getStartTime(beneficiary1), startTime);
         assertEq(tokenVesting.getDuration(beneficiary1), DURATION);
+        assertEq(tokenVesting.getCliffDuration(beneficiary1), CLIFF);
+        assertEq(tokenVesting.getTotalAmount(beneficiary1), VESTING_AMOUNT_1);
