@@ -128,3 +128,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     function getBeneficiaryCount() public view returns (uint256) {
         return beneficiaries.length;
     }
+    
