@@ -97,3 +97,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         require(_beneficiaries.length == _durations.length, "Arrays length mismatch");
         require(_beneficiaries.length == _cliffDurations.length, "Arrays length mismatch");
 
+        for (uint256 i = 0; i < _beneficiaries.length; i++) {
+            createVestingSchedule(_beneficiaries[i], _amounts[i], _startTimes[i], _durations[i], _cliffDurations[i]);
