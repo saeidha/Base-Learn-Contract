@@ -72,3 +72,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
             releasedAmount: 0
         });
 
+        beneficiaries.push(_beneficiary);
