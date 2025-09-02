@@ -90,3 +90,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         uint256[] calldata _amounts,
         uint64[] calldata _startTimes,
         uint64[] calldata _durations,
+        uint64[] calldata _cliffDurations
