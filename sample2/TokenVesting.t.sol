@@ -98,3 +98,5 @@ contract TestTokenVesting is Test {
         
         assertEq(tokenVesting.getReleasableAmount(beneficiary1), 0);
 
+        vm.prank(beneficiary1);
+        vm.expectRevert("TokenVesting: No tokens available for release");
