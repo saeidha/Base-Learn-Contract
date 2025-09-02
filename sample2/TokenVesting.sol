@@ -251,3 +251,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     
     /**
      * @notice Gets the remaining amount of tokens to be vested for a beneficiary.
+     * @param _beneficiary The address of the beneficiary.
