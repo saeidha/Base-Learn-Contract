@@ -52,3 +52,4 @@ contract TestTokenVesting is Test {
     function test_01_ContractDeployment() public {
         assertEq(address(tokenVesting.token()), address(mockToken));
         assertEq(tokenVesting.owner(), owner);
+    }
