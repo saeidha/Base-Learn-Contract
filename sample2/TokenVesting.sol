@@ -261,3 +261,6 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     /**
      * @notice Gets the total amount of all tokens locked in this contract across all schedules.
      * @return The total locked amount.
+     */
+    function getTotalLockedAmount() public view returns (uint256) {
+        return token.balanceOf(address(this));
