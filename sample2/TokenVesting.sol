@@ -149,3 +149,6 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     
     /**
      * @notice Gets the start time of the vesting schedule for a beneficiary.
+     */
+    function getStartTime(address _beneficiary) public view returns (uint64) {
+        return vestingSchedules[_beneficiary].startTime;
