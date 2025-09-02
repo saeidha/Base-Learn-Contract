@@ -109,3 +109,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     function release() external nonReentrant {
         address beneficiary = msg.sender;
         uint256 releasableAmount = getReleasableAmount(beneficiary);
+
+        require(releasableAmount > 0, "TokenVesting: No tokens available for release");
