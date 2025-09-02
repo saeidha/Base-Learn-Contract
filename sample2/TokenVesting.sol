@@ -192,3 +192,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         if (schedule.totalAmount == 0) {
             return 0;
         }
+        return _calculateVestedAmount(schedule, uint64(block.timestamp));
+    }
