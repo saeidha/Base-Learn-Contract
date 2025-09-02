@@ -55,3 +55,7 @@ contract TestTokenVesting is Test {
     }
 
     function test_02_CreateVestingSchedule_Success() public {
+        vm.prank(owner);
+        tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
+
+        TokenVesting.VestingSchedule memory schedule = tokenVesting.getVestingSchedule(beneficiary1);
