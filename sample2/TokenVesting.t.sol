@@ -253,3 +253,6 @@ contract TestTokenVesting is Test {
         vm.prank(owner);
         vm.expectRevert("TokenVesting: Duration must be greater than zero");
         tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, 0, CLIFF);
+    }
+    
+    function test_18_Fail_CreateSchedule_CliffLongerThanDuration() public {
