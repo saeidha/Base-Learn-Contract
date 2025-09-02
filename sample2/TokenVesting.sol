@@ -239,3 +239,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         return schedule.startTime + schedule.duration;
     }
 
+    /**
