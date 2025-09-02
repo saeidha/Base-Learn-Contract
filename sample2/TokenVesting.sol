@@ -264,3 +264,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      */
     function getTotalLockedAmount() public view returns (uint256) {
         return token.balanceOf(address(this));
+    }
+
