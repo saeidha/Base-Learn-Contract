@@ -174,3 +174,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     function getTotalAmount(address _beneficiary) public view returns (uint256) {
         return vestingSchedules[_beneficiary].totalAmount;
     }
+
+    /**
