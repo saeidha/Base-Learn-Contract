@@ -77,3 +77,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         emit VestingScheduleCreated(_beneficiary, _totalAmount, _startTime, _duration, _cliffDuration);
     }
     
+    /**
+     * @notice Creates vesting schedules for multiple beneficiaries at once.
