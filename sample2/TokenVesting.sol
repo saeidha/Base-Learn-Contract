@@ -198,3 +198,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     /**
      * @notice Calculates the amount of tokens that can be released by a beneficiary at the current time.
      * @param _beneficiary The address of the beneficiary.
+     * @return The amount of releasable tokens.
+     */
