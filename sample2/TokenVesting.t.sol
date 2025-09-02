@@ -284,3 +284,5 @@ contract TestTokenVesting is Test {
 
         // Beneficiary 1 releases
         uint256 b1_expected = (VESTING_AMOUNT_1 * (time - startTime)) / DURATION;
+        vm.prank(beneficiary1);
+        tokenVesting.release();
