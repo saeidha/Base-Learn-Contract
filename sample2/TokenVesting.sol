@@ -34,3 +34,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
 
     /**
      * @dev Sets the ERC20 token contract address.
+     * @param _token The address of the ERC20 token to be vested.
