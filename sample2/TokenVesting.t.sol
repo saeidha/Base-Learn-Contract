@@ -282,3 +282,5 @@ contract TestTokenVesting is Test {
         uint64 time = startTime + CLIFF + 50 days;
         vm.warp(time);
 
+        // Beneficiary 1 releases
+        uint256 b1_expected = (VESTING_AMOUNT_1 * (time - startTime)) / DURATION;
