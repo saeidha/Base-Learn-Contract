@@ -175,3 +175,5 @@ contract TestTokenVesting is Test {
         durations[1] = DURATION;
 
         uint64[] memory cliffDurations = new uint64[](2);
+        cliffDurations[0] = CLIFF;
+        cliffDurations[1] = CLIFF;
