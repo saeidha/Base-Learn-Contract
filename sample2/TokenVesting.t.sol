@@ -227,3 +227,5 @@ contract TestTokenVesting is Test {
         tokenVesting.release();
     }
 
+    function test_15_Release_AllTokensAlreadyReleased() public {
+        vm.prank(owner);
