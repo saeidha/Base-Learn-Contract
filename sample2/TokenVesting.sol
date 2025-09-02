@@ -57,3 +57,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         uint64 _cliffDuration
     ) external onlyOwner {
         require(_beneficiary != address(0), "TokenVesting: Beneficiary address cannot be zero");
+        require(vestingSchedules[_beneficiary].totalAmount == 0, "TokenVesting: Beneficiary already has a vesting schedule");
