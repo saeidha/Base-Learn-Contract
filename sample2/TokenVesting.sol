@@ -55,3 +55,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         uint64 _startTime,
         uint64 _duration,
         uint64 _cliffDuration
+    ) external onlyOwner {
+        require(_beneficiary != address(0), "TokenVesting: Beneficiary address cannot be zero");
