@@ -223,3 +223,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     /**
      * @notice Checks if a beneficiary has an existing vesting schedule.
      * @param _beneficiary The address of the beneficiary.
+     * @return True if a schedule exists, false otherwise.
+     */
