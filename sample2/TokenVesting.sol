@@ -188,3 +188,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @return The total vested amount of tokens.
      */
     function getVestedAmount(address _beneficiary) public view returns (uint256) {
+        VestingSchedule memory schedule = vestingSchedules[_beneficiary];
