@@ -50,3 +50,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @param _cliffDuration The duration of the cliff period in seconds.
      */
     function createVestingSchedule(
+        address _beneficiary,
