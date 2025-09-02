@@ -53,3 +53,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         address _beneficiary,
         uint256 _totalAmount,
         uint64 _startTime,
+        uint64 _duration,
+        uint64 _cliffDuration
