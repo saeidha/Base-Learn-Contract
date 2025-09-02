@@ -114,3 +114,4 @@ contract TestTokenVesting is Test {
         assertEq(tokenVesting.getReleasableAmount(beneficiary1), expectedVested);
         
         vm.prank(beneficiary1);
+        tokenVesting.release();
