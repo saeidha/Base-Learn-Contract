@@ -16,3 +16,4 @@ contract MockToken is ERC20 {
 contract TestTokenVesting is Test {
     TokenVesting public tokenVesting;
     MockToken public mockToken;
+
