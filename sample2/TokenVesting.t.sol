@@ -77,3 +77,4 @@ contract TestTokenVesting is Test {
     
     function test_04_Fail_CreateVestingSchedule_ZeroAddress() public {
         vm.prank(owner);
+        vm.expectRevert("TokenVesting: Beneficiary address cannot be zero");
