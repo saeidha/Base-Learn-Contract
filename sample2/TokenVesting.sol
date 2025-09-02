@@ -68,3 +68,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
             startTime: _startTime,
             duration: _duration,
             cliffDuration: _cliffDuration,
+            totalAmount: _totalAmount,
+            releasedAmount: 0
