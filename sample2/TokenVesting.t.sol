@@ -47,3 +47,5 @@ contract TestTokenVesting is Test {
         mockToken.transfer(address(tokenVesting), VESTING_AMOUNT_1 + VESTING_AMOUNT_2);
 
         startTime = uint64(block.timestamp + 1 days); // Vesting starts tomorrow
+    }
+
