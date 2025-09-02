@@ -135,3 +135,5 @@ contract TestTokenVesting is Test {
         assertEq(tokenVesting.getReleasedAmount(beneficiary1), VESTING_AMOUNT_1);
     }
     
+    function test_09_MultipleReleases() public {
+        vm.prank(owner);
