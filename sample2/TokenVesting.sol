@@ -32,3 +32,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     event VestingScheduleCreated(address indexed beneficiary, uint256 totalAmount, uint64 startTime, uint64 duration, uint64 cliffDuration);
     event TokensReleased(address indexed beneficiary, uint256 amount);
 
+    /**
+     * @dev Sets the ERC20 token contract address.
