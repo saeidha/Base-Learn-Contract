@@ -108,3 +108,7 @@ contract TestTokenVesting is Test {
         tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
         
         uint64 timeAfterCliff = startTime + CLIFF + 90 days;
+        vm.warp(timeAfterCliff);
+        
+        uint256 expectedVested = (VESTING_AMOUNT_1 * (timeAfterCliff - startTime)) / DURATION;
+        assertEq(tokenVesting.getReleasableAmount(beneficiary1), expectedVested);
