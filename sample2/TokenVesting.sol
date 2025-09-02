@@ -21,3 +21,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         uint256 totalAmount;
         uint256 releasedAmount;
     }
+
+    IERC20 public immutable token;
