@@ -130,3 +130,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     }
     
     /**
+     * @notice Gets the address of a beneficiary at a specific index.
+     * @param _index The index of the beneficiary in the beneficiaries array.
