@@ -79,3 +79,5 @@ contract TestTokenVesting is Test {
         vm.prank(owner);
         vm.expectRevert("TokenVesting: Beneficiary address cannot be zero");
         tokenVesting.createVestingSchedule(address(0), VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
+    }
+    
