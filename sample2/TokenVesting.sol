@@ -266,3 +266,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         return token.balanceOf(address(this));
     }
 
+    // --- Internal Functions ---
+
