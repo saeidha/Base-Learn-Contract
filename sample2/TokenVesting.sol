@@ -111,3 +111,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         uint256 releasableAmount = getReleasableAmount(beneficiary);
 
         require(releasableAmount > 0, "TokenVesting: No tokens available for release");
+
+        vestingSchedules[beneficiary].releasedAmount += releasableAmount;
