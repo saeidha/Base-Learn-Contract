@@ -225,3 +225,6 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @param _beneficiary The address of the beneficiary.
      * @return True if a schedule exists, false otherwise.
      */
+    function hasVestingSchedule(address _beneficiary) public view returns (bool) {
+        return vestingSchedules[_beneficiary].totalAmount > 0;
+    }
