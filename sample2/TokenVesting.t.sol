@@ -137,3 +137,4 @@ contract TestTokenVesting is Test {
     
     function test_09_MultipleReleases() public {
         vm.prank(owner);
+        tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
