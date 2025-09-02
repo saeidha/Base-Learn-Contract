@@ -267,3 +267,5 @@ contract TestTokenVesting is Test {
 
     function test_20_GetReleasableAmount_NoSchedule() public {
         assertEq(tokenVesting.getReleasableAmount(randomUser), 0);
+    }
+
