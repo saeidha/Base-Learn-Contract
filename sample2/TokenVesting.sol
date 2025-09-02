@@ -86,3 +86,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @param _cliffDurations An array of cliff durations for each beneficiary.
      */
     function createMultipleVestingSchedules(
+        address[] calldata _beneficiaries,
