@@ -42,3 +42,4 @@ contract TestTokenVesting is Test {
         vm.prank(owner);
         tokenVesting = new TokenVesting(address(mockToken));
 
+        // Transfer tokens to the vesting contract
