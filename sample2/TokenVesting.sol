@@ -240,3 +240,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     }
 
     /**
+     * @notice Returns the end time of the cliff period for a beneficiary.
