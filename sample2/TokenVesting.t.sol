@@ -35,3 +35,5 @@ contract TestTokenVesting is Test {
         beneficiary1 = makeAddr("beneficiary1");
         beneficiary2 = makeAddr("beneficiary2");
         randomUser = makeAddr("randomUser");
+
+        vm.prank(owner);
