@@ -103,3 +103,4 @@ contract TestTokenVesting is Test {
         tokenVesting.release();
     }
     
+    function test_07_ReleaseTokens_AfterCliff_MidVesting() public {
