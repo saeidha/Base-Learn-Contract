@@ -69,3 +69,5 @@ contract TestTokenVesting is Test {
         assertEq(tokenVesting.getBeneficiaryAtIndex(0), beneficiary1);
     }
     
+    function test_03_Fail_CreateVestingSchedule_NotOwner() public {
+        vm.prank(randomUser);
