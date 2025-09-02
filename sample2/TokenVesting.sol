@@ -99,3 +99,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
 
         for (uint256 i = 0; i < _beneficiaries.length; i++) {
             createVestingSchedule(_beneficiaries[i], _amounts[i], _startTimes[i], _durations[i], _cliffDurations[i]);
+        }
+    }
