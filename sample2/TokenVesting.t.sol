@@ -31,3 +31,4 @@ contract TestTokenVesting is Test {
     uint64 constant CLIFF = 180 days;
 
     function setUp() public {
+        owner = makeAddr("owner");
