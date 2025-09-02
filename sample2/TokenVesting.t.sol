@@ -22,3 +22,5 @@ contract TestTokenVesting is Test {
     address public beneficiary2;
     address public randomUser;
 
+    uint256 constant TOTAL_SUPPLY = 1_000_000e18;
+    uint256 constant VESTING_AMOUNT_1 = 100_000e18;
