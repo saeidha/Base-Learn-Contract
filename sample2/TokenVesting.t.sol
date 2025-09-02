@@ -106,3 +106,5 @@ contract TestTokenVesting is Test {
     function test_07_ReleaseTokens_AfterCliff_MidVesting() public {
         vm.prank(owner);
         tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
+        
+        uint64 timeAfterCliff = startTime + CLIFF + 90 days;
