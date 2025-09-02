@@ -178,3 +178,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     /**
      * @notice Gets the amount of tokens already released to a beneficiary.
      */
+    function getReleasedAmount(address _beneficiary) public view returns (uint256) {
+        return vestingSchedules[_beneficiary].releasedAmount;
