@@ -169,3 +169,6 @@ contract TestTokenVesting is Test {
         uint64[] memory startTimes = new uint64[](2);
         startTimes[0] = startTime;
         startTimes[1] = startTime;
+        
+        uint64[] memory durations = new uint64[](2);
+        durations[0] = DURATION;
