@@ -216,3 +216,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @param _timestamp The timestamp to calculate the vested amount at.
      * @return The vested amount at the given timestamp.
      */
+    function getVestedAmountAt(address _beneficiary, uint64 _timestamp) public view returns (uint256) {
