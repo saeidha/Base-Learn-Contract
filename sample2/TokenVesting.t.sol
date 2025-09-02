@@ -96,3 +96,5 @@ contract TestTokenVesting is Test {
         
         vm.warp(startTime + CLIFF - 1 days);
         
+        assertEq(tokenVesting.getReleasableAmount(beneficiary1), 0);
+
