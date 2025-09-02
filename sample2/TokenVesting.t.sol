@@ -206,3 +206,7 @@ contract TestTokenVesting is Test {
         vm.prank(owner);
         tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
 
+        uint64 futureTime = startTime + CLIFF + 100 days;
+        uint256 expectedVested = (VESTING_AMOUNT_1 * (futureTime - startTime)) / DURATION;
+        
+        assertEq(tokenVesting.getVestedAmountAt(beneficiary1, futureTime), expectedVested);
