@@ -160,3 +160,4 @@ contract TestTokenVesting is Test {
     function test_10_CreateMultipleVestingSchedules() public {
         address[] memory beneficiaries = new address[](2);
         beneficiaries[0] = beneficiary1;
+        beneficiaries[1] = beneficiary2;
