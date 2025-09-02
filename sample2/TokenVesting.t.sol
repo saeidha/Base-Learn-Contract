@@ -220,3 +220,4 @@ contract TestTokenVesting is Test {
          vm.prank(owner);
         tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
         
+        vm.warp(startTime - 1 days); // Before vesting starts
