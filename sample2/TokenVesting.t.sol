@@ -112,3 +112,4 @@ contract TestTokenVesting is Test {
         
         uint256 expectedVested = (VESTING_AMOUNT_1 * (timeAfterCliff - startTime)) / DURATION;
         assertEq(tokenVesting.getReleasableAmount(beneficiary1), expectedVested);
+        
