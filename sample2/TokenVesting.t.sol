@@ -64,3 +64,4 @@ contract TestTokenVesting is Test {
         assertEq(schedule.startTime, startTime);
         assertEq(schedule.duration, DURATION);
         assertEq(schedule.cliffDuration, CLIFF);
+        assertEq(schedule.releasedAmount, 0);
