@@ -239,3 +239,7 @@ contract TestTokenVesting is Test {
         // Try to release again
         vm.prank(beneficiary1);
         vm.expectRevert("TokenVesting: No tokens available for release");
+        tokenVesting.release();
+    }
+    
+    function test_16_Fail_CreateSchedule_PastStartTime() public {
