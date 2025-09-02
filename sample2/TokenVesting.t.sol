@@ -154,3 +154,5 @@ contract TestTokenVesting is Test {
         uint256 secondExpectedVested = totalVested - firstExpectedVested;
         vm.prank(beneficiary1);
         tokenVesting.release();
+        assertEq(mockToken.balanceOf(beneficiary1), totalVested);
+    }
