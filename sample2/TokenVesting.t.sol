@@ -156,3 +156,5 @@ contract TestTokenVesting is Test {
         tokenVesting.release();
         assertEq(mockToken.balanceOf(beneficiary1), totalVested);
     }
+    
+    function test_10_CreateMultipleVestingSchedules() public {
