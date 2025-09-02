@@ -59,3 +59,5 @@ contract TestTokenVesting is Test {
         tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
 
         TokenVesting.VestingSchedule memory schedule = tokenVesting.getVestingSchedule(beneficiary1);
+        assertEq(schedule.beneficiary, beneficiary1);
+        assertEq(schedule.totalAmount, VESTING_AMOUNT_1);
