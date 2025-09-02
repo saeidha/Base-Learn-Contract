@@ -215,3 +215,7 @@ contract TestTokenVesting is Test {
     function test_13_TotalLockedAmount() public {
         assertEq(tokenVesting.getTotalLockedAmount(), VESTING_AMOUNT_1 + VESTING_AMOUNT_2);
     }
+    
+    function test_14_Release_NoTokensVested() public {
+         vm.prank(owner);
+        tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
