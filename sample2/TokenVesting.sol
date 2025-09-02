@@ -230,3 +230,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     }
 
     /**
+     * @notice Returns the end time of the vesting schedule for a beneficiary.
