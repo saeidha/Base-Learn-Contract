@@ -269,3 +269,5 @@ contract TestTokenVesting is Test {
         assertEq(tokenVesting.getReleasableAmount(randomUser), 0);
     }
 
+    function test_21_MultipleBeneficiaries_IndependentReleases() public {
+        // Schedule for beneficiary 1
