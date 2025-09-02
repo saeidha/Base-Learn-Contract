@@ -260,3 +260,4 @@ contract TestTokenVesting is Test {
         vm.expectRevert("TokenVesting: Cliff duration cannot be longer than total duration");
         tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, DURATION + 1);
     }
+
