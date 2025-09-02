@@ -166,3 +166,5 @@ contract TestTokenVesting is Test {
         amounts[0] = VESTING_AMOUNT_1;
         amounts[1] = VESTING_AMOUNT_2;
         
+        uint64[] memory startTimes = new uint64[](2);
+        startTimes[0] = startTime;
