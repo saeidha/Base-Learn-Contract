@@ -66,3 +66,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         vestingSchedules[_beneficiary] = VestingSchedule({
             beneficiary: _beneficiary,
             startTime: _startTime,
+            duration: _duration,
+            cliffDuration: _cliffDuration,
