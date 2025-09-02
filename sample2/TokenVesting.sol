@@ -79,3 +79,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     
     /**
      * @notice Creates vesting schedules for multiple beneficiaries at once.
+     * @param _beneficiaries An array of beneficiary addresses.
+     * @param _amounts An array of total token amounts for each beneficiary.
