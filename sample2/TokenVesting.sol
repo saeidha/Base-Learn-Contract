@@ -41,3 +41,6 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         token = IERC20(_token);
     }
 
+    /**
+     * @notice Creates a new vesting schedule for a single beneficiary.
+     * @param _beneficiary The address of the beneficiary.
