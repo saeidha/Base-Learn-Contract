@@ -223,3 +223,6 @@ contract TestTokenVesting is Test {
         vm.warp(startTime - 1 days); // Before vesting starts
         
         vm.prank(beneficiary1);
+        vm.expectRevert("TokenVesting: No tokens available for release");
+        tokenVesting.release();
+    }
