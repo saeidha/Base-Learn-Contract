@@ -273,3 +273,5 @@ contract TestTokenVesting is Test {
         // Schedule for beneficiary 1
         vm.prank(owner);
         tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
+
+        // Schedule for beneficiary 2
