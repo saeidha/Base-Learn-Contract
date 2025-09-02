@@ -246,3 +246,5 @@ contract TestTokenVesting is Test {
         vm.prank(owner);
         uint64 pastTime = uint64(block.timestamp - 1 days);
         vm.expectRevert("TokenVesting: Start time must be in the future");
+        tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, pastTime, DURATION, CLIFF);
+    }
