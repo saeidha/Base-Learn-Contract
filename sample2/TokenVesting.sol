@@ -146,3 +146,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     function getVestingSchedule(address _beneficiary) public view returns (VestingSchedule memory) {
         return vestingSchedules[_beneficiary];
     }
+    
