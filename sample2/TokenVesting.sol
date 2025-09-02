@@ -143,3 +143,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @param _beneficiary The address of the beneficiary.
      * @return The VestingSchedule struct for the given beneficiary.
      */
+    function getVestingSchedule(address _beneficiary) public view returns (VestingSchedule memory) {
+        return vestingSchedules[_beneficiary];
