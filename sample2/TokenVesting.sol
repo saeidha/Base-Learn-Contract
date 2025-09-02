@@ -61,3 +61,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         require(_totalAmount > 0, "TokenVesting: Total amount must be greater than zero");
         require(_duration > 0, "TokenVesting: Duration must be greater than zero");
         require(_cliffDuration <= _duration, "TokenVesting: Cliff duration cannot be longer than total duration");
+        require(_startTime >= block.timestamp, "TokenVesting: Start time must be in the future");
