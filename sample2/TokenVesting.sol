@@ -237,3 +237,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     function getVestingEndTime(address _beneficiary) public view returns (uint64) {
         VestingSchedule memory schedule = vestingSchedules[_beneficiary];
         return schedule.startTime + schedule.duration;
+    }
+
