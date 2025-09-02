@@ -67,3 +67,4 @@ contract TestTokenVesting is Test {
         assertEq(schedule.releasedAmount, 0);
         assertEq(tokenVesting.getBeneficiaryCount(), 1);
         assertEq(tokenVesting.getBeneficiaryAtIndex(0), beneficiary1);
+    }
