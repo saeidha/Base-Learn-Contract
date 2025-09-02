@@ -280,3 +280,5 @@ contract TestTokenVesting is Test {
 
         // Time passes
         uint64 time = startTime + CLIFF + 50 days;
+        vm.warp(time);
+
