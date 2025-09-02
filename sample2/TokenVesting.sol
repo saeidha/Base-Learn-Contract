@@ -275,3 +275,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @return The vested amount.
      */
     function _calculateVestedAmount(VestingSchedule memory _schedule, uint64 _timestamp) internal pure returns (uint256) {
+        if (_timestamp < _schedule.startTime + _schedule.cliffDuration) {
