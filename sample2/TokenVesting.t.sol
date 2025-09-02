@@ -126,3 +126,4 @@ contract TestTokenVesting is Test {
         
         vm.warp(startTime + DURATION + 1 days);
         
+        assertEq(tokenVesting.getReleasableAmount(beneficiary1), VESTING_AMOUNT_1);
