@@ -87,3 +87,4 @@ contract TestTokenVesting is Test {
         
         vm.prank(owner);
         vm.expectRevert("TokenVesting: Beneficiary already has a vesting schedule");
+        tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
