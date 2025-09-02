@@ -24,3 +24,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
 
     IERC20 public immutable token;
 
+    // Mapping from beneficiary address to their vesting schedule
+    mapping(address => VestingSchedule) private vestingSchedules;
