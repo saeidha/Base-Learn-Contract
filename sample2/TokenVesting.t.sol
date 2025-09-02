@@ -37,3 +37,4 @@ contract TestTokenVesting is Test {
         randomUser = makeAddr("randomUser");
 
         vm.prank(owner);
+        mockToken = new MockToken("Mock Token", "MTK", TOTAL_SUPPLY);
