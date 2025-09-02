@@ -208,3 +208,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
 
         uint256 vestedAmount = _calculateVestedAmount(schedule, uint64(block.timestamp));
         return vestedAmount - schedule.releasedAmount;
+    }
+    
