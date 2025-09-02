@@ -201,3 +201,5 @@ contract TestTokenVesting is Test {
         assertEq(tokenVesting.getCliffEndTime(beneficiary1), startTime + CLIFF);
         assertEq(tokenVesting.getRemainingAmount(beneficiary1), VESTING_AMOUNT_1);
     }
+    
+    function test_12_GetVestedAmountAtTimestamp() public {
