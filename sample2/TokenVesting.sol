@@ -13,3 +13,5 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
  */
 contract TokenVesting is Ownable, ReentrancyGuard {
 
+    struct VestingSchedule {
+        address beneficiary;
