@@ -158,3 +158,6 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @notice Gets the duration of the vesting schedule for a beneficiary.
      */
     function getDuration(address _beneficiary) public view returns (uint64) {
+        return vestingSchedules[_beneficiary].duration;
+    }
+
