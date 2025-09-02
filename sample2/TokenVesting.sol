@@ -36,3 +36,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @dev Sets the ERC20 token contract address.
      * @param _token The address of the ERC20 token to be vested.
      */
+    constructor(address _token) Ownable(msg.sender) {
+        require(_token != address(0), "TokenVesting: Token address cannot be zero");
