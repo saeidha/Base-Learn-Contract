@@ -138,3 +138,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
         return beneficiaries[_index];
     }
 
+    /**
+     * @notice Gets the details of a vesting schedule for a specific beneficiary.
