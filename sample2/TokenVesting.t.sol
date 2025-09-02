@@ -7,3 +7,4 @@ import {Test} from "forge-std/Test.sol";
 import {TokenVesting} from "../contracts/TokenVesting.sol";
 
 // Mock ERC20 token for testing purposes
+contract MockToken is ERC20 {
