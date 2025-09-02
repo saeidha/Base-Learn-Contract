@@ -287,3 +287,5 @@ contract TestTokenVesting is Test {
         vm.prank(beneficiary1);
         tokenVesting.release();
         assertEq(mockToken.balanceOf(beneficiary1), b1_expected);
+
+        // Beneficiary 2 has not released yet
