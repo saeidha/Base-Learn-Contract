@@ -286,3 +286,4 @@ contract TestTokenVesting is Test {
         uint256 b1_expected = (VESTING_AMOUNT_1 * (time - startTime)) / DURATION;
         vm.prank(beneficiary1);
         tokenVesting.release();
+        assertEq(mockToken.balanceOf(beneficiary1), b1_expected);
