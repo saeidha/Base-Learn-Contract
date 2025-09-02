@@ -185,3 +185,4 @@ contract TestTokenVesting is Test {
         assertEq(tokenVesting.getTotalAmount(beneficiary1), VESTING_AMOUNT_1);
         assertEq(tokenVesting.getTotalAmount(beneficiary2), VESTING_AMOUNT_2);
     }
+    
