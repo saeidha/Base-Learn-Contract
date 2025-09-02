@@ -148,3 +148,5 @@ contract TestTokenVesting is Test {
         assertEq(mockToken.balanceOf(beneficiary1), firstExpectedVested);
 
         // Second release
+        uint64 secondReleaseTime = startTime + CLIFF + 90 days;
+        vm.warp(secondReleaseTime);
