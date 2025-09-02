@@ -28,3 +28,6 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     mapping(address => VestingSchedule) private vestingSchedules;
     // Array of all beneficiary addresses to enable iteration
     address[] public beneficiaries;
+
+    event VestingScheduleCreated(address indexed beneficiary, uint256 totalAmount, uint64 startTime, uint64 duration, uint64 cliffDuration);
+    event TokensReleased(address indexed beneficiary, uint256 amount);
