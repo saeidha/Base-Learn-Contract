@@ -171,3 +171,4 @@ contract TokenVesting is Ownable, ReentrancyGuard {
     /**
      * @notice Gets the total amount of tokens for a beneficiary's vesting schedule.
      */
+    function getTotalAmount(address _beneficiary) public view returns (uint256) {
