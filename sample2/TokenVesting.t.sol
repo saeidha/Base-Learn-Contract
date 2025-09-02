@@ -234,3 +234,4 @@ contract TestTokenVesting is Test {
         vm.warp(startTime + DURATION + 1 days);
         
         vm.prank(beneficiary1);
+        tokenVesting.release();
