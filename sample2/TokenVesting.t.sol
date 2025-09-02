@@ -186,3 +186,4 @@ contract TestTokenVesting is Test {
         assertEq(tokenVesting.getTotalAmount(beneficiary2), VESTING_AMOUNT_2);
     }
     
+    function test_11_ViewFunctions() public {
