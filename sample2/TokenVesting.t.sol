@@ -147,3 +147,4 @@ contract TestTokenVesting is Test {
         tokenVesting.release();
         assertEq(mockToken.balanceOf(beneficiary1), firstExpectedVested);
 
+        // Second release
