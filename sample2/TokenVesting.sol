@@ -47,3 +47,5 @@ contract TokenVesting is Ownable, ReentrancyGuard {
      * @param _totalAmount The total amount of tokens to be vested.
      * @param _startTime The start time of the vesting period (Unix timestamp).
      * @param _duration The duration of the vesting period in seconds.
+     * @param _cliffDuration The duration of the cliff period in seconds.
+     */
