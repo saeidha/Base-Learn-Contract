@@ -243,3 +243,5 @@ contract TestTokenVesting is Test {
     }
     
     function test_16_Fail_CreateSchedule_PastStartTime() public {
+        vm.prank(owner);
+        uint64 pastTime = uint64(block.timestamp - 1 days);
