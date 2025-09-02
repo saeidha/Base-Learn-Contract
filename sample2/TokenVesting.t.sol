@@ -75,3 +75,5 @@ contract TestTokenVesting is Test {
         tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
     }
     
+    function test_04_Fail_CreateVestingSchedule_ZeroAddress() public {
+        vm.prank(owner);
