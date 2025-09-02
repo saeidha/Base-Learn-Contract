@@ -27,3 +27,5 @@ contract TestTokenVesting is Test {
     uint256 constant VESTING_AMOUNT_2 = 50_000e18;
 
     uint64 public startTime;
+    uint64 constant DURATION = 365 days;
+    uint64 constant CLIFF = 180 days;
