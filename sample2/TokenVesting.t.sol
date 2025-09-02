@@ -71,3 +71,5 @@ contract TestTokenVesting is Test {
     
     function test_03_Fail_CreateVestingSchedule_NotOwner() public {
         vm.prank(randomUser);
+        vm.expectRevert();
+        tokenVesting.createVestingSchedule(beneficiary1, VESTING_AMOUNT_1, startTime, DURATION, CLIFF);
