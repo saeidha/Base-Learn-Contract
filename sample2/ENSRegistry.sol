@@ -120,3 +120,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     function setTTL(bytes32 node, uint64 _ttl) external whenNotPaused authorised(node) {
         records[node].ttl = _ttl;
         emit NewTTL(node, _ttl);
+    }
+
