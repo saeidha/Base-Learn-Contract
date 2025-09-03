@@ -96,3 +96,6 @@ contract PublicResolver is ERC165 {
     
     /**
      * @dev Returns the canonical name for a node.
+     * @param node The node to query.
+     * @return The name for the node.
+     */
