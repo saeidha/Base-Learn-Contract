@@ -126,3 +126,4 @@ contract TestENSRegistry is Test {
 
     function test_controller() public {
         vm.prank(owner);
+        registry.setController(user2, true);
