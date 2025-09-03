@@ -93,3 +93,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         emit NewOwner(node, label, _owner);
     }
 
+    /**
+     * @dev Sets the resolver for a node.
