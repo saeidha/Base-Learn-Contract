@@ -82,3 +82,5 @@ contract PublicResolver is ERC165 {
      */
     function text(bytes32 node, string calldata key) external view returns (string memory) {
         return texts[node][key];
+    }
+    
