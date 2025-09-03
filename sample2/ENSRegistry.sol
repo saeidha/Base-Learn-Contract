@@ -20,3 +20,4 @@ abstract contract ENS {
  */
 contract ENSRegistry is Ownable, Pausable, IERC165 {
     
+    struct Record {
