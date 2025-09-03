@@ -150,3 +150,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         emit ApprovalForAll(msg.sender, operator, _approved);
     }
 
+    /**
