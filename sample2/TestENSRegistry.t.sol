@@ -97,3 +97,5 @@ contract TestENSRegistry is Test {
         assertEq(registry.getApproved(testNode), user2);
 
         vm.prank(user2);
+        registry.transferFrom(user1, user2, testNode);
+        assertEq(registry.owner(testNode), user2);
