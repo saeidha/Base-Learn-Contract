@@ -186,3 +186,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
             approved[node] == msg.sender,
             "ENSRegistry: Not approved for transfer"
         );
+        
