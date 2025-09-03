@@ -151,3 +151,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     }
 
     /**
+     * @dev Tells whether an operator is approved by a given owner.
+     * @param _owner The owner to check.
