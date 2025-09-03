@@ -101,3 +101,4 @@ contract PublicResolver is ERC165 {
      */
     function name(bytes32 node) external view returns (string memory) {
         return names[node];
+    }
