@@ -110,3 +110,5 @@ contract PublicResolver is ERC165 {
      * @param isAuthorised True if the address is authorised, false otherwise.
      */
     function setAuthorisation(bytes32 node, address target, bool isAuthorised) external authorised(node) {
+        authorisations[node][msg.sender][target] = isAuthorised;
+        emit AuthorisationChanged(node, msg.sender, target, isAuthorised);
