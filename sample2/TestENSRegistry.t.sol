@@ -75,3 +75,5 @@ contract TestENSRegistry is Test {
         registry.setApprovalForAll(user2, true);
         assertTrue(registry.isApprovedForAll(user1, user2));
     }
+
+    function test_transferFrom() public {
