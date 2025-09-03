@@ -24,3 +24,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         address owner;
         address resolver;
         uint64 ttl;
+    }
+
