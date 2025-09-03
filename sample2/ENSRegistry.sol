@@ -247,3 +247,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     function burn(bytes32 node) external whenNotPaused authorised(node) {
         delete records[node];
         emit NodeBurnt(node);
+    }
+
