@@ -241,3 +241,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         return controllers[controller];
     }
 
+    /**
