@@ -172,3 +172,5 @@ contract TestENSRegistry is Test {
         assertEq(resolver.text(testNode, key), value);
     }
 
+    function test_resolver_setName() public {
+        string memory name = "test.eth";
