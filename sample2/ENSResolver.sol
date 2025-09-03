@@ -107,3 +107,4 @@ contract PublicResolver is ERC165 {
      * @dev Sets or clears an authorisation for a given address to act on behalf of the owner.
      * @param node The node to set authorisation for.
      * @param target The address to authorise.
+     * @param isAuthorised True if the address is authorised, false otherwise.
