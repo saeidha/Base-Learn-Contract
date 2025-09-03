@@ -104,3 +104,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     }
 
     /**
+     * @dev Returns the resolver for a node.
+     * @param node The node to query.
