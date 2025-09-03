@@ -31,3 +31,4 @@ contract PublicResolver is ERC165 {
 
     event AddrChanged(bytes32 indexed node, address a);
     event TextChanged(bytes32 indexed node, string indexed indexedKey, string key, string value);
+    event NameChanged(bytes32 indexed node, string name);
