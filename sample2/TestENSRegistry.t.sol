@@ -106,3 +106,5 @@ contract TestENSRegistry is Test {
         vm.prank(user1);
         registry.setRecord(testNode, user2, address(resolver), 7200);
         assertEq(registry.owner(testNode), user2);
+        assertEq(registry.resolver(testNode), address(resolver));
+        assertEq(registry.ttl(testNode), 7200);
