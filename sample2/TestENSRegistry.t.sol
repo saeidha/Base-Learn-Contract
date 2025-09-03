@@ -139,3 +139,4 @@ contract TestENSRegistry is Test {
         registry.burn(testNode);
         assertFalse(registry.exists(testNode));
     }
+    
