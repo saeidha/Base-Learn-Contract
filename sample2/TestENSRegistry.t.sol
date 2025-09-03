@@ -162,3 +162,5 @@ contract TestENSRegistry is Test {
         vm.prank(user1);
         resolver.setAddr(testNode, user1);
         assertEq(resolver.addr(testNode), user1);
+    }
+    
