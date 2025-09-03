@@ -157,3 +157,5 @@ contract TestENSRegistry is Test {
     }
     
     // --- Resolver Tests ---
+    
+    function test_resolver_setAddr() public {
