@@ -128,3 +128,4 @@ contract PublicResolver is ERC165 {
      * @dev Multicall function to execute multiple calls in a single transaction.
      * @param data Array of call data to execute.
      */
+    function multicall(bytes[] calldata data) external {
