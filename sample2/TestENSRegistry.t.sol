@@ -61,3 +61,5 @@ contract TestENSRegistry is Test {
     function test_setTTL() public {
         uint64 newTtl = 3600;
         vm.prank(user1);
+        registry.setTTL(testNode, newTtl);
+        assertEq(registry.ttl(testNode), newTtl);
