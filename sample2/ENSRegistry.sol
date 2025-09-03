@@ -169,3 +169,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     }
 
     /**
+     * @dev Gets the approved address for a single node.
