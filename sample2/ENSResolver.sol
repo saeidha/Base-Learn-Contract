@@ -85,3 +85,4 @@ contract PublicResolver is ERC165 {
     }
     
     /**
+     * @dev Sets the canonical name for a node.
