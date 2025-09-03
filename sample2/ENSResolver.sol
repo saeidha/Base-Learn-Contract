@@ -116,3 +116,5 @@ contract PublicResolver is ERC165 {
     
     /**
      * @dev Clears all records for a node.
+     */
+    function clearRecords(bytes32 node) external authorised(node) {
