@@ -77,3 +77,5 @@ contract TestENSRegistry is Test {
     }
 
     function test_transferFrom() public {
+        vm.prank(user1);
+        registry.transferFrom(user1, user2, testNode);
