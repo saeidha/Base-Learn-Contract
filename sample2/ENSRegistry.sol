@@ -9,3 +9,5 @@ abstract contract ENS {
     function setSubnodeOwner(bytes32 node, bytes32 label, address owner) virtual external;
     function setResolver(bytes32 node, address resolver) virtual external;
     function setOwner(bytes32 node, address owner) virtual external;
+    function owner(bytes32 node) virtual external view returns (address);
+    function resolver(bytes32 node) virtual external view returns (address);
