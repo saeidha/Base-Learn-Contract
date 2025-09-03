@@ -68,3 +68,4 @@ contract PublicResolver is ERC165 {
      * @param node The node to update.
      * @param key The key of the text record.
      * @param value The value of the text record.
+     */
