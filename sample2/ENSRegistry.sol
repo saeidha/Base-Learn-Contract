@@ -14,3 +14,4 @@ abstract contract ENS {
 }
 
 /**
+ * @title ENSRegistry
