@@ -86,3 +86,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      * @param node The parent node.
      * @param label The label of the subnode.
      * @param _owner The address of the new owner of the subnode.
+     */
+    function setSubnodeOwner(bytes32 node, bytes32 label, address _owner) external whenNotPaused authorised(node) {
