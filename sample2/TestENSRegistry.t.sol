@@ -44,3 +44,5 @@ contract TestENSRegistry is Test {
         vm.prank(user2);
         registry.setOwner(testNode, user2);
     }
+
+    function test_setSubnodeOwner() public {
