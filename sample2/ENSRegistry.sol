@@ -158,3 +158,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      */
     function isApprovedForAll(address _owner, address operator) external view returns (bool) {
         return operators[_owner][operator];
+    }
+    
