@@ -30,3 +30,6 @@ contract TestENSRegistry is Test {
         vm.stopPrank();
     }
     
+    function test_initialOwner() public {
+        assertEq(registry.owner(testNode), user1);
+    }
