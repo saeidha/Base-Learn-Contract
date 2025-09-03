@@ -239,3 +239,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      */
     function isController(address controller) external view returns (bool) {
         return controllers[controller];
+    }
+
