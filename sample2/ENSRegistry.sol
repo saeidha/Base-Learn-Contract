@@ -79,3 +79,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     function setOwner(bytes32 node, address _owner) external whenNotPaused authorised(node) {
         _setOwner(node, _owner);
         emit Transfer(node, _owner);
+    }
