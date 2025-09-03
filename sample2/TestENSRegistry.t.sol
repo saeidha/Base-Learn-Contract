@@ -16,3 +16,5 @@ contract TestENSRegistry is Test {
     bytes32 testNode = keccak256("test");
     bytes32 testLabel = keccak256("label");
     bytes32 testSubNode = keccak256(abi.encodePacked(testNode, testLabel));
+
+    function setUp() public {
