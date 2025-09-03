@@ -22,3 +22,5 @@ contract PublicResolver is ERC165 {
     bytes4 private constant TEXT_INTERFACE_ID = 0x59d1d43c;
     bytes4 private constant NAME_INTERFACE_ID = 0x691f3431;
 
+    mapping(bytes32 => address) private addresses;
+    mapping(bytes32 => mapping(string => string)) private texts;
