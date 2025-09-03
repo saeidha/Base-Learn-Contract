@@ -67,3 +67,4 @@ contract PublicResolver is ERC165 {
      * @dev Sets a text record for a node.
      * @param node The node to update.
      * @param key The key of the text record.
+     * @param value The value of the text record.
