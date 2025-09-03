@@ -29,3 +29,4 @@ contract TestENSRegistry is Test {
         registry.setResolver(testNode, address(resolver));
         vm.stopPrank();
     }
+    
