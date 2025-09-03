@@ -176,3 +176,6 @@ contract TestENSRegistry is Test {
         string memory name = "test.eth";
         vm.prank(user1);
         resolver.setName(testNode, name);
+        assertEq(resolver.name(testNode), name);
+    }
+
