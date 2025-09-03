@@ -42,3 +42,4 @@ contract TestENSRegistry is Test {
     
     function test_fail_setOwnerNotAuthorized() public {
         vm.prank(user2);
+        registry.setOwner(testNode, user2);
