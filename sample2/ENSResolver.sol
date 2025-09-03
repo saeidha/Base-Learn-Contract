@@ -102,3 +102,6 @@ contract PublicResolver is ERC165 {
     function name(bytes32 node) external view returns (string memory) {
         return names[node];
     }
+
+    /**
+     * @dev Sets or clears an authorisation for a given address to act on behalf of the owner.
