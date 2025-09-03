@@ -45,3 +45,5 @@ contract PublicResolver is ERC165 {
     }
 
     /**
+     * @dev Sets the address for a node.
+     * @param node The node to update.
