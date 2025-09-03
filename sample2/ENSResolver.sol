@@ -53,3 +53,4 @@ contract PublicResolver is ERC165 {
         addresses[node] = a;
         emit AddrChanged(node, a);
     }
+
