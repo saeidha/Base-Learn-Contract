@@ -46,3 +46,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         require(owner == msg.sender || operators[owner][msg.sender] || controllers[msg.sender], "ENSRegistry: Not authorised");
         _;
     }
+
