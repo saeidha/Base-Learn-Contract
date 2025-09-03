@@ -53,3 +53,6 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     }
 
     /**
+     * @dev Registers a new node with an owner. Only callable by contract owner for top-level domains.
+     * @param node The hash of the name to register.
+     * @param _owner The address of the new owner.
