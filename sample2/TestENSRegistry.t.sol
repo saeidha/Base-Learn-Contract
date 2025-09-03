@@ -27,3 +27,5 @@ contract TestENSRegistry is Test {
         vm.startPrank(owner);
         registry.register(testNode, user1);
         registry.setResolver(testNode, address(resolver));
+        vm.stopPrank();
+    }
