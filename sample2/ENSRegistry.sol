@@ -51,3 +51,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         // The root node is owned by the contract deployer initially.
         records[0x0].owner = msg.sender;
     }
+
