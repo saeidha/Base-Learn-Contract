@@ -136,3 +136,6 @@ contract TestENSRegistry is Test {
     
     function test_burn() public {
         vm.prank(user1);
+        registry.burn(testNode);
+        assertFalse(registry.exists(testNode));
+    }
