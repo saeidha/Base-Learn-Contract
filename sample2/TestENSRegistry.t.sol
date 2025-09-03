@@ -102,3 +102,5 @@ contract TestENSRegistry is Test {
         assertEq(registry.getApproved(testNode), address(0));
     }
 
+    function test_setRecord() public {
+        vm.prank(user1);
