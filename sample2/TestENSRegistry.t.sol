@@ -181,3 +181,5 @@ contract TestENSRegistry is Test {
 
     function test_resolver_supportsInterface() public {
         assertTrue(resolver.supportsInterface(0x3b3b57de)); // ADDR
+        assertTrue(resolver.supportsInterface(0x59d1d43c)); // TEXT
+        assertTrue(resolver.supportsInterface(0x691f3431)); // NAME
