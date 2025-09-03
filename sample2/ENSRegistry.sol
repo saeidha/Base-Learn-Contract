@@ -157,3 +157,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      * @return True if the operator is approved, false otherwise.
      */
     function isApprovedForAll(address _owner, address operator) external view returns (bool) {
+        return operators[_owner][operator];
