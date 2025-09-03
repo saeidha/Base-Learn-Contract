@@ -215,3 +215,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         records[subnode].ttl = _ttl;
         emit NewOwner(node, label, _owner);
         emit NewResolver(subnode, _resolver);
+        emit NewTTL(subnode, _ttl);
+    }
