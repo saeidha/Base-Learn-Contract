@@ -194,3 +194,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     }
     
     /**
+     * @dev A convenience function to set all records for a node at once.
