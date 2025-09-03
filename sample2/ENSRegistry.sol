@@ -81,3 +81,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         emit Transfer(node, _owner);
     }
 
+    /**
+     * @dev Sets the owner of a subnode.
