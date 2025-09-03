@@ -136,3 +136,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      * @param node The node to check.
      * @return True if the node exists, false otherwise.
      */
+    function exists(bytes32 node) external view returns (bool) {
+        return records[node].owner != address(0);
