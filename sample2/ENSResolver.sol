@@ -133,3 +133,4 @@ contract PublicResolver is ERC165 {
             (bool success, ) = address(this).delegatecall(data[i]);
             require(success, "PublicResolver: multicall call failed");
         }
+    }
