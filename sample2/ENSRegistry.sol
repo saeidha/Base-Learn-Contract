@@ -270,3 +270,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         records[node].owner = _owner;
     }
 
+    /**
