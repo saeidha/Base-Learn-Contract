@@ -112,3 +112,5 @@ contract PublicResolver is ERC165 {
     function setAuthorisation(bytes32 node, address target, bool isAuthorised) external authorised(node) {
         authorisations[node][msg.sender][target] = isAuthorised;
         emit AuthorisationChanged(node, msg.sender, target, isAuthorised);
+    }
+    
