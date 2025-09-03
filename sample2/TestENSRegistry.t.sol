@@ -46,3 +46,4 @@ contract TestENSRegistry is Test {
     }
 
     function test_setSubnodeOwner() public {
+        vm.prank(user1);
