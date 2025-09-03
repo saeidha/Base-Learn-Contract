@@ -59,3 +59,4 @@ contract TestENSRegistry is Test {
     }
     
     function test_setTTL() public {
+        uint64 newTtl = 3600;
