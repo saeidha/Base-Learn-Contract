@@ -118,3 +118,6 @@ contract PublicResolver is ERC165 {
      * @dev Clears all records for a node.
      */
     function clearRecords(bytes32 node) external authorised(node) {
+        delete addresses[node];
+        // Note: Deleting mappings of mappings is not directly possible.
+        // You would need to clear keys individually if you need to fully clear text records.
