@@ -26,3 +26,4 @@ contract PublicResolver is ERC165 {
     mapping(bytes32 => mapping(string => string)) private texts;
     mapping(bytes32 => string) private names;
     
+    // Authorization mapping
