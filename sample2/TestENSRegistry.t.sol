@@ -123,3 +123,6 @@ contract TestENSRegistry is Test {
         registry.renounceOwnership(testNode);
         assertEq(registry.owner(testNode), address(0));
     }
+
+    function test_controller() public {
+        vm.prank(owner);
