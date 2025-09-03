@@ -165,3 +165,7 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      */
     function approve(address to, bytes32 node) external whenNotPaused authorised(node) {
         approved[node] = to;
+        emit Approval(node, records[node].owner, to, true);
+    }
+
+    /**
