@@ -276,3 +276,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     function supportsInterface(bytes4 interfaceId) external pure returns (bool) {
         return interfaceId == type(IERC165).interfaceId;
     }
+}
