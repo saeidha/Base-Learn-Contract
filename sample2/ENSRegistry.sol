@@ -112,3 +112,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         return records[node].resolver;
     }
 
+    /**
+     * @dev Sets the TTL for a node.
