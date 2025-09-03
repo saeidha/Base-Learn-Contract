@@ -71,3 +71,6 @@ contract PublicResolver is ERC165 {
      */
     function setText(bytes32 node, string calldata key, string calldata value) external authorised(node) {
         texts[node][key] = value;
+        emit TextChanged(node, key, key, value);
+    }
+    
