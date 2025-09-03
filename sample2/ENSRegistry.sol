@@ -97,3 +97,6 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      * @dev Sets the resolver for a node.
      * @param node The node to update.
      * @param _resolver The address of the resolver.
+     */
+    function setResolver(bytes32 node, address _resolver) external whenNotPaused authorised(node) {
+        records[node].resolver = _resolver;
