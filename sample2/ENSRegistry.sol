@@ -257,3 +257,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     }
     
     /**
+     * @dev Unpauses the contract.
+     */
