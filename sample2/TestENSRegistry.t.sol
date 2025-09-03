@@ -140,3 +140,5 @@ contract TestENSRegistry is Test {
         assertFalse(registry.exists(testNode));
     }
     
+    function test_pause() public {
+        vm.prank(owner);
