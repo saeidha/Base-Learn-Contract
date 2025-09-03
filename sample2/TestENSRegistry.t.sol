@@ -149,3 +149,4 @@ contract TestENSRegistry is Test {
         registry.setOwner(testNode, user2);
         
         vm.prank(owner);
+        registry.unpause();
