@@ -18,3 +18,5 @@ contract TestENSRegistry is Test {
     bytes32 testSubNode = keccak256(abi.encodePacked(testNode, testLabel));
 
     function setUp() public {
+        vm.prank(owner);
+        registry = new ENSRegistry();
