@@ -129,3 +129,7 @@ contract PublicResolver is ERC165 {
      * @param data Array of call data to execute.
      */
     function multicall(bytes[] calldata data) external {
+        for (uint i = 0; i < data.length; i++) {
+            (bool success, ) = address(this).delegatecall(data[i]);
+            require(success, "PublicResolver: multicall call failed");
+        }
