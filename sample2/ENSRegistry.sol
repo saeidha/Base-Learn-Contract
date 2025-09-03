@@ -147,3 +147,6 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      */
     function setApprovalForAll(address operator, bool _approved) external {
         operators[msg.sender][operator] = _approved;
+        emit ApprovalForAll(msg.sender, operator, _approved);
+    }
+
