@@ -126,3 +126,6 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      * @dev Returns the TTL for a node.
      * @param node The node to query.
      * @return The TTL of the node.
+     */
+    function ttl(bytes32 node) external view returns (uint64) {
+        return records[node].ttl;
