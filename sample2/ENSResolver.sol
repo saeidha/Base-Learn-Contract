@@ -135,3 +135,5 @@ contract PublicResolver is ERC165 {
         }
     }
 
+    /**
+     * @inheritdoc IERC165
