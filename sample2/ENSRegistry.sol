@@ -187,3 +187,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
             "ENSRegistry: Not approved for transfer"
         );
         
+        // Clear approval after transfer
+        approved[node] = address(0);
