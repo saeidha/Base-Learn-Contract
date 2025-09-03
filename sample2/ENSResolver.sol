@@ -124,3 +124,5 @@ contract PublicResolver is ERC165 {
         emit AddrChanged(node, address(0));
     }
     
+    /**
+     * @dev Multicall function to execute multiple calls in a single transaction.
