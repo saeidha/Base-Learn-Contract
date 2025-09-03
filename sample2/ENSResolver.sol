@@ -16,3 +16,5 @@ abstract contract Resolver {
  * @dev A flexible resolver contract for the ENS-like registry.
  * It stores various types of records for a given node.
  */
+contract PublicResolver is ERC165 {
+    
