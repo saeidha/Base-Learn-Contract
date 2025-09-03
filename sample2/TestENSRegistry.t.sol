@@ -119,3 +119,4 @@ contract TestENSRegistry is Test {
     }
     
     function test_renounceOwnership() public {
+        vm.prank(user1);
