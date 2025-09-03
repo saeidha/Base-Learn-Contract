@@ -58,3 +58,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      * @param _owner The address of the new owner.
      */
     function register(bytes32 node, address _owner) external onlyOwner {
+        _setOwner(node, _owner);
