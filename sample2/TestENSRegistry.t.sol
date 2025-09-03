@@ -174,3 +174,4 @@ contract TestENSRegistry is Test {
 
     function test_resolver_setName() public {
         string memory name = "test.eth";
+        vm.prank(user1);
