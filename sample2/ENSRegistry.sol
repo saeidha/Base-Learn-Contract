@@ -238,3 +238,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      * @dev Checks if an address is a controller.
      */
     function isController(address controller) external view returns (bool) {
+        return controllers[controller];
