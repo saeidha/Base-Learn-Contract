@@ -118,3 +118,4 @@ contract TestENSRegistry is Test {
         assertEq(registry.ttl(testSubNode), 1800);
     }
     
+    function test_renounceOwnership() public {
