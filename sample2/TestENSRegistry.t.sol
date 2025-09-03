@@ -33,3 +33,5 @@ contract TestENSRegistry is Test {
     function test_initialOwner() public {
         assertEq(registry.owner(testNode), user1);
     }
+    
+    function test_setOwner() public {
