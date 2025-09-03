@@ -62,3 +62,6 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         emit Transfer(node, _owner);
     }
     
+    /**
+     * @dev Returns the owner of a node.
+     * @param node The node to query.
