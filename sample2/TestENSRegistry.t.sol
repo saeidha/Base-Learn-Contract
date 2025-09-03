@@ -65,3 +65,7 @@ contract TestENSRegistry is Test {
         assertEq(registry.ttl(testNode), newTtl);
     }
     
+    function test_exists() public {
+        assertTrue(registry.exists(testNode));
+        assertFalse(registry.exists(keccak256("nonexistent")));
+    }
