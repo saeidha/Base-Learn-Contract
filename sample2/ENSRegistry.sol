@@ -162,3 +162,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     
     /**
      * @dev Approves another address to transfer the ownership of a specific node.
+     */
+    function approve(address to, bytes32 node) external whenNotPaused authorised(node) {
