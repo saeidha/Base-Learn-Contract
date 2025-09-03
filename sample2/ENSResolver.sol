@@ -62,3 +62,4 @@ contract PublicResolver is ERC165 {
     function addr(bytes32 node) external view returns (address) {
         return addresses[node];
     }
+    
