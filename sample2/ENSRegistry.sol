@@ -36,3 +36,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     event NewResolver(bytes32 indexed node, address resolver);
     event NewTTL(bytes32 indexed node, uint64 ttl);
     event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
+    event Approval(bytes32 indexed node, address owner, address approved, bool isApproved);
