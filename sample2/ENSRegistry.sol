@@ -218,3 +218,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         emit NewTTL(subnode, _ttl);
     }
     
+    /**
+     * @dev Allows an owner to relinquish ownership of a node.
