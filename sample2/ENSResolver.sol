@@ -56,3 +56,4 @@ contract PublicResolver is ERC165 {
 
     /**
      * @dev Returns the address for a node.
+     * @param node The node to query.
