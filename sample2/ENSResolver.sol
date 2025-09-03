@@ -137,3 +137,5 @@ contract PublicResolver is ERC165 {
 
     /**
      * @inheritdoc IERC165
+     */
+    function supportsInterface(bytes4 interfaceId) public pure override returns (bool) {
