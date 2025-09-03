@@ -92,3 +92,5 @@ contract PublicResolver is ERC165 {
     function setName(bytes32 node, string calldata _name) external authorised(node) {
         names[node] = _name;
         emit NameChanged(node, _name);
+    }
+    
