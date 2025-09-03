@@ -34,3 +34,5 @@ contract PublicResolver is ERC165 {
     event NameChanged(bytes32 indexed node, string name);
     event AuthorisationChanged(bytes32 indexed node, address indexed owner, address indexed target, bool isAuthorised);
 
+
+    modifier authorised(bytes32 node) {
