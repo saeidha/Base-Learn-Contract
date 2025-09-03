@@ -77,3 +77,4 @@ contract PublicResolver is ERC165 {
     /**
      * @dev Returns a text record for a node.
      * @param node The node to query.
+     * @param key The key of the text record.
