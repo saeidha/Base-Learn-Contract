@@ -114,3 +114,5 @@ contract PublicResolver is ERC165 {
         emit AuthorisationChanged(node, msg.sender, target, isAuthorised);
     }
     
+    /**
+     * @dev Clears all records for a node.
