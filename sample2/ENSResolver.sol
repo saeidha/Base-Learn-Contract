@@ -57,3 +57,6 @@ contract PublicResolver is ERC165 {
     /**
      * @dev Returns the address for a node.
      * @param node The node to query.
+     * @return The address for the node.
+     */
+    function addr(bytes32 node) external view returns (address) {
