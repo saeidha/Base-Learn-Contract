@@ -71,3 +71,4 @@ contract TestENSRegistry is Test {
     }
     
     function test_setApprovalForAll() public {
+        vm.prank(user1);
