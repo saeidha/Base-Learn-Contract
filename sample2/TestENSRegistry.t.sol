@@ -115,3 +115,6 @@ contract TestENSRegistry is Test {
         registry.setSubnodeRecord(testNode, testLabel, user2, address(resolver), 1800);
         assertEq(registry.owner(testSubNode), user2);
         assertEq(registry.resolver(testSubNode), address(resolver));
+        assertEq(registry.ttl(testSubNode), 1800);
+    }
+    
