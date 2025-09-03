@@ -180,3 +180,6 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      */
     function transferFrom(address from, address to, bytes32 node) external whenNotPaused {
         require(from == records[node].owner, "ENSRegistry: Not owner");
+        require(
+            msg.sender == from || 
+            operators[from][msg.sender] || 
