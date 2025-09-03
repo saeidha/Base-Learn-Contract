@@ -232,3 +232,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     function setController(address controller, bool enabled) external onlyOwner {
         controllers[controller] = enabled;
         emit ControllerChanged(controller, enabled);
+    }
