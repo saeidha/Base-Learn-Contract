@@ -83,3 +83,6 @@ contract TestENSRegistry is Test {
     }
     
     function test_transferFromByOperator() public {
+        vm.prank(user1);
+        registry.setApprovalForAll(user2, true);
+        
