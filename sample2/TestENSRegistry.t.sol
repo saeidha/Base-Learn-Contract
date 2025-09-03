@@ -156,3 +156,4 @@ contract TestENSRegistry is Test {
         assertEq(registry.owner(testNode), user2);
     }
     
+    // --- Resolver Tests ---
