@@ -196,3 +196,7 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     /**
      * @dev A convenience function to set all records for a node at once.
      */
+    function setRecord(bytes32 node, address _owner, address _resolver, uint64 _ttl) external whenNotPaused authorised(node) {
+        _setOwner(node, _owner);
+        records[node].resolver = _resolver;
+        records[node].ttl = _ttl;
