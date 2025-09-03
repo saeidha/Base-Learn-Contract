@@ -142,3 +142,4 @@ contract TestENSRegistry is Test {
     
     function test_pause() public {
         vm.prank(owner);
+        registry.pause();
