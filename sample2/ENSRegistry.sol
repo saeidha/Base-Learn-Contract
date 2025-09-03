@@ -138,3 +138,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      */
     function exists(bytes32 node) external view returns (bool) {
         return records[node].owner != address(0);
+    }
+
