@@ -47,3 +47,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         _;
     }
 
+    constructor() {
