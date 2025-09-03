@@ -71,3 +71,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         return records[node].owner;
     }
 
+    /**
+     * @dev Sets the owner of a node.
