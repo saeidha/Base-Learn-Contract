@@ -78,3 +78,7 @@ contract PublicResolver is ERC165 {
      * @dev Returns a text record for a node.
      * @param node The node to query.
      * @param key The key of the text record.
+     * @return The value of the text record.
+     */
+    function text(bytes32 node, string calldata key) external view returns (string memory) {
+        return texts[node][key];
