@@ -146,3 +146,5 @@ contract TestENSRegistry is Test {
         
         vm.prank(user1);
         vm.expectRevert("Pausable: paused");
+        registry.setOwner(testNode, user2);
+        
