@@ -5,3 +5,5 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/Pausable.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol";
 
+abstract contract ENS {
+    function setSubnodeOwner(bytes32 node, bytes32 label, address owner) virtual external;
