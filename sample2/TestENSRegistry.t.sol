@@ -72,3 +72,6 @@ contract TestENSRegistry is Test {
     
     function test_setApprovalForAll() public {
         vm.prank(user1);
+        registry.setApprovalForAll(user2, true);
+        assertTrue(registry.isApprovedForAll(user1, user2));
+    }
