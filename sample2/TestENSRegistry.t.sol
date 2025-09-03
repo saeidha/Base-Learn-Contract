@@ -51,3 +51,5 @@ contract TestENSRegistry is Test {
         assertEq(registry.owner(testSubNode), user2);
     }
     
+    function test_setResolver() public {
+        address newResolver = address(0x4);
