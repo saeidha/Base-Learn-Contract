@@ -58,3 +58,4 @@ contract TestENSRegistry is Test {
         assertEq(registry.resolver(testNode), newResolver);
     }
     
+    function test_setTTL() public {
