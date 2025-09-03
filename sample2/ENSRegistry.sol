@@ -108,3 +108,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
      * @param node The node to query.
      * @return The address of the resolver.
      */
+    function resolver(bytes32 node) external view returns (address) {
+        return records[node].resolver;
