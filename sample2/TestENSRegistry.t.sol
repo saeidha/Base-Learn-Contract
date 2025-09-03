@@ -8,3 +8,5 @@ import "../contracts/PublicResolver.sol";
 contract TestENSRegistry is Test {
     ENSRegistry registry;
     PublicResolver resolver;
+    
+    address owner = address(0x1);
