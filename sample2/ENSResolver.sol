@@ -99,3 +99,5 @@ contract PublicResolver is ERC165 {
      * @param node The node to query.
      * @return The name for the node.
      */
+    function name(bytes32 node) external view returns (string memory) {
+        return names[node];
