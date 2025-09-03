@@ -12,3 +12,5 @@ abstract contract Resolver {
 
 
 /**
+ * @title PublicResolver
+ * @dev A flexible resolver contract for the ENS-like registry.
