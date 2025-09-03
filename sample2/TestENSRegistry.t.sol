@@ -37,3 +37,5 @@ contract TestENSRegistry is Test {
     function test_setOwner() public {
         vm.prank(user1);
         registry.setOwner(testNode, user2);
+        assertEq(registry.owner(testNode), user2);
+    }
