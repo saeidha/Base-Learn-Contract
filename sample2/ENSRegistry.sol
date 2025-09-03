@@ -80,3 +80,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         _setOwner(node, _owner);
         emit Transfer(node, _owner);
     }
+
