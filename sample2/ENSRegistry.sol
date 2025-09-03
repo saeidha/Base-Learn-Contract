@@ -140,3 +140,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         return records[node].owner != address(0);
     }
 
+    /**
+     * @dev Sets or unsets the approval of a given operator.
