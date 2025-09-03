@@ -54,3 +54,5 @@ contract PublicResolver is ERC165 {
         emit AddrChanged(node, a);
     }
 
+    /**
+     * @dev Returns the address for a node.
