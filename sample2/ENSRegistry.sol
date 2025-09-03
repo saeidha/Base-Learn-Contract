@@ -211,3 +211,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     function setSubnodeRecord(bytes32 node, bytes32 label, address _owner, address _resolver, uint64 _ttl) external whenNotPaused authorised(node) {
         bytes32 subnode = keccak256(abi.encodePacked(node, label));
         _setOwner(subnode, _owner);
+        records[subnode].resolver = _resolver;
+        records[subnode].ttl = _ttl;
