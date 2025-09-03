@@ -249,3 +249,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         emit NodeBurnt(node);
     }
 
+    /**
