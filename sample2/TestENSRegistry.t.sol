@@ -121,3 +121,5 @@ contract TestENSRegistry is Test {
     function test_renounceOwnership() public {
         vm.prank(user1);
         registry.renounceOwnership(testNode);
+        assertEq(registry.owner(testNode), address(0));
+    }
