@@ -110,3 +110,4 @@ contract TestENSRegistry is Test {
         assertEq(registry.ttl(testNode), 7200);
     }
 
+    function test_setSubnodeRecord() public {
