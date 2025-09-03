@@ -50,3 +50,4 @@ contract TestENSRegistry is Test {
         registry.setSubnodeOwner(testNode, testLabel, user2);
         assertEq(registry.owner(testSubNode), user2);
     }
+    
