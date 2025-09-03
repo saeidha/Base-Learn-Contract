@@ -27,3 +27,7 @@ contract PublicResolver is ERC165 {
     mapping(bytes32 => string) private names;
     
     // Authorization mapping
+    mapping(bytes32 => mapping(address => mapping(address => bool))) public authorisations;
+
+    event AddrChanged(bytes32 indexed node, address a);
+    event TextChanged(bytes32 indexed node, string indexed indexedKey, string key, string value);
