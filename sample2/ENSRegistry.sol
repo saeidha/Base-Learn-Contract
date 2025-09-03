@@ -226,3 +226,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         emit Transfer(node, address(0));
     }
     
+    /**
+     * @dev Sets or removes a controller address. Only callable by contract owner.
