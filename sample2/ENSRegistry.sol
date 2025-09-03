@@ -229,3 +229,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     /**
      * @dev Sets or removes a controller address. Only callable by contract owner.
      */
+    function setController(address controller, bool enabled) external onlyOwner {
