@@ -164,3 +164,4 @@ contract TestENSRegistry is Test {
         assertEq(resolver.addr(testNode), user1);
     }
     
+    function test_resolver_setText() public {
