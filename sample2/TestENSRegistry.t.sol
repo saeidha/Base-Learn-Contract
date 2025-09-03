@@ -40,3 +40,5 @@ contract TestENSRegistry is Test {
         assertEq(registry.owner(testNode), user2);
     }
     
+    function test_fail_setOwnerNotAuthorized() public {
+        vm.prank(user2);
