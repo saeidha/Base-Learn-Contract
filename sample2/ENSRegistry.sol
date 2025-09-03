@@ -23,3 +23,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
     struct Record {
         address owner;
         address resolver;
+        uint64 ttl;
