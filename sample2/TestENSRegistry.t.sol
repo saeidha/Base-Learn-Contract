@@ -179,3 +179,5 @@ contract TestENSRegistry is Test {
         assertEq(resolver.name(testNode), name);
     }
 
+    function test_resolver_supportsInterface() public {
+        assertTrue(resolver.supportsInterface(0x3b3b57de)); // ADDR
