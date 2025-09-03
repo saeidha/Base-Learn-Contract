@@ -160,3 +160,5 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         return operators[_owner][operator];
     }
     
+    /**
+     * @dev Approves another address to transfer the ownership of a specific node.
