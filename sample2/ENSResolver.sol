@@ -7,3 +7,5 @@ import "https/github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contrac
 abstract contract Resolver {
     function supportsInterface(bytes4 interfaceID) virtual external pure returns (bool);
     function addr(bytes32 node) virtual external view returns (address);
+    function setAddr(bytes32 node, address addr) virtual external;
+}
