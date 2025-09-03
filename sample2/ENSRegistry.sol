@@ -52,3 +52,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         records[0x0].owner = msg.sender;
     }
 
+    /**
