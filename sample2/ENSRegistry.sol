@@ -233,3 +233,6 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         controllers[controller] = enabled;
         emit ControllerChanged(controller, enabled);
     }
+
+    /**
+     * @dev Checks if an address is a controller.
