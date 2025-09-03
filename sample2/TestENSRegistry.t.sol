@@ -130,3 +130,4 @@ contract TestENSRegistry is Test {
         assertTrue(registry.isController(user2));
 
         vm.prank(user2); // As a controller
+        registry.setOwner(testNode, user2);
