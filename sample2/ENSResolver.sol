@@ -143,3 +143,5 @@ contract PublicResolver is ERC165 {
                interfaceId == TEXT_INTERFACE_ID ||
                interfaceId == NAME_INTERFACE_ID ||
                super.supportsInterface(interfaceId);
+    }
+}
