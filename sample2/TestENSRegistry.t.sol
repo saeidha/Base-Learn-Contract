@@ -63,3 +63,5 @@ contract TestENSRegistry is Test {
         vm.prank(user1);
         registry.setTTL(testNode, newTtl);
         assertEq(registry.ttl(testNode), newTtl);
+    }
+    
