@@ -189,3 +189,4 @@ contract ENSRegistry is Ownable, Pausable, IERC165 {
         
         // Clear approval after transfer
         approved[node] = address(0);
+        _setOwner(node, to);
