@@ -204,3 +204,6 @@ contract TestEnglishAuction is Test {
     
     // --- View Functions ---
     function test_15_ViewFunctions_Initial() public {
+        vm.prank(seller);
+        auction.createAuction(address(mockNft), NFT_ID, STARTING_BID, DURATION);
+        assertEq(auction.getNftOwner(), seller);
