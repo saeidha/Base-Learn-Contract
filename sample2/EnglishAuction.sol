@@ -148,3 +148,4 @@ contract EnglishAuction is ReentrancyGuard {
     }
 
     /**
+     * @notice Ends the auction after the duration has passed.
