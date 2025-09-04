@@ -64,3 +64,5 @@ contract EnglishAuction is ReentrancyGuard {
         address _nftContract,
         uint256 _tokenId,
         uint256 _startingBid,
+        uint256 _duration
+    ) external {
