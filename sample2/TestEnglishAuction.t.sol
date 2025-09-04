@@ -194,3 +194,5 @@ contract TestEnglishAuction is Test {
         assertEq(uint(auction.getAuctionState()), uint(EnglishAuction.AuctionState.CANCELED));
         assertEq(mockNft.ownerOf(NFT_ID), seller);
     }
+    
+    function test_14_Fail_CancelAuction_WithBids() public {
