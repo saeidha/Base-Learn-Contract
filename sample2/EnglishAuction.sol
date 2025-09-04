@@ -126,3 +126,6 @@ contract EnglishAuction is ReentrancyGuard {
 
         if (auction.highestBidder == address(0)) {
             // First bid
+            requiredBid = auction.startingBid;
+        } else {
+            // Subsequent bids require a 5% increment
