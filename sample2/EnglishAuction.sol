@@ -146,3 +146,5 @@ contract EnglishAuction is ReentrancyGuard {
 
         emit BidPlaced(msg.sender, currentBid);
     }
+
+    /**
