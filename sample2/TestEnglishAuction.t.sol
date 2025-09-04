@@ -182,3 +182,5 @@ contract TestEnglishAuction is Test {
     }
     
     // --- Test Cancel Auction ---
+    function test_13_CancelAuction_Success() public {
+        vm.prank(seller);
