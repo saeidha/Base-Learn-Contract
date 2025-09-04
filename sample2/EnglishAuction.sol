@@ -131,3 +131,5 @@ contract EnglishAuction is ReentrancyGuard {
             // Subsequent bids require a 5% increment
             requiredBid = auction.highestBid + (auction.highestBid / 20);
         }
+
+        if (currentBid <= requiredBid) {
