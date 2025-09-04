@@ -62,3 +62,5 @@ contract EnglishAuction is ReentrancyGuard {
      */
     function createAuction(
         address _nftContract,
+        uint256 _tokenId,
+        uint256 _startingBid,
