@@ -91,3 +91,5 @@ contract EnglishAuction is ReentrancyGuard {
     /**
      * @notice Starts the auction, transferring the NFT into the contract's custody.
      */
+    function startAuction() external {
+        if (msg.sender != auction.seller) {
