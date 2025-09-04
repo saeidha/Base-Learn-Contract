@@ -209,3 +209,5 @@ contract TestEnglishAuction is Test {
         assertEq(auction.getNftOwner(), seller);
         assertEq(auction.getRequiredBid(), STARTING_BID);
     }
+
+    function test_16_ViewFunctions_AfterStart() public {
