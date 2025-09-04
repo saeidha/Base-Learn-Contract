@@ -137,3 +137,5 @@ contract EnglishAuction is ReentrancyGuard {
         }
 
         if (auction.highestBidder != address(0)) {
+            // Refund the previous highest bidder
+            pendingWithdrawals[auction.highestBidder] += auction.highestBid;
