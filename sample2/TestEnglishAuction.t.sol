@@ -129,3 +129,5 @@ contract TestEnglishAuction is Test {
 
         uint256 bidder1InitialBalance = bidder1.balance;
         vm.prank(bidder1);
+        auction.withdraw();
+        assertEq(bidder1.balance, bidder1InitialBalance + STARTING_BID);
