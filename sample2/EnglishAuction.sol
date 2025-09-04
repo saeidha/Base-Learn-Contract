@@ -88,3 +88,5 @@ contract EnglishAuction is ReentrancyGuard {
         emit AuctionCreated(msg.sender, _startingBid, _duration);
     }
 
+    /**
+     * @notice Starts the auction, transferring the NFT into the contract's custody.
