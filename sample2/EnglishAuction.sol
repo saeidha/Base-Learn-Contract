@@ -26,3 +26,5 @@ contract EnglishAuction is ReentrancyGuard {
     }
 
     // A single auction instance is managed by this contract.
+    // This can be extended with a mapping to support multiple auctions.
+    Auction public auction;
