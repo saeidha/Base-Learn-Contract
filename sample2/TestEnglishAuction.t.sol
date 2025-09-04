@@ -260,3 +260,5 @@ contract TestEnglishAuction is Test {
         // Bid must be 1 + 0.05 = 1.05 ether. 1.04 is too low.
         vm.expectRevert(EnglishAuction.BidTooLow.selector);
         auction.bid{value: 1.04 ether}();
+        
+        // 1.051 ether is a valid bid
