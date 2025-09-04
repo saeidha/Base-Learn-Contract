@@ -47,3 +47,7 @@ contract TestEnglishAuction is Test {
     // --- Test Create Auction ---
     function test_01_CreateAuction_Success() public {
         vm.prank(seller);
+        auction.createAuction(address(mockNft), NFT_ID, STARTING_BID, DURATION);
+        assertEq(uint(auction.getAuctionState()), uint(EnglishAuction.AuctionState.CREATED));
+        assertEq(auction.getSeller(), seller);
+    }
