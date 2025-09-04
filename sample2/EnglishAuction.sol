@@ -58,3 +58,5 @@ contract EnglishAuction is ReentrancyGuard {
      * @param _nftContract The address of the ERC721 token contract.
      * @param _tokenId The ID of the token to be auctioned.
      * @param _startingBid The minimum initial price for the item.
+     * @param _duration The duration of the auction in seconds.
+     */
