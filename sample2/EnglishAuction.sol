@@ -72,3 +72,5 @@ contract EnglishAuction is ReentrancyGuard {
         if (_duration == 0) {
             revert InvalidDuration();
         }
+
+        auction = Auction({
