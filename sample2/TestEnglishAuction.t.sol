@@ -114,3 +114,5 @@ contract TestEnglishAuction is Test {
         auction.bid{value: STARTING_BID}();
         
         uint256 newBid = STARTING_BID + (STARTING_BID / 20) + 1;
+        vm.deal(bidder2, 3 ether);
+        vm.prank(bidder2);
