@@ -79,3 +79,5 @@ contract EnglishAuction is ReentrancyGuard {
             tokenId: _tokenId,
             startingBid: _startingBid,
             highestBid: 0,
+            highestBidder: address(0),
+            endTime: 0,
