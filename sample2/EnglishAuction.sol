@@ -171,3 +171,6 @@ contract EnglishAuction is ReentrancyGuard {
         } else {
             // If no bids, return NFT to the seller
             auction.nftContract.safeTransferFrom(address(this), auction.seller, auction.tokenId);
+            emit AuctionEnded(address(0), 0);
+        }
+    }
