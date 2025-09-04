@@ -231,3 +231,5 @@ contract EnglishAuction is ReentrancyGuard {
         if(auction.state == AuctionState.STARTED) return address(this);
         if(auction.state == AuctionState.ENDED && auction.highestBidder != address(0)) return auction.highestBidder;
         return auction.seller; // Canceled or Ended with no bids
+    }
+}
