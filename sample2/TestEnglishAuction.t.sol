@@ -92,3 +92,4 @@ contract TestEnglishAuction is Test {
     }
 
     function test_06_Fail_Bid_TooLow() public {
+        vm.prank(seller);
