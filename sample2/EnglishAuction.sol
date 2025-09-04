@@ -19,3 +19,7 @@ contract EnglishAuction is ReentrancyGuard {
         uint256 tokenId;
         uint256 startingBid;
         uint256 highestBid;
+        address highestBidder;
+        uint256 endTime;
+        uint256 duration;
+        AuctionState state;
