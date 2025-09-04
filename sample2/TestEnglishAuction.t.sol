@@ -111,3 +111,4 @@ contract TestEnglishAuction is Test {
 
         vm.deal(bidder1, 2 ether);
         vm.prank(bidder1);
+        auction.bid{value: STARTING_BID}();
