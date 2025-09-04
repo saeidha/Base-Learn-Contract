@@ -173,3 +173,5 @@ contract TestEnglishAuction is Test {
         vm.prank(seller);
         auction.startAuction();
 
+        vm.warp(block.timestamp + DURATION + 1);
+        
