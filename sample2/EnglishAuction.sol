@@ -25,3 +25,4 @@ contract EnglishAuction is ReentrancyGuard {
         AuctionState state;
     }
 
+    // A single auction instance is managed by this contract.
