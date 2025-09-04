@@ -223,3 +223,4 @@ contract EnglishAuction is ReentrancyGuard {
         return auction.endTime - block.timestamp;
     }
     function getRequiredBid() public view returns (uint256) {
+        if (auction.highestBidder == address(0)) return auction.startingBid;
