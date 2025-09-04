@@ -198,3 +198,5 @@ contract TestEnglishAuction is Test {
     function test_14_Fail_CancelAuction_WithBids() public {
         test_05_Bid_FirstBid_Success();
         vm.prank(seller);
+        vm.expectRevert("Cannot cancel with active bids");
+        auction.cancelAuction();
