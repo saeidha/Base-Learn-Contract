@@ -16,3 +16,4 @@ contract MockNFT is Test {
     function ownerOf(uint256 tokenId) public view returns (address) {
         return ERC721(address(this)).ownerOf(tokenId);
     }
+}
