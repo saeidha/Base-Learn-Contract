@@ -142,3 +142,5 @@ contract TestEnglishAuction is Test {
     
     // --- Test End Auction ---
     function test_10_EndAuction_Success() public {
+        test_07_Bid_Outbid_Success(); // Setup with bidder2 as highest
+
