@@ -86,3 +86,5 @@ contract EnglishAuction is ReentrancyGuard {
         });
 
         emit AuctionCreated(msg.sender, _startingBid, _duration);
+    }
+
