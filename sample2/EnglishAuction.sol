@@ -48,3 +48,5 @@ contract EnglishAuction is ReentrancyGuard {
     error AuctionNotEnded();
     error AuctionInProgress();
     error OnlySeller();
+    error BidTooLow();
+    error InvalidDuration();
