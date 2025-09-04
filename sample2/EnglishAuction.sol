@@ -83,3 +83,6 @@ contract EnglishAuction is ReentrancyGuard {
             endTime: 0,
             duration: _duration,
             state: AuctionState.CREATED
+        });
+
+        emit AuctionCreated(msg.sender, _startingBid, _duration);
