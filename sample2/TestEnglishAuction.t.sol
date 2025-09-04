@@ -6,3 +6,5 @@ import {EnglishAuction} from "../contracts/EnglishAuction.sol";
 
 // Mock ERC721 for testing
 contract MockNFT is Test {
+    function mint(address to, uint256 tokenId) public {
+        vm.prank(to);
