@@ -76,3 +76,6 @@ contract EnglishAuction is ReentrancyGuard {
         auction = Auction({
             seller: payable(msg.sender),
             nftContract: IERC721(_nftContract),
+            tokenId: _tokenId,
+            startingBid: _startingBid,
+            highestBid: 0,
