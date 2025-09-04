@@ -66,3 +66,4 @@ contract EnglishAuction is ReentrancyGuard {
         uint256 _startingBid,
         uint256 _duration
     ) external {
+        if (auction.seller != address(0)) {
