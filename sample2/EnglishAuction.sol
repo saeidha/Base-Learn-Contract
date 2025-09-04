@@ -46,3 +46,5 @@ contract EnglishAuction is ReentrancyGuard {
     error AuctionEndedOrCanceled();
     error AuctionAlreadyEnded();
     error AuctionNotEnded();
+    error AuctionInProgress();
+    error OnlySeller();
