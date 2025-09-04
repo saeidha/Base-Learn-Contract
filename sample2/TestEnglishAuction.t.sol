@@ -235,3 +235,4 @@ contract TestEnglishAuction is Test {
 
         vm.prank(bidder1);
         vm.expectRevert(EnglishAuction.AuctionAlreadyEnded.selector);
+        auction.bid{value: 5 ether}();
