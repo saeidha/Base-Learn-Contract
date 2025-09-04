@@ -55,3 +55,5 @@ contract TestEnglishAuction is Test {
     function test_02_Fail_CreateAuction_InvalidDuration() public {
         vm.prank(seller);
         vm.expectRevert(EnglishAuction.InvalidDuration.selector);
+        auction.createAuction(address(mockNft), NFT_ID, STARTING_BID, 0);
+    }
