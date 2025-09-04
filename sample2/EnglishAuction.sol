@@ -222,3 +222,4 @@ contract EnglishAuction is ReentrancyGuard {
         if (!isAuctionActive()) return 0;
         return auction.endTime - block.timestamp;
     }
+    function getRequiredBid() public view returns (uint256) {
