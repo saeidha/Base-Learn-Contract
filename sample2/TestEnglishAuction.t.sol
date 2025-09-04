@@ -97,3 +97,5 @@ contract TestEnglishAuction is Test {
         vm.prank(seller);
         auction.startAuction();
         
+        vm.deal(bidder1, 1 ether);
+        vm.prank(bidder1);
