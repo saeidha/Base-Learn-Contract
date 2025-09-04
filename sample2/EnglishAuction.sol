@@ -158,3 +158,4 @@ contract EnglishAuction is ReentrancyGuard {
         if (block.timestamp < auction.endTime) {
             revert AuctionInProgress();
         }
+        
