@@ -70,3 +70,4 @@ contract TestEnglishAuction is Test {
 
     function test_04_Fail_StartAuction_NotSeller() public {
         vm.prank(seller);
+        auction.createAuction(address(mockNft), NFT_ID, STARTING_BID, DURATION);
