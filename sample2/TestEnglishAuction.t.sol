@@ -126,3 +126,5 @@ contract TestEnglishAuction is Test {
     // --- Test Withdrawals ---
     function test_08_Withdraw_Success() public {
         test_07_Bid_Outbid_Success(); // Setup the outbid scenario
+
+        uint256 bidder1InitialBalance = bidder1.balance;
