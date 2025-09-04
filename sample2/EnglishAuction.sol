@@ -33,3 +33,6 @@ contract EnglishAuction is ReentrancyGuard {
     mapping(address => uint256) public pendingWithdrawals;
 
     // Events
+    event AuctionCreated(address indexed seller, uint256 startingBid, uint256 duration);
+    event AuctionStarted(uint256 endTime);
+    event AuctionEnded(address winner, uint256 amount);
