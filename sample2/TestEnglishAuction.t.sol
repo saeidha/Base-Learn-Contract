@@ -233,3 +233,5 @@ contract TestEnglishAuction is Test {
         test_07_Bid_Outbid_Success();
         vm.warp(block.timestamp + DURATION + 1);
 
+        vm.prank(bidder1);
+        vm.expectRevert(EnglishAuction.AuctionAlreadyEnded.selector);
