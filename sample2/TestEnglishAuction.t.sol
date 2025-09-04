@@ -120,3 +120,4 @@ contract TestEnglishAuction is Test {
 
         assertEq(auction.getHighestBid(), newBid);
         assertEq(auction.getHighestBidder(), bidder2);
+        assertEq(auction.getPendingWithdrawal(bidder1), STARTING_BID);
