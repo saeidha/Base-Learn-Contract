@@ -75,3 +75,7 @@ contract TestEnglishAuction is Test {
         vm.expectRevert(EnglishAuction.OnlySeller.selector);
         auction.startAuction();
     }
+    
+    // --- Test Bidding Logic ---
+    function test_05_Bid_FirstBid_Success() public {
+        vm.prank(seller);
