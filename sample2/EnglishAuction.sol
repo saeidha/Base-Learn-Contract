@@ -29,3 +29,5 @@ contract EnglishAuction is ReentrancyGuard {
     // This can be extended with a mapping to support multiple auctions.
     Auction public auction;
 
+    // Mapping to store funds for bidders who have been outbid.
+    mapping(address => uint256) public pendingWithdrawals;
