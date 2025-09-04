@@ -59,3 +59,5 @@ contract TestEnglishAuction is Test {
     }
 
     // --- Test Start Auction ---
+    function test_03_StartAuction_Success() public {
+        vm.prank(seller);
