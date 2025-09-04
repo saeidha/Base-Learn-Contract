@@ -74,3 +74,4 @@ contract TestEnglishAuction is Test {
         vm.prank(randomUser);
         vm.expectRevert(EnglishAuction.OnlySeller.selector);
         auction.startAuction();
+    }
