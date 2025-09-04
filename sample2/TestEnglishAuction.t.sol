@@ -45,3 +45,4 @@ contract TestEnglishAuction is Test {
     }
 
     // --- Test Create Auction ---
+    function test_01_CreateAuction_Success() public {
