@@ -245,3 +245,4 @@ contract TestEnglishAuction is Test {
         auction.startAuction();
     }
 
+    function test_21_Bid_Increments() public {
