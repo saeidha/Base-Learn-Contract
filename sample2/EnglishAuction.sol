@@ -159,3 +159,4 @@ contract EnglishAuction is ReentrancyGuard {
             revert AuctionInProgress();
         }
         
+        auction.state = AuctionState.ENDED;
