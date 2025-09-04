@@ -40,3 +40,7 @@ contract EnglishAuction is ReentrancyGuard {
     event BidPlaced(address indexed bidder, uint256 amount);
     event Withdrawal(address indexed user, uint256 amount);
 
+    error AuctionNotCreated();
+    error AuctionAlreadyStarted();
+    error AuctionNotStarted();
+    error AuctionEndedOrCanceled();
