@@ -236,3 +236,6 @@ contract TestEnglishAuction is Test {
         vm.prank(bidder1);
         vm.expectRevert(EnglishAuction.AuctionAlreadyEnded.selector);
         auction.bid{value: 5 ether}();
+    }
+
+    function test_20_Fail_Start_Twice() public {
