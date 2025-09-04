@@ -15,3 +15,5 @@ contract EnglishAuction is ReentrancyGuard {
 
     struct Auction {
         address payable seller;
+        IERC721 nftContract;
+        uint256 tokenId;
