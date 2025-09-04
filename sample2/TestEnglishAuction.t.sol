@@ -144,3 +144,5 @@ contract TestEnglishAuction is Test {
     function test_10_EndAuction_Success() public {
         test_07_Bid_Outbid_Success(); // Setup with bidder2 as highest
 
+        vm.warp(block.timestamp + DURATION + 1);
+
