@@ -223,3 +223,5 @@ contract TestEnglishAuction is Test {
     }
 
     function test_18_ViewFunctions_AfterEnd() public {
+        test_10_EndAuction_Success();
+        assertEq(auction.getNftOwner(), bidder2);
