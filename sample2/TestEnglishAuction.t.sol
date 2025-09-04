@@ -27,3 +27,5 @@ contract TestEnglishAuction is Test {
     address public bidder2 = address(0x3);
     address public randomUser = address(0x4);
 
+    uint256 constant NFT_ID = 1;
+    uint256 constant STARTING_BID = 1 ether;
