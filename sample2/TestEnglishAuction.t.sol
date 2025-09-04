@@ -31,3 +31,6 @@ contract TestEnglishAuction is Test {
     uint256 constant STARTING_BID = 1 ether;
     uint256 constant DURATION = 7 days;
 
+    function setUp() public {
+        auction = new EnglishAuction();
+        mockNft = new MockNFT();
