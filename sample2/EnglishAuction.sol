@@ -118,3 +118,5 @@ contract EnglishAuction is ReentrancyGuard {
             revert AuctionNotStarted();
         }
         if (block.timestamp >= auction.endTime) {
+            revert AuctionAlreadyEnded();
+        }
