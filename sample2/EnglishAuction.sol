@@ -136,3 +136,4 @@ contract EnglishAuction is ReentrancyGuard {
             revert BidTooLow();
         }
 
+        if (auction.highestBidder != address(0)) {
