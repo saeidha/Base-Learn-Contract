@@ -17,3 +17,5 @@ contract EnglishAuction is ReentrancyGuard {
         address payable seller;
         IERC721 nftContract;
         uint256 tokenId;
+        uint256 startingBid;
+        uint256 highestBid;
