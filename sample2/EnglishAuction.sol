@@ -11,3 +11,5 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
  */
 contract EnglishAuction is ReentrancyGuard {
 
+    enum AuctionState { CREATED, STARTED, ENDED, CANCELED }
+
