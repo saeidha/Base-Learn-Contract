@@ -31,3 +31,4 @@ contract EnglishAuction is ReentrancyGuard {
 
     // Mapping to store funds for bidders who have been outbid.
     mapping(address => uint256) public pendingWithdrawals;
+
