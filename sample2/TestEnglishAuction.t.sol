@@ -264,3 +264,4 @@ contract TestEnglishAuction is Test {
         // 1.051 ether is a valid bid
         auction.bid{value: 1.051 ether}();
         assertEq(auction.getHighestBidder(), bidder2);
+    }
