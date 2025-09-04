@@ -219,3 +219,4 @@ contract TestEnglishAuction is Test {
     function test_17_ViewFunctions_AfterBid() public {
         test_05_Bid_FirstBid_Success();
         uint256 required = STARTING_BID + (STARTING_BID / 20);
+        assertEq(auction.getRequiredBid(), required);
