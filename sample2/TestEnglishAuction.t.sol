@@ -138,3 +138,5 @@ contract TestEnglishAuction is Test {
         vm.prank(randomUser);
         vm.expectRevert(EnglishAuction.NoFundsToWithdraw.selector);
         auction.withdraw();
+    }
+    
