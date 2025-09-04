@@ -189,3 +189,5 @@ contract EnglishAuction is ReentrancyGuard {
 
         emit AuctionCanceled();
     }
+
+    /**
