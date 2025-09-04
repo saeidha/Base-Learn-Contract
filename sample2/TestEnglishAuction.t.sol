@@ -229,3 +229,5 @@ contract TestEnglishAuction is Test {
         assertEq(auction.getTimeLeft(), 0);
     }
 
+    function test_19_Fail_Bid_AfterEnd() public {
+        test_07_Bid_Outbid_Success();
