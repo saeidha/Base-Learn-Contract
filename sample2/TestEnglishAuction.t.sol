@@ -20,3 +20,4 @@ contract MockNFT is Test {
 
 contract TestEnglishAuction is Test {
     EnglishAuction public auction;
+    MockNFT public mockNft;
