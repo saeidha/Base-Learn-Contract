@@ -200,3 +200,4 @@ contract TestEnglishAuction is Test {
         vm.prank(seller);
         vm.expectRevert("Cannot cancel with active bids");
         auction.cancelAuction();
+    }
