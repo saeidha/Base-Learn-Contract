@@ -157,3 +157,4 @@ contract TestEnglishAuction is Test {
         assertEq(seller.balance, sellerInitialBalance + winningBid);
     }
 
+    function test_11_Fail_EndAuction_InProgress() public {
