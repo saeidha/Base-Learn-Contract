@@ -53,3 +53,5 @@ contract EnglishAuction is ReentrancyGuard {
     error NoFundsToWithdraw();
 
     /**
+     * @notice Creates the auction with specified parameters.
+     * @dev The seller must have approved the contract to transfer the NFT beforehand.
