@@ -241,3 +241,5 @@ contract TestEnglishAuction is Test {
     function test_20_Fail_Start_Twice() public {
         test_03_StartAuction_Success();
         vm.prank(seller);
+        vm.expectRevert(EnglishAuction.AuctionAlreadyStarted.selector);
+        auction.startAuction();
