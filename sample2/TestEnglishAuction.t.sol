@@ -13,3 +13,5 @@ contract MockNFT is Test {
     function approve(address to, uint256 tokenId) public {
         ERC721(address(this))._approve(to, tokenId);
     }
+    function ownerOf(uint256 tokenId) public view returns (address) {
+        return ERC721(address(this)).ownerOf(tokenId);
