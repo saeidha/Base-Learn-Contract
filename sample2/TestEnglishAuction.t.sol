@@ -36,3 +36,4 @@ contract TestEnglishAuction is Test {
         mockNft = new MockNFT();
 
         // Mint NFT to seller
+        vm.prank(seller);
