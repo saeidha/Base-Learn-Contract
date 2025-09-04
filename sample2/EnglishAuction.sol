@@ -123,3 +123,5 @@ contract EnglishAuction is ReentrancyGuard {
 
         uint256 currentBid = msg.value;
         uint256 requiredBid;
+
+        if (auction.highestBidder == address(0)) {
