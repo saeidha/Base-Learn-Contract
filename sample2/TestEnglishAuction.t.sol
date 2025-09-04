@@ -131,3 +131,5 @@ contract TestEnglishAuction is Test {
         vm.prank(bidder1);
         auction.withdraw();
         assertEq(bidder1.balance, bidder1InitialBalance + STARTING_BID);
+        assertEq(auction.getPendingWithdrawal(bidder1), 0);
+    }
