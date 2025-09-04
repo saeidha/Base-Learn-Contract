@@ -193,3 +193,5 @@ contract EnglishAuction is ReentrancyGuard {
     /**
      * @notice Allows outbid users to withdraw their funds.
      */
+    function withdraw() external nonReentrant {
+        uint256 amount = pendingWithdrawals[msg.sender];
