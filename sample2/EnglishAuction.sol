@@ -134,3 +134,5 @@ contract EnglishAuction is ReentrancyGuard {
 
         if (currentBid <= requiredBid) {
             revert BidTooLow();
+        }
+
