@@ -13,3 +13,5 @@ contract EnglishAuction is ReentrancyGuard {
 
     enum AuctionState { CREATED, STARTED, ENDED, CANCELED }
 
+    struct Auction {
+        address payable seller;
