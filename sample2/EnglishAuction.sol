@@ -60,3 +60,5 @@ contract EnglishAuction is ReentrancyGuard {
      * @param _startingBid The minimum initial price for the item.
      * @param _duration The duration of the auction in seconds.
      */
+    function createAuction(
+        address _nftContract,
