@@ -146,3 +146,5 @@ contract TestEnglishAuction is Test {
 
         vm.warp(block.timestamp + DURATION + 1);
 
+        uint256 sellerInitialBalance = seller.balance;
+        uint256 winningBid = auction.getHighestBid();
