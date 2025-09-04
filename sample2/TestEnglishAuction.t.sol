@@ -163,3 +163,4 @@ contract TestEnglishAuction is Test {
         vm.prank(seller);
         auction.startAuction();
         
+        vm.expectRevert(EnglishAuction.AuctionInProgress.selector);
