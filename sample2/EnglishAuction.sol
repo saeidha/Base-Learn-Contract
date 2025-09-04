@@ -213,3 +213,5 @@ contract EnglishAuction is ReentrancyGuard {
     function getTokenId() public view returns (uint256) { return auction.tokenId; }
     function getStartingBid() public view returns (uint256) { return auction.startingBid; }
     function getHighestBid() public view returns (uint256) { return auction.highestBid; }
+    function getHighestBidder() public view returns (address) { return auction.highestBidder; }
+    function getEndTime() public view returns (uint256) { return auction.endTime; }
