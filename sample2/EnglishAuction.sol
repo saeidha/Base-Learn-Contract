@@ -176,3 +176,5 @@ contract EnglishAuction is ReentrancyGuard {
     }
     
     /**
+     * @notice Allows the seller to cancel the auction before it ends if there are no bids.
+     */
