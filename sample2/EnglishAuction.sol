@@ -191,3 +191,5 @@ contract EnglishAuction is ReentrancyGuard {
     }
 
     /**
+     * @notice Allows outbid users to withdraw their funds.
+     */
