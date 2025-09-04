@@ -231,3 +231,5 @@ contract TestEnglishAuction is Test {
 
     function test_19_Fail_Bid_AfterEnd() public {
         test_07_Bid_Outbid_Success();
+        vm.warp(block.timestamp + DURATION + 1);
+
