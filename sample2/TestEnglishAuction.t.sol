@@ -88,3 +88,4 @@ contract TestEnglishAuction is Test {
         auction.bid{value: STARTING_BID}();
         
         assertEq(auction.getHighestBid(), STARTING_BID);
+        assertEq(auction.getHighestBidder(), bidder1);
