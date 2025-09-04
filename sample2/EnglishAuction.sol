@@ -224,3 +224,4 @@ contract EnglishAuction is ReentrancyGuard {
     }
     function getRequiredBid() public view returns (uint256) {
         if (auction.highestBidder == address(0)) return auction.startingBid;
+        return auction.highestBid + (auction.highestBid / 20);
