@@ -100,3 +100,5 @@ contract EnglishAuction is ReentrancyGuard {
         }
         
         // Transfer the NFT from the seller to this contract
+        auction.nftContract.transferFrom(msg.sender, address(this), auction.tokenId);
+        
