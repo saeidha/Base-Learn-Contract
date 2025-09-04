@@ -183,3 +183,4 @@ contract EnglishAuction is ReentrancyGuard {
         if (auction.state != AuctionState.STARTED) revert AuctionNotStarted();
         if (auction.highestBidder != address(0)) revert("Cannot cancel with active bids");
         if (block.timestamp >= auction.endTime) revert AuctionAlreadyEnded();
+
