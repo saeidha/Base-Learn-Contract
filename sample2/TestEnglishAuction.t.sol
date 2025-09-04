@@ -250,3 +250,5 @@ contract TestEnglishAuction is Test {
         auction.createAuction(address(mockNft), NFT_ID, STARTING_BID, DURATION);
         vm.prank(seller);
         auction.startAuction();
+
+        vm.deal(bidder1, 5 ether);
