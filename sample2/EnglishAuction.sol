@@ -211,3 +211,5 @@ contract EnglishAuction is ReentrancyGuard {
     function getSeller() public view returns (address) { return auction.seller; }
     function getNftContract() public view returns (address) { return address(auction.nftContract); }
     function getTokenId() public view returns (uint256) { return auction.tokenId; }
+    function getStartingBid() public view returns (uint256) { return auction.startingBid; }
+    function getHighestBid() public view returns (uint256) { return auction.highestBid; }
