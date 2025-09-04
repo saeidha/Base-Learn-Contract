@@ -140,3 +140,5 @@ contract TestEnglishAuction is Test {
         auction.withdraw();
     }
     
+    // --- Test End Auction ---
+    function test_10_EndAuction_Success() public {
