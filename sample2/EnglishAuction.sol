@@ -93,3 +93,4 @@ contract EnglishAuction is ReentrancyGuard {
      */
     function startAuction() external {
         if (msg.sender != auction.seller) {
+            revert OnlySeller();
