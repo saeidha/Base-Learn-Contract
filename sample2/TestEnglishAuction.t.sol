@@ -29,3 +29,5 @@ contract TestEnglishAuction is Test {
 
     uint256 constant NFT_ID = 1;
     uint256 constant STARTING_BID = 1 ether;
+    uint256 constant DURATION = 7 days;
+
