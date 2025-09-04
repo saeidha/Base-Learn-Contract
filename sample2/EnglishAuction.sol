@@ -55,3 +55,4 @@ contract EnglishAuction is ReentrancyGuard {
     /**
      * @notice Creates the auction with specified parameters.
      * @dev The seller must have approved the contract to transfer the NFT beforehand.
+     * @param _nftContract The address of the ERC721 token contract.
