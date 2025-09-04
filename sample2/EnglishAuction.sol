@@ -204,3 +204,5 @@ contract EnglishAuction is ReentrancyGuard {
 
         emit Withdrawal(msg.sender, amount);
     }
+
+    // --- View Functions ---
