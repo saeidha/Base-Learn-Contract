@@ -74,3 +74,4 @@ contract EnglishAuction is ReentrancyGuard {
         }
 
         auction = Auction({
+            seller: payable(msg.sender),
