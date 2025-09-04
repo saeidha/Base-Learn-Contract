@@ -195,3 +195,5 @@ contract EnglishAuction is ReentrancyGuard {
      */
     function withdraw() external nonReentrant {
         uint256 amount = pendingWithdrawals[msg.sender];
+        if (amount == 0) {
+            revert NoFundsToWithdraw();
