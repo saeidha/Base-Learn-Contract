@@ -113,3 +113,5 @@ contract EnglishAuction is ReentrancyGuard {
      * @dev The sent value must be higher than the current highest bid plus a 5% increment.
      * The previous highest bidder's funds are made available for withdrawal.
      */
+    function bid() external payable nonReentrant {
+        if (auction.state != AuctionState.STARTED) {
