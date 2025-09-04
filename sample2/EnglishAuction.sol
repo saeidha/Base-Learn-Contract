@@ -165,3 +165,4 @@ contract EnglishAuction is ReentrancyGuard {
             // Transfer NFT to the winner
             auction.nftContract.safeTransferFrom(address(this), auction.highestBidder, auction.tokenId);
             // Transfer funds to the seller
+            auction.seller.transfer(auction.highestBid);
