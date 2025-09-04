@@ -79,3 +79,4 @@ contract TestEnglishAuction is Test {
     // --- Test Bidding Logic ---
     function test_05_Bid_FirstBid_Success() public {
         vm.prank(seller);
+        auction.createAuction(address(mockNft), NFT_ID, STARTING_BID, DURATION);
