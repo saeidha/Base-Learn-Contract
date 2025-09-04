@@ -222,3 +222,4 @@ contract TestEnglishAuction is Test {
         assertEq(auction.getRequiredBid(), required);
     }
 
+    function test_18_ViewFunctions_AfterEnd() public {
