@@ -154,3 +154,4 @@ contract EnglishAuction is ReentrancyGuard {
     function endAuction() external nonReentrant {
         if (auction.state != AuctionState.STARTED) {
             revert AuctionNotStarted();
+        }
