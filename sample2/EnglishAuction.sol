@@ -50,3 +50,4 @@ contract EnglishAuction is ReentrancyGuard {
     error OnlySeller();
     error BidTooLow();
     error InvalidDuration();
+    error NoFundsToWithdraw();
