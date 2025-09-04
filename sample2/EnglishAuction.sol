@@ -120,3 +120,5 @@ contract EnglishAuction is ReentrancyGuard {
         if (block.timestamp >= auction.endTime) {
             revert AuctionAlreadyEnded();
         }
+
+        uint256 currentBid = msg.value;
