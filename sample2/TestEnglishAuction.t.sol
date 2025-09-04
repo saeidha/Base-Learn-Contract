@@ -133,3 +133,5 @@ contract TestEnglishAuction is Test {
         assertEq(bidder1.balance, bidder1InitialBalance + STARTING_BID);
         assertEq(auction.getPendingWithdrawal(bidder1), 0);
     }
+    
+    function test_09_Fail_Withdraw_NoFunds() public {
