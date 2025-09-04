@@ -141,3 +141,6 @@ contract EnglishAuction is ReentrancyGuard {
             pendingWithdrawals[auction.highestBidder] += auction.highestBid;
         }
 
+        auction.highestBid = currentBid;
+        auction.highestBidder = msg.sender;
+
