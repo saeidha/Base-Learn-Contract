@@ -17,3 +17,6 @@ contract MockNFT is Test {
         return ERC721(address(this)).ownerOf(tokenId);
     }
 }
+
+contract TestEnglishAuction is Test {
+    EnglishAuction public auction;
