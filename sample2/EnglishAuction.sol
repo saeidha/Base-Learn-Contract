@@ -102,3 +102,5 @@ contract EnglishAuction is ReentrancyGuard {
         // Transfer the NFT from the seller to this contract
         auction.nftContract.transferFrom(msg.sender, address(this), auction.tokenId);
         
+        auction.state = AuctionState.STARTED;
+        auction.endTime = block.timestamp + auction.duration;
