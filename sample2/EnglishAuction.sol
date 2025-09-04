@@ -111,3 +111,4 @@ contract EnglishAuction is ReentrancyGuard {
     /**
      * @notice Places a bid on the item.
      * @dev The sent value must be higher than the current highest bid plus a 5% increment.
+     * The previous highest bidder's funds are made available for withdrawal.
