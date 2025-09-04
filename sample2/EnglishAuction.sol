@@ -200,3 +200,7 @@ contract EnglishAuction is ReentrancyGuard {
         }
 
         pendingWithdrawals[msg.sender] = 0;
+        payable(msg.sender).transfer(amount);
+
+        emit Withdrawal(msg.sender, amount);
+    }
