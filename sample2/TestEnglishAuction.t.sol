@@ -158,3 +158,5 @@ contract TestEnglishAuction is Test {
     }
 
     function test_11_Fail_EndAuction_InProgress() public {
+        vm.prank(seller);
+        auction.createAuction(address(mockNft), NFT_ID, STARTING_BID, DURATION);
