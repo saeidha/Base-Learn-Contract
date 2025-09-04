@@ -227,3 +227,5 @@ contract EnglishAuction is ReentrancyGuard {
         return auction.highestBid + (auction.highestBid / 20);
     }
     function getNftOwner() public view returns(address) {
+        if(auction.state == AuctionState.CREATED) return auction.seller;
+        if(auction.state == AuctionState.STARTED) return address(this);
