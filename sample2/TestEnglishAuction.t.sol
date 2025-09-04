@@ -87,3 +87,4 @@ contract TestEnglishAuction is Test {
         vm.prank(bidder1);
         auction.bid{value: STARTING_BID}();
         
+        assertEq(auction.getHighestBid(), STARTING_BID);
