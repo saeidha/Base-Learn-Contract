@@ -51,3 +51,5 @@ contract TestEnglishAuction is Test {
         assertEq(uint(auction.getAuctionState()), uint(EnglishAuction.AuctionState.CREATED));
         assertEq(auction.getSeller(), seller);
     }
+
+    function test_02_Fail_CreateAuction_InvalidDuration() public {
