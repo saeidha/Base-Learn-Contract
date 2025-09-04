@@ -184,3 +184,4 @@ contract TestEnglishAuction is Test {
     // --- Test Cancel Auction ---
     function test_13_CancelAuction_Success() public {
         vm.prank(seller);
+        auction.createAuction(address(mockNft), NFT_ID, STARTING_BID, DURATION);
