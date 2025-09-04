@@ -99,3 +99,4 @@ contract EnglishAuction is ReentrancyGuard {
             revert AuctionAlreadyStarted();
         }
         
+        // Transfer the NFT from the seller to this contract
