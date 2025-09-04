@@ -21,3 +21,5 @@ contract MockNFT is Test {
 contract TestEnglishAuction is Test {
     EnglishAuction public auction;
     MockNFT public mockNft;
+
+    address public seller = address(0x1);
