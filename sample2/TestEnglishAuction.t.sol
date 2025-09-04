@@ -148,3 +148,5 @@ contract TestEnglishAuction is Test {
 
         uint256 sellerInitialBalance = seller.balance;
         uint256 winningBid = auction.getHighestBid();
+        
+        vm.prank(randomUser); // Anyone can end the auction
