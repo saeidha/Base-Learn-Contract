@@ -23,3 +23,5 @@ contract EnglishAuction is ReentrancyGuard {
         uint256 endTime;
         uint256 duration;
         AuctionState state;
+    }
+
