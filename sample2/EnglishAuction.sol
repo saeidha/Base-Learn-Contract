@@ -144,3 +144,5 @@ contract EnglishAuction is ReentrancyGuard {
         auction.highestBid = currentBid;
         auction.highestBidder = msg.sender;
 
+        emit BidPlaced(msg.sender, currentBid);
+    }
