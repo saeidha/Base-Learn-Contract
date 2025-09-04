@@ -150,3 +150,4 @@ contract TestEnglishAuction is Test {
         uint256 winningBid = auction.getHighestBid();
         
         vm.prank(randomUser); // Anyone can end the auction
+        auction.endAuction();
