@@ -89,3 +89,6 @@ contract TestEnglishAuction is Test {
         
         assertEq(auction.getHighestBid(), STARTING_BID);
         assertEq(auction.getHighestBidder(), bidder1);
+    }
+
+    function test_06_Fail_Bid_TooLow() public {
