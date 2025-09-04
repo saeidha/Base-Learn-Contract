@@ -57,3 +57,5 @@ contract TestEnglishAuction is Test {
         vm.expectRevert(EnglishAuction.InvalidDuration.selector);
         auction.createAuction(address(mockNft), NFT_ID, STARTING_BID, 0);
     }
+
+    // --- Test Start Auction ---
