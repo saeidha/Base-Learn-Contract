@@ -93,3 +93,5 @@ contract TestEnglishAuction is Test {
 
     function test_06_Fail_Bid_TooLow() public {
         vm.prank(seller);
+        auction.createAuction(address(mockNft), NFT_ID, STARTING_BID, DURATION);
+        vm.prank(seller);
