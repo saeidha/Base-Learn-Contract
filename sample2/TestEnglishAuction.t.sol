@@ -153,3 +153,7 @@ contract TestEnglishAuction is Test {
         auction.endAuction();
         
         assertEq(uint(auction.getAuctionState()), uint(EnglishAuction.AuctionState.ENDED));
+        assertEq(mockNft.ownerOf(NFT_ID), bidder2);
+        assertEq(seller.balance, sellerInitialBalance + winningBid);
+    }
+
