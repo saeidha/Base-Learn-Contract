@@ -174,3 +174,5 @@ contract EnglishAuction is ReentrancyGuard {
             emit AuctionEnded(address(0), 0);
         }
     }
+    
+    /**
