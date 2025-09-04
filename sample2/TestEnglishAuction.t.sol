@@ -99,3 +99,5 @@ contract TestEnglishAuction is Test {
         
         vm.deal(bidder1, 1 ether);
         vm.prank(bidder1);
+        vm.expectRevert(EnglishAuction.BidTooLow.selector);
+        auction.bid{value: STARTING_BID - 1}();
