@@ -220,3 +220,5 @@ contract TestEnglishAuction is Test {
         test_05_Bid_FirstBid_Success();
         uint256 required = STARTING_BID + (STARTING_BID / 20);
         assertEq(auction.getRequiredBid(), required);
+    }
+
