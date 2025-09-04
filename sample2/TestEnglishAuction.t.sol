@@ -102,3 +102,5 @@ contract TestEnglishAuction is Test {
         vm.expectRevert(EnglishAuction.BidTooLow.selector);
         auction.bid{value: STARTING_BID - 1}();
     }
+    
+    function test_07_Bid_Outbid_Success() public {
