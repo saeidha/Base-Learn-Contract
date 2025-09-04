@@ -36,3 +36,4 @@ contract EnglishAuction is ReentrancyGuard {
     event AuctionCreated(address indexed seller, uint256 startingBid, uint256 duration);
     event AuctionStarted(uint256 endTime);
     event AuctionEnded(address winner, uint256 amount);
+    event AuctionCanceled();
