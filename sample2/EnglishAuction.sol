@@ -167,3 +167,5 @@ contract EnglishAuction is ReentrancyGuard {
             // Transfer funds to the seller
             auction.seller.transfer(auction.highestBid);
             
+            emit AuctionEnded(auction.highestBidder, auction.highestBid);
+        } else {
