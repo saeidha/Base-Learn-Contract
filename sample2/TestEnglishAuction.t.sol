@@ -175,3 +175,5 @@ contract TestEnglishAuction is Test {
 
         vm.warp(block.timestamp + DURATION + 1);
         
+        auction.endAuction();
+
