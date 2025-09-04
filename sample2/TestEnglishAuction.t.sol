@@ -177,3 +177,4 @@ contract TestEnglishAuction is Test {
         
         auction.endAuction();
 
+        assertEq(uint(auction.getAuctionState()), uint(EnglishAuction.AuctionState.ENDED));
