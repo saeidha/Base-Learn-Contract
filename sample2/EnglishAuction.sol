@@ -69,3 +69,4 @@ contract EnglishAuction is ReentrancyGuard {
         if (auction.seller != address(0)) {
             revert AuctionAlreadyStarted();
         }
+        if (_duration == 0) {
