@@ -128,3 +128,4 @@ contract TestEnglishAuction is Test {
         test_07_Bid_Outbid_Success(); // Setup the outbid scenario
 
         uint256 bidder1InitialBalance = bidder1.balance;
+        vm.prank(bidder1);
