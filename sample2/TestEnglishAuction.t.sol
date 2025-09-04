@@ -53,3 +53,5 @@ contract TestEnglishAuction is Test {
     }
 
     function test_02_Fail_CreateAuction_InvalidDuration() public {
+        vm.prank(seller);
+        vm.expectRevert(EnglishAuction.InvalidDuration.selector);
