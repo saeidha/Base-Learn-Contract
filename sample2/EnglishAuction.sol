@@ -180,3 +180,5 @@ contract EnglishAuction is ReentrancyGuard {
      */
     function cancelAuction() external {
         if (msg.sender != auction.seller) revert OnlySeller();
+        if (auction.state != AuctionState.STARTED) revert AuctionNotStarted();
+        if (auction.highestBidder != address(0)) revert("Cannot cancel with active bids");
