@@ -23,3 +23,5 @@ contract TestEnglishAuction is Test {
     MockNFT public mockNft;
 
     address public seller = address(0x1);
+    address public bidder1 = address(0x2);
+    address public bidder2 = address(0x3);
