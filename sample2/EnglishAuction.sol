@@ -169,3 +169,4 @@ contract EnglishAuction is ReentrancyGuard {
             
             emit AuctionEnded(auction.highestBidder, auction.highestBid);
         } else {
+            // If no bids, return NFT to the seller
