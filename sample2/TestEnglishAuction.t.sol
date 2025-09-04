@@ -40,3 +40,5 @@ contract TestEnglishAuction is Test {
         mockNft.mint(seller, NFT_ID);
 
         // Seller approves the auction contract
+        vm.prank(seller);
+        mockNft.approve(address(auction), NFT_ID);
