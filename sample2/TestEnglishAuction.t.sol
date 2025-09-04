@@ -243,3 +243,5 @@ contract TestEnglishAuction is Test {
         vm.prank(seller);
         vm.expectRevert(EnglishAuction.AuctionAlreadyStarted.selector);
         auction.startAuction();
+    }
+
