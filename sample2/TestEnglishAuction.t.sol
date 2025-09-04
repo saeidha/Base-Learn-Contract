@@ -188,3 +188,7 @@ contract TestEnglishAuction is Test {
         vm.prank(seller);
         auction.startAuction();
         
+        vm.prank(seller);
+        auction.cancelAuction();
+
+        assertEq(uint(auction.getAuctionState()), uint(EnglishAuction.AuctionState.CANCELED));
