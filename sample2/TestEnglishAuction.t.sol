@@ -37,3 +37,5 @@ contract TestEnglishAuction is Test {
 
         // Mint NFT to seller
         vm.prank(seller);
+        mockNft.mint(seller, NFT_ID);
+
