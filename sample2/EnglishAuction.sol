@@ -206,3 +206,5 @@ contract EnglishAuction is ReentrancyGuard {
     }
 
     // --- View Functions ---
+
+    function getAuctionState() public view returns (AuctionState) { return auction.state; }
