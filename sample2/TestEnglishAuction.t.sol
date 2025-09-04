@@ -254,3 +254,5 @@ contract TestEnglishAuction is Test {
         vm.deal(bidder1, 5 ether);
         vm.prank(bidder1);
         auction.bid{value: 1 ether}();
+        
+        vm.deal(bidder2, 5 ether);
