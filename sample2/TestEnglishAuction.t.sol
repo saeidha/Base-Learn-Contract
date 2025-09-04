@@ -214,3 +214,5 @@ contract TestEnglishAuction is Test {
         test_03_StartAuction_Success();
         assertEq(auction.getNftOwner(), address(auction));
         assertTrue(auction.isAuctionActive());
+    }
+
