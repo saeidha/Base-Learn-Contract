@@ -78,3 +78,4 @@ contract DAO is Ownable {
      * @param targets The target addresses for the proposal's transactions.
      * @param values The ETH values to be sent in each transaction.
      * @param calldatas The calldata for each transaction.
+     * @param description A human-readable description of the proposal.
