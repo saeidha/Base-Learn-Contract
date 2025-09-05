@@ -204,3 +204,7 @@ contract TestDAO is Test {
     }
     function getValues() internal pure returns (uint[] memory) {
         uint[] memory values = new uint[](1);
+        values[0] = 1 ether;
+        return values;
+    }
+    function getCalldatas() internal pure returns (bytes[] memory) {
