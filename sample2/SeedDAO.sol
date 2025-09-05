@@ -72,3 +72,5 @@ contract DAO is Ownable {
         setQuorumPercentage(_quorumPercentage);
         setExecutionDelay(_executionDelay);
     }
+
+    /**
