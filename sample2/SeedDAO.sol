@@ -46,3 +46,4 @@ contract DAO is Ownable {
     uint public votingPeriod; // in blocks
     uint public proposalThreshold; // min tokens to create proposal
     uint public quorumPercentage; // min % of total supply to vote
+    uint public executionDelay; // timelock in seconds
