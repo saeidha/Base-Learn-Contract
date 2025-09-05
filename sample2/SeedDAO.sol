@@ -21,3 +21,5 @@ contract DAO is Ownable {
         uint[] values;
         bytes[] calldatas;
         string description;
+        uint creationBlock;
+        uint startBlock;
