@@ -173,3 +173,6 @@ contract TestDAO is Test {
         vm.prank(randomUser); dao.queue(1);
         assertEq(uint(dao.state(1)), uint(DAO.ProposalState.Queued));
         
+        vm.warp(block.timestamp + EXECUTION_DELAY + 1);
+        
+        uint targetInitialBalance = address(target).balance;
