@@ -129,3 +129,4 @@ contract DAO is Ownable {
         require(state(proposalId) == ProposalState.Active, "DAO: Voting is not active");
         require(p.receipts[voter].hasVoted == false, "DAO: Voter has already voted");
         require(support <= 2, "DAO: Invalid vote type");
+
