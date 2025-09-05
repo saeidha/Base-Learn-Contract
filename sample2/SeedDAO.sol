@@ -123,3 +123,7 @@ contract DAO is Ownable {
     function castVoteWithReason(uint proposalId, uint8 support, string calldata reason) external {
         _castVote(msg.sender, proposalId, support, reason);
     }
+
+    function _castVote(address voter, uint proposalId, uint8 support, string memory reason) internal {
+        Proposal storage p = proposals[proposalId];
+        require(state(proposalId) == ProposalState.Active, "DAO: Voting is not active");
