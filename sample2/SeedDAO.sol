@@ -34,3 +34,5 @@ contract DAO is Ownable {
     }
 
     struct Receipt {
+        bool hasVoted;
+        uint8 support; // 0 = Against, 1 = For, 2 = Abstain
