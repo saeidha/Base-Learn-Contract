@@ -179,3 +179,6 @@ contract TestDAO is Test {
         dao.execute(1);
         
         assertEq(uint(dao.state(1)), uint(DAO.ProposalState.Executed));
+        assertEq(target.x(), 42);
+        assertEq(address(target).balance, targetInitialBalance + 1 ether);
+    }
