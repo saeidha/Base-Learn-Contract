@@ -216,7 +216,7 @@ contract DAO is Ownable {
     function setExecutionDelay(uint _newExecutionDelay) public onlyOwner { executionDelay = _newExecutionDelay; emit GovernanceParametersUpdated(); }
 
     // --- View Functions ---
-    function getProposal(uint id) external view returns(Proposal memory) { return proposals[id]; }
+    // function getProposal(uint id) external view returns(Proposal memory) { return proposals[id]; }
     function getProposalCount() external view returns (uint) { return proposalCount; }
     function hasVoted(uint proposalId, address account) external view returns (bool) { return proposals[proposalId].receipts[account].hasVoted; }
     function getVotes(address account, uint blockNumber) external view returns (uint) { return governanceToken.getPastVotes(account, blockNumber); }
