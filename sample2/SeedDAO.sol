@@ -185,3 +185,4 @@ contract DAO is Ownable {
 
         if (p.canceled) return ProposalState.Canceled;
         if (p.executed) return ProposalState.Executed;
+        if (p.creationBlock >= block.number) return ProposalState.Pending;
