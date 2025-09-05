@@ -133,3 +133,4 @@ contract DAO is Ownable {
         uint96 votes = uint96(governanceToken.getPastVotes(voter, p.startBlock));
         p.receipts[voter] = Receipt({hasVoted: true, support: support, votes: votes});
 
+        if (support == uint8(VoteType.For)) {
