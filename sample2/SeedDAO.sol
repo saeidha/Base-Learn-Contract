@@ -109,3 +109,5 @@ contract DAO is Ownable {
 
         emit ProposalCreated(id, msg.sender, targets, values, calldatas, start, end, description);
         return id;
+    }
+    
