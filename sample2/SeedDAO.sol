@@ -9,3 +9,5 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * @dev A Decentralized Autonomous Organization with token-based governance, a treasury,
  * and a full proposal lifecycle including a timelock.
  */
+contract DAO is Ownable {
+    
