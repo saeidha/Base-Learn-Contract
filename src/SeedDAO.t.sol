@@ -113,3 +113,7 @@ contract TestDAO is Test {
     function test_04_Fail_Vote_NotActive_Pending() public {
         test_01_Propose_Success();
         vm.prank(voterA);
+        vm.expectRevert("DAO: Voting is not active");
+        dao.castVote(1, 1);
+    }
+    
