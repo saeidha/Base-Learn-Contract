@@ -55,3 +55,5 @@ contract Target is Test {
 }
 
 contract TestDAO is Test {
+    DAO public dao;
+    MockGovToken public token;
