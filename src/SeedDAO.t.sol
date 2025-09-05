@@ -8,3 +8,5 @@ import {DAO} from "../contracts/DAO.sol";
 contract MockGovToken is Test {
     string public name = "Mock Governance Token";
 // SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
