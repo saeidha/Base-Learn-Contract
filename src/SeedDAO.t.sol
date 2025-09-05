@@ -63,3 +63,4 @@ contract TestDAO is Test {
     address public proposer = address(0x2);
     address public voterA = address(0x3);
     address public voterB = address(0x4);
+    address public voterC = address(0x5);
