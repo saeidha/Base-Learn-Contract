@@ -96,3 +96,5 @@ contract DAO is Ownable {
         uint start = block.number + votingDelay;
         uint end = start + votingPeriod;
 
+        Proposal storage newProposal = proposals[id];
+        newProposal.id = id;
