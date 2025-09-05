@@ -85,3 +85,5 @@ contract TestDAO is Test {
         vm.deal(address(dao), 100 ether); // Fund treasury
         vm.stopPrank();
     }
+    
+    // --- Test Proposal Creation ---
