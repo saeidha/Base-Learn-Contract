@@ -70,3 +70,6 @@ contract TestDAO is Test {
     uint constant PROPOSAL_THRESHOLD = 100e18;
     uint constant QUORUM_PERCENTAGE = 10; // 10%
     uint constant EXECUTION_DELAY = 3 days;
+
+    function setUp() public {
+        vm.startPrank(owner);
