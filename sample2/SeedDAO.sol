@@ -198,3 +198,7 @@ contract DAO is Ownable {
         
         return ProposalState.Expired; // Timelock passed but not executed
     }
+    
+    /**
+     * @notice Queues a succeeded proposal for execution, setting its timelock.
+     */
