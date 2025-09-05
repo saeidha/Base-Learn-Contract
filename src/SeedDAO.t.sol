@@ -41,3 +41,5 @@ contract MockGovToken is Test {
             checkpoints[account][nCheckpoints - 1].votes = newVotes;
         } else {
             checkpoints[account].push(Checkpoint({fromBlock: uint32(block.number), votes: newVotes}));
+        }
+    }
