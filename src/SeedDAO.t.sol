@@ -76,3 +76,6 @@ contract TestDAO is Test {
         token = new MockGovToken();
         dao = new DAO(address(token), VOTING_DELAY, VOTING_PERIOD, PROPOSAL_THRESHOLD, QUORUM_PERCENTAGE, EXECUTION_DELAY);
         target = new Target();
+        
+        token.mint(proposer, 150e18);
+        token.mint(voterA, 300e18);
