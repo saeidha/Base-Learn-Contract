@@ -23,3 +23,4 @@ contract MockGovToken is Test {
     mapping(address => mapping(address => uint)) public allowance;
     mapping(address => Checkpoint[]) public checkpoints;
     struct Checkpoint { uint32 fromBlock; uint96 votes; }
+
