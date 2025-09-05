@@ -209,3 +209,5 @@ contract DAO is Ownable {
     }
 
     // --- Admin Functions ---
+    function setVotingDelay(uint _newVotingDelay) public onlyOwner { votingDelay = _newVotingDelay; emit GovernanceParametersUpdated(); }
+    function setVotingPeriod(uint _newVotingPeriod) public onlyOwner { votingPeriod = _newVotingPeriod; emit GovernanceParametersUpdated(); }
