@@ -62,3 +62,5 @@ contract DAO is Ownable {
         uint _votingDelay,
         uint _votingPeriod,
         uint _proposalThreshold,
+        uint _quorumPercentage,
+        uint _executionDelay
