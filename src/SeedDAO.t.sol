@@ -156,3 +156,5 @@ contract TestDAO is Test {
 
     function test_09_State_Defeated_Votes() public {
         test_01_Propose_Success();
+        vm.roll(block.number + VOTING_DELAY + 1);
+        
