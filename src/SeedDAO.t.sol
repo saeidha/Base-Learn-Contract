@@ -168,3 +168,4 @@ contract TestDAO is Test {
 
     // --- Test Execution ---
     function test_10_Execute_Success() public {
+        test_07_State_Succeeded();
