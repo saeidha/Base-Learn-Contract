@@ -153,3 +153,4 @@ contract TestDAO is Test {
         vm.roll(block.number + VOTING_PERIOD + 1);
         assertEq(uint(dao.state(1)), uint(DAO.ProposalState.Defeated));
     }
+
