@@ -81,3 +81,4 @@ contract TestDAO is Test {
         token.mint(voterA, 300e18);
         token.mint(voterB, 500e18);
         token.mint(voterC, 50e18); // Does not meet proposal threshold
+        
