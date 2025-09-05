@@ -68,3 +68,5 @@ contract TestDAO is Test {
     uint constant VOTING_DELAY = 10;
     uint constant VOTING_PERIOD = 100;
     uint constant PROPOSAL_THRESHOLD = 100e18;
+    uint constant QUORUM_PERCENTAGE = 10; // 10%
+    uint constant EXECUTION_DELAY = 3 days;
