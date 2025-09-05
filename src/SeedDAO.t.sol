@@ -202,3 +202,5 @@ contract TestDAO is Test {
         targets[0] = address(target);
         return targets;
     }
+    function getValues() internal pure returns (uint[] memory) {
+        uint[] memory values = new uint[](1);
