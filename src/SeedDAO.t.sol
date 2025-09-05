@@ -178,3 +178,4 @@ contract TestDAO is Test {
         uint targetInitialBalance = address(target).balance;
         dao.execute(1);
         
+        assertEq(uint(dao.state(1)), uint(DAO.ProposalState.Executed));
