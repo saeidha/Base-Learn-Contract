@@ -153,3 +153,7 @@ contract DAO is Ownable {
         require(state(proposalId) == ProposalState.Queued, "DAO: Proposal is not queued for execution");
         require(block.timestamp >= p.executionEta, "DAO: Timelock still active");
         
+        p.executed = true;
+
+        for (uint i = 0; i < p.targets.length; i++) {
+            (bool success, ) = p.targets[i].call{value: p.values[i]}(p.calldatas[i]);
