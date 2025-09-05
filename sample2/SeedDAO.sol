@@ -147,3 +147,5 @@ contract DAO is Ownable {
     /**
      * @notice Executes a succeeded proposal after its timelock has passed.
      * @param proposalId The ID of the proposal to execute.
+     */
+    function execute(uint proposalId) external payable {
