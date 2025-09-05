@@ -54,3 +54,4 @@ contract DAO is Ownable {
     event ProposalCreated(uint id, address proposer, address[] targets, uint[] values, bytes[] calldatas, uint startBlock, uint endBlock, string description);
     event VoteCast(address indexed voter, uint proposalId, uint8 support, uint votes, string reason);
     event ProposalCanceled(uint id);
+    event ProposalExecuted(uint id);
