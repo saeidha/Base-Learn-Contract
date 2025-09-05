@@ -28,3 +28,5 @@ contract MockGovToken is Test {
         balanceOf[to] += amount;
         totalSupply += amount;
         _writeCheckpoint(to, _add, amount);
+    }
+    function delegate(address delegatee) public { /* Simplified for testing */ }
