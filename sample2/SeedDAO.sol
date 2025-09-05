@@ -41,3 +41,4 @@ contract DAO is Ownable {
     
     IERC20 public immutable governanceToken;
 
+    // Governance Parameters
