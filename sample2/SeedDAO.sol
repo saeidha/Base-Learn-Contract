@@ -64,3 +64,5 @@ contract DAO is Ownable {
         uint _proposalThreshold,
         uint _quorumPercentage,
         uint _executionDelay
+    ) Ownable(msg.sender) {
+        governanceToken = IERC20(_tokenAddress);
