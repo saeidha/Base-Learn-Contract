@@ -125,3 +125,4 @@ contract TestDAO is Test {
         dao.castVote(1, 1);
     }
 
+    function test_06_Fail_Vote_DoubleVote() public {
