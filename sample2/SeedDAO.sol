@@ -217,3 +217,5 @@ contract DAO is Ownable {
 
     // --- View Functions ---
     function getProposal(uint id) external view returns(Proposal memory) { return proposals[id]; }
+    function getProposalCount() external view returns (uint) { return proposalCount; }
+    function hasVoted(uint proposalId, address account) external view returns (bool) { return proposals[proposalId].receipts[account].hasVoted; }
