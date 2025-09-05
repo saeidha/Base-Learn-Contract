@@ -204,3 +204,4 @@ contract DAO is Ownable {
      */
     function queue(uint proposalId) external {
         require(state(proposalId) == ProposalState.Succeeded, "DAO: Proposal has not succeeded");
+        Proposal storage p = proposals[proposalId];
