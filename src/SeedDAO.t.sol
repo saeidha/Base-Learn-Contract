@@ -123,3 +123,5 @@ contract TestDAO is Test {
         vm.prank(voterB);
         vm.expectRevert("DAO: Voting is not active");
         dao.castVote(1, 1);
+    }
+
