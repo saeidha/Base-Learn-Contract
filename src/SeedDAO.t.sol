@@ -21,3 +21,4 @@ contract MockGovToken is Test {
     uint public totalSupply;
     mapping(address => uint) public balanceOf;
     mapping(address => mapping(address => uint)) public allowance;
+    mapping(address => Checkpoint[]) public checkpoints;
