@@ -89,3 +89,5 @@ contract TestDAO is Test {
     // --- Test Proposal Creation ---
     function test_01_Propose_Success() public {
         vm.prank(proposer);
+        uint proposalId = dao.propose(getTargets(), getValues(), getCalldatas(), "Proposal 1");
+        assertEq(proposalId, 1);
