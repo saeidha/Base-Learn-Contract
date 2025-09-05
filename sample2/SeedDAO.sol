@@ -93,3 +93,6 @@ contract DAO is Ownable {
         proposalCount++;
         uint id = proposalCount;
         
+        uint start = block.number + votingDelay;
+        uint end = start + votingPeriod;
+
