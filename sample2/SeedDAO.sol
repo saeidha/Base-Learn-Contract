@@ -134,3 +134,4 @@ contract DAO is Ownable {
         p.receipts[voter] = Receipt({hasVoted: true, support: support, votes: votes});
 
         if (support == uint8(VoteType.For)) {
+            p.forVotes += votes;
