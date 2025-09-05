@@ -182,3 +182,5 @@ contract TestDAO is Test {
         assertEq(target.x(), 42);
         assertEq(address(target).balance, targetInitialBalance + 1 ether);
     }
+
+    function test_11_Fail_Execute_NotQueued() public {
