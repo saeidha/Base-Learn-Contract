@@ -82,3 +82,6 @@ contract TestDAO is Test {
         token.mint(voterB, 500e18);
         token.mint(voterC, 50e18); // Does not meet proposal threshold
         
+        vm.deal(address(dao), 100 ether); // Fund treasury
+        vm.stopPrank();
+    }
