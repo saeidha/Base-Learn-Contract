@@ -133,3 +133,5 @@ contract TestDAO is Test {
     }
     
     // --- Test Proposal Outcome ---
+    function test_07_State_Succeeded() public {
+        test_01_Propose_Success();
