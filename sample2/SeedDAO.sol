@@ -151,3 +151,4 @@ contract DAO is Ownable {
     function execute(uint proposalId) external payable {
         Proposal storage p = proposals[proposalId];
         require(state(proposalId) == ProposalState.Queued, "DAO: Proposal is not queued for execution");
+        require(block.timestamp >= p.executionEta, "DAO: Timelock still active");
