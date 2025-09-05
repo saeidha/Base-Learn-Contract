@@ -160,3 +160,5 @@ contract DAO is Ownable {
             require(success, "DAO: Transaction execution failed");
         }
 
+        emit ProposalExecuted(proposalId);
+    }
