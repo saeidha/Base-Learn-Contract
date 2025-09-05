@@ -121,3 +121,4 @@ contract DAO is Ownable {
     }
 
     function castVoteWithReason(uint proposalId, uint8 support, string calldata reason) external {
+        _castVote(msg.sender, proposalId, support, reason);
