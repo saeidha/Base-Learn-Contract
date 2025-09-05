@@ -206,3 +206,6 @@ contract DAO is Ownable {
         require(state(proposalId) == ProposalState.Succeeded, "DAO: Proposal has not succeeded");
         Proposal storage p = proposals[proposalId];
         p.executionEta = block.timestamp + executionDelay;
+    }
+
+    // --- Admin Functions ---
