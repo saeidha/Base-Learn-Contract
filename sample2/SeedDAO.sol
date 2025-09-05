@@ -192,3 +192,7 @@ contract DAO is Ownable {
         uint quorumVotes = (governanceToken.totalSupply() * quorumPercentage) / 100;
         if ((p.forVotes + p.againstVotes) < quorumVotes) return ProposalState.Defeated;
         if (p.forVotes <= p.againstVotes) return ProposalState.Defeated;
+
+        if (p.executionEta == 0) return ProposalState.Succeeded;
+        if (block.timestamp < p.executionEta) return ProposalState.Queued;
+        
