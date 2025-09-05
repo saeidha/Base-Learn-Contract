@@ -171,7 +171,7 @@ contract TestDAO is Test {
         test_07_State_Succeeded();
         
         vm.prank(randomUser);
-         dao.queue(1);
+        dao.queue(1);
         assertEq(uint(dao.state(1)), uint(DAO.ProposalState.Queued));
         
         vm.warp(block.timestamp + EXECUTION_DELAY + 1);
