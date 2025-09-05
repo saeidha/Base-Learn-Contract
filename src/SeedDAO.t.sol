@@ -176,3 +176,5 @@ contract TestDAO is Test {
         vm.warp(block.timestamp + EXECUTION_DELAY + 1);
         
         uint targetInitialBalance = address(target).balance;
+        dao.execute(1);
+        
