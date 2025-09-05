@@ -183,3 +183,5 @@ contract DAO is Ownable {
         Proposal storage p = proposals[proposalId];
         if (p.id == 0) revert("DAO: Invalid proposal ID");
 
+        if (p.canceled) return ProposalState.Canceled;
+        if (p.executed) return ProposalState.Executed;
