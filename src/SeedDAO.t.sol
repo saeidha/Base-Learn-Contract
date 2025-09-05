@@ -58,3 +58,5 @@ contract TestDAO is Test {
     DAO public dao;
     MockGovToken public token;
     Target public target;
+    
+    address public owner = address(0x1);
