@@ -113,3 +113,7 @@ contract DAO is Ownable {
     
     /**
      * @notice Casts a vote on an active proposal.
+     * @param proposalId The ID of the proposal to vote on.
+     * @param support The type of vote (0=Against, 1=For, 2=Abstain).
+     */
+    function castVote(uint proposalId, uint8 support) external {
