@@ -93,3 +93,4 @@ contract TestDAO is Test {
         assertEq(proposalId, 1);
         assertEq(uint(dao.state(proposalId)), uint(DAO.ProposalState.Pending));
     }
+
