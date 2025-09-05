@@ -196,3 +196,5 @@ contract TestDAO is Test {
         dao.execute(1);
     }
 
+    // --- Helper Functions ---
+    function getTargets() internal view returns (address[] memory) {
