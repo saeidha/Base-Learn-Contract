@@ -168,3 +168,6 @@ contract DAO is Ownable {
      * @param proposalId The ID of the proposal to cancel.
      */
     function cancel(uint proposalId) external {
+        require(state(proposalId) != ProposalState.Executed, "DAO: Cannot cancel executed proposal");
+        Proposal storage p = proposals[proposalId];
+        require(msg.sender == p.proposer, "DAO: Only proposer can cancel");
