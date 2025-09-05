@@ -178,3 +178,6 @@ contract DAO is Ownable {
 
     /**
      * @notice Determines the current state of a proposal.
+     */
+    function state(uint proposalId) public view returns (ProposalState) {
+        Proposal storage p = proposals[proposalId];
