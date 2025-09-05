@@ -117,3 +117,4 @@ contract TestDAO is Test {
         dao.castVote(1, 1);
     }
     
+    function test_05_Fail_Vote_NotActive_Ended() public {
