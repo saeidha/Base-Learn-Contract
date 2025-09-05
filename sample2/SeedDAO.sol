@@ -149,3 +149,5 @@ contract DAO is Ownable {
      * @param proposalId The ID of the proposal to execute.
      */
     function execute(uint proposalId) external payable {
+        Proposal storage p = proposals[proposalId];
+        require(state(proposalId) == ProposalState.Queued, "DAO: Proposal is not queued for execution");
