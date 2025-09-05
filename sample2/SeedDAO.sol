@@ -181,3 +181,4 @@ contract DAO is Ownable {
      */
     function state(uint proposalId) public view returns (ProposalState) {
         Proposal storage p = proposals[proposalId];
+        if (p.id == 0) revert("DAO: Invalid proposal ID");
