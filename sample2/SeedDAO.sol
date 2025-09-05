@@ -135,3 +135,6 @@ contract DAO is Ownable {
 
         if (support == uint8(VoteType.For)) {
             p.forVotes += votes;
+        } else if (support == uint8(VoteType.Against)) {
+            p.againstVotes += votes;
+        } else {
