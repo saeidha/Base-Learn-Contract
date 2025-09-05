@@ -197,3 +197,4 @@ contract DAO is Ownable {
         if (block.timestamp < p.executionEta) return ProposalState.Queued;
         
         return ProposalState.Expired; // Timelock passed but not executed
+    }
