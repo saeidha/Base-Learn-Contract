@@ -43,3 +43,4 @@ contract MockGovToken is Test {
             checkpoints[account].push(Checkpoint({fromBlock: uint32(block.number), votes: newVotes}));
         }
     }
+    function _add(uint a, uint b) internal pure returns (uint) { return a + b; }
