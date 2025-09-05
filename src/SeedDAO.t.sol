@@ -161,3 +161,6 @@ contract TestDAO is Test {
         vm.prank(voterA); dao.castVote(1, 0); // 300 Against
         vm.prank(voterB); dao.castVote(1, 0); // 500 Against
         vm.prank(proposer); dao.castVote(1, 1); // 150 For
+
+        vm.roll(block.number + VOTING_PERIOD + 1);
+        assertEq(uint(dao.state(1)), uint(DAO.ProposalState.Defeated));
