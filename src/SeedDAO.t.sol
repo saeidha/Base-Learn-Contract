@@ -87,3 +87,5 @@ contract TestDAO is Test {
     }
     
     // --- Test Proposal Creation ---
+    function test_01_Propose_Success() public {
+        vm.prank(proposer);
