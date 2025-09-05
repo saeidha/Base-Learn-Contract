@@ -54,3 +54,4 @@ contract Target is Test {
     receive() external payable {}
 }
 
+contract TestDAO is Test {
