@@ -74,3 +74,5 @@ contract TestDAO is Test {
     function setUp() public {
         vm.startPrank(owner);
         token = new MockGovToken();
+        dao = new DAO(address(token), VOTING_DELAY, VOTING_PERIOD, PROPOSAL_THRESHOLD, QUORUM_PERCENTAGE, EXECUTION_DELAY);
+        target = new Target();
