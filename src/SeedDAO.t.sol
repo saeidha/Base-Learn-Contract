@@ -52,3 +52,5 @@ contract Target is Test {
     event Executed(uint val);
     function execute(uint val) public payable { x = val; emit Executed(val); }
     receive() external payable {}
+}
+
