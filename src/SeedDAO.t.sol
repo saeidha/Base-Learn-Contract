@@ -18,3 +18,5 @@ contract MockGovToken is Test {
     function mint(address to, uint amount) public {
         balanceOf[to] += amount;
         totalSupply += amount;
+        _writeCheckpoint(to, _add, amount);
+    }
