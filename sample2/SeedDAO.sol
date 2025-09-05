@@ -74,3 +74,4 @@ contract DAO is Ownable {
     }
 
     /**
+     * @notice Creates a new governance proposal.
