@@ -84,3 +84,6 @@ contract DAO is Ownable {
         address[] memory targets,
         uint[] memory values,
         bytes[] memory calldatas,
+        string memory description
+    ) external returns (uint) {
+        require(governanceToken.getPastVotes(msg.sender, block.number - 1) >= proposalThreshold, "DAO: Proposer does not meet proposal threshold");
