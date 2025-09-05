@@ -11,3 +11,5 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  */
 contract DAO is Ownable {
     
+    enum ProposalState { Pending, Active, Canceled, Defeated, Succeeded, Queued, Expired, Executed }
+    enum VoteType { Against, For, Abstain }
