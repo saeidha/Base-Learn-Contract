@@ -172,3 +172,4 @@ contract TestDAO is Test {
         
         vm.prank(randomUser); dao.queue(1);
         assertEq(uint(dao.state(1)), uint(DAO.ProposalState.Queued));
+        
