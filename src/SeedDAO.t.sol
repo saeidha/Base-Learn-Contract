@@ -131,3 +131,5 @@ contract TestDAO is Test {
         vm.expectRevert("DAO: Voter has already voted");
         dao.castVote(1, 0);
     }
+    
+    // --- Test Proposal Outcome ---
