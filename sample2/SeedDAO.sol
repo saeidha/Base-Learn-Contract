@@ -59,3 +59,5 @@ contract DAO is Ownable {
     
     constructor(
         address _tokenAddress,
+        uint _votingDelay,
+        uint _votingPeriod,
