@@ -142,3 +142,6 @@ contract DAO is Ownable {
         }
 
         emit VoteCast(voter, proposalId, support, votes, reason);
+    }
+
+    /**
