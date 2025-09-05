@@ -193,3 +193,4 @@ contract TestDAO is Test {
         test_07_State_Succeeded();
         vm.prank(randomUser); dao.queue(1);
         vm.expectRevert("DAO: Timelock still active");
+        dao.execute(1);
