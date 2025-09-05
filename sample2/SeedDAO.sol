@@ -91,3 +91,5 @@ contract DAO is Ownable {
         require(targets.length > 0, "DAO: Must provide at least one action");
 
         proposalCount++;
+        uint id = proposalCount;
+        
