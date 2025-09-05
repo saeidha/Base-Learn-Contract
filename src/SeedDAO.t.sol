@@ -20,3 +20,5 @@ contract MockGovToken is Test {
         totalSupply += amount;
         _writeCheckpoint(to, _add, amount);
     }
+    function delegate(address delegatee) public { /* Simplified for testing */ }
+    function getPastVotes(address account, uint blockNumber) public view returns (uint) {
