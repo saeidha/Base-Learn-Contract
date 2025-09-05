@@ -211,3 +211,5 @@ contract TestDAO is Test {
         bytes[] memory calldatas = new bytes[](1);
         calldatas[0] = abi.encodeWithSignature("execute(uint256)", 42);
         return calldatas;
+    }
+}
