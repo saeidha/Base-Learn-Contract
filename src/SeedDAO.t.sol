@@ -50,3 +50,5 @@ contract MockGovToken is Test {
 contract Target is Test {
     uint public x;
     event Executed(uint val);
+    function execute(uint val) public payable { x = val; emit Executed(val); }
+    receive() external payable {}
