@@ -184,3 +184,6 @@ contract TestDAO is Test {
     }
 
     function test_11_Fail_Execute_NotQueued() public {
+        test_07_State_Succeeded();
+        vm.expectRevert("DAO: Proposal is not queued for execution");
+        dao.execute(1);
