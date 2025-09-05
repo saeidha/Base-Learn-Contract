@@ -87,3 +87,5 @@ contract DAO is Ownable {
         string memory description
     ) external returns (uint) {
         require(governanceToken.getPastVotes(msg.sender, block.number - 1) >= proposalThreshold, "DAO: Proposer does not meet proposal threshold");
+        require(targets.length == values.length && targets.length == calldatas.length, "DAO: Proposal arrays must have same length");
+        require(targets.length > 0, "DAO: Must provide at least one action");
