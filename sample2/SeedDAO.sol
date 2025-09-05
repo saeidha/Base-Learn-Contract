@@ -164,3 +164,4 @@ contract DAO is Ownable {
     }
     
     /**
+     * @notice Cancels a proposal. Can only be called by the proposer.
