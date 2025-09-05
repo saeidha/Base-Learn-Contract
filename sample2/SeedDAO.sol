@@ -212,3 +212,6 @@ contract DAO is Ownable {
     function setVotingDelay(uint _newVotingDelay) public onlyOwner { votingDelay = _newVotingDelay; emit GovernanceParametersUpdated(); }
     function setVotingPeriod(uint _newVotingPeriod) public onlyOwner { votingPeriod = _newVotingPeriod; emit GovernanceParametersUpdated(); }
     function setProposalThreshold(uint _newProposalThreshold) public onlyOwner { proposalThreshold = _newProposalThreshold; emit GovernanceParametersUpdated(); }
+    function setQuorumPercentage(uint _newQuorumPercentage) public onlyOwner { require(_newQuorumPercentage <= 100, "Quorum > 100%"); quorumPercentage = _newQuorumPercentage; emit GovernanceParametersUpdated(); }
+    function setExecutionDelay(uint _newExecutionDelay) public onlyOwner { executionDelay = _newExecutionDelay; emit GovernanceParametersUpdated(); }
+
