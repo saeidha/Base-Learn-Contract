@@ -215,3 +215,5 @@ contract DAO is Ownable {
     function setQuorumPercentage(uint _newQuorumPercentage) public onlyOwner { require(_newQuorumPercentage <= 100, "Quorum > 100%"); quorumPercentage = _newQuorumPercentage; emit GovernanceParametersUpdated(); }
     function setExecutionDelay(uint _newExecutionDelay) public onlyOwner { executionDelay = _newExecutionDelay; emit GovernanceParametersUpdated(); }
 
+    // --- View Functions ---
+    function getProposal(uint id) external view returns(Proposal memory) { return proposals[id]; }
