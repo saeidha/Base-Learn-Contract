@@ -38,3 +38,5 @@ contract DAO is Ownable {
         uint8 support; // 0 = Against, 1 = For, 2 = Abstain
         uint96 votes;
     }
+    
+    IERC20 public immutable governanceToken;
