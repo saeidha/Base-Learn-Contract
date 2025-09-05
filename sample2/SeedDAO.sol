@@ -23,3 +23,7 @@ contract DAO is Ownable {
         string description;
         uint creationBlock;
         uint startBlock;
+        uint endBlock;
+        uint executionEta;
+        uint forVotes;
+        uint againstVotes;
