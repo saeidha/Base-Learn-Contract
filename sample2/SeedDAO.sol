@@ -104,3 +104,5 @@ contract DAO is Ownable {
         newProposal.calldatas = calldatas;
         newProposal.description = description;
         newProposal.creationBlock = block.number;
+        newProposal.startBlock = start;
+        newProposal.endBlock = end;
