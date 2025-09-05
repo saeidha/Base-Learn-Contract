@@ -119,3 +119,6 @@ contract TestDAO is Test {
     
     function test_05_Fail_Vote_NotActive_Ended() public {
         test_03_CastVote_Success();
+        vm.roll(block.number + VOTING_PERIOD + 1);
+        vm.prank(voterB);
+        vm.expectRevert("DAO: Voting is not active");
