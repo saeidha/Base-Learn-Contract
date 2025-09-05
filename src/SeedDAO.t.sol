@@ -98,3 +98,4 @@ contract TestDAO is Test {
         vm.prank(voterC);
         vm.expectRevert("DAO: Proposer does not meet proposal threshold");
         dao.propose(getTargets(), getValues(), getCalldatas(), "Proposal Fail");
+    }
