@@ -56,3 +56,6 @@ contract DAO is Ownable {
     event ProposalCanceled(uint id);
     event ProposalExecuted(uint id);
     event GovernanceParametersUpdated();
+    
+    constructor(
+        address _tokenAddress,
