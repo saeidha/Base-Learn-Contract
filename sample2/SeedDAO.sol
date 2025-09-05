@@ -68,3 +68,4 @@ contract DAO is Ownable {
         governanceToken = IERC20(_tokenAddress);
         setVotingDelay(_votingDelay);
         setVotingPeriod(_votingPeriod);
+        setProposalThreshold(_proposalThreshold);
