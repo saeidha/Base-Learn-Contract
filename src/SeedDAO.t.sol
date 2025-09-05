@@ -91,3 +91,5 @@ contract TestDAO is Test {
         vm.prank(proposer);
         uint proposalId = dao.propose(getTargets(), getValues(), getCalldatas(), "Proposal 1");
         assertEq(proposalId, 1);
+        assertEq(uint(dao.state(proposalId)), uint(DAO.ProposalState.Pending));
+    }
