@@ -136,3 +136,5 @@ contract TestDAO is Test {
     function test_07_State_Succeeded() public {
         test_01_Propose_Success();
         vm.roll(block.number + VOTING_DELAY + 1);
+
+        vm.prank(voterA); dao.castVote(1, 1); // 300 For
