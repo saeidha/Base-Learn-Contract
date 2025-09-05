@@ -13,3 +13,6 @@ contract DAO is Ownable {
     
     enum ProposalState { Pending, Active, Canceled, Defeated, Succeeded, Queued, Expired, Executed }
     enum VoteType { Against, For, Abstain }
+
+    struct Proposal {
+        uint id;
