@@ -34,3 +34,5 @@ contract MockGovToken is Test {
         return checkpoints[account][lower].votes;
     }
     function _writeCheckpoint(address account, function(uint,uint) pure returns(uint) op, uint delta) internal {
+        uint nCheckpoints = checkpoints[account].length;
+        uint96 oldVotes = nCheckpoints > 0 ? checkpoints[account][nCheckpoints-1].votes : 0;
