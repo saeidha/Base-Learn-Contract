@@ -79,3 +79,6 @@ contract DAO is Ownable {
      * @param values The ETH values to be sent in each transaction.
      * @param calldatas The calldata for each transaction.
      * @param description A human-readable description of the proposal.
+     */
+    function propose(
+        address[] memory targets,
