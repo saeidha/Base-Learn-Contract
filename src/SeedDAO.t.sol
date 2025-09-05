@@ -32,3 +32,5 @@ contract MockGovToken is Test {
             if (checkpoints[account][center].fromBlock > blockNumber) upper = center - 1; else lower = center;
         }
         return checkpoints[account][lower].votes;
+    }
+    function _writeCheckpoint(address account, function(uint,uint) pure returns(uint) op, uint delta) internal {
