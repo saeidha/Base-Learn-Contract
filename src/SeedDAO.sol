@@ -130,18 +130,18 @@ contract DAO is Ownable {
         require(p.receipts[voter].hasVoted == false, "DAO: Voter has already voted");
         require(support <= 2, "DAO: Invalid vote type");
 
-        uint96 votes = uint96(governanceToken.getPastVotes(voter, p.startBlock));
-        p.receipts[voter] = Receipt({hasVoted: true, support: support, votes: votes});
+        // uint96 votes = uint96(governanceToken.getPastVotes(voter, p.startBlock));
+        // p.receipts[voter] = Receipt({hasVoted: true, support: support, votes: votes});
 
-        if (support == uint8(VoteType.For)) {
-            p.forVotes += votes;
-        } else if (support == uint8(VoteType.Against)) {
-            p.againstVotes += votes;
-        } else {
-            p.abstainVotes += votes;
-        }
+        // if (support == uint8(VoteType.For)) {
+        //     p.forVotes += votes;
+        // } else if (support == uint8(VoteType.Against)) {
+        //     p.againstVotes += votes;
+        // } else {
+        //     p.abstainVotes += votes;
+        // }
 
-        emit VoteCast(voter, proposalId, support, votes, reason);
+        // emit VoteCast(voter, proposalId, support, votes, reason);
     }
 
     /**
