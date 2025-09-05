@@ -7,3 +7,4 @@ import {DAO} from "../contracts/DAO.sol";
 // Mock ERC20Votes token
 contract MockGovToken is Test {
     string public name = "Mock Governance Token";
+// SPDX-License-Identifier: MIT
