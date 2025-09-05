@@ -117,3 +117,5 @@ contract DAO is Ownable {
      * @param support The type of vote (0=Against, 1=For, 2=Abstain).
      */
     function castVote(uint proposalId, uint8 support) external {
+        _castVote(msg.sender, proposalId, support, "");
+    }
