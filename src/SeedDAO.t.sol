@@ -154,3 +154,5 @@ contract TestDAO is Test {
         assertEq(uint(dao.state(1)), uint(DAO.ProposalState.Defeated));
     }
 
+    function test_09_State_Defeated_Votes() public {
+        test_01_Propose_Success();
