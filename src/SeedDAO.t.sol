@@ -66,3 +66,5 @@ contract TestDAO is Test {
     address public voterC = address(0x5);
 
     uint constant VOTING_DELAY = 10;
+    uint constant VOTING_PERIOD = 100;
+    uint constant PROPOSAL_THRESHOLD = 100e18;
