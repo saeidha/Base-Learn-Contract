@@ -66,3 +66,5 @@ contract DAO is Ownable {
         uint _executionDelay
     ) Ownable(msg.sender) {
         governanceToken = IERC20(_tokenAddress);
+        setVotingDelay(_votingDelay);
+        setVotingPeriod(_votingPeriod);
