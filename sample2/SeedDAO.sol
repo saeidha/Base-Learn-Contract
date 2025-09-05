@@ -111,3 +111,5 @@ contract DAO is Ownable {
         return id;
     }
     
+    /**
+     * @notice Casts a vote on an active proposal.
