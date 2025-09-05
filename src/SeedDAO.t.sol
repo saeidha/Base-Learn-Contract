@@ -47,3 +47,5 @@ contract MockGovToken is Test {
 }
 
 // Mock target for proposals
+contract Target is Test {
+    uint public x;
