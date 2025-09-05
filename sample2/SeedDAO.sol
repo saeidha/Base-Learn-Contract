@@ -27,3 +27,5 @@ contract DAO is Ownable {
         uint executionEta;
         uint forVotes;
         uint againstVotes;
+        uint abstainVotes;
+        bool executed;
