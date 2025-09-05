@@ -82,3 +82,5 @@ contract DAO is Ownable {
      */
     function propose(
         address[] memory targets,
+        uint[] memory values,
+        bytes[] memory calldatas,
