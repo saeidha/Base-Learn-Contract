@@ -110,3 +110,5 @@ contract TestDAO is Test {
         assertTrue(dao.hasVoted(1, voterA));
     }
     
+    function test_04_Fail_Vote_NotActive_Pending() public {
+        test_01_Propose_Success();
