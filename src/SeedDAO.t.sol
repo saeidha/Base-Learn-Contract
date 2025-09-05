@@ -22,3 +22,6 @@ contract MockGovToken is Test {
     }
     function delegate(address delegatee) public { /* Simplified for testing */ }
     function getPastVotes(address account, uint blockNumber) public view returns (uint) {
+        uint nCheckpoints = checkpoints[account].length;
+        if (nCheckpoints == 0 || checkpoints[account][0].fromBlock > blockNumber) return 0;
+        if (checkpoints[account][nCheckpoints - 1].fromBlock <= blockNumber) return checkpoints[account][nCheckpoints - 1].votes;
