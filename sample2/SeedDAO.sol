@@ -106,3 +106,6 @@ contract DAO is Ownable {
         newProposal.creationBlock = block.number;
         newProposal.startBlock = start;
         newProposal.endBlock = end;
+
+        emit ProposalCreated(id, msg.sender, targets, values, calldatas, start, end, description);
+        return id;
