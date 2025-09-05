@@ -210,3 +210,4 @@ contract TestDAO is Test {
     function getCalldatas() internal pure returns (bytes[] memory) {
         bytes[] memory calldatas = new bytes[](1);
         calldatas[0] = abi.encodeWithSignature("execute(uint256)", 42);
+        return calldatas;
