@@ -42,3 +42,7 @@ contract DAO is Ownable {
     IERC20 public immutable governanceToken;
 
     // Governance Parameters
+    uint public votingDelay; // in blocks
+    uint public votingPeriod; // in blocks
+    uint public proposalThreshold; // min tokens to create proposal
+    uint public quorumPercentage; // min % of total supply to vote
