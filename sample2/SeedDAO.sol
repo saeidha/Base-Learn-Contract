@@ -130,3 +130,6 @@ contract DAO is Ownable {
         require(p.receipts[voter].hasVoted == false, "DAO: Voter has already voted");
         require(support <= 2, "DAO: Invalid vote type");
 
+        uint96 votes = uint96(governanceToken.getPastVotes(voter, p.startBlock));
+        p.receipts[voter] = Receipt({hasVoted: true, support: support, votes: votes});
+
