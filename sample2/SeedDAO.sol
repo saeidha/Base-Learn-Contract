@@ -100,3 +100,6 @@ contract DAO is Ownable {
         newProposal.id = id;
         newProposal.proposer = msg.sender;
         newProposal.targets = targets;
+        newProposal.values = values;
+        newProposal.calldatas = calldatas;
+        newProposal.description = description;
