@@ -61,3 +61,4 @@ contract DAO is Ownable {
         address _tokenAddress,
         uint _votingDelay,
         uint _votingPeriod,
+        uint _proposalThreshold,
