@@ -25,3 +25,5 @@ contract MockGovToken is Test {
         uint nCheckpoints = checkpoints[account].length;
         if (nCheckpoints == 0 || checkpoints[account][0].fromBlock > blockNumber) return 0;
         if (checkpoints[account][nCheckpoints - 1].fromBlock <= blockNumber) return checkpoints[account][nCheckpoints - 1].votes;
+        
+        uint lower = 0; uint upper = nCheckpoints - 1;
