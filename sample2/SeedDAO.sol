@@ -158,3 +158,5 @@ contract DAO is Ownable {
         for (uint i = 0; i < p.targets.length; i++) {
             (bool success, ) = p.targets[i].call{value: p.values[i]}(p.calldatas[i]);
             require(success, "DAO: Transaction execution failed");
+        }
+
