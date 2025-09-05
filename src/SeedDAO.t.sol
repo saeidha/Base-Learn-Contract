@@ -140,3 +140,5 @@ contract TestDAO is Test {
         vm.prank(voterA); dao.castVote(1, 1); // 300 For
         vm.prank(voterB); dao.castVote(1, 1); // 500 For
         vm.prank(proposer); dao.castVote(1, 0); // 150 Against
+        
+        vm.roll(block.number + VOTING_PERIOD + 1);
