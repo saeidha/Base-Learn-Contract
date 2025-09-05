@@ -176,3 +176,5 @@ contract DAO is Ownable {
         emit ProposalCanceled(proposalId);
     }
 
+    /**
+     * @notice Determines the current state of a proposal.
