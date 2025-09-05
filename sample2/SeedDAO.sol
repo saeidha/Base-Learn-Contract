@@ -16,3 +16,5 @@ contract DAO is Ownable {
 
     struct Proposal {
         uint id;
+        address proposer;
+        address[] targets;
