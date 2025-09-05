@@ -187,3 +187,5 @@ contract TestDAO is Test {
         test_07_State_Succeeded();
         vm.expectRevert("DAO: Proposal is not queued for execution");
         dao.execute(1);
+    }
+
