@@ -7,3 +7,5 @@ import {DAO} from "../contracts/DAO.sol";
 // Mock ERC20Votes token
 contract MockGovToken is Test {
     string public name = "Mock Governance Token";
+    string public symbol = "MGT";
+    uint8 public decimals = 18;
