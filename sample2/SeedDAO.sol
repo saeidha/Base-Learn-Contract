@@ -173,3 +173,6 @@ contract DAO is Ownable {
         require(msg.sender == p.proposer, "DAO: Only proposer can cancel");
         
         p.canceled = true;
+        emit ProposalCanceled(proposalId);
+    }
+
