@@ -127,3 +127,5 @@ contract DAO is Ownable {
     function _castVote(address voter, uint proposalId, uint8 support, string memory reason) internal {
         Proposal storage p = proposals[proposalId];
         require(state(proposalId) == ProposalState.Active, "DAO: Voting is not active");
+        require(p.receipts[voter].hasVoted == false, "DAO: Voter has already voted");
+        require(support <= 2, "DAO: Invalid vote type");
