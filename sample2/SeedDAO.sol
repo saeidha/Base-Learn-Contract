@@ -99,3 +99,4 @@ contract DAO is Ownable {
         Proposal storage newProposal = proposals[id];
         newProposal.id = id;
         newProposal.proposer = msg.sender;
+        newProposal.targets = targets;
