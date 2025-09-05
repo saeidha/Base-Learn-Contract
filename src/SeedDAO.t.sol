@@ -38,3 +38,5 @@ contract MockGovToken is Test {
         uint96 oldVotes = nCheckpoints > 0 ? checkpoints[account][nCheckpoints-1].votes : 0;
         uint96 newVotes = uint96(op(oldVotes, delta));
         if (nCheckpoints > 0 && checkpoints[account][nCheckpoints - 1].fromBlock == block.number) {
+            checkpoints[account][nCheckpoints - 1].votes = newVotes;
+        } else {
