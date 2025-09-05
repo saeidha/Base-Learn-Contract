@@ -31,3 +31,6 @@ contract DAO is Ownable {
         bool executed;
         bool canceled;
         mapping(address => Receipt) receipts;
+    }
+
+    struct Receipt {
