@@ -462,3 +462,4 @@ contract W3SchoolSign is Ownable {
         require(!completions[_user][_courseId], "W3SS: Course already marked as completed");
         
         completions[_user][_courseId] = true;
+        emit CourseCompleted(_user, _courseId);
