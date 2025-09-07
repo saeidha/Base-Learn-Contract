@@ -29,3 +29,4 @@ contract W3SchoolSign is Ownable {
     }
 
     // =============================================================
+    //                         State Variables
