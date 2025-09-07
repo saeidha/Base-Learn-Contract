@@ -69,3 +69,5 @@ contract W3SchoolSign is Ownable {
         _;
     }
     
+    // =============================================================
+    //                    Admin Management Functions
