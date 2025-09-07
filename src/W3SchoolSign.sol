@@ -275,3 +275,5 @@ contract W3SchoolSign is Ownable {
     function getContractBalance() external view returns (uint) {
         return address(this).balance;
     }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
