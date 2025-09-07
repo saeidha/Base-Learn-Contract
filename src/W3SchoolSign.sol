@@ -283,3 +283,5 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 /**
  * @title W3SchoolSign
  * @dev A smart contract to manage user registrations and course enrollments for a decentralized learning platform.
+ * Users "sign up" for the platform and then "sign" into courses by enrolling.
+ */
