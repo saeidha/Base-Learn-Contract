@@ -78,3 +78,4 @@ contract W3SchoolSign is Ownable {
      * @param _admin The address to grant admin privileges to.
      */
     function addAdmin(address _admin) external onlyOwner {
+        require(_admin != address(0), "W3SS: Invalid admin address");
