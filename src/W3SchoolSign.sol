@@ -310,3 +310,4 @@ contract W3SchoolSign is Ownable {
     // =============================================================
 
     mapping(address => User) public users;
+    mapping(uint => Course) public courses;
