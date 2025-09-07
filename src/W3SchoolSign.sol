@@ -119,3 +119,6 @@ contract W3SchoolSign is Ownable {
      */
     function updateUserName(string memory _newName) external {
         require(users[msg.sender].isRegistered, "W3SS: User not registered");
+        require(bytes(_newName).length > 0, "W3SS: Name cannot be empty");
+        
+        users[msg.sender].name = _newName;
