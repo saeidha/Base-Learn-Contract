@@ -349,3 +349,6 @@ contract W3SchoolSign is Ownable {
     // =============================================================
     //                    Admin Management Functions
     // =============================================================
+
+    /**
+     * @notice Adds a new admin. Only the owner can call this.
