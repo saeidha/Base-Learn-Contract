@@ -18,3 +18,5 @@ contract W3SchoolSign is Ownable {
         string name;
         bool isRegistered;
         uint[] enrolledCourseIds;
+    }
+
