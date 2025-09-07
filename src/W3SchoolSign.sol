@@ -114,3 +114,5 @@ contract W3SchoolSign is Ownable {
     }
 
     /**
+     * @notice Allows a registered user to update their name.
+     * @param _newName The new name for the user.
