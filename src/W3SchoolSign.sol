@@ -206,3 +206,7 @@ contract W3SchoolSign is Ownable {
         enrollments[msg.sender][_courseId] = true;
         course.enrollmentCount++;
         users[msg.sender].enrolledCourseIds.push(_courseId);
+
+        emit UserEnrolled(msg.sender, _courseId);
+    }
+
