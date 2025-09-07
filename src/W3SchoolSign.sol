@@ -547,3 +547,6 @@ contract W3SchoolSign is Ownable {
 
     function getUserEnrolledCourses(address _user) external view returns (uint[] memory) {
         return users[_user].enrolledCourseIds;
+    }
+
+    function getContractBalance() external view returns (uint) {
