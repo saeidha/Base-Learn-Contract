@@ -527,3 +527,4 @@ contract W3SchoolSign is Ownable {
     function getCourseDetails(uint _courseId) external view courseExists(_courseId) returns (string memory, string memory, uint, bool, uint) {
         Course memory course = courses[_courseId];
         return (course.name, course.description, course.enrollmentFee, course.isActive, course.enrollmentCount);
+    }
