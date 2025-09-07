@@ -440,3 +440,4 @@ contract W3SchoolSign is Ownable {
      * @notice Updates the enrollment fee for a course.
      */
     function updateCourseFee(uint _courseId, uint _newFee) external onlyAdmin courseExists(_courseId) {
+        Course storage course = courses[_courseId];
