@@ -44,3 +44,5 @@ contract W3SchoolSign is Ownable {
     //                             Events
     // =============================================================
 
+    event UserRegistered(address indexed user, string name);
+    event UserProfileUpdated(address indexed user, string newName);
