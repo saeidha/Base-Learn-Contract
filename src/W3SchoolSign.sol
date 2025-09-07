@@ -187,3 +187,4 @@ contract W3SchoolSign is Ownable {
         completions[_user][_courseId] = true;
         emit CourseCompleted(_user, _courseId);
     }
+    
