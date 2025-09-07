@@ -168,3 +168,5 @@ contract W3SchoolSign is Ownable {
         emit CourseUpdated(_courseId, course.name, course.description, course.enrollmentFee);
     }
 
+    /**
+     * @notice Toggles the active status of a course. Inactive courses cannot be enrolled in.
