@@ -373,3 +373,5 @@ contract W3SchoolSign is Ownable {
     //                     User Management Functions
     // =============================================================
     
+    /**
+     * @notice Registers a new user on the platform.
