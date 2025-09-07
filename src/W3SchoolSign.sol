@@ -175,3 +175,5 @@ contract W3SchoolSign is Ownable {
         Course storage course = courses[_courseId];
         course.isActive = !course.isActive;
         emit CourseStatusChanged(_courseId, course.isActive);
+    }
+
