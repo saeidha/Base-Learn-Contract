@@ -504,3 +504,5 @@ contract W3SchoolSign is Ownable {
         emit FundsWithdrawn(owner(), balance);
     }
 
+    // =============================================================
+    //                        View Functions
