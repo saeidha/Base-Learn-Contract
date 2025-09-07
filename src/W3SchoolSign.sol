@@ -142,3 +142,5 @@ contract W3SchoolSign is Ownable {
             name: _name,
             description: _description,
             enrollmentFee: _fee,
+            isActive: true,
+            enrollmentCount: 0
