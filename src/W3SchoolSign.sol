@@ -170,3 +170,4 @@ contract W3SchoolSign is Ownable {
 
     /**
      * @notice Toggles the active status of a course. Inactive courses cannot be enrolled in.
+     */
