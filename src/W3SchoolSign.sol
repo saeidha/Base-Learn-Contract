@@ -360,3 +360,5 @@ contract W3SchoolSign is Ownable {
         emit AdminAdded(_admin);
     }
 
+    /**
+     * @notice Removes an admin. Only the owner can call this.
