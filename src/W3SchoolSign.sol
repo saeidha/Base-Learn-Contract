@@ -77,3 +77,4 @@ contract W3SchoolSign is Ownable {
      * @notice Adds a new admin. Only the owner can call this.
      * @param _admin The address to grant admin privileges to.
      */
+    function addAdmin(address _admin) external onlyOwner {
