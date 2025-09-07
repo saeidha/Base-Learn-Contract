@@ -181,3 +181,5 @@ contract W3SchoolSign is Ownable {
      * @notice Marks a user as having completed a course.
      */
     function markCourseCompleted(address _user, uint _courseId) external onlyAdmin courseExists(_courseId) {
+        require(enrollments[_user][_courseId], "W3SS: User not enrolled in this course");
+        require(!completions[_user][_courseId], "W3SS: Course already marked as completed");
