@@ -528,3 +528,4 @@ contract W3SchoolSign is Ownable {
         Course memory course = courses[_courseId];
         return (course.name, course.description, course.enrollmentFee, course.isActive, course.enrollmentCount);
     }
+
