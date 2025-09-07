@@ -92,3 +92,5 @@ contract W3SchoolSign is Ownable {
         emit AdminRemoved(_admin);
     }
 
+    // =============================================================
+    //                     User Management Functions
