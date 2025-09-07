@@ -219,3 +219,5 @@ contract W3SchoolSign is Ownable {
      */
     function withdrawFunds() external onlyOwner {
         uint balance = address(this).balance;
+        require(balance > 0, "W3SS: No funds to withdraw");
+        
