@@ -49,3 +49,7 @@ contract W3SchoolSign is Ownable {
     event AdminAdded(address indexed admin);
     event AdminRemoved(address indexed admin);
     event CourseAdded(uint indexed courseId, string name, uint fee);
+    event CourseUpdated(uint indexed courseId, string name, string description, uint fee);
+    event CourseStatusChanged(uint indexed courseId, bool isActive);
+    event UserEnrolled(address indexed user, uint indexed courseId);
+    event CourseCompleted(address indexed user, uint indexed courseId);
