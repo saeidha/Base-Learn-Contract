@@ -358,3 +358,5 @@ contract W3SchoolSign is Ownable {
         require(_admin != address(0), "W3SS: Invalid admin address");
         admins[_admin] = true;
         emit AdminAdded(_admin);
+    }
+
