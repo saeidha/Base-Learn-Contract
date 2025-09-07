@@ -411,3 +411,4 @@ contract W3SchoolSign is Ownable {
      * @param _name The name of the course.
      * @param _description A brief description of the course.
      * @param _fee The enrollment fee in wei.
+     */
