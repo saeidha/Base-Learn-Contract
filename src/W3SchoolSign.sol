@@ -159,3 +159,5 @@ contract W3SchoolSign is Ownable {
         emit CourseUpdated(_courseId, course.name, course.description, course.enrollmentFee);
     }
 
+    /**
+     * @notice Updates the enrollment fee for a course.
