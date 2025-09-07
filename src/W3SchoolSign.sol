@@ -101,3 +101,6 @@ contract W3SchoolSign is Ownable {
      * @param _name The user's chosen name.
      */
     function registerUser(string memory _name) external {
+        require(!users[msg.sender].isRegistered, "W3SS: User already registered");
+        require(bytes(_name).length > 0, "W3SS: Name cannot be empty");
+        
