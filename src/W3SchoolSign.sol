@@ -412,3 +412,7 @@ contract W3SchoolSign is Ownable {
      * @param _description A brief description of the course.
      * @param _fee The enrollment fee in wei.
      */
+    function addCourse(string memory _name, string memory _description, uint _fee) external onlyAdmin {
+        require(bytes(_name).length > 0, "W3SS: Course name cannot be empty");
+        courseCounter++;
+        courses[courseCounter] = Course({
