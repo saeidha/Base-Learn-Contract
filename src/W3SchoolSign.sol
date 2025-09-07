@@ -400,3 +400,4 @@ contract W3SchoolSign is Ownable {
         
         users[msg.sender].name = _newName;
         emit UserProfileUpdated(msg.sender, _newName);
+    }
