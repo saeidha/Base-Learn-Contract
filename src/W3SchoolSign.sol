@@ -474,3 +474,5 @@ contract W3SchoolSign is Ownable {
      * @param _courseId The ID of the course to enroll in.
      */
     function enroll(uint _courseId) external payable courseExists(_courseId) {
+        require(users[msg.sender].isRegistered, "W3SS: User not registered");
+        Course storage course = courses[_courseId];
