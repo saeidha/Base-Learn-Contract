@@ -428,3 +428,4 @@ contract W3SchoolSign is Ownable {
     /**
      * @notice Updates the details of an existing course.
      */
+    function updateCourseDetails(uint _courseId, string memory _name, string memory _description) external onlyAdmin courseExists(_courseId) {
