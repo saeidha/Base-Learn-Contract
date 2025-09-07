@@ -545,3 +545,5 @@ contract W3SchoolSign is Ownable {
         return completions[_user][_courseId];
     }
 
+    function getUserEnrolledCourses(address _user) external view returns (uint[] memory) {
+        return users[_user].enrolledCourseIds;
