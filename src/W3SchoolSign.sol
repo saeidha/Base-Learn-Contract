@@ -430,3 +430,5 @@ contract W3SchoolSign is Ownable {
      */
     function updateCourseDetails(uint _courseId, string memory _name, string memory _description) external onlyAdmin courseExists(_courseId) {
         require(bytes(_name).length > 0, "W3SS: Course name cannot be empty");
+        Course storage course = courses[_courseId];
+        course.name = _name;
