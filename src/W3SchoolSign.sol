@@ -435,3 +435,4 @@ contract W3SchoolSign is Ownable {
         course.description = _description;
         emit CourseUpdated(_courseId, course.name, course.description, course.enrollmentFee);
     }
+
