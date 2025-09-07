@@ -487,3 +487,6 @@ contract W3SchoolSign is Ownable {
         emit UserEnrolled(msg.sender, _courseId);
     }
 
+    // =============================================================
+    //                   Financial Functions (Owner Only)
+    // =============================================================
