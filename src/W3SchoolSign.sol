@@ -20,3 +20,5 @@ contract W3SchoolSign is Ownable {
         uint[] enrolledCourseIds;
     }
 
+    struct Course {
+        string name;
