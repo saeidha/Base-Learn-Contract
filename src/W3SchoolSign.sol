@@ -307,3 +307,6 @@ contract W3SchoolSign is Ownable {
 
     // =============================================================
     //                         State Variables
+    // =============================================================
+
+    mapping(address => User) public users;
