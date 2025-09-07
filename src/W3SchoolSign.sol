@@ -529,3 +529,5 @@ contract W3SchoolSign is Ownable {
         return (course.name, course.description, course.enrollmentFee, course.isActive, course.enrollmentCount);
     }
 
+    function getCourseFee(uint _courseId) external view courseExists(_courseId) returns (uint) {
+        return courses[_courseId].enrollmentFee;
