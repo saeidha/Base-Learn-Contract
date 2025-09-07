@@ -177,3 +177,5 @@ contract W3SchoolSign is Ownable {
         emit CourseStatusChanged(_courseId, course.isActive);
     }
 
+    /**
+     * @notice Marks a user as having completed a course.
