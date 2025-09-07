@@ -416,3 +416,4 @@ contract W3SchoolSign is Ownable {
         require(bytes(_name).length > 0, "W3SS: Course name cannot be empty");
         courseCounter++;
         courses[courseCounter] = Course({
+            name: _name,
