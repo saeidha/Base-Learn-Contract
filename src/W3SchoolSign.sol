@@ -215,3 +215,5 @@ contract W3SchoolSign is Ownable {
     // =============================================================
     
     /**
+     * @notice Allows the owner to withdraw the entire balance of the contract.
+     */
