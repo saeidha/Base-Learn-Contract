@@ -481,3 +481,4 @@ contract W3SchoolSign is Ownable {
         require(!enrollments[msg.sender][_courseId], "W3SS: Already enrolled in this course");
 
         enrollments[msg.sender][_courseId] = true;
+        course.enrollmentCount++;
