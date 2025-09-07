@@ -391,3 +391,4 @@ contract W3SchoolSign is Ownable {
     }
 
     /**
+     * @notice Allows a registered user to update their name.
