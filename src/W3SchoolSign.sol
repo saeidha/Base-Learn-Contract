@@ -408,3 +408,4 @@ contract W3SchoolSign is Ownable {
 
     /**
      * @notice Adds a new course to the platform.
+     * @param _name The name of the course.
