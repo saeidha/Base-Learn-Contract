@@ -522,3 +522,4 @@ contract W3SchoolSign is Ownable {
 
     function getTotalCourses() external view returns (uint) {
         return courseCounter;
+    }
