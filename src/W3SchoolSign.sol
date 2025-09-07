@@ -272,3 +272,5 @@ contract W3SchoolSign is Ownable {
         return users[_user].enrolledCourseIds;
     }
 
+    function getContractBalance() external view returns (uint) {
+        return address(this).balance;
