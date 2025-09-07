@@ -89,3 +89,4 @@ contract W3SchoolSign is Ownable {
      */
     function removeAdmin(address _admin) external onlyOwner {
         admins[_admin] = false;
+        emit AdminRemoved(_admin);
