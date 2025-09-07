@@ -238,3 +238,6 @@ contract W3SchoolSign is Ownable {
     function getUserName(address _user) external view returns (string memory) {
         return users[_user].name;
     }
+
+    function isUserAdmin(address _user) external view returns (bool) {
+        return admins[_user];
