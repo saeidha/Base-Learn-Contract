@@ -395,3 +395,4 @@ contract W3SchoolSign is Ownable {
      * @param _newName The new name for the user.
      */
     function updateUserName(string memory _newName) external {
+        require(users[msg.sender].isRegistered, "W3SS: User not registered");
