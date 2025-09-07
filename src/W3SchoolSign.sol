@@ -11,3 +11,5 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract W3SchoolSign is Ownable {
 
     // =============================================================
+    //                           Structs
+    // =============================================================
