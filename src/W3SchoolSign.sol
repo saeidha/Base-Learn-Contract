@@ -485,3 +485,4 @@ contract W3SchoolSign is Ownable {
         users[msg.sender].enrolledCourseIds.push(_courseId);
 
         emit UserEnrolled(msg.sender, _courseId);
+    }
