@@ -499,3 +499,5 @@ contract W3SchoolSign is Ownable {
         require(balance > 0, "W3SS: No funds to withdraw");
         
         (bool success, ) = owner().call{value: balance}("");
+        require(success, "W3SS: Withdrawal failed");
+        
