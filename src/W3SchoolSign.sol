@@ -417,3 +417,4 @@ contract W3SchoolSign is Ownable {
         courseCounter++;
         courses[courseCounter] = Course({
             name: _name,
+            description: _description,
