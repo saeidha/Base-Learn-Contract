@@ -203,3 +203,5 @@ contract W3SchoolSign is Ownable {
         require(msg.value == course.enrollmentFee, "W3SS: Incorrect enrollment fee sent");
         require(!enrollments[msg.sender][_courseId], "W3SS: Already enrolled in this course");
 
+        enrollments[msg.sender][_courseId] = true;
+        course.enrollmentCount++;
