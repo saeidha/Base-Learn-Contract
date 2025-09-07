@@ -424,3 +424,6 @@ contract W3SchoolSign is Ownable {
         });
         emit CourseAdded(courseCounter, _name, _fee);
     }
+
+    /**
+     * @notice Updates the details of an existing course.
