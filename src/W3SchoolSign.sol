@@ -65,3 +65,4 @@ contract W3SchoolSign is Ownable {
     }
 
     modifier courseExists(uint _courseId) {
+        require(_courseId > 0 && _courseId <= courseCounter, "W3SS: Course does not exist");
