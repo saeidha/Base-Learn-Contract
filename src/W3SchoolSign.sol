@@ -146,3 +146,4 @@ contract W3SchoolSign is Ownable {
             enrollmentCount: 0
         });
         emit CourseAdded(courseCounter, _name, _fee);
+    }
