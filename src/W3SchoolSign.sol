@@ -106,3 +106,5 @@ contract W3SchoolSign is Ownable {
         
         users[msg.sender] = User({
             name: _name,
+            isRegistered: true,
+            enrolledCourseIds: new uint[](0)
