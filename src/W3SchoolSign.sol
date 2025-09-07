@@ -550,3 +550,5 @@ contract W3SchoolSign is Ownable {
     }
 
     function getContractBalance() external view returns (uint) {
+        return address(this).balance;
+    }
