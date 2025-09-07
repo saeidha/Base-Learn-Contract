@@ -63,3 +63,5 @@ contract W3SchoolSign is Ownable {
         require(admins[msg.sender], "W3SS: Caller is not an admin");
         _;
     }
+
+    modifier courseExists(uint _courseId) {
