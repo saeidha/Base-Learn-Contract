@@ -303,3 +303,5 @@ contract W3SchoolSign is Ownable {
         uint enrollmentFee;
         bool isActive;
         uint enrollmentCount;
+    }
+
