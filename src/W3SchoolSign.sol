@@ -495,3 +495,5 @@ contract W3SchoolSign is Ownable {
      * @notice Allows the owner to withdraw the entire balance of the contract.
      */
     function withdrawFunds() external onlyOwner {
+        uint balance = address(this).balance;
+        require(balance > 0, "W3SS: No funds to withdraw");
