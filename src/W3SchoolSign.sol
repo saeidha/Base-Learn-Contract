@@ -281,3 +281,5 @@ pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
+ * @title W3SchoolSign
+ * @dev A smart contract to manage user registrations and course enrollments for a decentralized learning platform.
