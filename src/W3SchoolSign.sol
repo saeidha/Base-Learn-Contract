@@ -167,3 +167,4 @@ contract W3SchoolSign is Ownable {
         course.enrollmentFee = _newFee;
         emit CourseUpdated(_courseId, course.name, course.description, course.enrollmentFee);
     }
+
