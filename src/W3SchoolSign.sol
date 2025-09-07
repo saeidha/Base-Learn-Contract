@@ -385,3 +385,5 @@ contract W3SchoolSign is Ownable {
             name: _name,
             isRegistered: true,
             enrolledCourseIds: new uint[](0)
+        });
+        
