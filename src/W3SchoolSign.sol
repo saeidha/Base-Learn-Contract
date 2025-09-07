@@ -375,3 +375,4 @@ contract W3SchoolSign is Ownable {
     
     /**
      * @notice Registers a new user on the platform.
+     * @param _name The user's chosen name.
