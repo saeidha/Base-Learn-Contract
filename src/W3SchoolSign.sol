@@ -476,3 +476,6 @@ contract W3SchoolSign is Ownable {
     function enroll(uint _courseId) external payable courseExists(_courseId) {
         require(users[msg.sender].isRegistered, "W3SS: User not registered");
         Course storage course = courses[_courseId];
+        require(course.isActive, "W3SS: Course is not active");
+        require(msg.value == course.enrollmentFee, "W3SS: Incorrect enrollment fee sent");
+        require(!enrollments[msg.sender][_courseId], "W3SS: Already enrolled in this course");
