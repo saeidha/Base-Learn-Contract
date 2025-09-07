@@ -406,3 +406,5 @@ contract W3SchoolSign is Ownable {
     //                   Course Management Functions (Admin Only)
     // =============================================================
 
+    /**
+     * @notice Adds a new course to the platform.
