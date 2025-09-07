@@ -456,3 +456,5 @@ contract W3SchoolSign is Ownable {
 
     /**
      * @notice Marks a user as having completed a course.
+     */
+    function markCourseCompleted(address _user, uint _courseId) external onlyAdmin courseExists(_courseId) {
