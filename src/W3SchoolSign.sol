@@ -104,3 +104,5 @@ contract W3SchoolSign is Ownable {
         require(!users[msg.sender].isRegistered, "W3SS: User already registered");
         require(bytes(_name).length > 0, "W3SS: Name cannot be empty");
         
+        users[msg.sender] = User({
+            name: _name,
