@@ -331,3 +331,4 @@ contract W3SchoolSign is Ownable {
     event UserEnrolled(address indexed user, uint indexed courseId);
     event CourseCompleted(address indexed user, uint indexed courseId);
     event FundsWithdrawn(address indexed owner, uint amount);
+
