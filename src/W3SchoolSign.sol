@@ -34,3 +34,4 @@ contract W3SchoolSign is Ownable {
 
     mapping(address => User) public users;
     mapping(uint => Course) public courses;
+    mapping(address => mapping(uint => bool)) public enrollments;
