@@ -86,3 +86,4 @@ contract W3SchoolSign is Ownable {
     /**
      * @notice Removes an admin. Only the owner can call this.
      * @param _admin The address to revoke admin privileges from.
+     */
