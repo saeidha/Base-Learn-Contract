@@ -35,3 +35,6 @@ contract TimeLockWallet is Ownable, Pausable {
     //                             Events
     // =============================================================
 
+    event DepositMade(address indexed sender, uint256 amount, uint256 newContractBalance);
+    event BeneficiaryAdded(address indexed beneficiary, uint256 amount, uint256 unlockTime);
+    event BeneficiaryUpdated(address indexed beneficiary, uint256 oldAmount, uint256 newAmount, uint256 oldUnlockTime, uint256 newUnlockTime);
