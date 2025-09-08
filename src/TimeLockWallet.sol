@@ -296,3 +296,5 @@ contract TimeLockWallet is Ownable, Pausable {
     function getBeneficiaryWithdrawnAmount(address _beneficiary) external view returns (uint256) {
         return beneficiaries[_beneficiary].withdrawnAmount;
     }
+
+    /**
