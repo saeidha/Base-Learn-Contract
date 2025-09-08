@@ -129,3 +129,4 @@ contract W3SchoolSignTest is Test {
         w3s.enroll{value: COURSE_FEE}(1);
         
         uint256 initialOwnerBalance = OWNER.balance;
+        assertEq(address(w3s).balance, COURSE_FEE);
