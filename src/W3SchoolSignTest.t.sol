@@ -90,3 +90,6 @@ contract W3SchoolSignTest is Test {
     }
 
     function test_UserEnrollment() public {
+        // 1. Admin creates a course
+        vm.prank(ADMIN);
+        w3s.addCourse("Solidity 101", "Basics", COURSE_FEE);
