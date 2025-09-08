@@ -73,3 +73,5 @@ contract TimeLockWallet is Ownable, Pausable {
      */
     function deposit() external payable onlyOwner whenNotPaused {
         require(msg.value > 0, "TLW: Deposit amount must be greater than zero");
+        emit DepositMade(msg.sender, msg.value, address(this).balance);
+    }
