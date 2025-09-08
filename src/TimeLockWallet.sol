@@ -356,3 +356,5 @@ contract TimeLockWallet is Ownable, Pausable {
     }
 
     /**
+     * @notice Checks if a beneficiary can currently withdraw their funds.
+     * @param _beneficiary The address of the beneficiary.
