@@ -96,3 +96,5 @@ contract W3SchoolSignTest is Test {
 
         // 2. User 1 registers
         vm.prank(USER_1);
+        w3s.registerUser("Alice");
+
