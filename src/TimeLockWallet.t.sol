@@ -112,3 +112,5 @@ contract W3SchoolSignTest is Test {
         
         vm.prank(USER_1);
         w3s.registerUser("Alice");
+
+        uint256 wrongFee = 0.05 ether;
