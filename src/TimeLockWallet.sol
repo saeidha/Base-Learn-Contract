@@ -298,3 +298,5 @@ contract TimeLockWallet is Ownable, Pausable {
     }
 
     /**
+     * @notice Checks if a given address is an active beneficiary.
+     * @param _beneficiary The address to check.
