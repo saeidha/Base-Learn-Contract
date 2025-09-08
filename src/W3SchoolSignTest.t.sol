@@ -68,3 +68,5 @@ contract W3SchoolSignTest is Test {
     function testFail_RegisterTwice() public {
         vm.prank(USER_1);
         w3s.registerUser("Alice");
+        
+        vm.expectRevert("W3SS: User already registered");
