@@ -236,3 +236,5 @@ contract TimeLockWallet is Ownable, Pausable {
     function withdrawFunds() external payable whenNotPaused beneficiaryExists(msg.sender) {
         Beneficiary storage b = beneficiaries[msg.sender];
         require(block.timestamp >= b.unlockTimestamp, "TLW: Funds are still time-locked");
+        
+        uint256 withdrawableAmount = b.amountLocked - b.withdrawnAmount;
