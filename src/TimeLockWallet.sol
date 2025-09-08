@@ -18,3 +18,4 @@ contract TimeLockWallet is Ownable, Pausable {
 
     struct Beneficiary {
         bool isActive;          // True if the beneficiary is currently active
+        uint256 amountLocked;   // Total amount allocated to this beneficiary
