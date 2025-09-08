@@ -183,3 +183,7 @@ contract TimeLockWallet is Ownable, Pausable {
         whenNotPaused
         beneficiaryExists(_beneficiary)
     {
+        Beneficiary storage b = beneficiaries[_beneficiary];
+        uint256 remainingLockedAmount = b.amountLocked - b.withdrawnAmount;
+
+        b.isActive = false;
