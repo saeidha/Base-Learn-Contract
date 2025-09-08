@@ -327,3 +327,5 @@ contract TimeLockWallet is Ownable, Pausable {
         return address(this).balance - totalLockedFunds;
     }
 
+    /**
+     * @notice Returns the total sum of all funds currently allocated to active beneficiaries.
