@@ -160,3 +160,5 @@ contract TimeLockWallet is Ownable, Pausable {
      * @param _beneficiary The address of the beneficiary.
      * @param _newUnlockTimestamp The new, later timestamp.
      */
+    function extendBeneficiaryUnlockTime(address _beneficiary, uint256 _newUnlockTimestamp)
+        external
