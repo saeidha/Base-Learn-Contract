@@ -122,3 +122,5 @@ contract W3SchoolSignTest is Test {
     function test_OwnerWithdrawsFunds() public {
         // Enroll user to add funds to the contract
         vm.prank(ADMIN);
+        w3s.addCourse("Solidity 101", "Basics", COURSE_FEE);
+        vm.prank(USER_1);
