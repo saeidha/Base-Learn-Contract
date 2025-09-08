@@ -29,3 +29,6 @@ contract TimeLockWallet is Ownable, Pausable {
 
     mapping(address => Beneficiary) public beneficiaries;
     uint256 public beneficiaryCount; // Tracks the number of *active* beneficiaries
+    uint256 public totalLockedFunds; // Sum of all 'amountLocked' for active beneficiaries
+
+    // =============================================================
