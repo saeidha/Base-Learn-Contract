@@ -95,3 +95,5 @@ contract TimeLockWallet is Ownable, Pausable {
 
         beneficiaries[_beneficiary] = Beneficiary({
             isActive: true,
+            amountLocked: _amount,
+            unlockTimestamp: _unlockTimestamp,
