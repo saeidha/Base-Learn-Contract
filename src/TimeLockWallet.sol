@@ -99,3 +99,5 @@ contract TimeLockWallet is Ownable, Pausable {
             unlockTimestamp: _unlockTimestamp,
             withdrawnAmount: 0
         });
+        totalLockedFunds += _amount;
+        beneficiaryCount++;
