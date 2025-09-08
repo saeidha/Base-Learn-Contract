@@ -220,3 +220,6 @@ contract TimeLockWallet is Ownable, Pausable {
 
     /**
      * @notice Unpauses the contract. Only owner can call.
+     */
+    function unpause() external onlyOwner {
+        _unpause();
