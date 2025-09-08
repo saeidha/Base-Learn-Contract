@@ -15,3 +15,5 @@ contract W3SchoolSignTest is Test {
 
     uint256 public constant COURSE_FEE = 0.1 ether;
 
+    /**
+     * @dev This function is run before each test. It's the equivalent of `beforeEach`.
