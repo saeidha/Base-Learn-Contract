@@ -84,3 +84,4 @@ contract W3SchoolSignTest is Test {
     }
 
     function testFail_NonAdminCannotAddCourse() public {
+        vm.prank(USER_1); // A non-admin user
