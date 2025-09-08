@@ -91,3 +91,4 @@ contract W3SchoolSignTest is Test {
 
     function test_UserEnrollment() public {
         // 1. Admin creates a course
+        vm.prank(ADMIN);
