@@ -361,3 +361,5 @@ contract TimeLockWallet is Ownable, Pausable {
      * @return True if eligible for withdrawal, false otherwise.
      */
     function canWithdraw(address _beneficiary) external view returns (bool) {
+        Beneficiary storage b = beneficiaries[_beneficiary];
+        return b.isActive && block.timestamp >= b.unlockTimestamp && (b.amountLocked > b.withdrawnAmount);
