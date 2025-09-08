@@ -130,3 +130,5 @@ contract W3SchoolSignTest is Test {
         
         uint256 initialOwnerBalance = OWNER.balance;
         assertEq(address(w3s).balance, COURSE_FEE);
+
+        // Owner withdraws
