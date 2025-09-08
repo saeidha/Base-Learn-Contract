@@ -290,3 +290,5 @@ contract TimeLockWallet is Ownable, Pausable {
 
     /**
      * @notice Returns the amount already withdrawn by a specific beneficiary.
+     * @param _beneficiary The address of the beneficiary.
+     * @return The amount withdrawn. Returns 0 if not an active beneficiary.
