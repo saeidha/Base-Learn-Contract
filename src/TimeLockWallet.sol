@@ -75,3 +75,6 @@ contract TimeLockWallet is Ownable, Pausable {
         require(msg.value > 0, "TLW: Deposit amount must be greater than zero");
         emit DepositMade(msg.sender, msg.value, address(this).balance);
     }
+
+    /**
+     * @notice Adds a new beneficiary with a specified amount and unlock timestamp.
