@@ -285,3 +285,4 @@ contract TimeLockWallet is Ownable, Pausable {
      * @return The unlock timestamp. Returns 0 if not an active beneficiary.
      */
     function getBeneficiaryUnlockTimestamp(address _beneficiary) external view returns (uint256) {
+        return beneficiaries[_beneficiary].unlockTimestamp;
