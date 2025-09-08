@@ -7,3 +7,7 @@ import "@openzeppelin/contracts/utils/Pausable.sol";
 /**
  * @title TimeLockWallet
  * @dev A contract that allows an owner to deposit funds and allocate them to beneficiaries.
+ * Beneficiaries can withdraw their allocated funds only after a predefined unlock timestamp.
+ * Includes pause functionality.
+ */
+contract TimeLockWallet is Ownable, Pausable {
