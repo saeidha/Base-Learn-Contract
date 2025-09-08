@@ -110,3 +110,5 @@ contract TimeLockWallet is Ownable, Pausable {
      * @param _beneficiary The address of the beneficiary.
      * @param _newAmount The new amount to allocate to this beneficiary.
      */
+    function updateBeneficiaryAmount(address _beneficiary, uint256 _newAmount)
+        external
