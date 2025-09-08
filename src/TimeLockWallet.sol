@@ -317,3 +317,5 @@ contract TimeLockWallet is Ownable, Pausable {
     /**
      * @notice Calculates the funds in the contract that are not allocated to any beneficiary.
      * @dev These funds can be withdrawn by the owner via `emergencyWithdrawOwnerFunds`.
+     * @return The amount of unallocated funds.
+     */
