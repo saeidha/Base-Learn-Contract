@@ -279,3 +279,7 @@ contract TimeLockWallet is Ownable, Pausable {
         return beneficiaries[_beneficiary].amountLocked;
     }
 
+    /**
+     * @notice Returns the unlock timestamp for a specific beneficiary.
+     * @param _beneficiary The address of the beneficiary.
+     * @return The unlock timestamp. Returns 0 if not an active beneficiary.
