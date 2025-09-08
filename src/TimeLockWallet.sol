@@ -310,3 +310,4 @@ contract TimeLockWallet is Ownable, Pausable {
      * @notice Returns the current balance of the contract.
      * @return The contract's ETH balance in wei.
      */
+    function getContractBalance() external view returns (uint256) {
