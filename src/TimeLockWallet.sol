@@ -249,3 +249,5 @@ contract TimeLockWallet is Ownable, Pausable {
         emit FundsWithdrawn(msg.sender, withdrawableAmount);
     }
 
+    // =============================================================
+    //                        View Functions
