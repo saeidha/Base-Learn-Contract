@@ -162,3 +162,6 @@ contract TimeLockWallet is Ownable, Pausable {
      */
     function extendBeneficiaryUnlockTime(address _beneficiary, uint256 _newUnlockTimestamp)
         external
+        onlyOwner
+        whenNotPaused
+        beneficiaryExists(_beneficiary)
