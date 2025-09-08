@@ -240,3 +240,7 @@ contract TimeLockWallet is Ownable, Pausable {
         uint256 withdrawableAmount = b.amountLocked - b.withdrawnAmount;
         require(withdrawableAmount > 0, "TLW: No funds available to withdraw");
 
+        b.withdrawnAmount += withdrawableAmount;
+        totalLockedFunds -= withdrawableAmount;
+
+        (bool success, ) = msg.sender.call{value: withdrawableAmount}("");
