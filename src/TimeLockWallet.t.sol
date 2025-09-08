@@ -43,3 +43,4 @@ contract W3SchoolSignTest is Test {
         // Owner can remove admin
         vm.prank(OWNER);
         w3s.removeAdmin(ADMIN);
+        assertFalse(w3s.admins(ADMIN), "Admin should be removed.");
