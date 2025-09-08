@@ -69,3 +69,7 @@ contract W3SchoolSignTest is Test {
         vm.prank(USER_1);
         w3s.registerUser("Alice");
         
+        vm.expectRevert("W3SS: User already registered");
+        w3s.registerUser("Alice V2");
+    }
+
