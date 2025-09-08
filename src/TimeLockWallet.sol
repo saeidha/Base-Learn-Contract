@@ -212,3 +212,6 @@ contract TimeLockWallet is Ownable, Pausable {
 
     /**
      * @notice Pauses the contract. Only owner can call.
+     * @dev No funds can be deposited, added to beneficiaries, updated, or withdrawn while paused.
+     */
+    function pause() external onlyOwner {
