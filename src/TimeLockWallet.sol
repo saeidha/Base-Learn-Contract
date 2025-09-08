@@ -347,3 +347,4 @@ contract TimeLockWallet is Ownable, Pausable {
      * @notice Calculates the time remaining until a beneficiary's funds can be withdrawn.
      * @param _beneficiary The address of the beneficiary.
      * @return The remaining time in seconds. Returns 0 if already unlocked or not an active beneficiary.
+     */
