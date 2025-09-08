@@ -61,3 +61,4 @@ contract W3SchoolSignTest is Test {
         vm.prank(USER_1);
         w3s.registerUser("Alice");
 
+        assertTrue(w3s.isUserRegistered(USER_1), "User 1 should be registered.");
