@@ -275,3 +275,5 @@ contract TimeLockWallet is Ownable, Pausable {
      * @param _beneficiary The address of the beneficiary.
      * @return The amount locked. Returns 0 if not an active beneficiary.
      */
+    function getBeneficiaryAmountLocked(address _beneficiary) external view returns (uint256) {
+        return beneficiaries[_beneficiary].amountLocked;
