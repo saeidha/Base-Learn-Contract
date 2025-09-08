@@ -251,3 +251,7 @@ contract TimeLockWallet is Ownable, Pausable {
 
     // =============================================================
     //                        View Functions
+    // =============================================================
+
+    /**
+     * @notice Returns all details of a beneficiary.
