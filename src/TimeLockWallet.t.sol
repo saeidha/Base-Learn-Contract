@@ -84,3 +84,5 @@ contract W3SchoolSignTest is Test {
     }
 
     function testFail_NonAdminCannotAddCourse() public {
+        vm.prank(USER_1); // A non-admin user
+        vm.expectRevert("W3SS: Caller is not an admin");
