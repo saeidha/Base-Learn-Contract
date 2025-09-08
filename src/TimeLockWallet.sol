@@ -205,3 +205,5 @@ contract TimeLockWallet is Ownable, Pausable {
         require(availableOwnerFunds > 0, "TLW: No unallocated funds available for owner withdrawal");
         
         (bool success, ) = owner().call{value: availableOwnerFunds}("");
+        require(success, "TLW: Owner withdrawal failed");
+        
