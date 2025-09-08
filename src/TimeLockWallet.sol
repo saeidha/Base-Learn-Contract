@@ -49,3 +49,5 @@ contract TimeLockWallet is Ownable, Pausable {
 
     modifier beneficiaryExists(address _beneficiary) {
         require(beneficiaries[_beneficiary].isActive, "TLW: Beneficiary does not exist or is inactive");
+        _;
+    }
