@@ -141,3 +141,4 @@ contract TimeLockWallet is Ownable, Pausable {
      * @param _newUnlockTimestamp The new timestamp after which the beneficiary can withdraw.
      */
     function updateBeneficiaryUnlockTime(address _beneficiary, uint256 _newUnlockTimestamp)
+        external
