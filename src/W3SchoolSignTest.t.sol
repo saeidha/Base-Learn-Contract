@@ -135,3 +135,5 @@ contract W3SchoolSignTest is Test {
         vm.prank(OWNER);
         w3s.withdrawFunds();
 
+        assertEq(address(w3s).balance, 0, "Contract balance should be 0 after withdrawal.");
+        assertEq(OWNER.balance, initialOwnerBalance + COURSE_FEE, "Owner did not receive the funds.");
