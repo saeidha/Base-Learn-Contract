@@ -323,3 +323,4 @@ contract TimeLockWallet is Ownable, Pausable {
         if (address(this).balance < totalLockedFunds) {
             // This should ideally not happen if logic is correct, but defensive
             return 0;
+        }
