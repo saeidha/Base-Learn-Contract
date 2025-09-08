@@ -159,3 +159,4 @@ contract TimeLockWallet is Ownable, Pausable {
      * @dev Only allows setting a timestamp further in the future than the current one.
      * @param _beneficiary The address of the beneficiary.
      * @param _newUnlockTimestamp The new, later timestamp.
+     */
