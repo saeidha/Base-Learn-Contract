@@ -123,3 +123,4 @@ contract TimeLockWallet is Ownable, Pausable {
 
         uint256 oldAmount = b.amountLocked;
         if (_newAmount > oldAmount) {
+            uint256 amountToIncrease = _newAmount - oldAmount;
