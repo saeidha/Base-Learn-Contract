@@ -65,3 +65,5 @@ contract W3SchoolSignTest is Test {
         assertEq(w3s.getUserName(USER_1), "Alice", "Username should be Alice.");
     }
 
+    function testFail_RegisterTwice() public {
+        vm.prank(USER_1);
