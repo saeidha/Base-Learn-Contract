@@ -32,3 +32,4 @@ contract TimeLockWallet is Ownable, Pausable {
     uint256 public totalLockedFunds; // Sum of all 'amountLocked' for active beneficiaries
 
     // =============================================================
+    //                             Events
