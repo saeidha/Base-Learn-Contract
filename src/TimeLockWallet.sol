@@ -147,3 +147,4 @@ contract TimeLockWallet is Ownable, Pausable {
         beneficiaryExists(_beneficiary)
     {
         require(_newUnlockTimestamp > block.timestamp, "TLW: New unlock timestamp must be in the future");
+        require(_newUnlockTimestamp != beneficiaries[_beneficiary].unlockTimestamp, "TLW: New unlock timestamp is same as current");
