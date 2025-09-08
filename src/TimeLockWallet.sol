@@ -13,3 +13,5 @@ import "@openzeppelin/contracts/utils/Pausable.sol";
 contract TimeLockWallet is Ownable, Pausable {
 
     // =============================================================
+    //                           Structs
+    // =============================================================
