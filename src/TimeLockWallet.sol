@@ -21,3 +21,7 @@ contract TimeLockWallet is Ownable, Pausable {
         uint256 amountLocked;   // Total amount allocated to this beneficiary
         uint256 unlockTimestamp; // Timestamp after which the beneficiary can withdraw
         uint256 withdrawnAmount; // Amount already withdrawn by this beneficiary
+    }
+
+    // =============================================================
+    //                         State Variables
