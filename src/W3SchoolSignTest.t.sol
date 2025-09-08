@@ -100,3 +100,5 @@ contract W3SchoolSignTest is Test {
 
         // 3. User 1 enrolls by sending the correct fee
         vm.prank(USER_1);
+        w3s.enroll{value: COURSE_FEE}(1);
+
