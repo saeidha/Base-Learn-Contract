@@ -303,3 +303,5 @@ contract TimeLockWallet is Ownable, Pausable {
      * @return True if active, false otherwise.
      */
     function isBeneficiaryActive(address _beneficiary) external view returns (bool) {
+        return beneficiaries[_beneficiary].isActive;
+    }
