@@ -165,3 +165,4 @@ contract TimeLockWallet is Ownable, Pausable {
         onlyOwner
         whenNotPaused
         beneficiaryExists(_beneficiary)
+    {
