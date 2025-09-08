@@ -125,3 +125,5 @@ contract W3SchoolSignTest is Test {
         w3s.addCourse("Solidity 101", "Basics", COURSE_FEE);
         vm.prank(USER_1);
         w3s.registerUser("Alice");
+        vm.prank(USER_1);
+        w3s.enroll{value: COURSE_FEE}(1);
