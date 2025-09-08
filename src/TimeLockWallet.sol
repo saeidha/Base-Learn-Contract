@@ -354,3 +354,5 @@ contract TimeLockWallet is Ownable, Pausable {
         }
         return beneficiaries[_beneficiary].unlockTimestamp - block.timestamp;
     }
+
+    /**
