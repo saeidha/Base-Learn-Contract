@@ -136,3 +136,4 @@ contract TimeLockWallet is Ownable, Pausable {
     }
 
     /**
+     * @notice Updates the unlock timestamp for an existing beneficiary.
