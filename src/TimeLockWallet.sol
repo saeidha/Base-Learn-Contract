@@ -230,3 +230,4 @@ contract TimeLockWallet is Ownable, Pausable {
     // =============================================================
 
     /**
+     * @notice Allows a beneficiary to withdraw their allocated funds after the unlock timestamp.
