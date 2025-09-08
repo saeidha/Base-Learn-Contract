@@ -244,3 +244,5 @@ contract TimeLockWallet is Ownable, Pausable {
         totalLockedFunds -= withdrawableAmount;
 
         (bool success, ) = msg.sender.call{value: withdrawableAmount}("");
+        require(success, "TLW: Withdrawal failed");
+
