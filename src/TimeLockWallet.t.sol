@@ -41,3 +41,5 @@ contract W3SchoolSignTest is Test {
 
     function test_AdminManagement() public {
         // Owner can remove admin
+        vm.prank(OWNER);
+        w3s.removeAdmin(ADMIN);
