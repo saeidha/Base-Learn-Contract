@@ -126,3 +126,5 @@ contract TimeLockWallet is Ownable, Pausable {
             uint256 amountToIncrease = _newAmount - oldAmount;
             require(address(this).balance >= (totalLockedFunds + amountToIncrease), "TLW: Insufficient contract balance for increase");
             totalLockedFunds += amountToIncrease;
+        } else if (_newAmount < oldAmount) {
+            uint256 amountToDecrease = oldAmount - _newAmount;
