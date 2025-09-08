@@ -45,3 +45,4 @@ contract W3SchoolSignTest is Test {
         w3s.removeAdmin(ADMIN);
         assertFalse(w3s.admins(ADMIN), "Admin should be removed.");
 
+        // Add admin back
