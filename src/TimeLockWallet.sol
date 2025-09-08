@@ -351,3 +351,5 @@ contract TimeLockWallet is Ownable, Pausable {
     function getTimeRemaining(address _beneficiary) external view returns (uint256) {
         if (!beneficiaries[_beneficiary].isActive || block.timestamp >= beneficiaries[_beneficiary].unlockTimestamp) {
             return 0;
+        }
+        return beneficiaries[_beneficiary].unlockTimestamp - block.timestamp;
