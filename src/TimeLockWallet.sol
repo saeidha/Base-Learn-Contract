@@ -176,3 +176,6 @@ contract TimeLockWallet is Ownable, Pausable {
     /**
      * @notice Deactivates a beneficiary, making their locked funds available to the owner (if not withdrawn).
      * @param _beneficiary The address of the beneficiary to remove.
+     */
+    function removeBeneficiary(address _beneficiary)
+        external
