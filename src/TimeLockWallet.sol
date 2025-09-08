@@ -118,3 +118,4 @@ contract TimeLockWallet is Ownable, Pausable {
     {
         require(_newAmount > 0, "TLW: New amount must be greater than zero");
         
+        Beneficiary storage b = beneficiaries[_beneficiary];
