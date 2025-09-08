@@ -67,3 +67,5 @@ contract TimeLockWallet is Ownable, Pausable {
     //                     Owner/Admin Functions
     // =============================================================
 
+    /**
+     * @notice Allows the owner to deposit funds into the TimeLockWallet.
