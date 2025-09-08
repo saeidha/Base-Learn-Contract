@@ -270,3 +270,4 @@ contract TimeLockWallet is Ownable, Pausable {
         return (b.isActive, b.amountLocked, b.unlockTimestamp, b.withdrawnAmount);
     }
 
+    /**
