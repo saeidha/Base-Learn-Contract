@@ -137,3 +137,5 @@ contract TimeLockWallet is Ownable, Pausable {
 
     /**
      * @notice Updates the unlock timestamp for an existing beneficiary.
+     * @param _beneficiary The address of the beneficiary.
+     * @param _newUnlockTimestamp The new timestamp after which the beneficiary can withdraw.
