@@ -115,3 +115,5 @@ contract W3SchoolSignTest is Test {
 
         uint256 wrongFee = 0.05 ether;
         vm.prank(USER_1);
+        vm.expectRevert("W3SS: Incorrect enrollment fee sent");
+        w3s.enroll{value: wrongFee}(1);
