@@ -82,3 +82,5 @@ contract W3SchoolSignTest is Test {
         assertEq(name, "Solidity 101", "Course name is incorrect.");
         assertEq(fee, COURSE_FEE, "Course fee is incorrect.");
     }
+
+    function testFail_NonAdminCannotAddCourse() public {
