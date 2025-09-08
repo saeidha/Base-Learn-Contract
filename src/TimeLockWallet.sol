@@ -196,3 +196,6 @@ contract TimeLockWallet is Ownable, Pausable {
         emit BeneficiaryRemoved(_beneficiary, remainingLockedAmount);
     }
 
+    /**
+     * @notice Allows the owner to withdraw any unallocated funds from the contract.
+     * @dev Unallocated funds are contract balance minus totalLockedFunds.
