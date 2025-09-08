@@ -266,3 +266,5 @@ contract TimeLockWallet is Ownable, Pausable {
         view
         returns (bool isActive, uint256 amountLocked, uint256 unlockTimestamp, uint256 withdrawnAmount)
     {
+        Beneficiary storage b = beneficiaries[_beneficiary];
+        return (b.isActive, b.amountLocked, b.unlockTimestamp, b.withdrawnAmount);
