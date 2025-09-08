@@ -62,3 +62,4 @@ contract W3SchoolSignTest is Test {
         w3s.registerUser("Alice");
 
         assertTrue(w3s.isUserRegistered(USER_1), "User 1 should be registered.");
+        assertEq(w3s.getUserName(USER_1), "Alice", "Username should be Alice.");
