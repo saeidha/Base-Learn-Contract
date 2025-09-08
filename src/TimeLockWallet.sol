@@ -71,3 +71,5 @@ contract TimeLockWallet is Ownable, Pausable {
      * @notice Allows the owner to deposit funds into the TimeLockWallet.
      * @dev Funds deposited here are available to be allocated to beneficiaries or withdrawn by owner (if unallocated).
      */
+    function deposit() external payable onlyOwner whenNotPaused {
+        require(msg.value > 0, "TLW: Deposit amount must be greater than zero");
