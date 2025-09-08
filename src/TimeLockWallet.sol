@@ -168,3 +168,5 @@ contract TimeLockWallet is Ownable, Pausable {
     {
         require(_newUnlockTimestamp > beneficiaries[_beneficiary].unlockTimestamp, "TLW: New unlock timestamp must be later than current");
         
+        uint256 oldUnlockTimestamp = beneficiaries[_beneficiary].unlockTimestamp;
+        beneficiaries[_beneficiary].unlockTimestamp = _newUnlockTimestamp;
