@@ -35,3 +35,6 @@ contract W3SchoolSignTest is Test {
     //      Test Functions
     // =============================
 
+    function test_InitialOwner() public {
+        assertEq(w3s.owner(), OWNER, "Initial owner should be the deployer.");
+    }
