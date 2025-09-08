@@ -9,3 +9,5 @@ contract W3SchoolSignTest is Test {
 
     // Declare addresses for actors in the tests
     address public constant OWNER = address(0x1);
+    address public constant ADMIN = address(0x2);
+    address public constant USER_1 = address(0x3);
