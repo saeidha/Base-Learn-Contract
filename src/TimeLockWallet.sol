@@ -265,3 +265,4 @@ contract TimeLockWallet is Ownable, Pausable {
         external
         view
         returns (bool isActive, uint256 amountLocked, uint256 unlockTimestamp, uint256 withdrawnAmount)
+    {
