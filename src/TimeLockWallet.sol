@@ -87,3 +87,6 @@ contract TimeLockWallet is Ownable, Pausable {
         onlyOwner
         whenNotPaused
         notBeneficiary(_beneficiary)
+    {
+        require(_beneficiary != address(0), "TLW: Invalid beneficiary address");
+        require(_amount > 0, "TLW: Amount must be greater than zero");
