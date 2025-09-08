@@ -30,3 +30,5 @@ contract W3SchoolSignTest is Test {
         // Give USER_1 some ETH to pay for courses.
         vm.deal(USER_1, 1 ether);
     }
+
+    // =============================
