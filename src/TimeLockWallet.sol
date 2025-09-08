@@ -338,3 +338,5 @@ contract TimeLockWallet is Ownable, Pausable {
     /**
      * @notice Checks if the contract is currently paused.
      * @return True if paused, false otherwise.
+     */
+    function isContractPaused() external view returns (bool) {
