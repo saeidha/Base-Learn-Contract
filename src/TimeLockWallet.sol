@@ -358,3 +358,6 @@ contract TimeLockWallet is Ownable, Pausable {
     /**
      * @notice Checks if a beneficiary can currently withdraw their funds.
      * @param _beneficiary The address of the beneficiary.
+     * @return True if eligible for withdrawal, false otherwise.
+     */
+    function canWithdraw(address _beneficiary) external view returns (bool) {
