@@ -179,3 +179,6 @@ contract TimeLockWallet is Ownable, Pausable {
      */
     function removeBeneficiary(address _beneficiary)
         external
+        onlyOwner
+        whenNotPaused
+        beneficiaryExists(_beneficiary)
