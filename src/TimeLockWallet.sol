@@ -55,3 +55,5 @@ contract TimeLockWallet is Ownable, Pausable {
     modifier notBeneficiary(address _addr) {
         require(!beneficiaries[_addr].isActive, "TLW: Address is already an active beneficiary");
         _;
+    }
+
