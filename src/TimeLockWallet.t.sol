@@ -53,3 +53,6 @@ contract W3SchoolSignTest is Test {
 
     function testFail_NonOwnerCannotAddAdmin() public {
         vm.prank(USER_1); // A non-owner tries to add an admin
+        vm.expectRevert("Ownable: caller is not the owner");
+        w3s.addAdmin(USER_2);
+    }
