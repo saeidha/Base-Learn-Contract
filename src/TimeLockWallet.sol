@@ -314,3 +314,5 @@ contract TimeLockWallet is Ownable, Pausable {
         return address(this).balance;
     }
 
+    /**
+     * @notice Calculates the funds in the contract that are not allocated to any beneficiary.
