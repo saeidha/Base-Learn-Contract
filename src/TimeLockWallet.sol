@@ -326,3 +326,4 @@ contract TimeLockWallet is Ownable, Pausable {
         }
         return address(this).balance - totalLockedFunds;
     }
+
