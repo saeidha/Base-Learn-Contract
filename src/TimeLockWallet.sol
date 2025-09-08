@@ -92,3 +92,4 @@ contract TimeLockWallet is Ownable, Pausable {
         require(_amount > 0, "TLW: Amount must be greater than zero");
         require(address(this).balance >= totalLockedFunds + _amount, "TLW: Insufficient contract balance to lock funds");
         require(_unlockTimestamp > block.timestamp, "TLW: Unlock timestamp must be in the future");
+
