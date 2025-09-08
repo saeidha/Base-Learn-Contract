@@ -97,3 +97,5 @@ contract TimeLockWallet is Ownable, Pausable {
             isActive: true,
             amountLocked: _amount,
             unlockTimestamp: _unlockTimestamp,
+            withdrawnAmount: 0
+        });
