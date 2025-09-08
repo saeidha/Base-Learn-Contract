@@ -70,3 +70,4 @@ contract TimeLockWallet is Ownable, Pausable {
     /**
      * @notice Allows the owner to deposit funds into the TimeLockWallet.
      * @dev Funds deposited here are available to be allocated to beneficiaries or withdrawn by owner (if unallocated).
+     */
