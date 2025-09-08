@@ -76,3 +76,6 @@ contract W3SchoolSignTest is Test {
     function test_AdminCanAddCourse() public {
         vm.prank(ADMIN);
         w3s.addCourse("Solidity 101", "Basics of Solidity", COURSE_FEE);
+
+        (string memory name, , uint fee, ,) = w3s.getCourseDetails(1);
+        assertEq(w3s.getTotalCourses(), 1, "Total courses should be 1.");
