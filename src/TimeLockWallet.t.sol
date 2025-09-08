@@ -80,3 +80,5 @@ contract W3SchoolSignTest is Test {
         (string memory name, , uint fee, ,) = w3s.getCourseDetails(1);
         assertEq(w3s.getTotalCourses(), 1, "Total courses should be 1.");
         assertEq(name, "Solidity 101", "Course name is incorrect.");
+        assertEq(fee, COURSE_FEE, "Course fee is incorrect.");
+    }
