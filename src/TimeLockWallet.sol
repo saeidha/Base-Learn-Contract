@@ -82,3 +82,6 @@ contract TimeLockWallet is Ownable, Pausable {
      * @param _amount The amount of funds to allocate to this beneficiary.
      * @param _unlockTimestamp The timestamp after which the beneficiary can withdraw.
      */
+    function addBeneficiary(address _beneficiary, uint256 _amount, uint256 _unlockTimestamp)
+        external
+        onlyOwner
