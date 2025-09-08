@@ -5,3 +5,5 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Pausable.sol";
 
 /**
+ * @title TimeLockWallet
+ * @dev A contract that allows an owner to deposit funds and allocate them to beneficiaries.
