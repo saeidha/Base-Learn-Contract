@@ -6,3 +6,6 @@ import {W3SchoolSign} from "../src/W3SchoolSign.sol";
 
 contract W3SchoolSignTest is Test {
     W3SchoolSign public w3s;
+
+    // Declare addresses for actors in the tests
+    address public constant OWNER = address(0x1);
