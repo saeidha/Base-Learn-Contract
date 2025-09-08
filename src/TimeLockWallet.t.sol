@@ -104,3 +104,4 @@ contract W3SchoolSignTest is Test {
 
         assertTrue(w3s.isEnrolled(USER_1, 1), "User 1 should be enrolled in course 1.");
         assertEq(address(w3s).balance, COURSE_FEE, "Contract balance should be the course fee.");
+    }
