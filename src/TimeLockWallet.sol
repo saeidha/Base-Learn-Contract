@@ -238,3 +238,5 @@ contract TimeLockWallet is Ownable, Pausable {
         require(block.timestamp >= b.unlockTimestamp, "TLW: Funds are still time-locked");
         
         uint256 withdrawableAmount = b.amountLocked - b.withdrawnAmount;
+        require(withdrawableAmount > 0, "TLW: No funds available to withdraw");
+
