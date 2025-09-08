@@ -189,3 +189,5 @@ contract TimeLockWallet is Ownable, Pausable {
         b.isActive = false;
         b.amountLocked = 0; // Clear remaining balance for safety
         b.unlockTimestamp = 0;
+        b.withdrawnAmount = 0;
+
