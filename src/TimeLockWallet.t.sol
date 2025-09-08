@@ -73,3 +73,4 @@ contract W3SchoolSignTest is Test {
         w3s.registerUser("Alice V2");
     }
 
+    function test_AdminCanAddCourse() public {
