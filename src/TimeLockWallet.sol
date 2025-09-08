@@ -233,3 +233,5 @@ contract TimeLockWallet is Ownable, Pausable {
      * @notice Allows a beneficiary to withdraw their allocated funds after the unlock timestamp.
      * @dev Withdraws the full remaining amount.
      */
+    function withdrawFunds() external payable whenNotPaused beneficiaryExists(msg.sender) {
+        Beneficiary storage b = beneficiaries[msg.sender];
