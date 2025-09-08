@@ -56,3 +56,7 @@ contract W3SchoolSignTest is Test {
         vm.expectRevert("Ownable: caller is not the owner");
         w3s.addAdmin(USER_2);
     }
+
+    function test_UserRegistration() public {
+        vm.prank(USER_1);
+        w3s.registerUser("Alice");
