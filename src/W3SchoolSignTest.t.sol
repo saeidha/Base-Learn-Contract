@@ -89,3 +89,4 @@ contract W3SchoolSignTest is Test {
         w3s.addCourse("Unauthorized Course", "...", 0);
     }
 
+    function test_UserEnrollment() public {
