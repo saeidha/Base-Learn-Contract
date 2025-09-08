@@ -319,3 +319,6 @@ contract TimeLockWallet is Ownable, Pausable {
      * @dev These funds can be withdrawn by the owner via `emergencyWithdrawOwnerFunds`.
      * @return The amount of unallocated funds.
      */
+    function getAvailableOwnerFunds() public view returns (uint256) {
+        if (address(this).balance < totalLockedFunds) {
+            // This should ideally not happen if logic is correct, but defensive
