@@ -103,3 +103,4 @@ contract TimeLockWallet is Ownable, Pausable {
         beneficiaryCount++;
         emit BeneficiaryAdded(_beneficiary, _amount, _unlockTimestamp);
     }
+
