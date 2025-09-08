@@ -51,3 +51,4 @@ contract W3SchoolSignTest is Test {
         assertTrue(w3s.admins(ADMIN), "Admin should be added back.");
     }
 
+    function testFail_NonOwnerCannotAddAdmin() public {
