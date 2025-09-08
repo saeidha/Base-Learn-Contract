@@ -288,3 +288,5 @@ contract TimeLockWallet is Ownable, Pausable {
         return beneficiaries[_beneficiary].unlockTimestamp;
     }
 
+    /**
+     * @notice Returns the amount already withdrawn by a specific beneficiary.
