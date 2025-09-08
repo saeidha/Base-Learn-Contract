@@ -17,3 +17,5 @@ contract W3SchoolSignTest is Test {
 
     /**
      * @dev This function is run before each test. It's the equivalent of `beforeEach`.
+     */
+    function setUp() public {
